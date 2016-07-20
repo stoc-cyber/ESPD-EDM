@@ -560,6 +560,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#3-strong-other-criteria-strong">3. <strong>OTHER CRITERIA</strong></a></li>
 </ul>
 </li>
+<li><a href="#foot-notes">Foot notes</a></li>
 </ul>
 </div>
 </div>
@@ -610,16 +611,16 @@ stakeholder&#8217;s system. This document illustrates in detail how to use these
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The ESPDRequest, a document that is sent by the Contracting Authorities to the Economic Operators; and the</p>
+<p>The ESPDRequest, a document that is sent by the Contracting Authorities to the Economic Operators;</p>
 </li>
 <li>
 <p>The ESPDResponse, the document that is filled-in by the Economic Operators stating whether they fulfil or not the criteria required
-in the ESDPRequest, and providing the sources where evidences can be obtained to prove that the criteria are met by this EO.</p>
+in the ESPDRequest, and providing the sources where evidences can be obtained to prove that the criteria are met by this EO.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>As shown in the use case diagram below, the ESDP Documents are at the very core of the ESPD Service:</p>
+<p>As shown in the use case diagram below, the ESPD Documents are at the very core of the ESPD Service:</p>
 </div>
 <div id="ESPD_Functionalities" class="imageblock text-center" style="text-align: center">
 <div class="content">
@@ -633,7 +634,7 @@ in the ESDPRequest, and providing the sources where evidences can be obtained to
 <h3 id="objectives-and-target-audience"><a class="anchor" href="#objectives-and-target-audience"></a>Objectives and target audience</h3>
 <div class="paragraph text-left">
 <p>The European Commission (COM) has defined a Data Model and XML vocabularies to express the ESPD documents that the ESPD Service exports and imports. However, these Data Models and XML Vocabularies are also intended to be used by any other systems that will use and/or exchange ESPD documents with other systems or in need to render its content into other formats or process them otherwise.
-This document explains and illustrates how to implement XML documents based on the Data Model and XSD Schema. We name this model "ESPD Exchange Data Model" (ESPD-EDM). The model is quite flexible and should cater for future different situations.That the model is flexible is to be considered good news, as it may be easily used for unforeseen needs. However the development of software applications and the interoperability
+This document explains and illustrates how to implement XML documents based on the Data Model and XSD Schema. We name this model "ESPD Exchange Data Model" (ESPD-EDM). The model is quite flexible and should cater for future different situations. That the model is flexible is to be considered good news, as it may be easily used for unforeseen needs. However the development of software applications and the interoperability
 between systems require concrete explicit directives and rules that guide the actual implementation of the ESPD XML documents as well as the interpretation of their content. This was the case for the implementation of the ESPD Request and ESPD Response XML documents that are currently used by the ESPD Service.</p>
 </div>
 <div class="paragraph text-left">
@@ -731,10 +732,10 @@ XML instances, etc.</p>
 Each Schema has been assigned its own namespace and a specific prefix representing the namespace.</p>
 </div>
 <div class="paragraph text-left">
-<p>The table below lists the file names corresponding to each block, schema,namespace and namespace-prefix.</p>
+<p>The table below lists the file names corresponding to each block, schema, namespace and namespace-prefix.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Schemas, namespaces and prefixes used by the <strong>ESPResponse</strong></caption>
+<caption class="title">Table 1. Schemas, namespaces and prefixes used by the <strong>ESPDResponse</strong></caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -847,7 +848,7 @@ the ESPD-EDM data architecture are imported (see line 2 in ESPDResponse-1.0.xsd)
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>"espd-cbc", prefix for the Common Basic Components defined by COM for the ESP, e.g. "espd-cbc:SMEIndicator"</td>
+<td>"espd-cbc", prefix for the Common Basic Components defined by COM for the ESPD, e.g. "espd-cbc:SMEIndicator"</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
@@ -859,7 +860,7 @@ the ESPD-EDM data architecture are imported (see line 2 in ESPDResponse-1.0.xsd)
 </tr>
 <tr>
 <td><i class="conum" data-value="6"></i><b>6</b></td>
-<td>"cbc", prefix for the Common Basic Component ddefined in UBL-2.1, e.g. "cbc:TypeCode"</td>
+<td>"cbc", prefix for the Common Basic Component defined in UBL-2.1, e.g. "cbc:TypeCode"</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="7"></i><b>7</b></td>
@@ -1000,7 +1001,7 @@ components that are commonly used in the ESPD documents are herein sufficiently 
 <p>According to the UML Diagram an ESPDResponse XML document is represented by the class <code>espd:ESPDResponse</code>.
 This ''root'' class aggregates other classes (which in turn aggregate sub-classes).
 The list below summarises the use of each of these classes. Further on, in this document,
-each class is analised and illustrated in more detail:</p>
+each class is analysed and illustrated in more detail:</p>
 </div>
 <div class="olist arabic text-left">
 <ol class="arabic">
@@ -1010,7 +1011,7 @@ the Contracting Body.</p>
 </li>
 <li>
 <p>The <code>espd:EconomicOperator</code> class is defined by COM as a placeholder for all the data related to the
-Economic Operator. This class aggregates a espd:RepresentativeNaturalPerson class intended to gather
+Economic Operator. This class aggregates an espd:RepresentativeNaturalPerson class intended to gather
 the data of the legal representatives of the EO. It also reuses the UBL-2.1 cac:Party class.</p>
 </li>
 <li>
@@ -1059,11 +1060,11 @@ These references provide links to the specific code lists therein referred to. T
 the list and the values and descriptions of each code.</p>
 </div>
 <div class="paragraph">
-<p>Click on the links to download an examine the code list you are interested in.</p>
+<p>Click on the links to download and examine the code list you are interested in.</p>
 </div>
 <div class="paragraph">
 <p>The ESPD Service uses <a href="http://www.schematron.com/spec.html">Schematron</a> and the <a href="https://www.oasis-open.org/committees/codelist/">OASIS Genericode 1.0</a> specification for the validation
-of externalised codes. If you need the Genericode files you can download them altogheter, jointly with the code lists PDF files, from this <a href="./code_lists/code_lists.zip">zip volum</a>.</p>
+of externalised codes. If you need the Genericode files you can download them altogether, jointly with the code lists PDF files, from this <a href="./code_lists/code_lists.zip">zip volume</a>.</p>
 </div>
 </td>
 </tr>
@@ -1080,7 +1081,7 @@ of externalised codes. If you need the Genericode files you can download them al
 are optional the ESPD Service expects the following ones:</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. List of root properties expected by the ESPD Service in the ESPResponse</caption>
+<caption class="title">Table 2. List of root properties expected by the ESPD Service in the ESPDResponse</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -1201,7 +1202,7 @@ f01c214f-2fe6-4664-83ff-353f118b8d6f
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> (1..1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: Compulsoriness inherited from UBL-2.1. Do not forget specifying the schemAgencyID attribute (EU-COM-GROW identifies all elements defined in the ESPD by COM)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: Compulsoriness inherited from UBL-2.1. Do not forget to specify the schemeAgencyID attribute (EU-COM-GROW identifies all elements defined in the ESPD by COM)</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ContractFolderID</strong></p></td>
@@ -1297,7 +1298,7 @@ the class ESPDResponse does not uses currently. If you use them in your
 own XML documents the ESPD Service will skip them (i.e. no exception would be thrown).</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 3. List of root properties expected by the ESPD Service in the ESPResponse</caption>
+<caption class="title">Table 3. List of root properties expected by the ESPD Service in the ESPDResponse</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -1347,7 +1348,7 @@ None
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Provide the the value "None"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Provide the value "None"</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ProfileID</strong></p></td>
@@ -1402,7 +1403,7 @@ for your own internal purposes. If specified in an XML document the ESPD Service
 <div class="paragraph">
 <p>According to the <a href="http://docs.oasis-open.org/ubl/guidelines/UBL2-Customization1.0cs01.pdf">UBL 2 Guidelines for Customization</a>
 the UBLExtension element found at the beginning of all UBL documents allows communities of
-interest to specify additional information entities as part of a UBL standard document.The
+interest to specify additional information entities as part of a UBL standard document. The
 UBLExtension element is not one of UBL&#8217;s information entities. It is a structural device that
 allows arbitrary extensions to a UBL document type without affecting UBL conformance.</p>
 </div>
@@ -1427,7 +1428,7 @@ document type and still have their documents be validated by the standard UBL sc
 <h3 id="contracting-party"><a class="anchor" href="#contracting-party"></a>Contracting Party</h3>
 <div class="paragraph">
 <p>The class <code>cac:ContractingParty</code> was defined in UBL-2.1 (hence the prefix <code>cac:</code>).
-This UBL class is a specialisation of the the very rich UBL-2.1 aggregate component <code>cac:Party</code>.
+This UBL class is a specialisation of the very rich UBL-2.1 aggregate component <code>cac:Party</code>.
 The ESPDResponse only uses a reduced subset of its data, although the XSD Schema imports it in
 all of its richness (so you could use it for your own purposes beyond the ones expected by the
 ESPD Service). See the <a href="http://docs.oasis-open.org/ubl/UBL-2.1.html">UBL-2.1</a> specification for all
@@ -1557,7 +1558,7 @@ Service follows:</p>
 <div class="sect2 text-left">
 <h3 id="economic-operator"><a class="anchor" href="#economic-operator"></a>Economic Operator</h3>
 <div class="paragraph">
-<p>The ESPResponse was explicitly designed to hold data about one single Economic Operator.
+<p>The ESPDResponse was explicitly designed to hold data about one single Economic Operator.
 Thus, the ESPDResponse Exchange Data Model associates a class <code>EconomicOperatorParty</code> as
 a placeholder for the data related to only one Economic Operator (EO) that
 tenders solely to a procurement project, to one of the EOs that tender as part of a group
@@ -1781,7 +1782,7 @@ NaturalPersonRegistrationCountryCode</strong></p></td>
 <div class="content">
 <img src="./images/Representative_XSD_Extended_Details.png" alt="EO details, XSD" width="600" height="500">
 </div>
-<div class="title">Figure XX: UBL-2.1 Person, inside AgentyPary, inside PowerOfAttorney</div>
+<div class="title">Figure XX: UBL-2.1 Person, inside AgentParty, inside PowerOfAttorney</div>
 </div>
 <div class="paragraph">
 <p>From the subcomponent Person, also a rich UBL structure, the ESPD is interested in a small set of elements, namely the name, birth data, and contact data of the
@@ -2143,13 +2144,13 @@ conviction.</p>
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-In principle, practically all the elements in the UML class and the XSD Schema are in principle optional.
+In principle, practically all the elements in the UML class and the XSD Schema are optional.
 However <strong>this does not mean that an ESPD conformant Service will accept that
 certain data are not provided (or all of them for that matter)</strong>. The compulsoriness of the ESPD Service documents
 elements is not controlled solely by the XSD Schema. Instead the cardinality of the elements is also validated based on ''rules''.
 These rules are assertions about the restrictions that affect an element,  an attribute or the
 relationship between classes.<sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnote_12" title="View footnote.">12</a>]</sup>.
-In the tables below, describing each class, the optionallity or compulsoriness is indicated in respect of the ESPD Service needs, and
+In the tables below, describing each class, the optionality or compulsoriness is indicated in respect of the ESPD Service needs, and
 regardless of the XSD cardinality.
 </td>
 </tr>
@@ -2173,12 +2174,19 @@ to be ESPD Service-conformant.</p>
 </div>
 <div class="paragraph">
 <p>Remember that the prefixes (ccv:, cbc: cac:, etc.) are representatives of the namespaces used in the
-XSD Schema (see "Table Table 1. Schemas, namespaces and prefixes used by the ESPResponse").</p>
+XSD Schema (see "Table 1. Schemas, namespaces and prefixes used by the ESPDResponse").</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>NOTICE that, except for the ccv:Response element, the rest of the data is already present in the ESPDRequest XML Document. The ESPDResponse copies the ESPDRequest and extends it with the Response of the EO.</pre>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Except for the ccv:Response element, the rest of the data is already present in the ESPDRequest XML Document. The ESPDResponse copies the ESPDRequest and extends it with the Response of the EO.
+</td>
+</tr>
+</table>
 </div>
 <table class="tableblock frame-all grid-all spread text-left">
 <caption class="title">Table 9. Class ccv:Criterion</caption>
@@ -2529,17 +2537,19 @@ decision fork points</p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A CriterionRequirementGroup MAY contain sub-groups of criteria. This nested structure allows the ESPD to represent
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A CriterionRequirementGroup MAY contain sub-groups of criteria. This nested structure allows the ESPD to represent
 complex decision structures and capture faithfully the data represented in highly structured user interfaces
-(like the one implemented in the ESPD Service). This is clearly illustrated in the next sections.</p>
-</li>
-</ul>
+(like the one implemented in the ESPD Service). This is clearly illustrated in the next sections.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -2823,7 +2833,7 @@ below about "Quantities"</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cev-cac:Evidence</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">One or more references to a source where a documentary proof can be obtained to demostrate that one stated response does actually
+<td class="tableblock halign-left valign-top"><p class="tableblock">One or more references to a source where a documentary proof can be obtained to demonstrate that one stated response does actually
 fulfill the Requirement from a Criterion</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..n)</p></td>
@@ -2934,8 +2944,8 @@ EmbeddedEvidenceIndicator</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Indicates whether the Evidence is embedded in the XML document (<em>True</em>)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: The ESPD Service does not use this feature as it always refer to it through a URL. Other
-solutions could need it (e.g. the e-Sens Virtual Compnay Dossier, VCD). The UBL-2.1 component allows for both embedding the evidence and referring to it via a URL</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: The ESPD Service does not use this feature as it always refers to it through a URL. Other
+solutions could need it (e.g. the e-Sens Virtual Company Dossier, VCD). The UBL-2.1 component allows for both embedding the evidence and referring to it via a URL</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" colspan="5"><p class="tableblock"><strong>Associated classes</strong></p></td>
@@ -2999,7 +3009,7 @@ electronic signature. For the time being the ESPD does not use this UBL componen
 to include references to documents that they might consider relevant including in the XML instances of both types of documents.</p>
 </div>
 <div class="paragraph">
-<p>The class used for this, <code>cac:cac:AdditionalDocumentReference</code> ''is a'' <code>cac:DocumentReference</code> class defined in the UBL-2.1
+<p>The class used for this, <code>cac:AdditionalDocumentReference</code> ''is a'' <code>cac:DocumentReference</code> class defined in the UBL-2.1
 Common Aggregate Components library (see the folder <em>xsd/common/UBL-CommonAggregateComponents-2.1.xsd</em> file of the
 <a href="http://docs.oasis-open.org/ubl/UBL-2.1.html">UBL-2.1 specification</a>)</p>
 </div>
@@ -3042,7 +3052,7 @@ this is a special case (see General rule 1, below), as it refers to the Contract
       <span class="tag">&lt;cac:Attachment&gt;</span>
          <span class="tag">&lt;cac:ExternalReference&gt;</span>
             <span class="tag">&lt;cbc:FileName&gt;</span>Belgium-Brussels: European Resource Efficiency Excellence Centre<span class="tag">&lt;/cbc:FileName&gt;</span><i class="conum" data-value="3"></i><b>(3)</b>
-            <span class="tag">&lt;cbc:Description&gt;</span>The objective of this contract is to set up a virtual European Resource Efficiency Excellence Centre. TheCentre will provide information and support to European SMEs, business intermediaries, resource efficiencypractitioners and other interested parties such as regional authorities.<span class="tag">&lt;/cbc:Description&gt;</span><i class="conum" data-value="4"></i><b>(4)</b>
+            <span class="tag">&lt;cbc:Description&gt;</span>The objective of this contract is to set up a virtual European Resource Efficiency Excellence Centre. The Centre will provide information and support to European SMEs, business intermediaries, resource efficiencypractitioners and other interested parties such as regional authorities.<span class="tag">&lt;/cbc:Description&gt;</span><i class="conum" data-value="4"></i><b>(4)</b>
          <span class="tag">&lt;/cac:ExternalReference&gt;</span>
       <span class="tag">&lt;/cac:Attachment&gt;</span>
    <span class="tag">&lt;/cac:AdditionalDocumentReference&gt;</span></code></pre>
@@ -3068,9 +3078,13 @@ this is a special case (see General rule 1, below), as it refers to the Contract
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -3080,6 +3094,10 @@ this is a special case (see General rule 1, below), as it refers to the Contract
 <p>The title for the document is placed in the <em>cbc:FileName</em> field</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3176,7 +3194,7 @@ is set to 'No' (set to false). See examples amongst the Selection criteria.</p>
 <div class="title">Figure 22. Legend</div>
 </div>
 <div class="paragraph text-left">
-<p>The interpretation of this diagram could be as as follows:</p>
+<p>The interpretation of this diagram could be as follows:</p>
 </div>
 <div class="ulist text-left">
 <ul>
@@ -3261,14 +3279,21 @@ within each category (leaves in text without boxes):</p>
 flow diagrams like the one in the figure above (see Figure 21. ''General data-structure design rule for criteria and requirements with a <em>yes</em> or <em>no</em> answer'').
 Thus the data structures below represent how the data is organised for each exclusion criterion used in the ESPD.</p>
 </div>
-<div class="paragraph text-left">
-<p>Notice that exclusion criteria have been drafted ''from a negative perspective''. Thus a criterion like <code>Payment of Taxes</code>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The exclusion criteria have been drafted ''from a negative perspective''. Thus a criterion like <code>Payment of Taxes</code>
 is drafted like follows:</p>
 </div>
 <div class="paragraph">
 <p><em>Has the economic operator breached its obligations relating to the payment of taxes, both in the
 country in which it is established and in Member State of the contracting authority or contracting
-entity if other than the country of establishment?.</em></p>
+entity if other than the country of establishment?</em></p>
 </div>
 <div class="paragraph">
 <p>If the Economic Operator answers ''no'' then it has nothing to justify or motivate. On the
@@ -3277,6 +3302,10 @@ that the criterion is satisfied.</p>
 </div>
 <div class="paragraph">
 <p>The ESPD Service applies this approach as much as possible.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2 text-left">
@@ -3294,7 +3323,7 @@ Economic Operator may have been convicted <sup class="footnote">[<a id="_footnot
 </div>
 <div class="paragraph">
 <p>In an ESPD Service conformant XML document all these criteria share the same structure. The Figure 21 above provides a simple view of how the data of a <code>Conviction</code> exclusion criterion
-is organised. This other figure represents practically the same idea, but from a ''data-structing'' perspective:</p>
+is organised. This other figure represents practically the same idea, but from a ''data-structuring'' perspective:</p>
 </div>
 <div id="exclusion_convictions_data_structure" class="imageblock text-center">
 <div class="content">
@@ -3356,7 +3385,7 @@ is organised. This other figure represents practically the same idea, but from a
                     <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>5f9f09f7-f701-432c-9fdc-c22c124a74c9<span class="tag">&lt;/cbc:ID&gt;</span>
                     <span class="tag">&lt;ccv:Requirement</span> <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">INDICATOR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
                         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionRelatedIDs</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>20c5361b-7599-4ee6-b030-7f8323174d1e<span class="tag">&lt;/cbc:ID&gt;</span>
-                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability (<span class="entity">&amp;quot;</span>Self-Cleaning<span class="entity">&amp;quot;</span>)?<span class="tag">&lt;/cbc:Description&gt;</span>
+                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability 'Self-Cleaning'?<span class="tag">&lt;/cbc:Description&gt;</span>
                         <span class="tag">&lt;ccv:Response&gt;</span>
                             <span class="tag">&lt;ccv-cbc:Indicator&gt;</span>true<span class="tag">&lt;/ccv-cbc:Indicator&gt;</span>
                         <span class="tag">&lt;/ccv:Response&gt;</span>
@@ -3495,11 +3524,8 @@ the Response in case the Economic Operator answered ''yes'' to the first Require
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -3509,7 +3535,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure</p>
+<p>The XML structure maps the data-structure;</p>
 </li>
 </ul>
 </div>
@@ -3708,9 +3734,13 @@ Prepare to accommodate individuals with a physical disability before Church meet
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -3720,16 +3750,17 @@ Prepare to accommodate individuals with a physical disability before Church meet
 <p>The second group (available online information) is identical to the second group showed in the previous case (convictions); it requests references to evidences, a structure that repeats in practically all the ESPD criteria;</p>
 </li>
 <li>
-<p>The first group of requirements contain ''sub-groups'' of requirements.
-This is consistent with the model and the XSD Schema. Each sub-group starts with another
+<p>The first group of requirements contains ''sub-groups'' of requirements. This is consistent with the model and the XSD Schema. Each sub-group starts with another
 ''decision point''. As for the Criterion question, a ''yes'' answer in a sub-group indicates
-that a sub-group of data will have to be provided by the EO.
-It is important to always respect this approach in order to keep the conformance with the ESPD Service.
-Bear in mind that at validation time  the data provided by the Economic Operator in the
-ESPDResponse.xml instance will be checked against the required responseDataType attribute
+that a sub-group of data will have to be provided by the EO.  It is important to always respect this approach in order to keep the conformance with the ESPD Service.
+Bear in mind that at validation time  the data provided by the Economic Operator in the  ESPDResponse.xml instance will be checked against the required responseDataType attribute
 specified in each requirement of the ESPDRequest.xml.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2 text-left">
@@ -3759,9 +3790,13 @@ and ''breaching of obligations in the fields of labour law''.</p>
 </div>
 <div class="title">Figure 26. Data-structure representation for social-related criteria (EXCLUSION.SOCIAL.*)</div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -3771,6 +3806,10 @@ and ''breaching of obligations in the fields of labour law''.</p>
 <p>Contrary to the criteria so far studied this one does not include the group of requirements requesting evidences (see also [DOC-REF-1]).</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph text-left">
 <p>The piece of XML below is a fragment of an ESPD Request XML document.
@@ -3814,7 +3853,7 @@ This fragment shows the implementation of the Criterion
                     <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>5f9f09f7-f701-432c-9fdc-c22c124a74c9<span class="tag">&lt;/cbc:ID&gt;</span>
                     <span class="tag">&lt;ccv:Requirement</span> <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">INDICATOR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
                         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionRelatedIDs</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>20c5361b-7599-4ee6-b030-7f8323174d1e<span class="tag">&lt;/cbc:ID&gt;</span>
-                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability (<span class="entity">&amp;quot;</span>Self-Cleaning<span class="entity">&amp;quot;</span>)?<span class="tag">&lt;/cbc:Description&gt;</span>
+                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability 'Self-Cleaning'?<span class="tag">&lt;/cbc:Description&gt;</span>
                         <span class="tag">&lt;ccv:Response&gt;</span>
                             <span class="tag">&lt;ccv-cbc:Indicator&gt;</span>true<span class="tag">&lt;/ccv-cbc:Indicator&gt;</span>
                         <span class="tag">&lt;/ccv:Response&gt;</span>
@@ -3851,11 +3890,8 @@ This fragment shows the implementation of the Criterion
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -3865,7 +3901,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure
+<p>The XML structure maps the data-structure;
 ;</p>
 </li>
 <li>
@@ -3987,11 +4023,8 @@ Prepare to accommodate individuals with a physical disability before Church meet
     <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -4001,7 +4034,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure
+<p>The XML structure maps the data-structure;
 ;</p>
 </li>
 <li>
@@ -4075,7 +4108,7 @@ Prepare to accommodate individuals with a physical disability before Church meet
                     <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>5f9f09f7-f701-432c-9fdc-c22c124a74c9<span class="tag">&lt;/cbc:ID&gt;</span>
                     <span class="tag">&lt;ccv:Requirement</span> <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">INDICATOR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
                         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionRelatedIDs</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>20c5361b-7599-4ee6-b030-7f8323174d1e<span class="tag">&lt;/cbc:ID&gt;</span>
-                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability (<span class="entity">&amp;quot;</span>Self-Cleaning<span class="entity">&amp;quot;</span>)?<span class="tag">&lt;/cbc:Description&gt;</span>
+                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability 'Self-Cleaning'?<span class="tag">&lt;/cbc:Description&gt;</span>
                         <span class="tag">&lt;ccv:Response&gt;</span>
                             <span class="tag">&lt;ccv-cbc:Indicator&gt;</span>true<span class="tag">&lt;/ccv-cbc:Indicator&gt;</span>
                         <span class="tag">&lt;/ccv:Response&gt;</span>
@@ -4096,11 +4129,8 @@ Prepare to accommodate individuals with a physical disability before Church meet
 <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -4110,7 +4140,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure
+<p>The XML structure maps the data-structure;
 ;</p>
 </li>
 <li>
@@ -4207,7 +4237,7 @@ Prepare to accommodate individuals with a physical disability before Church meet
                     <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>5f9f09f7-f701-432c-9fdc-c22c124a74c9<span class="tag">&lt;/cbc:ID&gt;</span>
                     <span class="tag">&lt;ccv:Requirement</span> <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">INDICATOR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
                         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionRelatedIDs</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>20c5361b-7599-4ee6-b030-7f8323174d1e<span class="tag">&lt;/cbc:ID&gt;</span>
-                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability (<span class="entity">&amp;quot;</span>Self-Cleaning<span class="entity">&amp;quot;</span>)?<span class="tag">&lt;/cbc:Description&gt;</span>
+                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability 'Self-Cleaning'?<span class="tag">&lt;/cbc:Description&gt;</span>
                         <span class="tag">&lt;ccv:Response&gt;</span>
                             <span class="tag">&lt;ccv-cbc:Indicator&gt;</span>true<span class="tag">&lt;/ccv-cbc:Indicator&gt;</span>
                         <span class="tag">&lt;/ccv:Response&gt;</span>
@@ -4228,11 +4258,8 @@ Prepare to accommodate individuals with a physical disability before Church meet
 <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -4242,7 +4269,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure
+<p>The XML structure maps the data-structure;
 ;</p>
 </li>
 <li>
@@ -4254,7 +4281,7 @@ related to this criterion;</p>
 <div class="sect3 text-left">
 <h4 id="procedure-preparation"><a class="anchor" href="#procedure-preparation"></a>Procedure preparation</h4>
 <div class="paragraph">
-<p>The data structure for the criterion ''Direct or indirect involvement in the
+<p>The data structures for the criterion ''Direct or indirect involvement in the
 preparation of this procurement procedure'' are the simplest ones:</p>
 </div>
 <div id="interest_preparation_data_structure" class="imageblock text-center">
@@ -4307,11 +4334,8 @@ Prepare to accommodate individuals with a physical disability before Church meet
 <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -4321,7 +4345,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure
+<p>The XML structure maps the data-structure;
 .</p>
 </li>
 </ul>
@@ -4371,11 +4395,8 @@ interest due to its participation in the procurement procedure'' (file Example1-
     <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -4385,7 +4406,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure
+<p>The XML structure maps the data-structure;
 .</p>
 </li>
 </ul>
@@ -4437,11 +4458,8 @@ required documents and obtained confidential information of this procedure'':</p
     <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -4451,7 +4469,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure
+<p>The XML structure maps the data-structure;
 .</p>
 </li>
 </ul>
@@ -4561,11 +4579,8 @@ Prepare to accommodate individuals with a physical disability before Church meet
     <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -4575,7 +4590,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure</p>
+<p>The XML structure maps the data-structure;</p>
 </li>
 </ul>
 </div>
@@ -4586,7 +4601,7 @@ related to this criterion;</p>
 <p>The range of criteria related to the selection of Economic Operators is larger and more
 heterogeneous than the one related to the exclusion criteria. The figure below is intended to
 identify and list all the categories (branches in text boxes) and criteria
-(leaves in text without boxes).footnote:</p>
+(leaves in text without boxes):</p>
 </div>
 <div id="selection_criteria_taxonomy" class="imageblock text-center">
 <div class="content">
@@ -4648,9 +4663,20 @@ This is clearly illustrated for the selection suitability criteria in the next s
 </div>
 <div class="title">Figure 35. Detailed data-structure representation for suitability (CRITERION.SELECTION.SUITABILITY.ENROLMENT.*)</div>
 </div>
-<div class="paragraph text-left">
-<p><strong>NOTICE</strong> that:
-	* For the requirement R 1.1, both answers ''Yes'' or ''No'' redirect the flow of the data to the next requirement. However, the application controlling this flow (e.g. the ESPD Service) will persist and use.<sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnote_18" title="View footnote.">18</a>]</sup> the answer before deciding skipping to the next requirement.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For the requirement R 1.1, both answers ''Yes'' or ''No'' redirect the flow of the data to the next requirement.
+However, the application controlling this flow (e.g. the ESPD Service) will persist and use.<sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnote_18" title="View footnote.">18</a>]</sup> the answer before deciding skipping to the next requirement.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>The fragment of XML below shows the implementation of the
@@ -4724,7 +4750,7 @@ This is clearly illustrated for the selection suitability criteria in the next s
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The EO is enroled in a professional register</td>
+<td>The EO is enrolled in a professional register</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
@@ -4732,9 +4758,13 @@ This is clearly illustrated for the selection suitability criteria in the next s
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -4744,6 +4774,10 @@ This is clearly illustrated for the selection suitability criteria in the next s
 <p>The XML structure maps the structure of the data-flow.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -4839,9 +4873,13 @@ Prepare to accommodate individuals with a physical disability before Church meet
     <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -4851,6 +4889,10 @@ Prepare to accommodate individuals with a physical disability before Church meet
 <p>The additional data to provide in case of an affirmative answer to the criterion is the second requirement ''Please describe them''; hence the expected response data type, ''DESCRIPTION''.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -4886,7 +4928,7 @@ with specific data structures:</p>
 <h4 id="turnovers"><a class="anchor" href="#turnovers"></a>Turnovers</h4>
 <div class="paragraph">
 <p>The group of criteria relating to turnovers is somehow special in the sense that it introduces a kind of
-''iterative structure'' that the criteria studied so far does not implement. As illustrated in the
+''iterative structure'' that the criteria studied so far do not implement. As illustrated in the
 figures and example below, this iterative structure for turnovers allows repeating a specific tuple
 <sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnote_19" title="View footnote.">19</a>]</sup> of amount and year as many
 times as required in the specific call for tender (normally values for the past three years).</p>
@@ -5074,9 +5116,13 @@ The corresponding data-structure diagram would be this one. Notice that each tup
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -5091,7 +5137,7 @@ relating to the turnovers;</p>
 will have to be completed by the Economic Operator;</p>
 </li>
 <li>
-<p>The type of data expected in the ESPDResponse.xml file are ''YEAR'' and  ''AMOUNT''.
+<p>The types of data expected in the ESPDResponse.xml file are ''YEAR'' and  ''AMOUNT''.
 Beware of the following:</p>
 <div class="ulist">
 <ul>
@@ -5116,6 +5162,10 @@ cbc:AmountType attribute;</p>
 This will be improved in the future.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -5236,9 +5286,13 @@ lies in the tuple of values required, (Description, Ratio) instead of (Year, Amo
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -5253,7 +5307,7 @@ to the financial ratio criterion;</p>
 <p>Therefore <strong>data is expected in any case</strong>;</p>
 </li>
 <li>
-<p>The type of data expected in the ESPDResponse XML file are ''DESCRIPTION'' (a text) and  ''QUANTITY''. The element in the
+<p>The types of data expected in the ESPDResponse XML file are ''DESCRIPTION'' (a text) and ''QUANTITY''. The element in the
 response corresponding to this ''QUANTITY'' MUST be of type ''cbc:QuantityType''. This element, defined in the OASIS  UBL-2.1 specification,
 provides an attribute named	''unitCode''. In the case of the Ratio Criterion a value for this attribute MAY NOT be provided;</p>
 </li>
@@ -5261,6 +5315,10 @@ provides an attribute named	''unitCode''. In the case of the Ratio Criterion a v
 <p>The XML maps the structures illustrated in the figures above related to the selection financial ratio criterion.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -5353,9 +5411,13 @@ provides an attribute named	''unitCode''. In the case of the Ratio Criterion a v
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -5371,6 +5433,10 @@ all the responses with amounts MUST always specify the currency;</p>
 <p>The XML maps the above data-structure diagram.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -5441,18 +5507,26 @@ In this case a simple description is requested, plus additional information if a
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
 <p>The expected data type is ''QUANTITY_YEAR''. i.e. a year is expected expressed as a quantity, as in 2014. As for turnovers,
 where each turnover year was required, remember that the element used in the response MUST be ''cbc:QuantityType''. This element, taken
-from the OASIS UBL-2.1 specification provide an attribute named ''unitCode''. In the ESPD Response, the responses of type QUANTITY_YEAR <strong>MUST</strong>
+from the OASIS UBL-2.1 specification provides an attribute named ''unitCode''. In the ESPD Response, the responses of type QUANTITY_YEAR <strong>MUST</strong>
 specify the value ''YEAR'' for the attribute ''cbc:unitCode'' of cbc:QuantityType.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -5594,9 +5668,13 @@ Universidad Politecnica de Madrid the university in Spain which carries for year
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -5610,6 +5688,10 @@ Universidad Politecnica de Madrid the university in Spain which carries for year
 required by the contracting authority is organised in two groups of requirements.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -5865,9 +5947,13 @@ repetitive structure asks for a description, an amount, a date and the related r
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -5886,6 +5972,10 @@ repetitive structure asks for a description, an amount, a date and the related r
 <p>The expected <strong>date format is YYYY-MM-DD</strong>.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -5938,9 +6028,13 @@ repetitive structure asks for a description, an amount, a date and the related r
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -5951,6 +6045,10 @@ repetitive structure asks for a description, an amount, a date and the related r
 simple structure, see  the ''suitability enrolment'' group of criteria, for example).</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -6091,9 +6189,13 @@ of a long table plenty of details. The corresponding data-structure diagram woul
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -6111,6 +6213,10 @@ releases of the ESPD Service;</p>
 <p>Notice that the <em>unitCode</em> value for the expected <em>QUANTITY_INTEGER</em> Response data type is <em>NUMBER</em></p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -6213,23 +6319,27 @@ and ''For supply contracts: samples, descriptions or photographs <strong>without
 </tr>
 </table>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
 <p>The EO only has to answer ''yes'' or ''no'' and provide available online evidences. In this case the EO does not provide any evidence
 but states that it will produce any requested artefact.</p>
-</li>
-</ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
 <h4 id="certificates"><a class="anchor" href="#certificates"></a>Certificates</h4>
 <div class="paragraph">
 <p>The criteria under the category ''Certificates'' use two groups of data structure. However the categorisation of the
-certificates (in the Criteria Taxonomy) has been split in three different categories of the certificates:</p>
+certificates (in the Criteria Taxonomy) has been split in three different certificate categories:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -6455,15 +6565,17 @@ that this structure is possibly on of the most frequent in the ESPD Service as i
 </div>
 <div class="title">Figure 49. Data-structure representation for the criteria of type CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.*</div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The data-structure is identical to the certificate about quality assurance independent, above.</p>
-</li>
-</ul>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The data-structure is identical to the certificate about quality assurance independent above.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>The fragment of XML below shows the implementation of this criterion in the ESPD Service:</p>
@@ -6608,10 +6720,12 @@ They are mostly presented as plain lists of data that the EO has to provide in c
 </div>
 <div class="paragraph">
 <p>This XML piece, as for all the previous XML examples, was
-generated by the <a href="https://webgate.acceptance.ec.europa.eu/espd/filter?lang=en">ESPD Service</a>.</p>
+generated by the <a href="https://webgate.ec.europa.eu/espd/filter?lang=en">ESPD Service</a>.</p>
+</div>
+<div class="paragraph">
+<p>An XML example for the criterion <code>&#8230;&#8203; Is the economic operator a sheltered workshop &#8230;&#8203;</code> from the group <code>CRITERION.OTHER.EO_DATA.*</code> is given below.</p>
 </div>
 <div class="listingblock">
-<div class="title">XML example for the criterion ''&#8230;&#8203; Is the economic operator a sheltered workshop &#8230;&#8203;'' from the group CRITERION.OTHER.EO_DATA.*</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>2043338f-a38a-490b-b3ec-2607cb25a017<span class="tag">&lt;/cbc:ID&gt;</span>
@@ -6644,22 +6758,37 @@ generated by the <a href="https://webgate.acceptance.ec.europa.eu/espd/filter?la
                 <span class="tag">&lt;/ccv:Requirement&gt;</span>
             <span class="tag">&lt;/ccv:RequirementGroup&gt;</span>
         <span class="tag">&lt;/ccv:RequirementGroup&gt;</span>
-    <span class="tag">&lt;/ccv:Criterion&gt;</span>
- ----
-
-*NOTICE* that:
-
-         * There is only one group
-         * The INDICATOR is not a decision point, but is treated as one datum
-
-
-
-
-
-== Foot notes</code></pre>
+<span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>There is only one group;</p>
+</li>
+<li>
+<p>The INDICATOR is not a decision point, but is treated as one datum</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="foot-notes"><a class="anchor" href="#foot-notes"></a>Foot notes</h2>
+<div class="sectionbody">
+
 </div>
 </div>
 </div>
@@ -6725,7 +6854,7 @@ generated by the <a href="https://webgate.acceptance.ec.europa.eu/espd/filter?la
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-08 15:44:32 CEST
+Last updated 2016-07-19 15:22:10 CEST
 </div>
 </div>
 </body>

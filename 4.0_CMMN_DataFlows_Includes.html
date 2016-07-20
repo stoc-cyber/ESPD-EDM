@@ -606,7 +606,7 @@ is set to 'No' (set to false). See examples amongst the Selection criteria.</p>
 <div class="title">Figure 2. Legend</div>
 </div>
 <div class="paragraph text-left">
-<p>The interpretation of this diagram could be as as follows:</p>
+<p>The interpretation of this diagram could be as follows:</p>
 </div>
 <div class="ulist text-left">
 <ul>
@@ -691,14 +691,21 @@ within each category (leaves in text without boxes):</p>
 flow diagrams like the one in the figure above (see Figure 21. ''General data-structure design rule for criteria and requirements with a <em>yes</em> or <em>no</em> answer'').
 Thus the data structures below represent how the data is organised for each exclusion criterion used in the ESPD.</p>
 </div>
-<div class="paragraph text-left">
-<p>Notice that exclusion criteria have been drafted ''from a negative perspective''. Thus a criterion like <code>Payment of Taxes</code>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The exclusion criteria have been drafted ''from a negative perspective''. Thus a criterion like <code>Payment of Taxes</code>
 is drafted like follows:</p>
 </div>
 <div class="paragraph">
 <p><em>Has the economic operator breached its obligations relating to the payment of taxes, both in the
 country in which it is established and in Member State of the contracting authority or contracting
-entity if other than the country of establishment?.</em></p>
+entity if other than the country of establishment?</em></p>
 </div>
 <div class="paragraph">
 <p>If the Economic Operator answers ''no'' then it has nothing to justify or motivate. On the
@@ -707,6 +714,10 @@ that the criterion is satisfied.</p>
 </div>
 <div class="paragraph">
 <p>The ESPD Service applies this approach as much as possible.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2 text-left">
@@ -724,7 +735,7 @@ Economic Operator may have been convicted <sup class="footnote">[<a id="_footnot
 </div>
 <div class="paragraph">
 <p>In an ESPD Service conformant XML document all these criteria share the same structure. The Figure 21 above provides a simple view of how the data of a <code>Conviction</code> exclusion criterion
-is organised. This other figure represents practically the same idea, but from a ''data-structing'' perspective:</p>
+is organised. This other figure represents practically the same idea, but from a ''data-structuring'' perspective:</p>
 </div>
 <div id="exclusion_convictions_data_structure" class="imageblock text-center">
 <div class="content">
@@ -786,7 +797,7 @@ is organised. This other figure represents practically the same idea, but from a
                     <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>5f9f09f7-f701-432c-9fdc-c22c124a74c9<span class="tag">&lt;/cbc:ID&gt;</span>
                     <span class="tag">&lt;ccv:Requirement</span> <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">INDICATOR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
                         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionRelatedIDs</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>20c5361b-7599-4ee6-b030-7f8323174d1e<span class="tag">&lt;/cbc:ID&gt;</span>
-                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability (<span class="entity">&amp;quot;</span>Self-Cleaning<span class="entity">&amp;quot;</span>)?<span class="tag">&lt;/cbc:Description&gt;</span>
+                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability 'Self-Cleaning'?<span class="tag">&lt;/cbc:Description&gt;</span>
                         <span class="tag">&lt;ccv:Response&gt;</span>
                             <span class="tag">&lt;ccv-cbc:Indicator&gt;</span>true<span class="tag">&lt;/ccv-cbc:Indicator&gt;</span>
                         <span class="tag">&lt;/ccv:Response&gt;</span>
@@ -925,11 +936,8 @@ the Response in case the Economic Operator answered ''yes'' to the first Require
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -939,7 +947,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure</p>
+<p>The XML structure maps the data-structure;</p>
 </li>
 </ul>
 </div>
@@ -1138,9 +1146,13 @@ Prepare to accommodate individuals with a physical disability before Church meet
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -1150,16 +1162,17 @@ Prepare to accommodate individuals with a physical disability before Church meet
 <p>The second group (available online information) is identical to the second group showed in the previous case (convictions); it requests references to evidences, a structure that repeats in practically all the ESPD criteria;</p>
 </li>
 <li>
-<p>The first group of requirements contain ''sub-groups'' of requirements.
-This is consistent with the model and the XSD Schema. Each sub-group starts with another
+<p>The first group of requirements contains ''sub-groups'' of requirements. This is consistent with the model and the XSD Schema. Each sub-group starts with another
 ''decision point''. As for the Criterion question, a ''yes'' answer in a sub-group indicates
-that a sub-group of data will have to be provided by the EO.
-It is important to always respect this approach in order to keep the conformance with the ESPD Service.
-Bear in mind that at validation time  the data provided by the Economic Operator in the
-ESPDResponse.xml instance will be checked against the required responseDataType attribute
+that a sub-group of data will have to be provided by the EO.  It is important to always respect this approach in order to keep the conformance with the ESPD Service.
+Bear in mind that at validation time  the data provided by the Economic Operator in the  ESPDResponse.xml instance will be checked against the required responseDataType attribute
 specified in each requirement of the ESPDRequest.xml.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2 text-left">
@@ -1189,9 +1202,13 @@ and ''breaching of obligations in the fields of labour law''.</p>
 </div>
 <div class="title">Figure 6. Data-structure representation for social-related criteria (EXCLUSION.SOCIAL.*)</div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -1201,6 +1218,10 @@ and ''breaching of obligations in the fields of labour law''.</p>
 <p>Contrary to the criteria so far studied this one does not include the group of requirements requesting evidences (see also [DOC-REF-1]).</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph text-left">
 <p>The piece of XML below is a fragment of an ESPD Request XML document.
@@ -1244,7 +1265,7 @@ This fragment shows the implementation of the Criterion
                     <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>5f9f09f7-f701-432c-9fdc-c22c124a74c9<span class="tag">&lt;/cbc:ID&gt;</span>
                     <span class="tag">&lt;ccv:Requirement</span> <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">INDICATOR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
                         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionRelatedIDs</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>20c5361b-7599-4ee6-b030-7f8323174d1e<span class="tag">&lt;/cbc:ID&gt;</span>
-                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability (<span class="entity">&amp;quot;</span>Self-Cleaning<span class="entity">&amp;quot;</span>)?<span class="tag">&lt;/cbc:Description&gt;</span>
+                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability 'Self-Cleaning'?<span class="tag">&lt;/cbc:Description&gt;</span>
                         <span class="tag">&lt;ccv:Response&gt;</span>
                             <span class="tag">&lt;ccv-cbc:Indicator&gt;</span>true<span class="tag">&lt;/ccv-cbc:Indicator&gt;</span>
                         <span class="tag">&lt;/ccv:Response&gt;</span>
@@ -1281,11 +1302,8 @@ This fragment shows the implementation of the Criterion
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -1295,7 +1313,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure
+<p>The XML structure maps the data-structure;
 ;</p>
 </li>
 <li>
@@ -1417,11 +1435,8 @@ Prepare to accommodate individuals with a physical disability before Church meet
     <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -1431,7 +1446,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure
+<p>The XML structure maps the data-structure;
 ;</p>
 </li>
 <li>
@@ -1505,7 +1520,7 @@ Prepare to accommodate individuals with a physical disability before Church meet
                     <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>5f9f09f7-f701-432c-9fdc-c22c124a74c9<span class="tag">&lt;/cbc:ID&gt;</span>
                     <span class="tag">&lt;ccv:Requirement</span> <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">INDICATOR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
                         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionRelatedIDs</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>20c5361b-7599-4ee6-b030-7f8323174d1e<span class="tag">&lt;/cbc:ID&gt;</span>
-                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability (<span class="entity">&amp;quot;</span>Self-Cleaning<span class="entity">&amp;quot;</span>)?<span class="tag">&lt;/cbc:Description&gt;</span>
+                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability 'Self-Cleaning'?<span class="tag">&lt;/cbc:Description&gt;</span>
                         <span class="tag">&lt;ccv:Response&gt;</span>
                             <span class="tag">&lt;ccv-cbc:Indicator&gt;</span>true<span class="tag">&lt;/ccv-cbc:Indicator&gt;</span>
                         <span class="tag">&lt;/ccv:Response&gt;</span>
@@ -1526,11 +1541,8 @@ Prepare to accommodate individuals with a physical disability before Church meet
 <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -1540,7 +1552,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure
+<p>The XML structure maps the data-structure;
 ;</p>
 </li>
 <li>
@@ -1637,7 +1649,7 @@ Prepare to accommodate individuals with a physical disability before Church meet
                     <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>5f9f09f7-f701-432c-9fdc-c22c124a74c9<span class="tag">&lt;/cbc:ID&gt;</span>
                     <span class="tag">&lt;ccv:Requirement</span> <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">INDICATOR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
                         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionRelatedIDs</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>20c5361b-7599-4ee6-b030-7f8323174d1e<span class="tag">&lt;/cbc:ID&gt;</span>
-                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability (<span class="entity">&amp;quot;</span>Self-Cleaning<span class="entity">&amp;quot;</span>)?<span class="tag">&lt;/cbc:Description&gt;</span>
+                        <span class="tag">&lt;cbc:Description&gt;</span>Have you taken measures to demonstrate your reliability 'Self-Cleaning'?<span class="tag">&lt;/cbc:Description&gt;</span>
                         <span class="tag">&lt;ccv:Response&gt;</span>
                             <span class="tag">&lt;ccv-cbc:Indicator&gt;</span>true<span class="tag">&lt;/ccv-cbc:Indicator&gt;</span>
                         <span class="tag">&lt;/ccv:Response&gt;</span>
@@ -1658,11 +1670,8 @@ Prepare to accommodate individuals with a physical disability before Church meet
 <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -1672,7 +1681,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure
+<p>The XML structure maps the data-structure;
 ;</p>
 </li>
 <li>
@@ -1684,7 +1693,7 @@ related to this criterion;</p>
 <div class="sect3 text-left">
 <h4 id="procedure-preparation"><a class="anchor" href="#procedure-preparation"></a>Procedure preparation</h4>
 <div class="paragraph">
-<p>The data structure for the criterion ''Direct or indirect involvement in the
+<p>The data structures for the criterion ''Direct or indirect involvement in the
 preparation of this procurement procedure'' are the simplest ones:</p>
 </div>
 <div id="interest_preparation_data_structure" class="imageblock text-center">
@@ -1737,11 +1746,8 @@ Prepare to accommodate individuals with a physical disability before Church meet
 <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -1751,7 +1757,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure
+<p>The XML structure maps the data-structure;
 .</p>
 </li>
 </ul>
@@ -1801,11 +1807,8 @@ interest due to its participation in the procurement procedure'' (file Example1-
     <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -1815,7 +1818,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure
+<p>The XML structure maps the data-structure;
 .</p>
 </li>
 </ul>
@@ -1867,11 +1870,8 @@ required documents and obtained confidential information of this procedure'':</p
     <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -1881,7 +1881,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure
+<p>The XML structure maps the data-structure;
 .</p>
 </li>
 </ul>
@@ -1991,11 +1991,8 @@ Prepare to accommodate individuals with a physical disability before Church meet
     <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist NOTE">
+<ul class="NOTE">
 <li>
 <p>The XML structure and elements of the above example reproduce the fragment of text in
 the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex to the Regulation 2016/7</a>
@@ -2005,7 +2002,7 @@ related to this criterion;</p>
 <p>The general rules are respected;</p>
 </li>
 <li>
-<p>The XML structure maps the data-structure</p>
+<p>The XML structure maps the data-structure;</p>
 </li>
 </ul>
 </div>
@@ -2016,7 +2013,7 @@ related to this criterion;</p>
 <p>The range of criteria related to the selection of Economic Operators is larger and more
 heterogeneous than the one related to the exclusion criteria. The figure below is intended to
 identify and list all the categories (branches in text boxes) and criteria
-(leaves in text without boxes).footnote:</p>
+(leaves in text without boxes):</p>
 </div>
 <div id="selection_criteria_taxonomy" class="imageblock text-center">
 <div class="content">
@@ -2078,9 +2075,20 @@ This is clearly illustrated for the selection suitability criteria in the next s
 </div>
 <div class="title">Figure 15. Detailed data-structure representation for suitability (CRITERION.SELECTION.SUITABILITY.ENROLMENT.*)</div>
 </div>
-<div class="paragraph text-left">
-<p><strong>NOTICE</strong> that:
-	* For the requirement R 1.1, both answers ''Yes'' or ''No'' redirect the flow of the data to the next requirement. However, the application controlling this flow (e.g. the ESPD Service) will persist and use.<sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnote_6" title="View footnote.">6</a>]</sup> the answer before deciding skipping to the next requirement.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For the requirement R 1.1, both answers ''Yes'' or ''No'' redirect the flow of the data to the next requirement.
+However, the application controlling this flow (e.g. the ESPD Service) will persist and use.<sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnote_6" title="View footnote.">6</a>]</sup> the answer before deciding skipping to the next requirement.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>The fragment of XML below shows the implementation of the
@@ -2154,7 +2162,7 @@ This is clearly illustrated for the selection suitability criteria in the next s
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The EO is enroled in a professional register</td>
+<td>The EO is enrolled in a professional register</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
@@ -2162,9 +2170,13 @@ This is clearly illustrated for the selection suitability criteria in the next s
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -2174,6 +2186,10 @@ This is clearly illustrated for the selection suitability criteria in the next s
 <p>The XML structure maps the structure of the data-flow.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -2269,9 +2285,13 @@ Prepare to accommodate individuals with a physical disability before Church meet
     <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -2281,6 +2301,10 @@ Prepare to accommodate individuals with a physical disability before Church meet
 <p>The additional data to provide in case of an affirmative answer to the criterion is the second requirement ''Please describe them''; hence the expected response data type, ''DESCRIPTION''.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -2316,7 +2340,7 @@ with specific data structures:</p>
 <h4 id="turnovers"><a class="anchor" href="#turnovers"></a>Turnovers</h4>
 <div class="paragraph">
 <p>The group of criteria relating to turnovers is somehow special in the sense that it introduces a kind of
-''iterative structure'' that the criteria studied so far does not implement. As illustrated in the
+''iterative structure'' that the criteria studied so far do not implement. As illustrated in the
 figures and example below, this iterative structure for turnovers allows repeating a specific tuple
 <sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnote_7" title="View footnote.">7</a>]</sup> of amount and year as many
 times as required in the specific call for tender (normally values for the past three years).</p>
@@ -2504,9 +2528,13 @@ The corresponding data-structure diagram would be this one. Notice that each tup
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -2521,7 +2549,7 @@ relating to the turnovers;</p>
 will have to be completed by the Economic Operator;</p>
 </li>
 <li>
-<p>The type of data expected in the ESPDResponse.xml file are ''YEAR'' and  ''AMOUNT''.
+<p>The types of data expected in the ESPDResponse.xml file are ''YEAR'' and  ''AMOUNT''.
 Beware of the following:</p>
 <div class="ulist">
 <ul>
@@ -2546,6 +2574,10 @@ cbc:AmountType attribute;</p>
 This will be improved in the future.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -2666,9 +2698,13 @@ lies in the tuple of values required, (Description, Ratio) instead of (Year, Amo
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -2683,7 +2719,7 @@ to the financial ratio criterion;</p>
 <p>Therefore <strong>data is expected in any case</strong>;</p>
 </li>
 <li>
-<p>The type of data expected in the ESPDResponse XML file are ''DESCRIPTION'' (a text) and  ''QUANTITY''. The element in the
+<p>The types of data expected in the ESPDResponse XML file are ''DESCRIPTION'' (a text) and ''QUANTITY''. The element in the
 response corresponding to this ''QUANTITY'' MUST be of type ''cbc:QuantityType''. This element, defined in the OASIS  UBL-2.1 specification,
 provides an attribute named	''unitCode''. In the case of the Ratio Criterion a value for this attribute MAY NOT be provided;</p>
 </li>
@@ -2691,6 +2727,10 @@ provides an attribute named	''unitCode''. In the case of the Ratio Criterion a v
 <p>The XML maps the structures illustrated in the figures above related to the selection financial ratio criterion.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -2783,9 +2823,13 @@ provides an attribute named	''unitCode''. In the case of the Ratio Criterion a v
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -2801,6 +2845,10 @@ all the responses with amounts MUST always specify the currency;</p>
 <p>The XML maps the above data-structure diagram.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -2871,18 +2919,26 @@ In this case a simple description is requested, plus additional information if a
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
 <p>The expected data type is ''QUANTITY_YEAR''. i.e. a year is expected expressed as a quantity, as in 2014. As for turnovers,
 where each turnover year was required, remember that the element used in the response MUST be ''cbc:QuantityType''. This element, taken
-from the OASIS UBL-2.1 specification provide an attribute named ''unitCode''. In the ESPD Response, the responses of type QUANTITY_YEAR <strong>MUST</strong>
+from the OASIS UBL-2.1 specification provides an attribute named ''unitCode''. In the ESPD Response, the responses of type QUANTITY_YEAR <strong>MUST</strong>
 specify the value ''YEAR'' for the attribute ''cbc:unitCode'' of cbc:QuantityType.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -3024,9 +3080,13 @@ Universidad Politecnica de Madrid the university in Spain which carries for year
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -3040,6 +3100,10 @@ Universidad Politecnica de Madrid the university in Spain which carries for year
 required by the contracting authority is organised in two groups of requirements.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -3295,9 +3359,13 @@ repetitive structure asks for a description, an amount, a date and the related r
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -3316,6 +3384,10 @@ repetitive structure asks for a description, an amount, a date and the related r
 <p>The expected <strong>date format is YYYY-MM-DD</strong>.</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -3368,9 +3440,13 @@ repetitive structure asks for a description, an amount, a date and the related r
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -3381,6 +3457,10 @@ repetitive structure asks for a description, an amount, a date and the related r
 simple structure, see  the ''suitability enrolment'' group of criteria, for example).</p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -3521,9 +3601,13 @@ of a long table plenty of details. The corresponding data-structure diagram woul
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE that:</strong></p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -3541,6 +3625,10 @@ releases of the ESPD Service;</p>
 <p>Notice that the <em>unitCode</em> value for the expected <em>QUANTITY_INTEGER</em> Response data type is <em>NUMBER</em></p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -3643,23 +3731,27 @@ and ''For supply contracts: samples, descriptions or photographs <strong>without
 </tr>
 </table>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
 <p>The EO only has to answer ''yes'' or ''no'' and provide available online evidences. In this case the EO does not provide any evidence
 but states that it will produce any requested artefact.</p>
-</li>
-</ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3 text-left">
 <h4 id="certificates"><a class="anchor" href="#certificates"></a>Certificates</h4>
 <div class="paragraph">
 <p>The criteria under the category ''Certificates'' use two groups of data structure. However the categorisation of the
-certificates (in the Criteria Taxonomy) has been split in three different categories of the certificates:</p>
+certificates (in the Criteria Taxonomy) has been split in three different certificate categories:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3885,15 +3977,17 @@ that this structure is possibly on of the most frequent in the ESPD Service as i
 </div>
 <div class="title">Figure 29. Data-structure representation for the criteria of type CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.*</div>
 </div>
-<div class="paragraph">
-<p><strong>NOTICE</strong> that:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The data-structure is identical to the certificate about quality assurance independent, above.</p>
-</li>
-</ul>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The data-structure is identical to the certificate about quality assurance independent above.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>The fragment of XML below shows the implementation of this criterion in the ESPD Service:</p>
@@ -4038,10 +4132,12 @@ They are mostly presented as plain lists of data that the EO has to provide in c
 </div>
 <div class="paragraph">
 <p>This XML piece, as for all the previous XML examples, was
-generated by the <a href="https://webgate.acceptance.ec.europa.eu/espd/filter?lang=en">ESPD Service</a>.</p>
+generated by the <a href="https://webgate.ec.europa.eu/espd/filter?lang=en">ESPD Service</a>.</p>
+</div>
+<div class="paragraph">
+<p>An XML example for the criterion <code>&#8230;&#8203; Is the economic operator a sheltered workshop &#8230;&#8203;</code> from the group <code>CRITERION.OTHER.EO_DATA.*</code> is given below.</p>
 </div>
 <div class="listingblock">
-<div class="title">XML example for the criterion ''&#8230;&#8203; Is the economic operator a sheltered workshop &#8230;&#8203;'' from the group CRITERION.OTHER.EO_DATA.*</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>2043338f-a38a-490b-b3ec-2607cb25a017<span class="tag">&lt;/cbc:ID&gt;</span>
@@ -4074,14 +4170,29 @@ generated by the <a href="https://webgate.acceptance.ec.europa.eu/espd/filter?la
                 <span class="tag">&lt;/ccv:Requirement&gt;</span>
             <span class="tag">&lt;/ccv:RequirementGroup&gt;</span>
         <span class="tag">&lt;/ccv:RequirementGroup&gt;</span>
-    <span class="tag">&lt;/ccv:Criterion&gt;</span>
- ----
-
-*NOTICE* that:
-
-         * There is only one group
-         * The INDICATOR is not a decision point, but is treated as one datum</code></pre>
+<span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>There is only one group;</p>
+</li>
+<li>
+<p>The INDICATOR is not a decision point, but is treated as one datum</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -4113,7 +4224,7 @@ generated by the <a href="https://webgate.acceptance.ec.europa.eu/espd/filter?la
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-08 15:44:32 CEST
+Last updated 2016-07-19 15:22:10 CEST
 </div>
 </div>
 </body>
