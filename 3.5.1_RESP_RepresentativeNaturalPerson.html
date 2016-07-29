@@ -612,31 +612,26 @@ representative, as shown in this example:</p>
 <div class="title">XML example of the data related to Person required by the ESPD Service</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cac:PowerOfAttorney&gt;</span>
-        <span class="tag">&lt;cac:AgentParty&gt;</span>
-                <span class="tag">&lt;cac:Person&gt;</span>
-                        <span class="tag">&lt;cbc:FirstName&gt;</span>Bruce<span class="tag">&lt;/cbc:FirstName&gt;</span>
-                        <span class="tag">&lt;cbc:FamilyName&gt;</span>Wayne<span class="tag">&lt;/cbc:FamilyName&gt;</span>
-                        <span class="tag">&lt;cbc:BirthDate&gt;</span>1983-03-02<span class="tag">&lt;/cbc:BirthDate&gt;</span>
-                        <span class="tag">&lt;cbc:BirthplaceName&gt;</span>USA<span class="tag">&lt;/cbc:BirthplaceName&gt;</span>
-                        <span class="tag">&lt;cac:Contact&gt;</span>
-                                <span class="tag">&lt;cbc:Telephone&gt;</span>01 234 56 78<span class="tag">&lt;/cbc:Telephone&gt;</span>
-                                <span class="tag">&lt;cbc:ElectronicMail&gt;</span>
-                                        Bruce.wayne@enterprises.com
-                                <span class="tag">&lt;/cbc:ElectronicMail&gt;</span>
-                        <span class="tag">&lt;/cac:Contact&gt;</span>
-                        <span class="tag">&lt;cac:ResidenceAddress&gt;</span>
-                                <span class="tag">&lt;cbc:Postbox&gt;</span>1000<span class="tag">&lt;/cbc:Postbox&gt;</span>
-                                <span class="tag">&lt;cbc:StreetName&gt;</span>Rue Melsens 3<span class="tag">&lt;/cbc:StreetName&gt;</span>
-                                <span class="tag">&lt;cbc:CityName&gt;</span>Brussels<span class="tag">&lt;/cbc:CityName&gt;</span>
-                                <span class="tag">&lt;cac:Country&gt;</span>
-                                        <span class="tag">&lt;cbc:IdentificationCode</span>
-                                                <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO 3166-1</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-                                                BE
-                                        <span class="tag">&lt;/cbc:IdentificationCode&gt;</span>
-                                <span class="tag">&lt;/cac:Country&gt;</span>
-                        <span class="tag">&lt;/cac:ResidenceAddress&gt;</span>
-                <span class="tag">&lt;/cac:Person&gt;</span>
-        <span class="tag">&lt;/cac:AgentParty&gt;</span>
+  <span class="tag">&lt;cac:AgentParty&gt;</span>
+    <span class="tag">&lt;cac:Person&gt;</span>
+          <span class="tag">&lt;cbc:FirstName&gt;</span>Bruce<span class="tag">&lt;/cbc:FirstName&gt;</span>
+          <span class="tag">&lt;cbc:FamilyName&gt;</span>Wayne<span class="tag">&lt;/cbc:FamilyName&gt;</span>
+          <span class="tag">&lt;cbc:BirthDate&gt;</span>1983-03-02<span class="tag">&lt;/cbc:BirthDate&gt;</span>
+          <span class="tag">&lt;cbc:BirthplaceName&gt;</span>USA<span class="tag">&lt;/cbc:BirthplaceName&gt;</span>
+          <span class="tag">&lt;cac:Contact&gt;</span>
+            <span class="tag">&lt;cbc:Telephone&gt;</span>01 234 56 78<span class="tag">&lt;/cbc:Telephone&gt;</span>
+                <span class="tag">&lt;cbc:ElectronicMail&gt;</span>Bruce.wayne@enterprises.com<span class="tag">&lt;/cbc:ElectronicMail&gt;</span>
+          <span class="tag">&lt;/cac:Contact&gt;</span>
+          <span class="tag">&lt;cac:ResidenceAddress&gt;</span>
+            <span class="tag">&lt;cbc:Postbox&gt;</span>1000<span class="tag">&lt;/cbc:Postbox&gt;</span>
+                <span class="tag">&lt;cbc:StreetName&gt;</span>Rue Melsens 3<span class="tag">&lt;/cbc:StreetName&gt;</span>
+                <span class="tag">&lt;cbc:CityName&gt;</span>Brussels<span class="tag">&lt;/cbc:CityName&gt;</span>
+                <span class="tag">&lt;cac:Country&gt;</span>
+                  <span class="tag">&lt;cbc:IdentificationCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>BE<span class="tag">&lt;/cbc:IdentificationCode&gt;</span>
+                <span class="tag">&lt;/cac:Country&gt;</span>
+          <span class="tag">&lt;/cac:ResidenceAddress&gt;</span>
+        <span class="tag">&lt;/cac:Person&gt;</span>
+  <span class="tag">&lt;/cac:AgentParty&gt;</span>
 <span class="tag">&lt;/cac:PowerOfAttorney&gt;</span></code></pre>
 </div>
 </div>
@@ -645,7 +640,7 @@ representative, as shown in this example:</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-19 15:22:10 CEST
+Last updated 2016-07-29 14:44:38 CEST
 </div>
 </div>
 </body>

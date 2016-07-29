@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>Untitled</title>
+<title>Release Notes</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -509,115 +509,68 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .head .head{color:#f4f}
 </style>
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
-</div>
-<div id="content">
-<div class="paragraph">
-<p>The fragment of XML below shows the implementation of this criterion ''Professional risk indemnity insurance'' in the ESPD Service:</p>
-</div>
-<div class="listingblock">
-<div class="title">XML example of a risk indemnity insurance (CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.RISK_INDEMNITY_INSURANCE) criterion</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
-        <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>7604bd40-4462-4086-8763-a50da51a869c<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.RISK_INDEMNITY_INSURANCE<span class="tag">&lt;/cbc:TypeCode&gt;</span>
-        <span class="tag">&lt;cbc:Name&gt;</span>Professional risk indemnity insurance<span class="tag">&lt;/cbc:Name&gt;</span>
-        <span class="tag">&lt;cbc:Description&gt;</span>The insured amount in its professional risk indemnity insurance is the following:<span class="tag">&lt;/cbc:Description&gt;</span>
-        <span class="tag">&lt;ccv:LegislationReference&gt;</span>
-            <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
-            <span class="tag">&lt;cbc:Description&gt;</span>On public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
-            <span class="tag">&lt;ccv-cbc:Article&gt;</span>58(3)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
-            <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
-        <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
-        <span class="tag">&lt;ccv:RequirementGroup&gt;</span>
-            <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>42dc8062-974d-4201-91ba-7f2ea90338fd<span class="tag">&lt;/cbc:ID&gt;</span>
-            <span class="tag">&lt;ccv:Requirement</span> <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">AMOUNT</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-                <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionRelatedIDs</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>42db0eaa-d2dd-48cb-83ac-38d73cab9b50<span class="tag">&lt;/cbc:ID&gt;</span>
-                <span class="tag">&lt;cbc:Description&gt;</span>Amount<span class="tag">&lt;/cbc:Description&gt;</span>
-                <span class="tag">&lt;ccv:Response&gt;</span>
-                    <span class="tag">&lt;cbc:Amount</span> <span class="attribute-name">currencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EUR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>3000000000000000<span class="tag">&lt;/cbc:Amount&gt;</span><i class="conum" data-value="1"></i><b>(1)</b>
-                <span class="tag">&lt;/ccv:Response&gt;</span>
-            <span class="tag">&lt;/ccv:Requirement&gt;</span>
-        <span class="tag">&lt;/ccv:RequirementGroup&gt;</span>
-        <span class="tag">&lt;ccv:RequirementGroup&gt;</span><i class="conum" data-value="2"></i><b>(2)</b>
-            <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>9026e403-3eb6-4705-a9e9-e21a1efc867d<span class="tag">&lt;/cbc:ID&gt;</span>
-            <span class="tag">&lt;ccv:Requirement</span> <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">INDICATOR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-                <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionRelatedIDs</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>9dae5670-cb75-4c97-901b-96ddac5a633a<span class="tag">&lt;/cbc:ID&gt;</span>
-                <span class="tag">&lt;cbc:Description&gt;</span>Is this information available electronically?<span class="tag">&lt;/cbc:Description&gt;</span>
-                <span class="tag">&lt;ccv:Response&gt;</span>
-                    <span class="tag">&lt;ccv-cbc:Indicator&gt;</span>true<span class="tag">&lt;/ccv-cbc:Indicator&gt;</span>
-                <span class="tag">&lt;/ccv:Response&gt;</span>
-            <span class="tag">&lt;/ccv:Requirement&gt;</span>
-            <span class="tag">&lt;ccv:RequirementGroup</span> <span class="attribute-name">pi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">GROUP_FULFILLED.ON_TRUE</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-                <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0a166f0a-0c5f-42b0-81e9-0fc9fa598a48<span class="tag">&lt;/cbc:ID&gt;</span>
-                <span class="tag">&lt;ccv:Requirement</span> <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EVIDENCE_URL</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-                    <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionRelatedIDs</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>03bb1954-13ae-47d8-8ef8-b7fe0f22d700<span class="tag">&lt;/cbc:ID&gt;</span>
-                    <span class="tag">&lt;cbc:Description&gt;</span>URL<span class="tag">&lt;/cbc:Description&gt;</span>
-                    <span class="tag">&lt;ccv:Response&gt;</span>
-                        <span class="tag">&lt;cev:Evidence&gt;</span>
-                            <span class="tag">&lt;cev:EvidenceDocumentReference&gt;</span>
-<span class="tag">&lt;cbc:ID&gt;</span>cf195bb0-48ba-409f-9a90-77e0ef1a8f5c<span class="tag">&lt;/cbc:ID&gt;</span>
-<span class="tag">&lt;cac:Attachment&gt;</span>
-    <span class="tag">&lt;cac:ExternalReference&gt;</span>
-        <span class="tag">&lt;cbc:URI&gt;</span>https://www.lds.org/topics/disability/list/physical-disability?lang=eng<span class="tag">&lt;/cbc:URI&gt;</span>
-    <span class="tag">&lt;/cac:ExternalReference&gt;</span>
-<span class="tag">&lt;/cac:Attachment&gt;</span>
-                            <span class="tag">&lt;/cev:EvidenceDocumentReference&gt;</span>
-                        <span class="tag">&lt;/cev:Evidence&gt;</span>
-                    <span class="tag">&lt;/ccv:Response&gt;</span>
-                <span class="tag">&lt;/ccv:Requirement&gt;</span>
-                <span class="tag">&lt;ccv:Requirement</span> <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CODE</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-                    <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionRelatedIDs</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>e2d863a0-60cb-4e58-8c14-4c1595af48b7<span class="tag">&lt;/cbc:ID&gt;</span>
-                    <span class="tag">&lt;cbc:Description&gt;</span>Code<span class="tag">&lt;/cbc:Description&gt;</span>
-                    <span class="tag">&lt;ccv:Response&gt;</span>
-                        <span class="tag">&lt;ccv-cbc:Code&gt;</span>Professional risk indemnity insurance code<span class="tag">&lt;/ccv-cbc:Code&gt;</span>
-                    <span class="tag">&lt;/ccv:Response&gt;</span>
-                <span class="tag">&lt;/ccv:Requirement&gt;</span>
-            <span class="tag">&lt;/ccv:RequirementGroup&gt;</span>
-        <span class="tag">&lt;/ccv:RequirementGroup&gt;</span>
-    <span class="tag">&lt;/ccv:Criterion&gt;</span></code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The EO provides an amount</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>The EO does not provide an evidence</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Conversely to the criteria studied up to now, the general rules number 1 and 3 are treated differently: no question is asked,
-a direct request for data is issued instead. Therefore an amount is always expected in this case;</p>
-</li>
-<li>
-<p>The expected data type is ''AMOUNT''. In the case of the data type ''AMOUNT'', the element used in the response will have to be
-''cbc:AmountType''. Keep in mind that this element provides an attribute named ''currencyID'' and that, in the ESPDResponse XML document,
-all the responses with amounts MUST always specify the currency;</p>
-</li>
-<li>
-<p>The XML maps the above data-structure diagram.</p>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#release-notes">Release Notes</a>
+<ul class="sectlevel2">
+<li><a href="#v1-0-2-28th-of-july-2016">v1.0.2 (28th of July 2016)</a></li>
+<li><a href="#v1-0-1">v1.0.1</a></li>
+</ul>
 </li>
 </ul>
 </div>
-</td>
-</tr>
-</table>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="release-notes"><a class="anchor" href="#release-notes"></a>Release Notes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="v1-0-2-28th-of-july-2016"><a class="anchor" href="#v1-0-2-28th-of-july-2016"></a>v1.0.2 (28th of July 2016)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/ESPD/ESPD-EDM/issues/2">Change cardinality of requirements inside requirement groups</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="v1-0-1"><a class="anchor" href="#v1-0-1"></a>v1.0.1</h3>
+<div class="paragraph">
+<p>The <code>eu.europa.ec.grow.espd.exchange-model</code> Java library was deployed to Maven Central on the 19th of July 2016.</p>
+</div>
+<div class="paragraph">
+<p>The recommended way to get started using the <code>exchange-model</code> in your Java project is with a dependency management system.</p>
+</div>
+<div class="sect3">
+<h4 id="with-maven"><a class="anchor" href="#with-maven"></a>With Maven</h4>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
+  <span class="tag">&lt;groupId&gt;</span>eu.europa.ec.grow.espd<span class="tag">&lt;/groupId&gt;</span>
+  <span class="tag">&lt;artifactId&gt;</span>exchange-model<span class="tag">&lt;/artifactId&gt;</span>
+  <span class="tag">&lt;version&gt;</span>1.0.1<span class="tag">&lt;/version&gt;</span>
+<span class="tag">&lt;/dependency&gt;</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="with-gradle"><a class="anchor" href="#with-gradle"></a>With Gradle</h4>
+<div class="listingblock">
+<div class="title">build.gradle</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="groovy">dependencies {
+    compile(<span class="string"><span class="delimiter">&quot;</span><span class="content">eu.europa.ec.grow.espd:exchange-model:1.0.1</span><span class="delimiter">&quot;</span></span>)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="footer">

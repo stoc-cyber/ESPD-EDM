@@ -560,6 +560,12 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#3-strong-other-criteria-strong">3. <strong>OTHER CRITERIA</strong></a></li>
 </ul>
 </li>
+<li><a href="#release-notes">Release Notes</a>
+<ul class="sectlevel2">
+<li><a href="#v1-0-2-28th-of-july-2016">v1.0.2 (28th of July 2016)</a></li>
+<li><a href="#v1-0-1">v1.0.1</a></li>
+</ul>
+</li>
 <li><a href="#foot-notes">Foot notes</a></li>
 </ul>
 </div>
@@ -1129,7 +1135,7 @@ transaction:biitrns092:ver3.0
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the code defined by the CEN/BII Workshop-3 (<em>BiiCoreTrdm092 ESPD</em>). See <a href="./code_lists/PDF/CustomizationID.pdf">Code List</a>.</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the code defined by the CEN/BII Workshop-3 (<em>BiiCoreTrdm092 ESPD</em>). See <a href="./code_lists/pdf/CustomizationID.pdf">Code List</a>.</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:CopyIndicator</strong></p></td>
@@ -1498,10 +1504,10 @@ services or public works using a tendering procedure as described in the applica
  <span class="tag">&lt;cac:PostalAddress&gt;</span>
   <span class="tag">&lt;cac:Country&gt;</span>
    <span class="tag">&lt;cbc:IdentificationCode</span>
-   <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO</span><span class="delimiter">&quot;</span></span>
-   <span class="attribute-name">listName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO 3166-1</span><span class="delimiter">&quot;</span></span>
-   <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-   BE
+     <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span>
+     <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span>
+     <span class="attribute-name">listName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span>
+     <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>BE
    <span class="tag">&lt;/cbc:IdentificationCode&gt;</span>
   <span class="tag">&lt;/cac:Country&gt;</span>
  <span class="tag">&lt;/cac:PostalAddress&gt;</span>
@@ -1510,7 +1516,7 @@ services or public works using a tendering procedure as described in the applica
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> - (Although in the XSD Schema the cardinality is 0..n)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: The country of the contracting body MUST always be specified. Compulsory use of the
-code list <a href="./code_lists/PDF/CountryCodeIdentifier.pdf">CountryCodeIdentifier</a></code></p></td>
+code list <a href="./code_lists/pdf/CountryCodeIdentifier.pdf">CountryCodeIdentifier</a></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -1533,24 +1539,19 @@ Service follows:</p>
 <div class="listingblock">
 <div class="title">Elements re-used from <code>cac:Party</code> to identify the contracting body</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;cac:ContractingParty&gt;</span>
-      <span class="tag">&lt;cac:Party&gt;</span>
-         <span class="tag">&lt;cac:PartyName&gt;</span>
-            <span class="tag">&lt;cbc:Name&gt;</span>Executive Agency for Small and Medium-sized Enterprises (EASME)<span class="tag">&lt;/cbc:Name&gt;</span>
-         <span class="tag">&lt;/cac:PartyName&gt;</span>
-         <span class="tag">&lt;cac:PostalAddress&gt;</span>
-            <span class="tag">&lt;cac:Country&gt;</span>
-               <span class="tag">&lt;cbc:IdentificationCode</span>
-               <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO</span><span class="delimiter">&quot;</span></span>
-               <span class="attribute-name">listName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO 3166-1</span><span class="delimiter">&quot;</span></span>
-               <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-               BE
-               <span class="tag">&lt;/cbc:IdentificationCode&gt;</span>
-            <span class="tag">&lt;/cac:Country&gt;</span>
-         <span class="tag">&lt;/cac:PostalAddress&gt;</span>
-         <span class="tag">&lt;cac:Contact</span><span class="tag">/&gt;</span>
-      <span class="tag">&lt;/cac:Party&gt;</span>
-   <span class="tag">&lt;/cac:ContractingParty&gt;</span></code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cac:ContractingParty&gt;</span>
+  <span class="tag">&lt;cac:Party&gt;</span>
+    <span class="tag">&lt;cac:PartyName&gt;</span>
+      <span class="tag">&lt;cbc:Name&gt;</span>Executive Agency for Small and Medium-sized Enterprises (EASME)<span class="tag">&lt;/cbc:Name&gt;</span>
+    <span class="tag">&lt;/cac:PartyName&gt;</span>
+    <span class="tag">&lt;cac:PostalAddress&gt;</span>
+      <span class="tag">&lt;cac:Country&gt;</span>
+        <span class="tag">&lt;cbc:IdentificationCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>BE<span class="tag">&lt;/cbc:IdentificationCode&gt;</span>
+      <span class="tag">&lt;/cac:Country&gt;</span>
+    <span class="tag">&lt;/cac:PostalAddress&gt;</span>
+    <span class="tag">&lt;cac:Contact</span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;/cac:Party&gt;</span>
+<span class="tag">&lt;/cac:ContractingParty&gt;</span></code></pre>
 </div>
 </div>
 </div>
@@ -1635,7 +1636,7 @@ EconomicOperatorRoleCode<span class="error">&gt;</span></code></pre>
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1) - Currently not used in the ESPD Service</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the code list <a href="./code_lists/PDF/EPROC-TendererRole.pdf">TendererRole</a>.</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the code list <a href="./code_lists/pdf/TendererRole.pdf">TendererRole</a>.</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>espd-cbc:
@@ -1792,31 +1793,26 @@ representative, as shown in this example:</p>
 <div class="title">XML example of the data related to Person required by the ESPD Service</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cac:PowerOfAttorney&gt;</span>
-        <span class="tag">&lt;cac:AgentParty&gt;</span>
-                <span class="tag">&lt;cac:Person&gt;</span>
-                        <span class="tag">&lt;cbc:FirstName&gt;</span>Bruce<span class="tag">&lt;/cbc:FirstName&gt;</span>
-                        <span class="tag">&lt;cbc:FamilyName&gt;</span>Wayne<span class="tag">&lt;/cbc:FamilyName&gt;</span>
-                        <span class="tag">&lt;cbc:BirthDate&gt;</span>1983-03-02<span class="tag">&lt;/cbc:BirthDate&gt;</span>
-                        <span class="tag">&lt;cbc:BirthplaceName&gt;</span>USA<span class="tag">&lt;/cbc:BirthplaceName&gt;</span>
-                        <span class="tag">&lt;cac:Contact&gt;</span>
-                                <span class="tag">&lt;cbc:Telephone&gt;</span>01 234 56 78<span class="tag">&lt;/cbc:Telephone&gt;</span>
-                                <span class="tag">&lt;cbc:ElectronicMail&gt;</span>
-                                        Bruce.wayne@enterprises.com
-                                <span class="tag">&lt;/cbc:ElectronicMail&gt;</span>
-                        <span class="tag">&lt;/cac:Contact&gt;</span>
-                        <span class="tag">&lt;cac:ResidenceAddress&gt;</span>
-                                <span class="tag">&lt;cbc:Postbox&gt;</span>1000<span class="tag">&lt;/cbc:Postbox&gt;</span>
-                                <span class="tag">&lt;cbc:StreetName&gt;</span>Rue Melsens 3<span class="tag">&lt;/cbc:StreetName&gt;</span>
-                                <span class="tag">&lt;cbc:CityName&gt;</span>Brussels<span class="tag">&lt;/cbc:CityName&gt;</span>
-                                <span class="tag">&lt;cac:Country&gt;</span>
-                                        <span class="tag">&lt;cbc:IdentificationCode</span>
-                                                <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO 3166-1</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-                                                BE
-                                        <span class="tag">&lt;/cbc:IdentificationCode&gt;</span>
-                                <span class="tag">&lt;/cac:Country&gt;</span>
-                        <span class="tag">&lt;/cac:ResidenceAddress&gt;</span>
-                <span class="tag">&lt;/cac:Person&gt;</span>
-        <span class="tag">&lt;/cac:AgentParty&gt;</span>
+  <span class="tag">&lt;cac:AgentParty&gt;</span>
+    <span class="tag">&lt;cac:Person&gt;</span>
+          <span class="tag">&lt;cbc:FirstName&gt;</span>Bruce<span class="tag">&lt;/cbc:FirstName&gt;</span>
+          <span class="tag">&lt;cbc:FamilyName&gt;</span>Wayne<span class="tag">&lt;/cbc:FamilyName&gt;</span>
+          <span class="tag">&lt;cbc:BirthDate&gt;</span>1983-03-02<span class="tag">&lt;/cbc:BirthDate&gt;</span>
+          <span class="tag">&lt;cbc:BirthplaceName&gt;</span>USA<span class="tag">&lt;/cbc:BirthplaceName&gt;</span>
+          <span class="tag">&lt;cac:Contact&gt;</span>
+            <span class="tag">&lt;cbc:Telephone&gt;</span>01 234 56 78<span class="tag">&lt;/cbc:Telephone&gt;</span>
+                <span class="tag">&lt;cbc:ElectronicMail&gt;</span>Bruce.wayne@enterprises.com<span class="tag">&lt;/cbc:ElectronicMail&gt;</span>
+          <span class="tag">&lt;/cac:Contact&gt;</span>
+          <span class="tag">&lt;cac:ResidenceAddress&gt;</span>
+            <span class="tag">&lt;cbc:Postbox&gt;</span>1000<span class="tag">&lt;/cbc:Postbox&gt;</span>
+                <span class="tag">&lt;cbc:StreetName&gt;</span>Rue Melsens 3<span class="tag">&lt;/cbc:StreetName&gt;</span>
+                <span class="tag">&lt;cbc:CityName&gt;</span>Brussels<span class="tag">&lt;/cbc:CityName&gt;</span>
+                <span class="tag">&lt;cac:Country&gt;</span>
+                  <span class="tag">&lt;cbc:IdentificationCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>BE<span class="tag">&lt;/cbc:IdentificationCode&gt;</span>
+                <span class="tag">&lt;/cac:Country&gt;</span>
+          <span class="tag">&lt;/cac:ResidenceAddress&gt;</span>
+        <span class="tag">&lt;/cac:Person&gt;</span>
+  <span class="tag">&lt;/cac:AgentParty&gt;</span>
 <span class="tag">&lt;/cac:PowerOfAttorney&gt;</span></code></pre>
 </div>
 </div>
@@ -1906,20 +1902,15 @@ EO in case of conflicting EOs names)</code></p></td>
 <td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cac:PostalAddress&gt;</span>
- <span class="tag">&lt;cac:Country&gt;</span>
-   <span class="tag">&lt;cbc:IdentificationCode</span>
-   <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO</span><span class="delimiter">&quot;</span></span>
-   <span class="attribute-name">listName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO 3166-1</span><span class="delimiter">&quot;</span></span>
-   <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-   BE
-   <span class="tag">&lt;/cbc:IdentificationCode&gt;</span>
- <span class="tag">&lt;/cac:Country&gt;</span>
+  <span class="tag">&lt;cac:Country&gt;</span>
+    <span class="tag">&lt;cbc:IdentificationCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>BE<span class="tag">&lt;/cbc:IdentificationCode&gt;</span>
+  <span class="tag">&lt;/cac:Country&gt;</span>
 <span class="tag">&lt;/cac:PostalAddress&gt;</span></code></pre>
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> - (Although in the XSD Schema the cardinality is 0..1)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">`<strong>Rule</strong>: The country code MUST always be specified. Compulsory use of the
-code list <a href="./code_lists/PDF/CountryCodeIdentifier.pdf">CountryCodeIdentifier</a></p></td>
+code list <a href="./code_lists/pdf/CountryCodeIdentifier.pdf">CountryCodeIdentifier</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:Contact</strong></p></td>
@@ -1927,15 +1918,9 @@ code list <a href="./code_lists/PDF/CountryCodeIdentifier.pdf">CountryCodeIdenti
 <td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cac:Contact&gt;</span>
-  <span class="tag">&lt;cbc:Name&gt;</span>
-  Bruce Wayne
-  <span class="tag">&lt;/cbc:Name&gt;</span>
-  <span class="tag">&lt;cbc:Telephone&gt;</span>
-  01 234 56 78
-  <span class="tag">&lt;/cbc:Telephone&gt;</span>
-  <span class="tag">&lt;cbc:ElectronicMail&gt;</span>
-  wayne@enterprises.com
-  <span class="tag">&lt;/cbc:ElectronicMail&gt;</span>
+  <span class="tag">&lt;cbc:Name&gt;</span>Bruce Wayne<span class="tag">&lt;/cbc:Name&gt;</span>
+  <span class="tag">&lt;cbc:Telephone&gt;</span>01 234 56 78<span class="tag">&lt;/cbc:Telephone&gt;</span>
+  <span class="tag">&lt;cbc:ElectronicMail&gt;</span>wayne@enterprises.com<span class="tag">&lt;/cbc:ElectronicMail&gt;</span>
 <span class="tag">&lt;/cac:Contact&gt;</span></code></pre>
 </div>
 </div></div></td>
@@ -1962,28 +1947,25 @@ code list <a href="./code_lists/PDF/CountryCodeIdentifier.pdf">CountryCodeIdenti
   <span class="tag">&lt;espd-cbc:SMEIndicator&gt;</span>false<span class="tag">&lt;/espd-cbc:SMEIndicator&gt;</span>
   <span class="tag">&lt;espd-cac:RepresentativeNaturalPerson</span><span class="tag">/&gt;</span>
   <span class="tag">&lt;cac:Party&gt;</span>
-     <span class="tag">&lt;cac:PartyIdentification&gt;</span>
-        <span class="tag">&lt;cbc:ID&gt;</span>B20779081<span class="tag">&lt;/cbc:ID&gt;</span>
-     <span class="tag">&lt;/cac:PartyIdentification&gt;</span>
-     <span class="tag">&lt;cac:PartyName&gt;</span>
-        <span class="tag">&lt;cbc:Name&gt;</span>Wayne Enterprises<span class="tag">&lt;/cbc:Name&gt;</span>
-     <span class="tag">&lt;/cac:PartyName&gt;</span>
-     <span class="tag">&lt;cac:PostalAddress&gt;</span>
-        <span class="tag">&lt;cbc:Postbox&gt;</span>1000<span class="tag">&lt;/cbc:Postbox&gt;</span>
-        <span class="tag">&lt;cbc:StreetName&gt;</span>Rue Melsens 3<span class="tag">&lt;/cbc:StreetName&gt;</span>
-        <span class="tag">&lt;cbc:CityName&gt;</span>Brussels<span class="tag">&lt;/cbc:CityName&gt;</span>
-        <span class="tag">&lt;cac:Country&gt;</span>
-           <span class="tag">&lt;cbc:IdentificationCode</span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO 3166-1</span><span class="delimiter">&quot;</span></span>
-           <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-           BE
-           <span class="tag">&lt;/cbc:IdentificationCode&gt;</span>
-        <span class="tag">&lt;/cac:Country&gt;</span>
-     <span class="tag">&lt;/cac:PostalAddress&gt;</span>
-     <span class="tag">&lt;cac:Contact&gt;</span>
-        <span class="tag">&lt;cbc:Name&gt;</span>Bruce Wayne<span class="tag">&lt;/cbc:Name&gt;</span>
-        <span class="tag">&lt;cbc:Telephone&gt;</span>01 234 56 78<span class="tag">&lt;/cbc:Telephone&gt;</span>
-        <span class="tag">&lt;cbc:ElectronicMail&gt;</span>wayne@enterprises.com<span class="tag">&lt;/cbc:ElectronicMail&gt;</span>
-     <span class="tag">&lt;/cac:Contact&gt;</span>
+    <span class="tag">&lt;cac:PartyIdentification&gt;</span>
+      <span class="tag">&lt;cbc:ID&gt;</span>B20779081<span class="tag">&lt;/cbc:ID&gt;</span>
+    <span class="tag">&lt;/cac:PartyIdentification&gt;</span>
+    <span class="tag">&lt;cac:PartyName&gt;</span>
+      <span class="tag">&lt;cbc:Name&gt;</span>Wayne Enterprises<span class="tag">&lt;/cbc:Name&gt;</span>
+    <span class="tag">&lt;/cac:PartyName&gt;</span>
+    <span class="tag">&lt;cac:PostalAddress&gt;</span>
+      <span class="tag">&lt;cbc:Postbox&gt;</span>1000<span class="tag">&lt;/cbc:Postbox&gt;</span>
+      <span class="tag">&lt;cbc:StreetName&gt;</span>Rue Melsens 3<span class="tag">&lt;/cbc:StreetName&gt;</span>
+      <span class="tag">&lt;cbc:CityName&gt;</span>Brussels<span class="tag">&lt;/cbc:CityName&gt;</span>
+      <span class="tag">&lt;cac:Country&gt;</span>
+        <span class="tag">&lt;cbc:IdentificationCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>BE<span class="tag">&lt;/cbc:IdentificationCode&gt;</span>
+      <span class="tag">&lt;/cac:Country&gt;</span>
+    <span class="tag">&lt;/cac:PostalAddress&gt;</span>
+    <span class="tag">&lt;cac:Contact&gt;</span>
+      <span class="tag">&lt;cbc:Name&gt;</span>Bruce Wayne<span class="tag">&lt;/cbc:Name&gt;</span>
+      <span class="tag">&lt;cbc:Telephone&gt;</span>01 234 56 78<span class="tag">&lt;/cbc:Telephone&gt;</span>
+      <span class="tag">&lt;cbc:ElectronicMail&gt;</span>wayne@enterprises.com<span class="tag">&lt;/cbc:ElectronicMail&gt;</span>
+    <span class="tag">&lt;/cac:Contact&gt;</span>
   <span class="tag">&lt;/cac:Party&gt;</span>
 <span class="tag">&lt;/espd-cac:EconomicOperatorParty&gt;</span></code></pre>
 </div>
@@ -2230,7 +2212,7 @@ well as allows to reference the criterion in other documents</p></td>
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> (1..1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the UUIDs from the table <a href="./code_lists/CriteriaTaxonomy.xlsx">Criteria</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the UUIDs from the table <a href="./code_lists/xls/CriteriaTaxonomy.xlsx">Criteria</a></code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ccv-cbc:
@@ -2256,14 +2238,14 @@ FulfillmentIndicatorType</strong></p></td>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cbc:TypeCode</span>
 <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span>
 <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span>
-<span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
 CRITERION.EXCLUSION.CONVICTIONS.
 PARTICIPATION_IN_CRIMINAL_ORGANISATION
 <span class="tag">&lt;/cbc:TypeCode&gt;</span></code></pre>
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> (1..1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the code list <a href="./code_lists/PDF/CriteriaTypeCode.pdf">CriteriaTypeCode</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the code list <a href="./code_lists/pdf/CriteriaTypeCode.pdf">CriteriaTypeCode</a></code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:Name</strong></p></td>
@@ -2277,7 +2259,7 @@ of trafficking in human beings
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> (1..1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: The names of the criteria can be obtained from the table <a href="./code_lists/CriteriaTaxonomy.xlsx">Criteria</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: The names of the criteria can be obtained from the table <a href="./code_lists/xls/CriteriaTaxonomy.xlsx">Criteria</a></code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:Description</strong></p></td>
@@ -2293,7 +2275,7 @@ management or supervisory body ...
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> (1..1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: The descriptions of the criteria can be obtained from the table <a href="./code_lists/CriteriaTaxonomy.xlsx">Criteria</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: The descriptions of the criteria can be obtained from the table <a href="./code_lists/xls/CriteriaTaxonomy.xlsx">Criteria</a></code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" colspan="5"><p class="tableblock"><strong>Associated classes</strong></p></td>
@@ -2314,7 +2296,7 @@ management or supervisory body ...
 requirements that are applied at the national or sub-national level; e.g. a
 very specific national professional misconduct criterion that is more specific
 than the ones defined in the
-<a href="./code_lists/CriteriaTaxonomy.xlsx">EU Exclusion Criteria</a></code></p></td>
+<a href="./code_lists/xls/CriteriaTaxonomy.xlsx">EU Exclusion Criteria</a></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -2399,18 +2381,16 @@ JurisdictionLevelCode</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Jurisdictional level of a particular Legislation</p></td>
 <td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv-cbc:</span>
-<span class="attribute-name">JurisdictionLevelCode</span>
-<span class="attribute-name">listID</span>=
-<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span>
-<span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span>
-<span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-EU_DIRECTIVE
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span>
+  <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span>
+  <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span>
+  <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  EU_DIRECTIVE
 <span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span></code></pre>
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> (0..1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the code list <a href="./code_lists/PDF/CriterionJurisdictionLevel.pdf">CriterionJurisdictionLevel</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the code list <a href="./code_lists/pdf/CriterionJurisdictionLevel.pdf">CriterionJurisdictionLevel</a></code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ccv-cbc:Article</strong></p></td>
@@ -2493,7 +2473,7 @@ this attribute to specify whether the elements within the group must be shown or
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> (1..1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the UUIDs from the table <a href="./code_lists/CriteriaTaxonomy.xlsx">Criteria</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the UUIDs from the table <a href="./code_lists/xls/CriteriaTaxonomy.xlsx">Criteria</a></code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:Name</strong></p></td>
@@ -2588,7 +2568,7 @@ complex decision structures and capture faithfully the data represented in highl
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type of response expected for this requirement; e.g. Indicator, Date, Description, etc.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">MANDATORY (1..1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the code list <a href="./code_lists/PDF/ResponseDataType.pdf">ResponseDataType</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the code list <a href="./code_lists/pdf/ResponseDataType.pdf">ResponseDataType</a></code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" colspan="5"><p class="tableblock">Properties</p></td>
@@ -2602,7 +2582,7 @@ complex decision structures and capture faithfully the data represented in highl
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">MANDATORY (1..1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the UUIDs from the table <a href="./code_lists/CriteriaTaxonomy.xlsx">Criteria</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the UUIDs from the table <a href="./code_lists/xls/CriteriaTaxonomy.xlsx">Criteria</a></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -2626,7 +2606,7 @@ the contracting body.</p>
 only one response data MUST be provided. And the data provided in the response MUST match the one specified in the attribute of the class ccv:Requirement.</p>
 </div>
 <div class="paragraph">
-<p>The economic operator MUST use the code list <a href="./code_lists/PDF/ResponseDataType.pdf">ResponseDataType</a> and make sure that the data provided is of the same type that the
+<p>The economic operator MUST use the code list <a href="./code_lists/pdf/ResponseDataType.pdf">ResponseDataType</a> and make sure that the data provided is of the same type that the
 one expected by the contracting authority (See the column ''Type of value expected by the
 current version of the ESPD Service'').</p>
 </div>
@@ -2718,7 +2698,7 @@ economic operators fulfills an specific criterion</p></td>
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: The currencyID attribute is MANDATORY (e.g. "EUR"). Compulsory use of the code list <a href="./code_lists/PDF/CountryCodeIdentifier.pdf">CountryCodeIdentifier</a>. BEWARE that amounts can use decimal separators (e.g. 14134,95 but not hundred or thousand separators)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: The currencyID attribute is MANDATORY (e.g. "EUR"). Compulsory use of the code list <a href="./code_lists/pdf/CountryCodeIdentifier.pdf">CountryCodeIdentifier</a>. BEWARE that amounts can use decimal separators (e.g. 14134,95 but not hundred or thousand separators)</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ccv-cbc:Code</strong></p></td>
@@ -2810,7 +2790,7 @@ expected data</p></td>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: BEWARE that different types of Quantities can be required, some of them with a special attribute. See the column "Type of value expected by the
-current version of the ESPD Service" of the code list <a href="./code_lists/PDF/ResponseDataType.pdf">ResponseDataType</a>. See also the note
+current version of the ESPD Service" of the code list <a href="./code_lists/pdf/ResponseDataType.pdf">ResponseDataType</a>. See also the note
 below about "Quantities"</code></p></td>
 </tr>
 <tr>
@@ -2884,7 +2864,7 @@ specified (e.g. number of workers); (2) QUANTITY_YEAR, a non-negative integer
 </div>
 <div class="paragraph">
 <p>Beware that in the case of QUANTITY_INTEGER and QUANTITY_YEAR the attribute <strong><em>unitCode</em></strong> MUST be always
-specified (See code list <a href="./code_lists/PDF/ResponseDataType.pdf">ResponseDataType</a>).</p>
+specified (See code list <a href="./code_lists/pdf/ResponseDataType.pdf">ResponseDataType</a>).</p>
 </div>
 <div id="About_Quantities" class="imageblock">
 <div class="content">
@@ -3257,7 +3237,7 @@ ESPDRespone XML documents MUST specify all the exclusion criteria defined in the
 <div class="paragraph text-left">
 <p>All ESPDResponse XML instances (and the ESPDRequest instances, too, for that matter) MUST always
 include all the exclusion criterion detailed in the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex of the Regulation 2016</a>
-and the <a href="./code_lists/CriteriaTaxonomy.xlsx">criteria data flow tables</a> defined by COM).</p>
+and the <a href="./code_lists/xls/CriteriaTaxonomy.xlsx">criteria data flow tables</a> defined by COM).</p>
 </div>
 </td>
 </tr>
@@ -3336,10 +3316,16 @@ is organised. This other figure represents practically the same idea, but from a
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>005eb9ed-1347-4ca3-bb29-9bc0db64e1ab<span class="tag">&lt;/cbc:ID&gt;</span><i class="conum" data-value="1"></i><b>(1)</b>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION<span class="tag">&lt;/cbc:TypeCode&gt;</span><i class="conum" data-value="2"></i><b>(2)</b>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION<span class="tag">&lt;/cbc:TypeCode&gt;</span><i class="conum" data-value="2"></i><b>(2)</b>
         <span class="tag">&lt;cbc:Name&gt;</span>Participation in a criminal organisation<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Has the economic operator itself or any person who is a member of its administrative, management or supervisory body or has powers of representation, decision or control therein been the subject of a conviction by final judgment for participation in a criminal organisation, by a conviction rendered at the most five years ago or in which an exclusion period set out directly in the conviction continues to be applicable? As defined in Article 2 of Council Framework Decision 2008/841/JHA of 24 October 2008 on the fight against organised crime (OJ L 300, 11.11.2008, p. 42).<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
+           <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
+           <span class="tag">&lt;cbc:Description&gt;</span>Directive 2014/24/EU<span class="tag">&lt;/cbc:Description&gt;</span>
+           <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+           <span class="tag">&lt;ccv-cbc:Article&gt;</span>57(1)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
+           <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
+        <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
         <span class="tag">&lt;ccv:RequirementGroup&gt;</span>
             <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>7c637c0c-7703-4389-ba52-02997a055bd7<span class="tag">&lt;/cbc:ID&gt;</span><i class="conum" data-value="3"></i><b>(3)</b>
             <span class="tag">&lt;ccv:Requirement</span> <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">INDICATOR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><i class="conum" data-value="5"></i><b>(5)</b>
@@ -3446,19 +3432,19 @@ is organised. This other figure represents practically the same idea, but from a
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>COM UUID in table <a href="./code_lists/CriteriaTaxonomy.xlsx">ESPD Criteria: Exclusion criteria</a></td>
+<td>COM UUID in table <a href="./code_lists/xls/CriteriaTaxonomy.xlsx">ESPD Criteria: Exclusion criteria</a></td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>COM code list <a href="./code_lists/PDF/CriteriaTypeCode.pdf">CriteriaTypeCode</a></td>
+<td>COM code list <a href="./code_lists/pdf/CriteriaTypeCode.pdf">CriteriaTypeCode</a></td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>COM UUID in table <a href="./code_lists/CriteriaTaxonomy.xlsx">ESPD Criteria: Exclusion criteria</a></td>
+<td>COM UUID in table <a href="./code_lists/xls/CriteriaTaxonomy.xlsx">ESPD Criteria: Exclusion criteria</a></td>
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
-<td>COM UUID in table <a href="./code_lists/CriteriaTaxonomy.xlsx">ESPD Criteria: Exclusion criteria</a></td>
+<td>COM UUID in table <a href="./code_lists/xls/CriteriaTaxonomy.xlsx">ESPD Criteria: Exclusion criteria</a></td>
 </tr>
 <tr>
 <td><i class="conum" data-value="5"></i><b>5</b></td>
@@ -3569,13 +3555,13 @@ related to this criterion;</p>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>b61bbeb7-690e-4a40-bc68-d6d4ecfaa3d4<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_TAXES<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_TAXES<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Payment of taxes<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Has the economic operator breached its obligations relating to the payment of taxes, both in the country in which it is established and in Member State of the contracting authority or contracting entity if other than the country of establishment?<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>Directive 2014/24/EU<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>57(2)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -3821,13 +3807,13 @@ This fragment shows the implementation of the Criterion
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>a80ddb62-d25b-4e4e-ae22-3968460dc0a9<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.SOCIAL.ENVIRONMENTAL_LAW<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.SOCIAL.ENVIRONMENTAL_LAW<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Breaching of obligations in the fields of environmental law<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Has the economic operator, to its knowledge, breached its obligations in the fields of environmental law? As referred to for the purposes of this procurement in national law, in the relevant notice or the procurement documents or in Article 18(2) of Directive 2014/24/EU.<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>Directive 2014/24/EU<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>57(4)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -3943,13 +3929,13 @@ This fragment shows the implementation of the Criterion ''Bankruptcy'':</p>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>d3732c09-7d62-4edc-a172-241da6636e7c<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.BUSINESS.BANKRUPTCY<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.BUSINESS.BANKRUPTCY<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Bankruptcy<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Is the economic operator bankrupt? This information needs not be given if exclusion of economic operators in this case has been made mandatory under the applicable national law without any possibility of derogation where the economic operator is nevertheless able to perform the contract.<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>Directive 2014/24/EU<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>57(4)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -4074,13 +4060,13 @@ This fragment shows the implementation of the Criterion ''Guilty of grave profes
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>514d3fde-1e3e-4dcd-b02a-9f984d5bbda3<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.MISCONDUCT.MC_PROFESSIONAL<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.MISCONDUCT.MC_PROFESSIONAL<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Guilty of grave professional misconduct<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Is the economic operator  guilty of grave professional misconduct? Where applicable, see definitions in national law, the relevant notice or the procurement documents.<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>Directive 2014/24/EU<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>57(4)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -4203,13 +4189,13 @@ This fragment shows the implementation of the criterion ''Early termination'':</
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>3293e92b-7f3e-42f1-bee6-a7641bb04251<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.EARLY_TERMINATION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.EARLY_TERMINATION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Early termination, damages or other comparable sanctions<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Has the economic operator experienced that a prior public contract, a prior contract with a contracting entity or a prior concession contract was terminated early, or that damages or other comparable sanctions were imposed in connection with that prior contract?<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>Directive 2014/24/EU<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>57(4)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -4299,13 +4285,13 @@ preparation of this procurement procedure'' are the simplest ones:</p>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>61874050-5130-4f1c-a174-720939c7b483<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.PROCEDURE_PREPARATION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.PROCEDURE_PREPARATION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Direct or indirect involvement in the preparation of this procurement procedure<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Has the economic operator or an undertaking related to it advised the contracting authority or contracting entity or otherwise been involved in the preparation of the procurement procedure?<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>Directive 2014/24/EU<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>57(4)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -4372,13 +4358,13 @@ interest due to its participation in the procurement procedure'' (file Example1-
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>b1b5ac18-f393-4280-9659-1367943c1a2e<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.PROCEDURE_PARTICIPATION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.PROCEDURE_PARTICIPATION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Conflict of interest due to its participation in the procurement procedure<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Is the economic operator aware of any conflict of interest, as indicated in national law, the relevant notice or the procurement documents due to its participation in the procurement procedure?<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>Directive 2014/24/EU<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>57(4)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -4435,13 +4421,13 @@ required documents and obtained confidential information of this procedure'':</p
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>696a75b2-6107-428f-8b74-82affb67e184<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.MISINTERPRETATION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.MISINTERPRETATION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Guilty of misinterpretation, withheld information, unable to provide required documents and obtained confidential information of this procedure<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Can the economic operator confirm the four exclusion grounds, that it has not been guilty of serious misrepresentation in supplying the information required for the verification of the absence of grounds for exclusion or the fulfilment of the selection criteria, that it has not withheld such information, it has been able, without delay, to submit the supporting documents required by a contracting authority or contracting entity, and it has not undertaken to unduly influence the decision making process of the contracting authority or contracting entity, to obtain confidential information that may confer upon it undue advantages in the procurement procedure or to negligently provide misleading information that may have a material influence on decisions concerning exclusion, selection or award?<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>Directive 2014/24/EU<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>57(4)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -4508,13 +4494,13 @@ which data structure is as simple as the one illustrated below:</p>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml">   <span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>63adb07d-db1b-4ef0-a14e-a99785cf8cf6<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.NATIONAL.OTHER<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.EXCLUSION.NATIONAL.OTHER<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Purely national exclusion grounds<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Other exclusion grounds that may be foreseen in the national legislation of the contracting authority’s or contracting entity’s Member State. Do the purely national grounds of exclusion, which are specified in the relevant notice or in the procurement documents, apply?<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>Directive 2014/24/EU<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>57(4)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -4625,7 +4611,7 @@ This is clearly illustrated for the selection suitability criteria in the next s
 <td class="content">
 <div class="paragraph">
 <p>Remember that the data structures corresponding to the data-flow diagrams shown in this section can be accessed online
-(click <a href="./code_lists/CriteriaTaxonomy.xlsx">here</a>).</p>
+(click <a href="./code_lists/xls/CriteriaTaxonomy.xlsx">here</a>).</p>
 </div>
 </td>
 </tr>
@@ -4687,13 +4673,13 @@ However, the application controlling this flow (e.g. the ESPD Service) will pers
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>6ee55a59-6adb-4c3a-b89f-e62a7ad7be7f<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.SUITABILITY.PROFESSIONAL_REGISTER_ENROLMENT<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.SUITABILITY.PROFESSIONAL_REGISTER_ENROLMENT<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Enrolment in a relevant professional register<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>It is enrolled in relevant professional registers kept in the Member State of its establishment as described in Annex XI of Directive 2014/24/EU; economic operators from certain Member States may have to comply with other requirements set out in that Annex.<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>Directive 2014/24/EU<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>58(2)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -4784,7 +4770,7 @@ However, the application controlling this flow (e.g. the ESPD Service) will pers
 <h4 id="authorisation-or-membership"><a class="anchor" href="#authorisation-or-membership"></a>Authorisation or membership</h4>
 <div class="paragraph">
 <p>The only difference between this group of suitability criteria and the enrolment one, above,
-is that it adds a requirement asking for a description. See the <a href="./code_lists/CriteriaTaxonomy.xlsx">Selection Criteria Table</a>,
+is that it adds a requirement asking for a description. See the <a href="./code_lists/xls/CriteriaTaxonomy.xlsx">Selection Criteria Table</a>,
 data-structure and example below).</p>
 </div>
 <div id="selection_suitability_authorisation_data_structure" class="imageblock text-center">
@@ -4802,13 +4788,13 @@ data-structure and example below).</p>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>9eeb6d5c-0eb8-48e8-a4c5-5087a7c095a4<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.SUITABILITY.AUTHORISATION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.SUITABILITY.AUTHORISATION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>For service contracts: authorisation of particular organisation needed<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Is a particular membership of a particular organisation needed in order to be able to perform the service in question in the country of establishment of the economic operator?<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>Directive 2014/24/EU<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>58(2)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -4952,13 +4938,13 @@ The corresponding data-structure diagram would be this one. Notice that each tup
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;ccv:Criterion&gt;</span>
       <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>499efc97-2ac1-4af2-9e84-323c2ca67747<span class="tag">&lt;/cbc:ID&gt;</span>
-      <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>SELECTION.ECONOMIC_FINANCIAL_STANDING<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+      <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>SELECTION.ECONOMIC_FINANCIAL_STANDING<span class="tag">&lt;/cbc:TypeCode&gt;</span>
       <span class="tag">&lt;cbc:Name&gt;</span>General yearly turnover<span class="tag">&lt;/cbc:Name&gt;</span>
       <span class="tag">&lt;cbc:Description&gt;</span>Its general yearly turnover for the number of financial years required in the relevant notice, the procurement documents or the ESPD is as follows:<span class="tag">&lt;/cbc:Description&gt;</span>
       <span class="tag">&lt;ccv:LegislationReference&gt;</span>
          <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
          <span class="tag">&lt;cbc:Description&gt;</span>On public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/cbc:Description&gt;</span>
-         <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+         <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
          <span class="tag">&lt;ccv-cbc:Article&gt;</span>58(3)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
          <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
       <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -5196,13 +5182,13 @@ lies in the tuple of values required, (Description, Ratio) instead of (Year, Amo
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>e4d37adc-08cd-4f4d-a8d8-32b62b0a1f46<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.FINANCIAL_RATIO<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.FINANCIAL_RATIO<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Financial ratio<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Concerning the financial ratios  specified in the relevant notice, the procurement documents or the ESPD, the economic operator declares that the actual values for the required ratios are as follows:<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>On public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>58(3)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -5340,13 +5326,13 @@ provides an attribute named	''unitCode''. In the case of the Ratio Criterion a v
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>7604bd40-4462-4086-8763-a50da51a869c<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.RISK_INDEMNITY_INSURANCE<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.RISK_INDEMNITY_INSURANCE<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Professional risk indemnity insurance<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>The insured amount in its professional risk indemnity insurance is the following:<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>On public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>58(3)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -5476,13 +5462,13 @@ In this case a simple description is requested, plus additional information if a
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>77f481ce-ffb6-483f-8e2b-c78db5e68292<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SET_UP<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SET_UP<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Set up of economic operator<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>In case the information concerning turnover (general or specific) is not available for the entire period required, please state the date on which the economic operator was set up or started trading:<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>On public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>58(3)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -5548,7 +5534,7 @@ additional information available online are requested.</p>
 <p>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.* also has a specific (iterative) structure where several groups of requirements specific for reference to experience are requested: ''For works contracts: performance of works of the specified type'', ''For supply contracts: performance of deliveries of the specified type'', ''For service contracts: performance of services of the specified type'';</p>
 </li>
 <li>
-<p>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL. CHECKS. ALLOWANCE_OF_CHECKS: represents the criterion ''Allowance of checks'' which has however a special data structure of its own (a response ''yes'' or ''no'' is simply expected;</p>
+<p>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.CHECKS.ALLOWANCE_OF_CHECKS: represents the criterion ''Allowance of checks'' which has however a special data structure of its own (a response ''yes'' or ''no'' is simply expected;</p>
 </li>
 <li>
 <p>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT: ''Number of managerial staff'', and ''Average annual manpower''. And two other sub-elements with different structures:</p>
@@ -5597,13 +5583,13 @@ additional information available online are requested.</p>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>dc12a151-7fdf-4733-a8f0-30f667292e66<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.SUPPLY_CHAIN_MANAGEMENT<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.SUPPLY_CHAIN_MANAGEMENT<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Supply chain management<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>It will be able to apply the following supply chain management and tracking systems when performing the contract:<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>On public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>58(4)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -5719,13 +5705,13 @@ repetitive structure asks for a description, an amount, a date and the related r
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>cdd3bb3e-34a5-43d5-b668-2aab86a73822<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.WORKS_PERFORMANCE<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.WORKS_PERFORMANCE<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>For works contracts: performance of works of the specified type<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>For public works contracts only: During the reference period, the economic operator has performed the following works of the specified type. Contracting authorities may require up to five years and allow experience dating from more than five years.<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>On public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>58(4)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -5997,13 +5983,13 @@ repetitive structure asks for a description, an amount, a date and the related r
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>c8809aa1-29b6-4f27-ae2f-27e612e394db<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.CHECKS.ALLOWANCE_OF_CHECKS<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.CHECKS.ALLOWANCE_OF_CHECKS<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Allowance of checks<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>For complex products or services to be supplied or, exceptionally, for products or services which are required for a special purpose: The economic operator will allow checks  to be conducted on the production capacities or the technical capacity of the economic operator and, where necessary, on the means of study and research which are available to it and on the quality control measures? The check is to be performed by the contracting authority or, in case the latter consents to this, on its behalf by a competent official body of the country in which the supplier or service provider is established.<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>On public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>58(4)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -6073,13 +6059,13 @@ of a long table plenty of details. The corresponding data-structure diagram woul
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>6346959b-e097-4ea1-89cd-d1b4c131ea4d<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.MANAGERIAL_STAFF<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.MANAGERIAL_STAFF<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Number of managerial staff<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>The economic operator’s number of managerial staff for the last three years were as follows:<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>On public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>58(4)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -6252,13 +6238,13 @@ and ''For supply contracts: samples, descriptions or photographs <strong>without
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>bdf0601d-2480-4250-b870-658d0ee95be6<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.ARTEFACTS.NO_AUTHENTICATED_ARTEFACTS<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.ARTEFACTS.NO_AUTHENTICATED_ARTEFACTS<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>For supply contracts: samples, descriptions or photographs without certification of authenticity<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>For public supply contracts: The economic operator will supply the required samples, descriptions or photographs of the products to be supplied, which do not need to be accompanied by certifications of authenticity.<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>On public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>58(4)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -6373,13 +6359,13 @@ certificates (in the Criteria Taxonomy) has been split in three different certif
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>a7669d7d-9297-43e1-9d10-691a1660187c<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INSTITUTES_CERTIFICATE<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INSTITUTES_CERTIFICATE<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>For supply contracts: certificates by quality control institutes<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Can the economic operator provide the required certificates drawn up by official quality control institutes or agencies of recognised competence attesting the conformity of products clearly identified by references to the technical specifications or standards, which are set out in the relevant notice or the procurement documents?<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>On public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>58(4)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -6472,13 +6458,13 @@ certificates (in the Criteria Taxonomy) has been split in three different certif
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>d726bac9-e153-4e75-bfca-c5385587766d<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INDEPENDENT_CERTIFICATE<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INDEPENDENT_CERTIFICATE<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Certificates by independent bodies about quality assurance standards<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Will the economic operator be able to produce certificates drawn up by independent bodies attesting that the economic operator complies with the required quality assurance standards, including accessibility for disabled persons?<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>On public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>62(2)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -6585,13 +6571,13 @@ The data-structure is identical to the certificate about quality assurance indep
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>8ed65e48-fd0d-444f-97bd-4f58da632999<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.ENVIRONMENTAL_MANAGEMENT.ENV_INDEPENDENT_CERTIFICATE<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.ENVIRONMENTAL_MANAGEMENT.ENV_INDEPENDENT_CERTIFICATE<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Certificates by independent bodies about environmental management systems or standards<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Will the economic operator be able to produce certificates drawn up by independent bodies attesting that the economic operator complies with the required environmental management systems or standards?<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:LegislationReference&gt;</span>
             <span class="tag">&lt;ccv-cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/ccv-cbc:Title&gt;</span>
             <span class="tag">&lt;cbc:Description&gt;</span>On public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/cbc:Description&gt;</span>
-            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevelCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
+            <span class="tag">&lt;ccv-cbc:JurisdictionLevelCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionJurisdictionLevel</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EU_DIRECTIVE<span class="tag">&lt;/ccv-cbc:JurisdictionLevelCode&gt;</span>
             <span class="tag">&lt;ccv-cbc:Article&gt;</span>62(2)<span class="tag">&lt;/ccv-cbc:Article&gt;</span>
             <span class="tag">&lt;cbc:URI&gt;</span>http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32014L0024<span class="tag">&lt;/cbc:URI&gt;</span>
         <span class="tag">&lt;/ccv:LegislationReference&gt;</span>
@@ -6674,9 +6660,9 @@ The data-structure is identical to the certificate about quality assurance indep
 its selection (and could even be used to make a decision about its awarding).</p>
 </div>
 <div class="paragraph">
-<p>In the <a href="./code_lists/PDF/CriteriaTypeCode.pdf">Criteria Taxonomy</a> code list these criteria are
+<p>In the <a href="./code_lists/pdf/CriteriaTypeCode.pdf">Criteria Taxonomy</a> code list these criteria are
 classified as ''CRITERION.OTHER.EO_DATA.*''. The complete list of these criteria is accessible in the table
-<a href="./code_lists/CriteriaTaxonomy.xlsx">ESPD Criteria: Other Criteria</a> (please have
+<a href="./code_lists/xls/CriteriaTaxonomy.xlsx">ESPD Criteria: Other Criteria</a> (please have
 a look into this table, it will help you better understand how these criteria work in the ESPD Service):</p>
 </div>
 <div class="olist arabic">
@@ -6729,7 +6715,7 @@ generated by the <a href="https://webgate.ec.europa.eu/espd/filter?lang=en">ESPD
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Criterion&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>2043338f-a38a-490b-b3ec-2607cb25a017<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.OTHER.EO_DATA.SHELTERED_WORKSHOP<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.OTHER.EO_DATA.SHELTERED_WORKSHOP<span class="tag">&lt;/cbc:TypeCode&gt;</span>
         <span class="tag">&lt;cbc:Name&gt;</span>Procurement reserved<span class="tag">&lt;/cbc:Name&gt;</span>
         <span class="tag">&lt;cbc:Description&gt;</span>Only in case the procurement is reserved: is the economic operator a sheltered workshop, a 'social business' or will it provide for the performance of the contract in the context of sheltered employment programmes?<span class="tag">&lt;/cbc:Description&gt;</span>
         <span class="tag">&lt;ccv:RequirementGroup&gt;</span>
@@ -6786,6 +6772,54 @@ generated by the <a href="https://webgate.ec.europa.eu/espd/filter?lang=en">ESPD
 </div>
 </div>
 <div class="sect1">
+<h2 id="release-notes"><a class="anchor" href="#release-notes"></a>Release Notes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="v1-0-2-28th-of-july-2016"><a class="anchor" href="#v1-0-2-28th-of-july-2016"></a>v1.0.2 (28th of July 2016)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/ESPD/ESPD-EDM/issues/2">Change cardinality of requirements inside requirement groups</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="v1-0-1"><a class="anchor" href="#v1-0-1"></a>v1.0.1</h3>
+<div class="paragraph">
+<p>The <code>eu.europa.ec.grow.espd.exchange-model</code> Java library was deployed to Maven Central on the 19th of July 2016.</p>
+</div>
+<div class="paragraph">
+<p>The recommended way to get started using the <code>exchange-model</code> in your Java project is with a dependency management system.</p>
+</div>
+<div class="sect3">
+<h4 id="with-maven"><a class="anchor" href="#with-maven"></a>With Maven</h4>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
+  <span class="tag">&lt;groupId&gt;</span>eu.europa.ec.grow.espd<span class="tag">&lt;/groupId&gt;</span>
+  <span class="tag">&lt;artifactId&gt;</span>exchange-model<span class="tag">&lt;/artifactId&gt;</span>
+  <span class="tag">&lt;version&gt;</span>1.0.1<span class="tag">&lt;/version&gt;</span>
+<span class="tag">&lt;/dependency&gt;</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="with-gradle"><a class="anchor" href="#with-gradle"></a>With Gradle</h4>
+<div class="listingblock">
+<div class="title">build.gradle</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="groovy">dependencies {
+    compile(<span class="string"><span class="delimiter">&quot;</span><span class="content">eu.europa.ec.grow.espd:exchange-model:1.0.1</span><span class="delimiter">&quot;</span></span>)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="foot-notes"><a class="anchor" href="#foot-notes"></a>Foot notes</h2>
 <div class="sectionbody">
 
@@ -6834,7 +6868,7 @@ generated by the <a href="https://webgate.ec.europa.eu/espd/filter?lang=en">ESPD
 <a href="#_footnoteref_13">13</a>. In the XML this is the attribute <code>GROUP_FULFILLED.ON_TRUE</code> of the element <code>RequirementGroup</code>
 </div>
 <div class="footnote" id="_footnote_14">
-<a href="#_footnoteref_14">14</a>. This notation <em>CRITERION.EXCLUSION.CONVICTION.*</em> is to be read as ''it applies to all the selection criteria, which are part of the exclusion criteria group''. See the <a href="./code_lists/CriteriaTaxonomy.xlsx">criteria tables</a> for the complete taxonomy of criteria and each criterion code label.
+<a href="#_footnoteref_14">14</a>. This notation <em>CRITERION.EXCLUSION.CONVICTION.*</em> is to be read as ''it applies to all the selection criteria, which are part of the exclusion criteria group''. See the <a href="./code_lists/xls/CriteriaTaxonomy.xlsx">criteria tables</a> for the complete taxonomy of criteria and each criterion code label.
 </div>
 <div class="footnote" id="_footnote_15">
 <a href="#_footnoteref_15">15</a>. For the time being e-Certis only contains Criteria.
@@ -6854,7 +6888,7 @@ generated by the <a href="https://webgate.ec.europa.eu/espd/filter?lang=en">ESPD
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-19 15:22:10 CEST
+Last updated 2016-07-29 14:44:38 CEST
 </div>
 </div>
 </body>
