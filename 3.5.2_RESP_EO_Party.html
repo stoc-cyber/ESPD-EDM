@@ -560,7 +560,10 @@ address and contact, as shown below:</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cac:PartyIdentification&gt;</span>
  <span class="tag">&lt;cbc:ID</span>
  <span class="attribute-name">schemeAgencyID</span>= <i class="conum" data-value="1"></i><b>(1)</b>
- <span class="string"><span class="delimiter">&quot;</span><span class="content">ES-TAX-AGENCY</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+ <span class="string"><span class="delimiter">&quot;</span><span class="content">ES-TAX-AGENCY</span><span class="delimiter">&quot;</span></span>
+ <span class="attribute-name">schemeID</span>= <i class="conum" data-value="2"></i><b>(2)</b>
+ <span class="string"><span class="delimiter">&quot;</span><span class="content">VAT_Number</span><span class="delimiter">&quot;</span></span>
+ <span class="tag">&gt;</span>
  B20779081
  <span class="tag">&lt;/cbc:ID&gt;</span>
 <span class="tag">&lt;/cac:PartyIdentification&gt;</span></code></pre>
@@ -637,6 +640,11 @@ code list <a href="./code_lists/pdf/CountryCodeIdentifier.pdf">CountryCodeIdenti
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 <td>The data provider SHOULD specify who is the issuer of the EO&#8217;s ID</td>
 </tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The <code>schemeID</code> attribute specifies if it is a VAT number or another national number. The
+possible values are: <code>VAT_Number</code> and <code>National_Number</code>.</td>
+</tr>
 </table>
 </div>
 <div class="paragraph">
@@ -676,7 +684,7 @@ code list <a href="./code_lists/pdf/CountryCodeIdentifier.pdf">CountryCodeIdenti
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-29 14:44:38 CEST
+Last updated 2016-09-20 11:37:06 CEST
 </div>
 </div>
 </body>
