@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>ESPD Exchange Data Model (ESPD-EDM)</title>
+<title>Root properties</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -513,147 +513,238 @@ table.CodeRay td.code>pre{padding:0}
 <div id="header">
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#espd-exchange-data-model-espd-edm">ESPD Exchange Data Model (ESPD-EDM)</a></li>
-<li><a href="#resources">Resources</a></li>
-<li><a href="#requirements">Requirements</a>
 <ul class="sectlevel2">
-<li><a href="#installation">Installation</a></li>
-<li><a href="#with-maven">With Maven</a></li>
-<li><a href="#with-gradle">With Gradle</a></li>
-</ul>
-</li>
+<li><a href="#root-properties">Root properties</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="espd-exchange-data-model-espd-edm"><a class="anchor" href="#espd-exchange-data-model-espd-edm"></a>ESPD Exchange Data Model (ESPD-EDM)</h2>
-<div class="sectionbody">
+<div class="sect2 text-left">
+<h3 id="root-properties"><a class="anchor" href="#root-properties"></a>Root properties</h3>
 <div class="paragraph">
-<p>v2.0.0-alpha</p>
+<p>The ESPDResponse main class represents the entire ESPDResponse documents. All the data (root properties) of the document "hang" directly from the class or are other classes associated to it.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="resources"><a class="anchor" href="#resources"></a>Resources</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://espd.github.io/ESPD-EDM/v2.0.0/xml_guide.html">ESPD Exchange Data Model Implementation Guide V02.00.00</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/dist">All resources in the distribution package</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/code_lists">Code lists</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/xml/snippets">XML snippets</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/exchange-model/src/main/resources/schema/2.0.0">XSD Schema files</a> - they are found under the <code>exchange-model</code>
-module, under the <code>exchange-model/src/main/resources/schema/2.0.0</code> folder.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="requirements"><a class="anchor" href="#requirements"></a>Requirements</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Java 8</p>
-</li>
-<li>
-<p>Maven 3</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="installation"><a class="anchor" href="#installation"></a>Installation</h3>
-
-</div>
-<div class="sect2">
-<h3 id="with-maven"><a class="anchor" href="#with-maven"></a>With Maven</h3>
 <div class="paragraph">
-<p>The recommended way to get started using the <code>exchange-model</code> in your Java project is with a dependency management system.</p>
+<p>As for all documents designed upon the UBL-2.1 Naming and Design Rules (NDR), this main class uses several UBL-2.1 common basic components. Although most of them
+are optional the ESPD Service expects the following ones:</p>
 </div>
-<div class="listingblock">
-<div class="title">pom.xml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
-  <span class="tag">&lt;groupId&gt;</span>eu.europa.ec.grow.espd<span class="tag">&lt;/groupId&gt;</span>
-  <span class="tag">&lt;artifactId&gt;</span>exchange-model2<span class="tag">&lt;/artifactId&gt;</span>
-  <span class="tag">&lt;version&gt;</span>2.0.0-SNAPSHOT<span class="tag">&lt;/version&gt;</span>
-<span class="tag">&lt;/dependency&gt;</span></code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. List of root properties expected by the ESPD Service in the ESPDResponse</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Version 2 of the <code>Exchange Model</code> has a different <code>artifactId</code>, i.e. <code>exchange-model2</code>, in order to
-support the usage of both versions at the same time inside a <code>Java</code> Maven project.</p>
-</div>
-</td>
+<th class="tableblock halign-left valign-top"><strong>Property</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Example</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Mandatory?</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Rules &amp; comments</strong></th>
 </tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
+</thead>
+<tbody>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>In order to use the snapshot version, you might have to enable the <code>Maven</code> snapshot repository.</p>
-</div>
-<div class="listingblock">
-<div class="title">pom.xml</div>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:UBLVersionID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifies the earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;repositories&gt;</span>
-  <span class="tag">&lt;repository&gt;</span>
-    <span class="tag">&lt;id&gt;</span>oss-sonatype<span class="tag">&lt;/id&gt;</span>
-    <span class="tag">&lt;name&gt;</span>oss-sonatype<span class="tag">&lt;/name&gt;</span>
-    <span class="tag">&lt;url&gt;</span>https://oss.sonatype.org/content/repositories/snapshots/<span class="tag">&lt;/url&gt;</span>
-    <span class="tag">&lt;snapshots&gt;</span>
-      <span class="tag">&lt;enabled&gt;</span>true<span class="tag">&lt;/enabled&gt;</span>
-    <span class="tag">&lt;/snapshots&gt;</span>
-  <span class="tag">&lt;/repository&gt;</span>
-<span class="tag">&lt;/repositories&gt;</span></code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cbc:UBLVersionID</span>
+<span class="attribute-name">schemeAgencyID</span>=
+<span class="string"><span class="delimiter">&quot;</span><span class="content">OASIS-UBL-TC</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+2.1
+<span class="tag">&lt;/cbc:UBLVersionID&gt;</span></code></pre>
 </div>
-</div>
-</td>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Use the value "2.1". Use also "OASIS-UBL-TC" for the schemeAgencyID attribute</code>.</p></td>
 </tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="with-gradle"><a class="anchor" href="#with-gradle"></a>With Gradle</h3>
-<div class="listingblock">
-<div class="title">build.gradle</div>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:CustomizationID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifies a user-defined customization of UBL for a specific use.</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">dependencies {
-    compile(<span class="string"><span class="delimiter">&quot;</span><span class="content">eu.europa.ec.grow.espd:exchange-model2:2.0.0-SNAPSHOT</span><span class="delimiter">&quot;</span></span>)
-}</code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cbc:CustomizationID</span>
+<span class="attribute-name">schemeName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CustomizationID</span><span class="delimiter">&quot;</span></span>
+<span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">BII</span><span class="delimiter">&quot;</span></span>
+<span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+urn:www.cenbii.eu:
+transaction:biitrns092:ver3.0
+ <span class="tag">&lt;/cbc:CustomizationID&gt;</span></code></pre>
 </div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Compulsory use of the code defined by the CEN/BII Workshop-3 (<em>BiiCoreTrdm092 ESPD</em>). See <a href="../code_lists/pdf/CustomizationID.pdf">Code List</a>.</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:CopyIndicator</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates whether this document is a copy (true) or not (false)</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cbc:CopyIndicator&gt;</span>
+false
+<span class="tag">&lt;/cbc:CopyIndicator&gt;</span></code></pre>
 </div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:VersionID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the current version of this ESPDResponse XSD Schema</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cbc:VersionID</span>
+<span class="attribute-name">schemeAgencyID</span>=
+<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+2016.04.2
+<span class="tag">&lt;/cbc:VersionID&gt;</span></code></pre>
 </div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Use always the value "2016.04.2 for this version (this may change in future releases)</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:IssueDate</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The date, assigned by the sender, on which this document was issued</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cbc:IssueDate&gt;</span>
+2016-05-09
+<span class="tag">&lt;/cbc:IssueDate&gt;</span></code></pre>
 </div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> (1..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: compulsoriness inherited from UBL-2.1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:IssueTime</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The time, assigned by the sender, at which this document was issued</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cbc:IssueTime&gt;</span>
+17:36:51
+<span class="tag">&lt;/cbc:IssueTime&gt;</span></code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An identifier for this document, assigned by the sender</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cbc:ID</span>
+<span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO/IEC 9834-8:2008 - 4UUID</span><span class="delimiter">&quot;</span></span>
+<span class="attribute-name">schemeAgencyID</span>=
+<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span>
+<span class="attribute-name">schemeAgencyName</span>=
+<span class="string"><span class="delimiter">&quot;</span><span class="content">DG GROW (European Commission)</span><span class="delimiter">&quot;</span></span>
+<span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+f01c214f-2fe6-4664-83ff-353f118b8d6f
+<span class="tag">&lt;/cbc:ID&gt;</span></code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> (1..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: Compulsoriness inherited from UBL-2.1. Do not forget to specify the schemeAgencyID attribute (EU-COM-GROW identifies all elements defined in the ESPD by COM)</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ContractFolderID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An identifier, assigned by the sender, for the process file (i.e., record) to which this document belongs</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cbc:ContractFolderID</span>
+<span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">TeD</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+EASME/COSME/2015/027
+<span class="tag">&lt;/cbc:ContractFolderID&gt;</span></code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> (1..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: This is a mandatory data provided by the Contracting Authority. It is already present in the ESPDRequest</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" colspan="5"><p class="tableblock"><strong>Associated classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ext:UBLExtensions</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A container for all ad-hoc (non standard) extensions present in the document.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: Not used by the ESPD. See sub-section further on in this document</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:ContractingParty</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The contracting authority or contracting entity who is buying supplies,
+services or public works using a tendering procedure as described in the
+applicable directive (Directives 2014/24/EU, 2014/25/EU).</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> (1..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: See details further on in this document</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>espd-cac:
+EconomicOperatorParty</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any natural or legal person or public entity or group of such persons
+and/or entities, including any temporary association of undertakings,
+which offers the execution of works and/or a work, the supply of products
+or the provision of services on the market. Information about the party
+submitting the qualification.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> (1..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: See details further on in this document</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:ProcurementProjectLot</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One of the parts of a procurement project that is being subdivided to allow
+the contracting party to award different lots to different economic operators under
+different contracts</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> (1..n)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: See details further on in this document</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ccv:Criterion</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A condition that the economic has to meet in order to not be excluded and
+be selected as a candidate for awarding in a procurement procedure.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> (1..n)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: See details further on in this document</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:
+ServiceProviderParty</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The organisation that provided the data about the procurement project,
+the Contracting Authority and/or the Economic Operator</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: See details further on in this document</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:Signature</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The signature of the Economic Operator or of its representative</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..n)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: See details further on in this document</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:
+AdditionalDocumentReference</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A reference to an additional document</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..n)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: See details further on in this document</code></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-09-04 11:49:01 CEST
+Last updated 2016-07-29 14:44:38 CEST
 </div>
 </div>
 </body>

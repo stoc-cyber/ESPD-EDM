@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>ESPD Exchange Data Model (ESPD-EDM)</title>
+<title>Evidence</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -513,147 +513,106 @@ table.CodeRay td.code>pre{padding:0}
 <div id="header">
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#espd-exchange-data-model-espd-edm">ESPD Exchange Data Model (ESPD-EDM)</a></li>
-<li><a href="#resources">Resources</a></li>
-<li><a href="#requirements">Requirements</a>
 <ul class="sectlevel2">
-<li><a href="#installation">Installation</a></li>
-<li><a href="#with-maven">With Maven</a></li>
-<li><a href="#with-gradle">With Gradle</a></li>
-</ul>
-</li>
+<li><a href="#evidence">Evidence</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="espd-exchange-data-model-espd-edm"><a class="anchor" href="#espd-exchange-data-model-espd-edm"></a>ESPD Exchange Data Model (ESPD-EDM)</h2>
-<div class="sectionbody">
+<div class="sect2 text-left">
+<h3 id="evidence"><a class="anchor" href="#evidence"></a>Evidence</h3>
 <div class="paragraph">
-<p>v2.0.0-alpha</p>
+<p>The <code>ccv:Evidence</code> class is used by the economic operator to refer to a trusted source of proofs that
+supports the stated response to a criterion requirement.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="resources"><a class="anchor" href="#resources"></a>Resources</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://espd.github.io/ESPD-EDM/v2.0.0/xml_guide.html">ESPD Exchange Data Model Implementation Guide V02.00.00</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/dist">All resources in the distribution package</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/code_lists">Code lists</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/xml/snippets">XML snippets</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/exchange-model/src/main/resources/schema/2.0.0">XSD Schema files</a> - they are found under the <code>exchange-model</code>
-module, under the <code>exchange-model/src/main/resources/schema/2.0.0</code> folder.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="requirements"><a class="anchor" href="#requirements"></a>Requirements</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Java 8</p>
-</li>
-<li>
-<p>Maven 3</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="installation"><a class="anchor" href="#installation"></a>Installation</h3>
-
-</div>
-<div class="sect2">
-<h3 id="with-maven"><a class="anchor" href="#with-maven"></a>With Maven</h3>
 <div class="paragraph">
-<p>The recommended way to get started using the <code>exchange-model</code> in your Java project is with a dependency management system.</p>
+<p>In the ESPD Exchange Data Model (ESPD EDM) the Evidence class is part of the Response to a Requirement, as
+shown in the XSD diagram below:</p>
 </div>
-<div class="listingblock">
-<div class="title">pom.xml</div>
+<div id="Evidence_XSD" class="imageblock text-center">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
-  <span class="tag">&lt;groupId&gt;</span>eu.europa.ec.grow.espd<span class="tag">&lt;/groupId&gt;</span>
-  <span class="tag">&lt;artifactId&gt;</span>exchange-model2<span class="tag">&lt;/artifactId&gt;</span>
-  <span class="tag">&lt;version&gt;</span>2.0.0-SNAPSHOT<span class="tag">&lt;/version&gt;</span>
-<span class="tag">&lt;/dependency&gt;</span></code></pre>
+<img src="../images/Evidence_XSD.png" alt="UML_representation" width="1000" height="900">
 </div>
+<div class="title">Figure 1. XSD diagram for class cev:Evidence</div>
 </div>
-<div class="admonitionblock note">
-<table>
+<table class="tableblock frame-all grid-all spread text-left">
+<caption class="title">Table 1. Class ccv:Evidence</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Version 2 of the <code>Exchange Model</code> has a different <code>artifactId</code>, i.e. <code>exchange-model2</code>, in order to
-support the usage of both versions at the same time inside a <code>Java</code> Maven project.</p>
-</div>
-</td>
+<td class="tableblock halign-center valign-top" colspan="5"><p class="tableblock">"<em>A class used by the economic operator to refer to a trusted source of proofs that
+supports the stated response to a criterion requirement</em>"</p></td>
 </tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>In order to use the snapshot version, you might have to enable the <code>Maven</code> snapshot repository.</p>
-</div>
-<div class="listingblock">
-<div class="title">pom.xml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;repositories&gt;</span>
-  <span class="tag">&lt;repository&gt;</span>
-    <span class="tag">&lt;id&gt;</span>oss-sonatype<span class="tag">&lt;/id&gt;</span>
-    <span class="tag">&lt;name&gt;</span>oss-sonatype<span class="tag">&lt;/name&gt;</span>
-    <span class="tag">&lt;url&gt;</span>https://oss.sonatype.org/content/repositories/snapshots/<span class="tag">&lt;/url&gt;</span>
-    <span class="tag">&lt;snapshots&gt;</span>
-      <span class="tag">&lt;enabled&gt;</span>true<span class="tag">&lt;/enabled&gt;</span>
-    <span class="tag">&lt;/snapshots&gt;</span>
-  <span class="tag">&lt;/repository&gt;</span>
-<span class="tag">&lt;/repositories&gt;</span></code></pre>
-</div>
-</div>
-</td>
+<td class="tableblock halign-center valign-top" colspan="5"><p class="tableblock"><strong>Properties</strong></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cev-cbc:EvidenceName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of an evidence</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: The ESPD Service does not use this property for the time being</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cev-cbc:
+EmbeddedEvidenceIndicator</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates whether the Evidence is embedded in the XML document (<em>True</em>)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: The ESPD Service does not use this feature as it always refers to it through a URL. Other
+solutions could need it (e.g. the e-Sens Virtual Company Dossier, VCD). The UBL-2.1 component allows for both embedding the evidence and referring to it via a URL</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" colspan="5"><p class="tableblock"><strong>Associated classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>EvidenceIssuerParty</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A UBL-2.1 Party class to refer to the (trusted) Party responsible for issuing the Evidence</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: The ESPD Service does not use this element for the time being</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>EvidenceDocumentReference</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A UBL-2.1 DocumentReference class to hold the data about the reference to the Evidence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(See example below)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: The URL is currently the only property used by the ESPD</code></p></td>
+</tr>
+</tbody>
 </table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="with-gradle"><a class="anchor" href="#with-gradle"></a>With Gradle</h3>
 <div class="listingblock">
-<div class="title">build.gradle</div>
+<div class="title">Use of the Evidence element by the ESPD Service</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">dependencies {
-    compile(<span class="string"><span class="delimiter">&quot;</span><span class="content">eu.europa.ec.grow.espd:exchange-model2:2.0.0-SNAPSHOT</span><span class="delimiter">&quot;</span></span>)
-}</code></pre>
-</div>
-</div>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Requirement</span> <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EVIDENCE_URL</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+ <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionRelatedIDs</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>03bb1954-13ae-47d8-8ef8-b7fe0f22d700<span class="tag">&lt;/cbc:ID&gt;</span>
+  <span class="tag">&lt;cbc:Description&gt;</span>URL<span class="tag">&lt;/cbc:Description&gt;</span>
+   <span class="tag">&lt;ccv:Response&gt;</span>
+    <span class="tag">&lt;cev:Evidence&gt;</span>
+     <span class="tag">&lt;cev:EvidenceDocumentReference&gt;</span>
+      <span class="tag">&lt;cbc:ID&gt;</span>6a5818a9-7908-44d0-9847-086b4b7a1444<span class="tag">&lt;/cbc:ID&gt;</span>
+       <span class="tag">&lt;cac:Attachment&gt;</span>
+        <span class="tag">&lt;cac:ExternalReference&gt;</span>
+         <span class="tag">&lt;cbc:URI&gt;</span>http://www.eurodb.be/scriptsPublic/arianeweb.dll/e/m_mkt_rech<span class="tag">&lt;/cbc:URI&gt;</span>
+        <span class="tag">&lt;/cac:ExternalReference&gt;</span>
+       <span class="tag">&lt;/cac:Attachment&gt;</span>
+      <span class="tag">&lt;/cev:EvidenceDocumentReference&gt;</span>
+     <span class="tag">&lt;/cev:Evidence&gt;</span>
+    <span class="tag">&lt;/ccv:Response&gt;</span>
+<span class="tag">&lt;/ccv:Requirement&gt;</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-09-04 11:49:01 CEST
+Last updated 2016-07-19 15:22:10 CEST
 </div>
 </div>
 </body>

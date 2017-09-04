@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>ESPD Exchange Data Model (ESPD-EDM)</title>
+<title>Untitled</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -509,88 +509,18 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .head .head{color:#f4f}
 </style>
 </head>
-<body class="article toc2 toc-left">
+<body class="article">
 <div id="header">
-<div id="toc" class="toc2">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#espd-exchange-data-model-espd-edm">ESPD Exchange Data Model (ESPD-EDM)</a></li>
-<li><a href="#resources">Resources</a></li>
-<li><a href="#requirements">Requirements</a>
-<ul class="sectlevel2">
-<li><a href="#installation">Installation</a></li>
-<li><a href="#with-maven">With Maven</a></li>
-<li><a href="#with-gradle">With Gradle</a></li>
-</ul>
-</li>
-</ul>
-</div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="espd-exchange-data-model-espd-edm"><a class="anchor" href="#espd-exchange-data-model-espd-edm"></a>ESPD Exchange Data Model (ESPD-EDM)</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>v2.0.0-alpha</p>
+<div class="paragraph text-left">
+<p>The ESPD Exchange Data Model (ESPD-EDM) is flexible enough so as to implement XML documents with different structures. Concretely, the
+possibility of nesting groups of requirements inside groups of requirements can end up in complex XML instances that may not resemble
+amongst them thus hindering the mapping of data, their presentation and the interoperability between systems.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="resources"><a class="anchor" href="#resources"></a>Resources</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://espd.github.io/ESPD-EDM/v2.0.0/xml_guide.html">ESPD Exchange Data Model Implementation Guide V02.00.00</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/dist">All resources in the distribution package</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/code_lists">Code lists</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/xml/snippets">XML snippets</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/exchange-model/src/main/resources/schema/2.0.0">XSD Schema files</a> - they are found under the <code>exchange-model</code>
-module, under the <code>exchange-model/src/main/resources/schema/2.0.0</code> folder.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="requirements"><a class="anchor" href="#requirements"></a>Requirements</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Java 8</p>
-</li>
-<li>
-<p>Maven 3</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="installation"><a class="anchor" href="#installation"></a>Installation</h3>
-
-</div>
-<div class="sect2">
-<h3 id="with-maven"><a class="anchor" href="#with-maven"></a>With Maven</h3>
-<div class="paragraph">
-<p>The recommended way to get started using the <code>exchange-model</code> in your Java project is with a dependency management system.</p>
-</div>
-<div class="listingblock">
-<div class="title">pom.xml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
-  <span class="tag">&lt;groupId&gt;</span>eu.europa.ec.grow.espd<span class="tag">&lt;/groupId&gt;</span>
-  <span class="tag">&lt;artifactId&gt;</span>exchange-model2<span class="tag">&lt;/artifactId&gt;</span>
-  <span class="tag">&lt;version&gt;</span>2.0.0-SNAPSHOT<span class="tag">&lt;/version&gt;</span>
-<span class="tag">&lt;/dependency&gt;</span></code></pre>
-</div>
+<div class="paragraph text-left">
+<p>Hence the need of establishing of a minimum set of rules about how to build up such data structures. To keep conformance with
+the ESPD Services the rules are simple:</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -599,61 +529,93 @@ module, under the <code>exchange-model/src/main/resources/schema/2.0.0</code> fo
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div class="paragraph">
-<p>Version 2 of the <code>Exchange Model</code> has a different <code>artifactId</code>, i.e. <code>exchange-model2</code>, in order to
-support the usage of both versions at the same time inside a <code>Java</code> Maven project.</p>
+<div class="title">General rule 2: How to structure an ESPD Service Criterion</div>
+<div class="olist arabic text-left">
+<ol class="arabic">
+<li>
+<p>Respect the structure proposed by the ESPD Service for each Criterion, as shown in this document or as in the XML structures of
+the documents exported by the ESPD Service. For the time being these structures are fixed (immutable). In future releases of the
+ESPD Service the structures will be "dynamic"  and will map the criteria as defined in e-Certis2;</p>
+</li>
+<li>
+<p>Reserve the first requirement of a group to ask a question for which the response MUST be "Yes" or "No".</p>
+</li>
+<li>
+<p>Use the attribute <code>pi</code> of the <code>RequirementGroup</code> element to set whether the ESPD Service MUST take into account the content
+of the group or not. The ESPD Service accepts three possibilities:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>GROUP_FULFILLED.ON_TRUE</strong> means that the requirement group which contains this attribute value is displayed when, in the response,
+the corresponding INDICATOR is set to 'Yes' (set to true). This is the case for all the Exclusion criteria.</p>
+</li>
+<li>
+<p><strong>GROUP_FULFILLED.ON_FALSE</strong> the requirement group which contains this attribute value is displayed when its corresponding indicator
+is set to 'No' (set to false). See examples amongst the Selection criteria.</p>
+</li>
+<li>
+<p>If it is missing then the requirement group will always be displayed</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>In order to use the snapshot version, you might have to enable the <code>Maven</code> snapshot repository.</p>
+<div class="paragraph text-left">
+<p>The flow-chart below illustrates this principle for any exclusion conviction criterion:</p>
 </div>
-<div class="listingblock">
-<div class="title">pom.xml</div>
+<div id="data_struct_design" class="imageblock text-center">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;repositories&gt;</span>
-  <span class="tag">&lt;repository&gt;</span>
-    <span class="tag">&lt;id&gt;</span>oss-sonatype<span class="tag">&lt;/id&gt;</span>
-    <span class="tag">&lt;name&gt;</span>oss-sonatype<span class="tag">&lt;/name&gt;</span>
-    <span class="tag">&lt;url&gt;</span>https://oss.sonatype.org/content/repositories/snapshots/<span class="tag">&lt;/url&gt;</span>
-    <span class="tag">&lt;snapshots&gt;</span>
-      <span class="tag">&lt;enabled&gt;</span>true<span class="tag">&lt;/enabled&gt;</span>
-    <span class="tag">&lt;/snapshots&gt;</span>
-  <span class="tag">&lt;/repository&gt;</span>
-<span class="tag">&lt;/repositories&gt;</span></code></pre>
+<img src="../images/DS_CRITERION.EXCLUSION.CONVICTIONS.png" alt="data_flow_design" width="900">
 </div>
+<div class="title">Figure 1. General data-structure design rule for criteria and requirements with a ''yes'' or ''no'' answer"</div>
 </div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="with-gradle"><a class="anchor" href="#with-gradle"></a>With Gradle</h3>
-<div class="listingblock">
-<div class="title">build.gradle</div>
+<div id="data_struct_design_legend" class="imageblock text-center">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">dependencies {
-    compile(<span class="string"><span class="delimiter">&quot;</span><span class="content">eu.europa.ec.grow.espd:exchange-model2:2.0.0-SNAPSHOT</span><span class="delimiter">&quot;</span></span>)
-}</code></pre>
+<img src="../images/DS_CRITERION.EXCLUSION.CONVICTIONS_legend.png" alt="data_flow_design" width="900">
+</div>
+<div class="title">Figure 2. Legend</div>
+</div>
+<div class="paragraph text-left">
+<p>The interpretation of this diagram could be as follows:</p>
+</div>
+<div class="ulist text-left">
+<ul>
+<li>
+<p>This criterion has two main groups of requirements  (G1: <em>Breach?</em> and G2: <em>Online Evidence</em>);</p>
+</li>
+<li>
+<p>The first group of requirements has one requirement and one sub-group or requirements;</p>
+</li>
+<li>
+<p>If the response to the requirement is "Yes" (ON TRUE <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>)
+then the ESPD Service application will show four data fields and a new subgroup with an additional question. Thus (on True) the EO will have to provide the date of the conviction,
+the reason, who was convicted and for how long.  If the response is "No", then the EO will proceed providing data about whether there&#8217;s online evidence or not
+regarding to the absence of conviction (if that is possible).</p>
+</li>
+<li>
+<p>This behaviour repeats per each subgroup of requirements: the deepest subgroup of the structure for the group 1 will have to be shown by the ESPD Service (and filled by the EO) in case an
+imported ESPDRequirement XML has a "Yes" in the response to the requirement <em>Self-Cleaning</em>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph text-left">
+<p>In the next sections this principle is used to structure the Exclusion and Selection Criteria. See also the examples provided all along the document.</p>
 </div>
 </div>
-</div>
-</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a>. In the XML this is the attribute <code>GROUP_FULFILLED.ON_TRUE</code> of the element <code>RequirementGroup</code>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-09-04 11:49:01 CEST
+Last updated 2016-07-19 15:22:10 CEST
 </div>
 </div>
 </body>

@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>ESPD Exchange Data Model (ESPD-EDM)</title>
+<title>I. Introduction</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -514,146 +514,141 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#espd-exchange-data-model-espd-edm">ESPD Exchange Data Model (ESPD-EDM)</a></li>
-<li><a href="#resources">Resources</a></li>
-<li><a href="#requirements">Requirements</a>
+<li><a href="#i-introduction">I. Introduction</a>
 <ul class="sectlevel2">
-<li><a href="#installation">Installation</a></li>
-<li><a href="#with-maven">With Maven</a></li>
-<li><a href="#with-gradle">With Gradle</a></li>
+<li><a href="#context">Context</a></li>
+<li><a href="#objectives-and-target-audience">Objectives and target audience</a></li>
+<li><a href="#scope-of-this-document">Scope of this document</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="espd-exchange-data-model-espd-edm"><a class="anchor" href="#espd-exchange-data-model-espd-edm"></a>ESPD Exchange Data Model (ESPD-EDM)</h2>
+<div class="sect1 text-center">
+<h2 id="i-introduction"><a class="anchor" href="#i-introduction"></a>I. Introduction</h2>
 <div class="sectionbody">
+<div class="sect2 text-left">
+<h3 id="context"><a class="anchor" href="#context"></a>Context</h3>
+<div class="sect3">
+<h4 id="the-directive-2014-24-eu-and-the-espd"><a class="anchor" href="#the-directive-2014-24-eu-and-the-espd"></a>The Directive 2014/24/EU and the ESPD</h4>
 <div class="paragraph">
-<p>v2.0.0-alpha</p>
+<p>Article 59 of the new Public Procurement Directive 2014/24/EC (henceforth ''the Directive'') introduced a new concept,
+the European Single Procurement Document (ESPD) which is a self-declaration document intended for preliminary evidence
+in a public procurement procedure. By mapping out equivalent certificates between MS, the ESPD replaces certificates issued
+by public authorities or a third party involved in a procedure. It is thus a valuable facilitator for cross-border participation
+of a greater number of potential operators in public procurement procedures and a valuable tool for integrating the European Single Market.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="resources"><a class="anchor" href="#resources"></a>Resources</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://espd.github.io/ESPD-EDM/v2.0.0/xml_guide.html">ESPD Exchange Data Model Implementation Guide V02.00.00</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/dist">All resources in the distribution package</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/code_lists">Code lists</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/xml/snippets">XML snippets</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/exchange-model/src/main/resources/schema/2.0.0">XSD Schema files</a> - they are found under the <code>exchange-model</code>
-module, under the <code>exchange-model/src/main/resources/schema/2.0.0</code> folder.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="requirements"><a class="anchor" href="#requirements"></a>Requirements</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Java 8</p>
-</li>
-<li>
-<p>Maven 3</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="installation"><a class="anchor" href="#installation"></a>Installation</h3>
-
-</div>
-<div class="sect2">
-<h3 id="with-maven"><a class="anchor" href="#with-maven"></a>With Maven</h3>
+<div class="sect3">
+<h4 id="the-espd-service"><a class="anchor" href="#the-espd-service"></a>The ESPD Service</h4>
 <div class="paragraph">
-<p>The recommended way to get started using the <code>exchange-model</code> in your Java project is with a dependency management system.</p>
+<p>In order to make full use of the ESPD concept, the European Commission has established an on-line service available for both suppliers and buyers.
+The main objective of the ESPD is to reduce the administrative burden and lead to considerable simplification of participation in public
+procurement procedures for buyers and suppliers. The service will reduce that burden by removing the need to produce a substantial number
+of certificates and documentation related to exclusion and selection criteria. This will answer to obstacles reported by many suppliers and
+especially SMEs.</p>
 </div>
-<div class="listingblock">
-<div class="title">pom.xml</div>
+<div class="paragraph">
+<p>The ESPD Service is currently in version 1.0 and can be accessed at this URL: <a href="https://ec.europa.eu/growth/tools-databases/espd/" class="bare">https://ec.europa.eu/growth/tools-databases/espd/</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="the-electronic-and-structured-espd-xml-documents"><a class="anchor" href="#the-electronic-and-structured-espd-xml-documents"></a>The electronic and structured ESPD XML documents</h4>
+<div class="paragraph">
+<p>The ESPD Service was designed to provide the ESPD in a machine-readable structured format that will help solutions all over Europe to be interoperable. Aiming at this objective, DG GROW has developed a data model and artefacts.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup> for the exchange of the ESPD between any Procurement
+stakeholder&#8217;s system. This document illustrates in detail how to use these artefacts in compliance with the Directive.</p>
+</div>
+<div class="paragraph">
+<p>The ESPD Service allows the Contracting Authorities (CA) and the Economic Operators (EO) to edit, import or export (and share) two types of electronic documents:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The ESPDRequest, a document that is sent by the Contracting Authorities to the Economic Operators;</p>
+</li>
+<li>
+<p>The ESPDResponse, the document that is filled-in by the Economic Operators stating whether they fulfil or not the criteria required
+in the ESPDRequest, and providing the sources where evidences can be obtained to prove that the criteria are met by this EO.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>As shown in the use case diagram below, the ESPD Documents are at the very core of the ESPD Service:</p>
+</div>
+<div id="ESPD_Functionalities" class="imageblock text-center" style="text-align: center">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
-  <span class="tag">&lt;groupId&gt;</span>eu.europa.ec.grow.espd<span class="tag">&lt;/groupId&gt;</span>
-  <span class="tag">&lt;artifactId&gt;</span>exchange-model2<span class="tag">&lt;/artifactId&gt;</span>
-  <span class="tag">&lt;version&gt;</span>2.0.0-SNAPSHOT<span class="tag">&lt;/version&gt;</span>
-<span class="tag">&lt;/dependency&gt;</span></code></pre>
+<img src="../images/functionalities.png" alt="Functionalities" width="600" height="400">
+</div>
+<div class="title">Figure 1. ESPD Service functionalities (Use Cases)</div>
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
+</div>
+<div class="sect2 text-left">
+<h3 id="objectives-and-target-audience"><a class="anchor" href="#objectives-and-target-audience"></a>Objectives and target audience</h3>
+<div class="paragraph text-left">
+<p>The European Commission (COM) has defined a Data Model and XML vocabularies to express the ESPD documents that the ESPD Service exports and imports. However, these Data Models and XML Vocabularies are also intended to be used by any other systems that will use and/or exchange ESPD documents with other systems or in need to render its content into other formats or process them otherwise.
+This document explains and illustrates how to implement XML documents based on the Data Model and XSD Schema. We name this model "ESPD Exchange Data Model" (ESPD-EDM). The model is quite flexible and should cater for future different situations. That the model is flexible is to be considered good news, as it may be easily used for unforeseen needs. However the development of software applications and the interoperability
+between systems require concrete explicit directives and rules that guide the actual implementation of the ESPD XML documents as well as the interpretation of their content. This was the case for the implementation of the ESPD Request and ESPD Response XML documents that are currently used by the ESPD Service.</p>
+</div>
+<div class="paragraph text-left">
+<p>To sum up, this document is intended to <strong>facilitate the understanding of the model underlying the implementation of ESPD Response XML documents</strong>. With that objective in mind the reader is provided with examples and rules relating to how the content of an ESPD Response XML document SHOULD look like and be interpreted.</p>
+</div>
 <div class="paragraph">
-<p>Version 2 of the <code>Exchange Model</code> has a different <code>artifactId</code>, i.e. <code>exchange-model2</code>, in order to
-support the usage of both versions at the same time inside a <code>Java</code> Maven project.</p>
+<p>The content of this document is mainly addressed to the development teams from the Member States, Economic Operators, Information Providers or any other party interested in understanding how the ESPD Exchange Data Model works and how to use it to produce XML instances of the ESPD Request document.</p>
 </div>
-</td>
-</tr>
-</table>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
+<div class="sect2 text-left">
+<h3 id="scope-of-this-document"><a class="anchor" href="#scope-of-this-document"></a>Scope of this document</h3>
+<div class="sect3">
+<h4 id="contracts-above-the-threshold-and-below-the-threshold"><a class="anchor" href="#contracts-above-the-threshold-and-below-the-threshold"></a>Contracts above the threshold and below the threshold</h4>
 <div class="paragraph">
-<p>In order to use the snapshot version, you might have to enable the <code>Maven</code> snapshot repository.</p>
+<p>The Directive (namely Article 4) regulates in detail those  public procurement procedures which values of contract exceed certain amounts. These amounts, also known as
+''thresholds'', vary depending on the type of the contract and of the administration level of the contracting authority.</p>
 </div>
-<div class="listingblock">
-<div class="title">pom.xml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;repositories&gt;</span>
-  <span class="tag">&lt;repository&gt;</span>
-    <span class="tag">&lt;id&gt;</span>oss-sonatype<span class="tag">&lt;/id&gt;</span>
-    <span class="tag">&lt;name&gt;</span>oss-sonatype<span class="tag">&lt;/name&gt;</span>
-    <span class="tag">&lt;url&gt;</span>https://oss.sonatype.org/content/repositories/snapshots/<span class="tag">&lt;/url&gt;</span>
-    <span class="tag">&lt;snapshots&gt;</span>
-      <span class="tag">&lt;enabled&gt;</span>true<span class="tag">&lt;/enabled&gt;</span>
-    <span class="tag">&lt;/snapshots&gt;</span>
-  <span class="tag">&lt;/repository&gt;</span>
-<span class="tag">&lt;/repositories&gt;</span></code></pre>
+<div class="paragraph">
+<p>Those contracts that fall under this article 4 of the Directive are called contracts ''above the threshold'', and the rest are known as contracts ''below the threshold''.<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p>The ESPD-EDM is rich and flexible enough so as to allow ESPD instances for contracts above and below the threshold. However this document is oriented exclusively to illustrate
+how to create ESPD electronic documents for contracts above the threshold.</p>
 </div>
 </div>
-</td>
-</tr>
-</table>
+<div class="sect3">
+<h4 id="in-scope"><a class="anchor" href="#in-scope"></a>In-Scope</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>This document provides commented examples only on ESPD relating to contracts above the threshold</p>
+</li>
+<li>
+<p>The explanations, examples, rules, recommendations, etc. only apply to the XML documents that intend to be compatible with the import and export features of the ESPD Service</p>
+</li>
+</ol>
 </div>
 </div>
-<div class="sect2">
-<h3 id="with-gradle"><a class="anchor" href="#with-gradle"></a>With Gradle</h3>
-<div class="listingblock">
-<div class="title">build.gradle</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">dependencies {
-    compile(<span class="string"><span class="delimiter">&quot;</span><span class="content">eu.europa.ec.grow.espd:exchange-model2:2.0.0-SNAPSHOT</span><span class="delimiter">&quot;</span></span>)
-}</code></pre>
+<div class="sect3">
+<h4 id="out-of-scope"><a class="anchor" href="#out-of-scope"></a>Out-of-Scope</h4>
+<div class="paragraph">
+<p>Many of the requirements and recommendations expressed in this document MAY NOT be valid for contracts below the threshold. However, from a purely technical point of view, the examples commented MAY be used to understand how the ESPD-EDM works and to create, in a normalized way, XML instances containing criteria for contracts below the threshold.</p>
 </div>
 </div>
 </div>
 </div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a>. E.g. XSD schemas and validation mechanisms.
+</div>
+<div class="footnote" id="_footnote_2">
+<a href="#_footnoteref_2">2</a>. Examples of contracts above the threshold would be: (a) public works contracts which value is above EUR 5 186 000; (b) public supply and service contracts which value is above EUR 134 000 awarded by central government authorities; (c) public supply and service contracts which value is above EUR 207 000 awarded by sub-central contracting authorities; (d) EUR 750 000 for public service contracts for social and other specific services listed in Annex XIV. For more details, see Article 4 (where the threshold are established), Article 5 (about special cases associated to Lots), and Annexes III and XIV of the Directive 2014/24/EU.
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-09-04 11:49:01 CEST
+Last updated 2016-07-19 15:22:10 CEST
 </div>
 </div>
 </body>

@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>ESPD Exchange Data Model (ESPD-EDM)</title>
+<title>Response</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -513,147 +513,306 @@ table.CodeRay td.code>pre{padding:0}
 <div id="header">
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#espd-exchange-data-model-espd-edm">ESPD Exchange Data Model (ESPD-EDM)</a></li>
-<li><a href="#resources">Resources</a></li>
-<li><a href="#requirements">Requirements</a>
-<ul class="sectlevel2">
-<li><a href="#installation">Installation</a></li>
-<li><a href="#with-maven">With Maven</a></li>
-<li><a href="#with-gradle">With Gradle</a></li>
-</ul>
-</li>
+<ul class="sectlevel3">
+<li><a href="#response">Response</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="espd-exchange-data-model-espd-edm"><a class="anchor" href="#espd-exchange-data-model-espd-edm"></a>ESPD Exchange Data Model (ESPD-EDM)</h2>
-<div class="sectionbody">
+<div class="sect3 text-left">
+<h4 id="response"><a class="anchor" href="#response"></a>Response</h4>
 <div class="paragraph">
-<p>v2.0.0-alpha</p>
+<p>The <code>ccv:Response</code> class is used by the economic operator to answer a specific Requirement issued by
+the contracting body.</p>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Providing the expected data type</div>
+<div class="paragraph">
+<p>The XSD Schema defines multiple types of data for the response (Indicator, Amount, Date, etc.),
+only one response data MUST be provided. And the data provided in the response MUST match the one specified in the attribute of the class ccv:Requirement.</p>
 </div>
+<div class="paragraph">
+<p>The economic operator MUST use the code list <a href="../code_lists/pdf/ResponseDataType.pdf">ResponseDataType</a> and make sure that the data provided is of the same type that the
+one expected by the contracting authority (See the column ''Type of value expected by the
+current version of the ESPD Service'').</p>
 </div>
-<div class="sect1">
-<h2 id="resources"><a class="anchor" href="#resources"></a>Resources</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://espd.github.io/ESPD-EDM/v2.0.0/xml_guide.html">ESPD Exchange Data Model Implementation Guide V02.00.00</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/dist">All resources in the distribution package</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/code_lists">Code lists</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/xml/snippets">XML snippets</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/exchange-model/src/main/resources/schema/2.0.0">XSD Schema files</a> - they are found under the <code>exchange-model</code>
-module, under the <code>exchange-model/src/main/resources/schema/2.0.0</code> folder.</p>
-</li>
-</ul>
+</td>
+</tr>
+</table>
 </div>
+<div id="Response_XSD" class="imageblock text-center" style="text-align: center">
+<div class="content">
+<img src="../images/Response_XSD.png" alt="EO details, UML" width="600" height="500">
 </div>
+<div class="title">Figure 1. XSD Diagram of the class Response</div>
 </div>
-<div class="sect1">
-<h2 id="requirements"><a class="anchor" href="#requirements"></a>Requirements</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Java 8</p>
-</li>
-<li>
-<p>Maven 3</p>
-</li>
-</ul>
+<table class="tableblock frame-all grid-all spread text-left">
+<caption class="title">Table 1. Class ccv:Response</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" colspan="5"><p class="tableblock">"<em>A class to associate the answer provided by the Economic Operator (EO) to a specific Requirement</em>"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" colspan="5"><p class="tableblock"><strong>Attributes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>pi</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Processing Instruction. Reserved for non-standard processing of the class;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL  (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: This attribute is defined in the ESPDRequest XSD Schema. The ESPD Service does not make any use of this attribute</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" colspan="5"><p class="tableblock"><strong>Properties</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A language-independent token, e.g., a number, that allows to identify a Response</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: This id SHOULD be provided by the EO or the service provider that instantiates the ESPDResponse XML document</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ccv-cbc:Indicator</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates a positive or a negative answer provided by the economic operator as an answer to a question in the Requirement</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Requirement</span>
+<span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">INDICATOR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+        ... <i class="conum" data-value="1"></i><b>(1)</b>
+   <span class="tag">&lt;ccv:Response&gt;</span>
+     <span class="tag">&lt;ccv-cbc:Indicator&gt;</span>
+     false
+     <span class="tag">&lt;/ccv-cbc:Indicator&gt;</span>
+   <span class="tag">&lt;/ccv:Response&gt;</span>
+<span class="tag">&lt;/ccv:Requirement&gt;</span></code></pre>
 </div>
-<div class="sect2">
-<h3 id="installation"><a class="anchor" href="#installation"></a>Installation</h3>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">`<strong>Comment</strong>: The only possible values are <em>False</em> and <em>True</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A textual description of a criterion response that describes how an
+economic operators fulfills an specific criterion</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:Amount</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Declared amount that fulfills this criterion</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Requirement</span>
+<span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">AMOUNT</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+ ...
+ <span class="tag">&lt;ccv:Response&gt;</span>
+  <span class="tag">&lt;cbc:Amount</span>
+  <span class="attribute-name">currencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EUR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  100000
+  <span class="tag">&lt;/cbc:Amount&gt;</span>
+ <span class="tag">&lt;/ccv:Response&gt;</span>
+<span class="tag">&lt;/ccv:Requirement&gt;</span></code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: The currencyID attribute is MANDATORY (e.g. "EUR"). Compulsory use of the code list <a href="../code_lists/pdf/CountryCodeIdentifier.pdf">CountryCodeIdentifier</a>. BEWARE that amounts can use decimal separators (e.g. 14134,95 but not hundred or thousand separators)</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ccv-cbc:Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A code pointing at a definition of a concept as the answer to the Requirement</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">`<strong>Comment</strong>: The current ESPD Service does not use this property, but consider for example a
+Requirement asking for a country code: in that case this would be the right placeholder for the
+expected data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:Date</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Declared date that fulfills this criterion</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Requirement</span>
+ <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">DATE</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  ...
+  <span class="tag">&lt;cbc:Description&gt;</span>
+  Date of conviction
+  <span class="tag">&lt;/cbc:Description&gt;</span>
+          <span class="tag">&lt;ccv:Response&gt;</span>
+            <span class="tag">&lt;cbc:Date&gt;</span>
+            2015-11-04
+            <span class="tag">&lt;/cbc:Date&gt;</span>
+        <span class="tag">&lt;/ccv:Response&gt;</span>
+<span class="tag">&lt;/ccv:Requirement&gt;</span></code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">`<strong>Rule</strong>: The date format MUST be 'YYYY-MM-DD', where 'Y' stands for 'Year', 'M' for 'Month', and 'D' for 'Day'</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:Percent</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Declared percentage that fulfills this criterion</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Requirement</span>
+<span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">PERCENTAGE</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+ ...
+ <span class="tag">&lt;cbc:Description&gt;</span>What is the
+ corresponding percentage of
+ disabled or disadvantaged
+ workers?
+ <span class="tag">&lt;/cbc:Description&gt;</span>
+  <span class="tag">&lt;ccv:Response&gt;</span>
+  0.4
+  <span class="tag">&lt;/ccv:Response&gt;</span>
+ <span class="tag">&lt;/ccv:Requirement&gt;</span></code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: do not format the percentage with the "%" symbol, just provide a float value like in the example</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:Quantity</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Declared quantity that fullfills the criterion</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml">*EXAMPLE 1*:
+<span class="tag">&lt;ccv:Requirement</span>
+<span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QUANTITY_YEAR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+ ...
+ <span class="tag">&lt;cbc:Description&gt;</span>
+ Year
+ <span class="tag">&lt;/cbc:Description&gt;</span>
+  <span class="tag">&lt;ccv:Response&gt;</span>
+  <span class="tag">&lt;cbc:Quantity</span>
+  <span class="attribute-name">unitCode</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">YEAR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><i class="conum" data-value="2"></i><b>(2)</b>
+  2015
+  <span class="tag">&lt;/cbc:Quantity&gt;</span>
+ <span class="tag">&lt;/ccv:Response&gt;</span>
 
+*EXAMPLE 2*:
+<span class="tag">&lt;/ccv:Requirement&gt;</span>
+ <span class="tag">&lt;ccv:Requirement</span>
+ <span class="attribute-name">responseDataType</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QUANTITY</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+ ...
+ <span class="tag">&lt;cbc:Description&gt;</span>
+ Ratio
+ <span class="tag">&lt;/cbc:Description&gt;</span>
+  <span class="tag">&lt;ccv:Response&gt;</span>
+   <span class="tag">&lt;cbc:Quantity&gt;</span><i class="conum" data-value="3"></i><b>(3)</b>
+   1.7
+   <span class="tag">&lt;/cbc:Quantity&gt;</span>
+  <span class="tag">&lt;/ccv:Response&gt;</span>
+<span class="tag">&lt;/ccv:Requirement&gt;</span></code></pre>
 </div>
-<div class="sect2">
-<h3 id="with-maven"><a class="anchor" href="#with-maven"></a>With Maven</h3>
-<div class="paragraph">
-<p>The recommended way to get started using the <code>exchange-model</code> in your Java project is with a dependency management system.</p>
-</div>
-<div class="listingblock">
-<div class="title">pom.xml</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: BEWARE that different types of Quantities can be required, some of them with a special attribute. See the column "Type of value expected by the
+current version of the ESPD Service" of the code list <a href="../code_lists/pdf/ResponseDataType.pdf">ResponseDataType</a>. See also the note
+below about "Quantities"</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" colspan="5"><p class="tableblock"><strong>Associated classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:Period</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Declared period that fulfills the Criterion</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
-  <span class="tag">&lt;groupId&gt;</span>eu.europa.ec.grow.espd<span class="tag">&lt;/groupId&gt;</span>
-  <span class="tag">&lt;artifactId&gt;</span>exchange-model2<span class="tag">&lt;/artifactId&gt;</span>
-  <span class="tag">&lt;version&gt;</span>2.0.0-SNAPSHOT<span class="tag">&lt;/version&gt;</span>
-<span class="tag">&lt;/dependency&gt;</span></code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ccv:Response&gt;</span>
+ <span class="tag">&lt;cac:Period&gt;</span>
+  <span class="tag">&lt;cbc:Description&gt;</span>5 months<span class="tag">&lt;/cbc:Description&gt;</span>
+ <span class="tag">&lt;/cac:Period&gt;</span>
+<span class="tag">&lt;/ccv:Response&gt;</span></code></pre>
 </div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: For the time being the ESPD Service uses the text field Description of the cac:Period class. Future versions of the ESPD Service would leverage the features of this UBL component</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cev-cac:Evidence</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One or more references to a source where a documentary proof can be obtained to demonstrate that one stated response does actually
+fulfill the Requirement from a Criterion</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..n)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: The current ESPD Service only allows the specification of one evidence. Beware that the economic operator may use one evidence
+to prove different Requirements. For this the EO will have to duplicate the reference to the same evidence
+for each Requirement where the reference to the Evidence is relevant</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>RelatedParty</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A party that may be affected by the response provided by the economic operator</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL (0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: The ESPD Service does not use this feature for the time being</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>"&#8230;&#8203;" indicates that some mandatory elements (ID and Description) have been removed from
+the example to shorten it</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Notice the use of the attribute <em>unitCode</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Notice the absence of the attribute <em>unitCode</em></td>
+</tr>
+</table>
 </div>
-<div class="admonitionblock note">
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
+<div class="title">About the different types of <strong>Quantities</strong></div>
 <div class="paragraph">
-<p>Version 2 of the <code>Exchange Model</code> has a different <code>artifactId</code>, i.e. <code>exchange-model2</code>, in order to
-support the usage of both versions at the same time inside a <code>Java</code> Maven project.</p>
+<p>Up to three different types of Quantities can be specified: (1) QUANTITY_INTEGER,
+a number representing a quantity in a specific unit of measure. The unit has to be
+specified (e.g. number of workers); (2) QUANTITY_YEAR, a non-negative integer
+(i.e. a natural number) representing a year. The unit has to be specified as YEAR, and
+(3) QUANTITY, a number representing a generic quantity with no unit specified (e.g. a ratio).</p>
+</div>
+<div class="paragraph">
+<p>Beware that in the case of QUANTITY_INTEGER and QUANTITY_YEAR the attribute <strong><em>unitCode</em></strong> MUST be always
+specified (See code list <a href="../code_lists/pdf/ResponseDataType.pdf">ResponseDataType</a>).</p>
+</div>
+<div id="About_Quantities" class="imageblock">
+<div class="content">
+<img src="../images/About_Quantities.png" alt="About Quantities" width="1000" height="900">
+</div>
+<div class="title">Figure XXX: The ResponseDataType code list</div>
 </div>
 </td>
 </tr>
 </table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>In order to use the snapshot version, you might have to enable the <code>Maven</code> snapshot repository.</p>
-</div>
-<div class="listingblock">
-<div class="title">pom.xml</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;repositories&gt;</span>
-  <span class="tag">&lt;repository&gt;</span>
-    <span class="tag">&lt;id&gt;</span>oss-sonatype<span class="tag">&lt;/id&gt;</span>
-    <span class="tag">&lt;name&gt;</span>oss-sonatype<span class="tag">&lt;/name&gt;</span>
-    <span class="tag">&lt;url&gt;</span>https://oss.sonatype.org/content/repositories/snapshots/<span class="tag">&lt;/url&gt;</span>
-    <span class="tag">&lt;snapshots&gt;</span>
-      <span class="tag">&lt;enabled&gt;</span>true<span class="tag">&lt;/enabled&gt;</span>
-    <span class="tag">&lt;/snapshots&gt;</span>
-  <span class="tag">&lt;/repository&gt;</span>
-<span class="tag">&lt;/repositories&gt;</span></code></pre>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="with-gradle"><a class="anchor" href="#with-gradle"></a>With Gradle</h3>
-<div class="listingblock">
-<div class="title">build.gradle</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">dependencies {
-    compile(<span class="string"><span class="delimiter">&quot;</span><span class="content">eu.europa.ec.grow.espd:exchange-model2:2.0.0-SNAPSHOT</span><span class="delimiter">&quot;</span></span>)
-}</code></pre>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-09-04 11:49:01 CEST
+Last updated 2016-07-29 14:44:38 CEST
 </div>
 </div>
 </body>

@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>ESPD Exchange Data Model (ESPD-EDM)</title>
+<title>The Party component of the Economic Operator</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -513,147 +513,178 @@ table.CodeRay td.code>pre{padding:0}
 <div id="header">
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#espd-exchange-data-model-espd-edm">ESPD Exchange Data Model (ESPD-EDM)</a></li>
-<li><a href="#resources">Resources</a></li>
-<li><a href="#requirements">Requirements</a>
-<ul class="sectlevel2">
-<li><a href="#installation">Installation</a></li>
-<li><a href="#with-maven">With Maven</a></li>
-<li><a href="#with-gradle">With Gradle</a></li>
-</ul>
-</li>
+<ul class="sectlevel4">
+<li><a href="#the-party-component-of-the-economic-operator">The Party component of the Economic Operator</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="espd-exchange-data-model-espd-edm"><a class="anchor" href="#espd-exchange-data-model-espd-edm"></a>ESPD Exchange Data Model (ESPD-EDM)</h2>
-<div class="sectionbody">
+<div class="sect4 text-left">
+<h5 id="the-party-component-of-the-economic-operator"><a class="anchor" href="#the-party-component-of-the-economic-operator"></a>The Party component of the Economic Operator</h5>
 <div class="paragraph">
-<p>v2.0.0-alpha</p>
+<p>For the Economic Operator (EO) it is the UBL class cac:Party that holds the more important part of the data.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="resources"><a class="anchor" href="#resources"></a>Resources</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://espd.github.io/ESPD-EDM/v2.0.0/xml_guide.html">ESPD Exchange Data Model Implementation Guide V02.00.00</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/dist">All resources in the distribution package</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/code_lists">Code lists</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/docs/src/main/asciidoc/xml/snippets">XML snippets</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.0/exchange-model/src/main/resources/schema/2.0.0">XSD Schema files</a> - they are found under the <code>exchange-model</code>
-module, under the <code>exchange-model/src/main/resources/schema/2.0.0</code> folder.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="requirements"><a class="anchor" href="#requirements"></a>Requirements</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Java 8</p>
-</li>
-<li>
-<p>Maven 3</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="installation"><a class="anchor" href="#installation"></a>Installation</h3>
-
-</div>
-<div class="sect2">
-<h3 id="with-maven"><a class="anchor" href="#with-maven"></a>With Maven</h3>
-<div class="paragraph">
-<p>The recommended way to get started using the <code>exchange-model</code> in your Java project is with a dependency management system.</p>
-</div>
-<div class="listingblock">
-<div class="title">pom.xml</div>
+<div id="EO_Party_XSD" class="imageblock" style="text-align: center">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
-  <span class="tag">&lt;groupId&gt;</span>eu.europa.ec.grow.espd<span class="tag">&lt;/groupId&gt;</span>
-  <span class="tag">&lt;artifactId&gt;</span>exchange-model2<span class="tag">&lt;/artifactId&gt;</span>
-  <span class="tag">&lt;version&gt;</span>2.0.0-SNAPSHOT<span class="tag">&lt;/version&gt;</span>
-<span class="tag">&lt;/dependency&gt;</span></code></pre>
+<img src="../images/EO_Party_XSD.png" alt="EO details, XSD" width="1000" height="900">
 </div>
+<div class="title">Figure 1. EO&#8217;s cac:Party sub-component</div>
 </div>
-<div class="admonitionblock note">
+<div class="paragraph">
+<p>The ESPD Service uses the class <code>cac:Party</code> to identify the Economic Operator. Although this UBL-2.1 class defines
+many properties and associated classes, the ESPD Service uses only a reduced set of them: the EO&#8217;s identification, name,
+address and contact, as shown below:</p>
+</div>
+<table class="tableblock frame-all grid-all spread text-left">
+<caption class="title">Table 1. Elements from the cac:Party expected in the ESPD Service to identify the Economic Operator (EO)</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Element</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Example</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Mandatory?</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rules &amp; comments</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:PartyIdentification</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique identification number for the Economic Operator</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cac:PartyIdentification&gt;</span>
+ <span class="tag">&lt;cbc:ID</span>
+ <span class="attribute-name">schemeAgencyID</span>= <i class="conum" data-value="1"></i><b>(1)</b>
+ <span class="string"><span class="delimiter">&quot;</span><span class="content">ES-TAX-AGENCY</span><span class="delimiter">&quot;</span></span>
+ <span class="attribute-name">schemeID</span>= <i class="conum" data-value="2"></i><b>(2)</b>
+ <span class="string"><span class="delimiter">&quot;</span><span class="content">VAT_Number</span><span class="delimiter">&quot;</span></span>
+ <span class="tag">&gt;</span>
+ B20779081
+ <span class="tag">&lt;/cbc:ID&gt;</span>
+<span class="tag">&lt;/cac:PartyIdentification&gt;</span></code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> - (Although in the XSD Schema the cardinality is 0..n)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Always provide an ID for the Economic Operator. In many countries this
+ID is the VAT number, but in the future it could be the European Unique ID provided
+by the Business Registers Interconnection System (BRIS)</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:PartyName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The official name of the Economic Operator, as registered in a Business Register</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cac:PartyName&gt;</span>
+ <span class="tag">&lt;cbc:Name&gt;</span>
+ Wayne Enterprises
+ <span class="tag">&lt;/cbc:Name&gt;</span>
+<span class="tag">&lt;/cac:PartyName&gt;</span></code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> - (Although in the XSD Schema the cardinality is 0..n)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Rule</strong>: Always provide a name for the Economic Operator</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:PostalAddress</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The address of the Economic Operator, as registered in a Business Register</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml">(see example below)</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>Comment</strong>: Although optional, provide the complete address (it helps disambiguate who is the
+EO in case of conflicting EOs names)</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:Country</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The country code of where the EO is registered in a Business Register</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cac:PostalAddress&gt;</span>
+  <span class="tag">&lt;cac:Country&gt;</span>
+    <span class="tag">&lt;cbc:IdentificationCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>BE<span class="tag">&lt;/cbc:IdentificationCode&gt;</span>
+  <span class="tag">&lt;/cac:Country&gt;</span>
+<span class="tag">&lt;/cac:PostalAddress&gt;</span></code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANDATORY</strong> - (Although in the XSD Schema the cardinality is 0..1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">`<strong>Rule</strong>: The country code MUST always be specified. Compulsory use of the
+code list <a href="../code_lists/pdf/CountryCodeIdentifier.pdf">CountryCodeIdentifier</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:Contact</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The contact data of a person related to the EO</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;cac:Contact&gt;</span>
+  <span class="tag">&lt;cbc:Name&gt;</span>Bruce Wayne<span class="tag">&lt;/cbc:Name&gt;</span>
+  <span class="tag">&lt;cbc:Telephone&gt;</span>01 234 56 78<span class="tag">&lt;/cbc:Telephone&gt;</span>
+  <span class="tag">&lt;cbc:ElectronicMail&gt;</span>wayne@enterprises.com<span class="tag">&lt;/cbc:ElectronicMail&gt;</span>
+<span class="tag">&lt;/cac:Contact&gt;</span></code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPTIONAL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">`<strong>Comment</strong>: The ESPD Service expects the name, telephone and e-mail</p></td>
+</tr>
+</tbody>
+</table>
+<div class="colist arabic">
 <table>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Version 2 of the <code>Exchange Model</code> has a different <code>artifactId</code>, i.e. <code>exchange-model2</code>, in order to
-support the usage of both versions at the same time inside a <code>Java</code> Maven project.</p>
-</div>
-</td>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The data provider SHOULD specify who is the issuer of the EO&#8217;s ID</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The <code>schemeID</code> attribute specifies if it is a VAT number or another national number. The
+possible values are: <code>VAT_Number</code> and <code>National_Number</code>.</td>
 </tr>
 </table>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
 <div class="paragraph">
-<p>In order to use the snapshot version, you might have to enable the <code>Maven</code> snapshot repository.</p>
+<p>A complete example about the EO&#8217;s Party elements expected by the ESPD Service follows:</p>
 </div>
 <div class="listingblock">
-<div class="title">pom.xml</div>
+<div class="title">Elements re-used from <code>cac:Party</code> to identify the Economic Operator</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;repositories&gt;</span>
-  <span class="tag">&lt;repository&gt;</span>
-    <span class="tag">&lt;id&gt;</span>oss-sonatype<span class="tag">&lt;/id&gt;</span>
-    <span class="tag">&lt;name&gt;</span>oss-sonatype<span class="tag">&lt;/name&gt;</span>
-    <span class="tag">&lt;url&gt;</span>https://oss.sonatype.org/content/repositories/snapshots/<span class="tag">&lt;/url&gt;</span>
-    <span class="tag">&lt;snapshots&gt;</span>
-      <span class="tag">&lt;enabled&gt;</span>true<span class="tag">&lt;/enabled&gt;</span>
-    <span class="tag">&lt;/snapshots&gt;</span>
-  <span class="tag">&lt;/repository&gt;</span>
-<span class="tag">&lt;/repositories&gt;</span></code></pre>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="with-gradle"><a class="anchor" href="#with-gradle"></a>With Gradle</h3>
-<div class="listingblock">
-<div class="title">build.gradle</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">dependencies {
-    compile(<span class="string"><span class="delimiter">&quot;</span><span class="content">eu.europa.ec.grow.espd:exchange-model2:2.0.0-SNAPSHOT</span><span class="delimiter">&quot;</span></span>)
-}</code></pre>
-</div>
-</div>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;espd-cac:EconomicOperatorParty&gt;</span>
+  <span class="tag">&lt;espd-cbc:SMEIndicator&gt;</span>false<span class="tag">&lt;/espd-cbc:SMEIndicator&gt;</span>
+  <span class="tag">&lt;espd-cac:RepresentativeNaturalPerson</span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;cac:Party&gt;</span>
+    <span class="tag">&lt;cac:PartyIdentification&gt;</span>
+      <span class="tag">&lt;cbc:ID&gt;</span>B20779081<span class="tag">&lt;/cbc:ID&gt;</span>
+    <span class="tag">&lt;/cac:PartyIdentification&gt;</span>
+    <span class="tag">&lt;cac:PartyName&gt;</span>
+      <span class="tag">&lt;cbc:Name&gt;</span>Wayne Enterprises<span class="tag">&lt;/cbc:Name&gt;</span>
+    <span class="tag">&lt;/cac:PartyName&gt;</span>
+    <span class="tag">&lt;cac:PostalAddress&gt;</span>
+      <span class="tag">&lt;cbc:Postbox&gt;</span>1000<span class="tag">&lt;/cbc:Postbox&gt;</span>
+      <span class="tag">&lt;cbc:StreetName&gt;</span>Rue Melsens 3<span class="tag">&lt;/cbc:StreetName&gt;</span>
+      <span class="tag">&lt;cbc:CityName&gt;</span>Brussels<span class="tag">&lt;/cbc:CityName&gt;</span>
+      <span class="tag">&lt;cac:Country&gt;</span>
+        <span class="tag">&lt;cbc:IdentificationCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CountryCodeIdentifier</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>BE<span class="tag">&lt;/cbc:IdentificationCode&gt;</span>
+      <span class="tag">&lt;/cac:Country&gt;</span>
+    <span class="tag">&lt;/cac:PostalAddress&gt;</span>
+    <span class="tag">&lt;cac:Contact&gt;</span>
+      <span class="tag">&lt;cbc:Name&gt;</span>Bruce Wayne<span class="tag">&lt;/cbc:Name&gt;</span>
+      <span class="tag">&lt;cbc:Telephone&gt;</span>01 234 56 78<span class="tag">&lt;/cbc:Telephone&gt;</span>
+      <span class="tag">&lt;cbc:ElectronicMail&gt;</span>wayne@enterprises.com<span class="tag">&lt;/cbc:ElectronicMail&gt;</span>
+    <span class="tag">&lt;/cac:Contact&gt;</span>
+  <span class="tag">&lt;/cac:Party&gt;</span>
+<span class="tag">&lt;/espd-cac:EconomicOperatorParty&gt;</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-09-04 11:49:01 CEST
+Last updated 2016-09-20 11:37:06 CEST
 </div>
 </div>
 </body>
