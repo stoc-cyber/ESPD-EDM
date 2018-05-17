@@ -515,6 +515,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel2">
 <li><a href="#ii-4-codes-and-identifiers">II.4 Codes and Identifiers</a></li>
+<li><a href="#ii-4-5-codes-and-code-lists">II.4.5 Codes and code lists</a></li>
 </ul>
 </div>
 </div>
@@ -522,7 +523,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sect2 text-left">
 <h3 id="ii-4-codes-and-identifiers"><a class="anchor" href="#ii-4-codes-and-identifiers"></a>II.4 Codes and Identifiers</h3>
 <div class="paragraph">
-<p>A code is a shortened way (a number or a short abbreviated text), leading to the definition of a 'concept'. The code itself represents and replaces the concept.</p>
+<p>A code is a shortened way (a number or a short abbreviated text), leading to the definition of a 'concept'. The code epresents the concept and is used by software applications to retrieve the definition of the concept or make automatic decisions.</p>
 </div>
 <div class="paragraph">
 <p>An Identifier, in turn, can be defined as “a value (represented as a short text, a number or a combination of both) used to establish the identity of, and distinguish uniquely, one occurrence of an object following a pattern” .</p>
@@ -560,10 +561,89 @@ table.CodeRay td.code>pre{padding:0}
 </ol>
 </div>
 </div>
+<div class="sect2">
+<h3 id="ii-4-5-codes-and-code-lists"><a class="anchor" href="#ii-4-5-codes-and-code-lists"></a>II.4.5 Codes and code lists</h3>
+<div class="paragraph">
+<p>The ESPD Exchange Data Model tries to reuse as much as possible the codes that are already used for e-Procurement. In any project, like the ESPD-EDM,
+there are at least three types (or layers) of codes:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Cross-sector</strong>, common, codes, like the ones defined and maintained by the ISO for currencies, languages, countries, etc.; or the ones defined by the European Commission
+that can be used in multiple business domains, e.g. the NUTS defined by EUROSTAT; the ones defined by BACH (Banque de France), etc.;</p>
+</li>
+<li>
+<p><strong>Business domain-related</strong>, maintained by international or European authorities, e.g. the ones defined by UNECE (as unit codes), or by the Publications Office of the European Union (OP), e.g. types of procurement procedures (based on the EU Directives);</p>
+</li>
+<li>
+<p><strong>Project-specific</strong> (or application-specific), i.e. those codes that are particular of the project. Types (taxonomy) of exclusion and selection criteria, types of evaluation method, etc. in the case of the ESPD-EDM.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Codes are normally maintained in "code lists". The ESPD-EDM keeps and distributes these code lists in three different formats:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In an Office Open XML (<a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.2/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-CodeLists-V2.0.2.xlsx">XLSX</a>) file,</p>
+</li>
+<li>
+<p>In an Open Office Document (<a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.2/docs/src/main/asciidoc/dist/cl/ods">ODS</a>) file,</p>
+</li>
+<li>
+<p>Genericode 1.0 (<a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.2/docs/src/main/asciidoc/dist/cl/gc">GC</a>) files (one <code>*.gc</code> file per code list).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>ESPD-EDM Code list contain the following elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Metadata</strong>: information about the code list, e.g. its identifier, the identifier and name of the agency responsible for defining and maintaining the list, the version of the list, etc.</p>
+</li>
+<li>
+<p><strong>Code identifier</strong>: the literal (a label composed of characters, numbers and simbols like '_');</p>
+</li>
+<li>
+<p><strong>Concept description</strong>: the definition of the concept represented by the code;</p>
+</li>
+<li>
+<p><strong>Multilingual descriptions</strong>: the translations of the English definitions.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The figure below illustrate how these elements are organised in the code lists maintained in spread-sheets:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="./images/CodelistElementsAndMetadata.png" alt="Elements and metadata of an ESPD code list">
+</div>
+<div class="title">Figure 1. Elements and metadata of an ESPD code list</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <a href="http://#annex-ii-code-lists-used-in-espd">Annex II</a> of this document lists all the code lists used by the ESPD and in which context or element it is used.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-12-19 15:33:44 CET
+Last updated 2018-05-17 16:39:55 CEST
 </div>
 </div>
 </body>

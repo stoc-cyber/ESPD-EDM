@@ -520,7 +520,6 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#i-2-espd-conformant-solutions">I.2 ESPD conformant solutions</a></li>
 <li><a href="#i-3-the-espd-profile">I.3 The ESPD Profile</a></li>
 <li><a href="#i-4-regulated-and-self-contained-espds">I.4 Regulated and Self-contained ESPDs</a></li>
-<li><a href="#i-5-forward-compatibility">I.5 Forward compatibility</a></li>
 </ul>
 </li>
 </ul>
@@ -689,40 +688,12 @@ of a greater number of potential operators in public procurement procedures and 
 </div>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="i-5-forward-compatibility"><a class="anchor" href="#i-5-forward-compatibility"></a>I.5 Forward compatibility</h3>
-<div class="paragraph">
-<p>In order to ensure compatibility between regulated ESPD versions 1 and 2, this distribution provides a conversion solution to facilitate the generation of ESPD REGULATED Request and Response XML documents. Beware that <strong>this is not the case for Self-contained ESPDs</strong>: given that Self-contained ESPDs may contain requirements and richer structures that are not present in the Regulated ESPD the compatibility is not possible for all the elements of the version 2.</p>
-</div>
-<div class="paragraph">
-<p>The development and testing of the previous version 1.0.2 by Member States and other Stakeholders revealed the need for improving some minor details relating the taxonomy of criteria. <strong>The data model and XSD schemas was not modified whatsoever</strong>. Hence a new minor editorial <strong><em>ESPD version 1.0.3</em></strong> of the criteria is distributed jointly with this distribution package that is <strong><em>compliant with the REGULATED ESPD-EDM v.2.0.2</em></strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The updated criteria taxonomy v1.0.3 can be found here: link: ./dist/cl/ods/ESPD-CriteriaTaxonomy(Data-Structures)_V1.0.3.ods[Criteria Taxonomy (Data Structures)].</p>
-</li>
-<li>
-<p>To track those few changes introduced in v1.0.3 you can use this <a href="./dist/cl/ods/CriteriaTaxonomyV1.0.3_CHANGE_LOG.ods">Track-Change file "CriteriaTaxonomyV1.0.3_CHANGE_LOG.ods"</a>.</p>
-</li>
-<li>
-<p>The folder link:./dist/xslt/Versions_1-2_Mapping contains the stylesheets making possible to transform XML documents from version 1.0.3 into version REGULATED ESPD Request and Response v.2.0.2. See "Annex II: Converting from version 1.0.3 into 2.0.2" for details on how this conversion works.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Mapping a Regulated ESPD (or an ESPD 1.0.2) into a V2.0.2 Self-contained ESPD is yet possible for a large part of its components. This means that software applications could somehow "pre-fill" a Self-contained ESPD taking as the input a 1.0.2 or a 2.0.2 Regulated ESPD and leave the "extended" requirements and fields empty (i.e. "forward compatibility" is to some extent possible).</p>
-</div>
-<div class="paragraph">
-<p>In order to facilitate developers map between one version into the other and vice-versa, this guide includes a <a href="./dist/doc/UBL2.2-ESPD1.02_Mapping.ods">spreadsheet</a> with the correspondences between the elements of the ESPD-EDM V1.0.3 and ESPD-EDM V2.0.2.</p>
-</div>
-</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-24 16:06:16 CEST
+Last updated 2018-05-17 16:39:55 CEST
 </div>
 </div>
 </body>

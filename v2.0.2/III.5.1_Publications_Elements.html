@@ -540,6 +540,10 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">A reference to an additional document associated with this document.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common (BR-COM-10)</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
 </tr>
@@ -578,7 +582,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">The identifier for the referenced document, generally issued by the entity responsible for the document.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr070-007"><em>tbr070-007</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: If the document referenced is a Contract Notice published on TED the ID must follow the scheme defined by the Publications Office: [][][][]/S [][][]-[][][][][][] (e.g. 2015/S 252-461137). If at the time of drafting the ESPD document the Publication Office has not published yet the Contract Notice the value 0000/S 000-000000 value must be used to indicate that a temporary identifier is being used.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: If the document referenced is a Contract Notice published on TED the ID must follow the scheme defined by the Publications Office: [][][][]/S [][][]-[][][][][][] (e.g. 2015/S 252-461137). If at the time of drafting the ESPD document the Publication Office has not published yet the Contract Notice the value 0000/S 000-000000 value must be used to indicate that a temporary identifier is being used.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-COM-10#1, BR-OTH-02)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:UUID</strong></p></td>
@@ -596,7 +601,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of document being referenced, expressed as a code.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr070-007"><em>tbr070-007</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: For the ESDP-EDM it is compulsory use of the Code List <code>DocRefContentType</code>. See example below on how to specify the OJS Contract Notice. If, for other documents, the type of document is not available in this list, provide the code “Other” and describe the content in the element <code>DocumentType</code>.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: For the ESDP-EDM it is compulsory use of the Code List <code>DocRefContentType</code>. See example below on how to specify the OJS Contract Notice. If, for other documents, the type of document is not available in this list, provide the code “Other” and describe the content in the element <code>DocumentType</code>.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-OTH-01, BR-OTH-01#3, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:DocumentType</strong></p></td>
@@ -605,7 +611,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of document being referenced, expressed as text.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr070-007"><em>tbr070-007</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Optionally use the attribute languageID to indicate the language of the text. Use the Code List <code>LanguageCodeEU</code> for the value of the languageID attribute.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Optionally use the attribute languageID to indicate the language of the text. Use the Code List <code>LanguageCodeEU</code> for the value of the languageID attribute.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-OTH-01, BR-OTH-01#4, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:IssueDate</strong></p></td>
@@ -698,7 +705,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">Short description of the document.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr070-007"><em>tbr070-007</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: If the document being referenced is a Notice being published on TED, use two description lines. Use the second description line to place therein the temporary number received from TED. See example and comments below.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: If the document being referenced is a Notice being published on TED, use two description lines. Use the second description line to place therein the temporary number received from TED. See example and comments below.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-COM-10#2, BR-COM-10-S10, BR-COM-10-S20, BR-COM-10-S30)</p></td>
 </tr>
 </tbody>
 </table>
@@ -706,7 +714,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-12-19 15:33:44 CET
+Last updated 2018-05-17 16:39:55 CEST
 </div>
 </div>
 </body>

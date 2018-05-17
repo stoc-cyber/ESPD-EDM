@@ -600,6 +600,10 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">A reference to an additional document associated with this document.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
 </tr>
@@ -638,7 +642,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">The identifier for the referenced document, generally issued by the entity responsible for the document.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-013"><em>tbr92-013</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Use the same value that was used in the <strong>cac:QualificationApplicationRequest/cbc:ID</strong>.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Use the same value that was used in the <strong>cac:QualificationApplicationRequest/cbc:ID</strong>.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-OTH-02)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:UUID</strong></p></td>
@@ -647,7 +652,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">A universally unique identifier that can be used to reference this ESPD document instance.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-013"><em>tbr92-013</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Use the same value that was used in the <strong>cac:QualificationApplicationRequest/cbc:UUID</strong>.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Use the same value that was used in the <strong>cac:QualificationApplicationRequest/cbc:UUID</strong>.
+</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-02)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:DocumentTypeCode</strong></p></td>
@@ -656,7 +662,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of document being referenced, expressed as a code.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-013"><em>tbr92-013</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: For the ESDP-EDM it is compulsory use of the value <code>ESPD_REQUEST</code> from the Code List <a href="./dist/cl/ods/ESPD-CodeLists-V2.0.2.ods"><em>DocRefContentType</em></a>. See also the XML example below on how to specify the ESPD Request.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: For the ESDP-EDM it is compulsory use of the value <code>ESPD_REQUEST</code> from the Code List <a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.2/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.0.2.ods"><em>DocRefContentType</em></a>. See also the XML example below on how to specify the ESPD Request.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-OTH-01, BR-COM-10#3, BR-OTH-01#3, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:DocumentType</strong></p></td>
@@ -665,7 +672,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of document being referenced, expressed as text.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-013"><em>tbr92-013</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Optionally use the attribute languageID to indicate the language of the text. Use the Code List <a href="./dist/cl/ods/ESPD-CodeLists-V2.0.2.ods"><em>LanguageCodeEU</em></a> for the value of the languageID attribute.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Optionally use the attribute languageID to indicate the language of the text. Use the Code List <a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.2/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.0.2.ods"><em>LanguageCodeEU</em></a> for the value of the languageID attribute.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-OTH-01, BR-OTH-01#4, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:IssueDate</strong></p></td>
@@ -747,7 +755,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">The Uniform Resource Identifier (URI) that identifies where the document is located.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-013"><em>tbr92-013</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: None.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: If the document exists at a remote location, then the value should be the URL pointing to the document.</p></td>
 </tr>
 </tbody>
 </table>
@@ -756,7 +764,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-24 16:06:16 CEST
+Last updated 2018-05-17 16:39:55 CEST
 </div>
 </div>
 </body>

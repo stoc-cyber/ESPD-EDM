@@ -537,6 +537,10 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">A class to describe a response to a criterion property.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SELF-CONTAINED (BR-RESP-80, BR-RESP-80-S10, BR-RESP-80-S20), Common (BR-LEAD-10)</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
 </tr>
@@ -574,7 +578,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A language-independent token, e.g., a number, that allows to identify a criterion response uniquely as well as allows to reference the criterion response in other documents. A criterion response describes how an economic operators fulfills an specific criterion.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-018"><em>tbr92-018, tbr92-007, tbr92-005, tbr92-006</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: This ID SHOULD be provided by the EO or the service provider that instantiates the ESPDResponse XML document.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: This ID SHOULD be provided by the EO or the service provider that instantiates the ESPDResponse XML document.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-TCR-05, BR-OTH-02)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ValidatedCriterionPropertyID</strong></p></td>
@@ -582,7 +587,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A cross-reference to the criterion propertys which is validated thorugh this response expressed as an identifier.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-018"><em>tbr92-018, tbr92-007, tbr92-005, tbr92-006</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: This ID MUST point at one of the TenderingCriterionProperty/cbc:ID that were included in the Request document.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: This ID MUST point at one of the TenderingCriterionProperty/cbc:ID that were included in the Request document.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-RESP-30, BR-RESP-40, BR-RESP-60, BR-RESP-60-S10, BR-RESP-60-S20, BR-TCR-01, BR-TCR-03, BR-LEAD-10-S20, BR-LEAD-10-S30)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ConfidentialityLevelCode</strong></p></td>
@@ -590,7 +596,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A code specifying the confidentiality level of the given response for this criterion.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-018"><em>tbr92-018, tbr92-007, tbr92-005, tbr92-006</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: If the value is true, all the evidences associated to this response becomes also confidential.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: If the value is true, all the evidences associated to this response becomes also confidential.
+</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-TCR-02, BR-OTH-01, BR-OTH-01#19, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:ResponseValue</strong></p></td>
@@ -598,7 +605,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A class to describe the criterion property response value.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-018"><em>tbr92-018</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: This class contains the main disjoint elements used to provide the actual answer. The UBL-2.2 model provides cardinality 0..n, this allows for building up lists of, namely, identifier and code values that are all "packaged" into one <code>cac:TenderingCriterionResponse</code> that in turn is linked to one <code>cac:TenderingCriterionProperty</code>. Beware that the cardinality is flexible (0..whatever) because some responses are not simple values, like the ones but complex ones, e.g. <code>cac:ApplicablePeriod</code> and <code>cac:EvidenceSupplied</code>).</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: This class contains the main disjoint elements used to provide the actual answer. The UBL-2.2 model provides cardinality 0..n, this allows for building up lists of, namely, identifier and code values that are all "packaged" into one <code>cac:TenderingCriterionResponse</code> that in turn is linked to one <code>cac:TenderingCriterionProperty</code>. Beware that the cardinality is flexible (0..whatever) because some responses are not simple values, like the ones but complex ones, e.g. <code>cac:ApplicablePeriod</code> and <code>cac:EvidenceSupplied</code>).
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-TCR-08, BR-TCR-04)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:ApplicablePeriod</strong></p></td>
@@ -614,7 +622,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A reference to the evidence supporting this criterion property response.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-017"><em>tbr92-017</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: None.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Used to point at an instance of the cac:Evidence.</p></td>
 </tr>
 </tbody>
 </table>
@@ -633,7 +641,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>Thus, for example, if in the ESPD Request the expected type is DESCRIPTION the cac:ResponseValue must use the element <code>cbc:Description</code>, if INDICATOR <code>cbc:ResponseIndicator</code>, if IDENTIFIER <code>cbc:ResponseID</code>, etc.</p>
 </div>
 <div class="paragraph">
-<p>See the codes used for <code>cac:ValueDataTypeCode</code> in the Code List <a href="./dist/cl/ods/ESPD-CodeLists-V2.0.2.ods">ResponseDataType</a>. For the different possible values in the response see the XSD diagrams above and the list of the expected elements in <code>cac:ResponseValue</code> in the table below.</p>
+<p>See the codes used for <code>cac:ValueDataTypeCode</code> in the Code List <a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.2/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.0.2.ods">ResponseDataType</a>. For the different possible values in the response see the XSD diagrams above and the list of the expected elements in <code>cac:ResponseValue</code> in the table below.</p>
 </div>
 <div class="paragraph">
 <p>This disjointness rule applies to the <strong>type</strong> of the value, but <strong>not to the values of the same type</strong>. Thus, for lists of values that constitute the actual answer (e.g. the list of LotIDs the economic operator tenders to, or a list of CPV codes to describe with granularity an activity), a sequence of <code>cac:ResponseValues</code> shall be instantiated in the XML. See the XML examples below.</p>
@@ -656,6 +664,10 @@ table.CodeRay td.code>pre{padding:0}
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definition</strong>:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A class to describe a period of time.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
@@ -723,6 +735,10 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">A reference to the evidence supporting this criterion property response.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
 </tr>
@@ -760,7 +776,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of the referenced evidence.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-018"><em>tbr92-018</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: The expected identifier must match the value of a <code>cac:Evidence/cbc:ID</code> present in the XML document.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: The expected identifier must match the value of a <code>cac:Evidence/cbc:ID</code> present in the XML document.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-TCR-09, BR-OTH-0)</p></td>
 </tr>
 </tbody>
 </table>
@@ -781,6 +798,10 @@ table.CodeRay td.code>pre{padding:0}
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definition</strong>:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A class to describe the criterion property response value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common (BR-TCR-08, BR-TCR-04)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
@@ -820,7 +841,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An identifier to refer to this criterion response value.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-018"><em>tbr92-018</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: Recommendation: use a UUDI-version 4 number.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Recommendation: use a UUDI-version 4 number.
+</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-TCR-05)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:Description</strong></p></td>
@@ -836,7 +858,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An amount used as a reply to the criterion property.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-018"><em>tbr92-018</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: None.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: The currencyID attribute is MANDATORY (e.g. "EUR"). Compulsory use of the code list "ISO 4217 3A:2015". BEWARE that amounts can use decimal separators (e.g. 14134,95 but not hundred or thousand separators).
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-OTH-01, BR-OTH-01#17, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ResponseCode</strong></p></td>
@@ -844,7 +867,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A code used as a reply to the criterion property.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-018"><em>tbr92-018</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the attributes mentioned in the section "<a href="##ii-4-codes-and-identifiers">II.4 Codes and Identifiers</a>" for codes.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the attributes mentioned in the section "<a href="##ii-4-codes-and-identifiers">II.4 Codes and Identifiers</a>" for codes.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-OTH-01)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ResponseDate</strong></p></td>
@@ -876,7 +900,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An indicator used as a reply to the criterion property.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-018"><em>tbr92-018</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: None.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: The only possible values are False and True.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-TCR-06, BR-TCR-07)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ResponseMeasure</strong></p></td>
@@ -892,7 +917,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A number used as a reply to the criterion property.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-018"><em>tbr92-018</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: None.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Do not format the percentage with the "%" symbol, just provide a float value like in the example (e.g. 0.4).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ResponseQuantity</strong></p></td>
@@ -900,7 +925,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A quantity used as a reply to the criterion property.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr92-018"><em>tbr92-018</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: None.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: BEWARE that different types of Quantities can be required, some of them with a special attribute. Up to three different types of Quantities can be specified: (1) QUANTITY_INTEGER, a number representing a quantity in a specific unit of measure. The unit has to be specified (e.g. number of workers); (2) QUANTITY_YEAR, a non-negative integer (i.e. a natural number) representing a year. The unit has to be specified as YEAR, and (3) QUANTITY, a number representing a generic quantity with no unit specified (e.g. a ratio). Beware that in the case of QUANTITY_INTEGER and QUANTITY_YEAR the attribute unitCode MUST be always specified.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ResponseURI</strong></p></td>
@@ -916,7 +941,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-24 16:06:16 CEST
+Last updated 2018-05-17 16:39:55 CEST
 </div>
 </div>
 </body>

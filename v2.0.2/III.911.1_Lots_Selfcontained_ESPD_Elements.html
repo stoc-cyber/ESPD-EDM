@@ -538,6 +538,10 @@ table.CodeRay td.code>pre{padding:0}
 </p><p class="tableblock"><a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr070-008"><em>tbr070-008</em></a></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SELF-CONTAINED (BR-LOT-30)</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
 </tr>
@@ -572,7 +576,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">A reference to one or more lots the economic operator is applying for. The original lot definition is part of the call for tender document. The Qualification instance only references the corresponding IDs in order to establish the connection to the call for tender information.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr070-008"><em>tbr070-008</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of schemeAgencyID attribute. If several lots are present check that the type of the <code>cbc:QualificationApplicationResponse</code> element is set to <code>SELFCONTAINED</code>; otherwise a fatal exception should be thrown. As for the <strong>Regulated</strong> version, if only one Lot is specified its ID has to be set to '0' thus indicating that the procurement procedure is not divided into Lots.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of schemeAgencyID attribute. If several lots are present check that the type of the <code>cbc:QualificationApplicationResponse</code> element is set to <code>SELFCONTAINED</code>; otherwise a fatal exception should be thrown. As for the <strong>Regulated</strong> version, if only one Lot is specified its ID has to be set to '0' thus indicating that the procurement procedure is not divided into Lots.
+</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-LOT-10, BR-LOT-30-S10, BR-OTH-02)</p></td>
 </tr>
 </tbody>
 </table>
@@ -583,7 +588,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-12-19 15:33:44 CET
+Last updated 2018-05-17 16:39:55 CEST
 </div>
 </div>
 </body>

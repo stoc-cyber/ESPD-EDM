@@ -537,6 +537,10 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">"<em>A structured electronic business document for requesting qualification information through an ESPD (conform to an ESPD template). Directive 2014/24/EU, Art. 59.</em>" (<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-ESPDRequesttransaction(Trdm070)"><em>ESPD Request transaction (Trdm070)</em></a>)</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dist/main/xsdrt/UBL-QualificationApplicationRequest-2.2-Pre-award.xsd</p></td>
 </tr>
@@ -567,7 +571,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">An identifier that is specified by the buyer and used as a reference number for all documents in the procurement process. It is also known as procurement project identifier, procurement reference number or contract folder identifier. A reference to the procurement procedure to which this Qualification document is delivered as a response.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr070-007"><em>tbr070-007</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of schemeAgencyID attribute. Although not mandatory, it is a good practice to identify the document with a UUID. Copies of a document should be identified with a different UUID.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of schemeAgencyID attribute. Although not mandatory, it is a good practice to identify the document with a UUID. Copies of a document should be identified with a different UUID.
+</p><p class="tableblock"><strong>Rule scope</strong>: REGULATED (BR-REG-10), SELF-CONTAINED (BR-SC-10)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ProcedureCode</strong></p></td>
@@ -575,7 +580,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of the procurement administrative procedure according to the EU Directives.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr070-007"><em>tbr070-007</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the Code List <code>ProcedureType</code> (open procedure, restricted procedure, accelerated restricted procedure, competitive dialogue, negotiated procedure, etc.).</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the Code List <code>ProcedureType</code> (open procedure, restricted procedure, accelerated restricted procedure, competitive dialogue, negotiated procedure, etc.).
+</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-SC-10#2, BR-OTH-03, BR-OTH-01, BR-OTH-01#1)</p></td>
 </tr>
 </tbody>
 </table>
@@ -596,6 +602,10 @@ table.CodeRay td.code>pre{padding:0}
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definition</strong>:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An overall description of the procurement procedure.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
@@ -627,7 +637,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A title for the procurement procedure.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr070-007"><em>tbr070-007</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Use the same name that will be used for the Contract Notice.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Use the same name that will be used for the Contract Notice.
+</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-SC-10#1)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:Description</strong></p></td>
@@ -643,7 +654,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A code to describe the object of the project (e.g. works, supplies, services, public work concessions, service concessions, other).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr070-007"><em>tbr070-007</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the Code List <code>ProjectType</code>.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the Code List <code>ProjectType</code>.
+</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-01, BR-OTH-01#6,  BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:MainCommodityClassification</strong></p></td>
@@ -651,7 +663,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A class to classify the works, services or supplies. The Self-contained ESPD uses it to assign CPV codes to works and services.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr070-007"><em>tbr070-007</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Use the element <code>cbc:ItemClassificationCode</code> for the specification of the CPV code. Beware that the cardinality of the basic element is 0..1 but the cardinality of the class is 0..n, thus allowing for multiple CPVs.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Use the element <code>cbc:ItemClassificationCode</code> for the specification of the CPV code. Beware that the cardinality of the basic element is 0..1 but the cardinality of the class is 0..n, thus allowing for multiple CPVs.
+</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-SC-10#1, BR-OTH-01)</p></td>
 </tr>
 </tbody>
 </table>
@@ -659,7 +672,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-03-16 11:50:34 CET
+Last updated 2018-05-17 16:39:55 CEST
 </div>
 </div>
 </body>

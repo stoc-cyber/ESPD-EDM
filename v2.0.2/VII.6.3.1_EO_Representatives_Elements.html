@@ -538,6 +538,10 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">Official or legal mandate issued by an authority (e.g. an attorney or a notary) to represent the economic operator as a representative of the economic operator in public procurement procedures.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common (BR-RESP-20)</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
 </tr>
@@ -576,7 +580,8 @@ cac:Person/cbc:FirstName</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name of the natural person.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr092-009"><em>tbr92-009</em></a>
-<strong>Rule</strong>: None.</p></td>
+<strong>Rule</strong>: Name of the natural person is mandatory.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-RESP-20-01)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:PowerOfAttorney/cac:AgentParty/
@@ -585,7 +590,8 @@ cac:Person/cbc:FamilyName</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Family Name of the natural person.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr092-009"><em>tbr92-009</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: None.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Family Name of the natural person is mandatory.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-RESP-20-02)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:PowerOfAttorney/cac:AgentParty/
@@ -640,7 +646,8 @@ cac:Country/cbc:IdentificationCode</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A code that identifies the country.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr092-009"><em>tbr92-009</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the Code List <a href="./dist/cl/ods/ESPD-CodeLists-V2.0.2.ods">CountryCodeIdentifier</a>.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the Code List <a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.2/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.0.2.ods">CountryCodeIdentifier</a>.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-RESP-20-03, BR-OTH-01, BR-OTH-01#5, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:PowerOfAttorney/cac:AgentParty/
@@ -650,7 +657,7 @@ cac:Country/cbc:Name</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The name of the country.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr092-009"><em>tbr92-009</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: Try to use the name provided in the Code List <a href="./dist/cl/ods/ESPD-CodeLists-V2.0.2.ods">CountryCodeIdentifier</a> and in the language of the user.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Try to use the name provided in the Code List <a href="https://github.com/ESPD/ESPD-EDM/tree/2.0.2/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.0.2.ods">CountryCodeIdentifier</a> and in the language of the user.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:PowerOfAttorney/cac:AgentParty/
@@ -690,7 +697,7 @@ cac:Person/cac:Contact/cbc:Telephone</strong></p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-24 16:06:16 CEST
+Last updated 2018-05-17 16:39:55 CEST
 </div>
 </div>
 </body>

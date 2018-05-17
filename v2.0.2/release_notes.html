@@ -516,9 +516,8 @@ table.CodeRay td.code>pre{padding:0}
 <ul class="sectlevel1">
 <li><a href="#release-notes">Release Notes</a>
 <ul class="sectlevel2">
-<li><a href="#v2-0-2-30th-april-2018">v2.0.2 (30th April 2018)</a></li>
-<li><a href="#v1-0-3-30th-april-2018">v1.0.3 (30th April 2018)</a></li>
-<li><a href="#v2-0-2-1st-february-2018">v2.0.2 (1st February 2018)</a></li>
+<li><a href="#v2-0-2-may-2018">v2.0.2 (May 2018)</a></li>
+<li><a href="#v2-0-1-1st-february-2018">v2.0.1 (1st February 2018)</a></li>
 <li><a href="#v2-0-0-25th-july-2017">v2.0.0 (25th July 2017)</a></li>
 <li><a href="#v1-0-2-28th-of-july-2016">v1.0.2 (28th of July 2016)</a></li>
 </ul>
@@ -531,128 +530,68 @@ table.CodeRay td.code>pre{padding:0}
 <h2 id="release-notes"><a class="anchor" href="#release-notes"></a>Release Notes</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="v2-0-2-30th-april-2018"><a class="anchor" href="#v2-0-2-30th-april-2018"></a>v2.0.2 (30th April 2018)</h3>
+<h3 id="v2-0-2-may-2018"><a class="anchor" href="#v2-0-2-may-2018"></a>v2.0.2 (May 2018)</h3>
 <div class="paragraph">
-<p>This releases encompasses the following updates:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>XML Validation</strong>:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Schematron files are provided for the validation of REGULATED and SELF-CONTAINED ESPD Request and Response XML instances, including the validation of the criteria. See folder <a href="./dist/val">dist/val</a> and the online documentation (see chapter Annex I. XML Validation").</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Code Lists</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>A new Code List has been added: "WeightingType". Reason: some selection criteria need to be weighted. In version 2.0.0 the element "cbc:WeightingTypeCode" was added to the root of the "UBL-QualificationApplicationResponse-2.2-Pre-award.xd" document.</p>
-</li>
-<li>
-<p>The OASIS Genericode *.gc files have been moved from the "dist/cl/" folder into the "dist/val/schematron/common/" folder.</p>
-</li>
-<li>
-<p>Genericode *.gc files are provided for the Criteria Taxonomy, see file "dist/val/schematron/common/gc/ESPD-CriteriaTaxonomy_V1.0.3.gc".</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Compatibility between versions 1 and 2</strong>:</p>
-</li>
-</ul>
+<p>The ESPD EDM version 2.0.2 is now released and contains only bugs fixed on the basis of the received comments on GitHub.
+For further details please read the release notes. For further details please read the release notes. The release contains a definition of all relevant
+business rules and corresponding schematron files to validate Regulate and Self-Contained ESPD Request and Response XML instances
+(including the validation of the criteria taxonomy). The corresponding TestBed for version 2.0.2 has been set up.
+The specifications for version 2.0.2 contain an updated distribution of the ESPD Exchange Data Model and include a corresponding implementation guideline
+which clarifies the ESPD validation architecture in Annex I. Also, the BIS 41 – ESPD version 2.0.2 was updated accordingly.</p>
 </div>
 <div class="paragraph">
-<p>Transformation artefacts are now available for the conversion of ESPD Request and Response <strong>from version 1.0.3</strong> (see below) and <strong>REGULATED ESPD V2.0.2</strong>, Request and Response. See chapters "I.5 Forward compatibility" and "Annex II: v1.0.3 to v2.0.2 conversion" for more details.</p>
+<p>This release encompasses these other minor updates:</p>
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p><strong>Code lists</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>A new code list has been added: "WeightingType". Reason: some selection criteria need to be weighted. In version 2.0.0 the element "cbc:WeightingTypeCode" was added to the root of the "UBL-QualificationApplicationResponse-2.2-Pre-award.xd" document.</p>
+</li>
+<li>
+<p>Two code lists have been removed as they are not used anymore in versions 2.0.x: <code>PeriodMeasureTypeCodes</code> and <code>TechnicalCapabilityTypeCode</code>.</p>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p><strong>Criteria data structures</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>All criteria have now one block "Is this information available electronically" with cardinality 0..n. See data structures spread-sheets for both
+the <a href="https://github.com/ESPD/ESPD-EDM/blob/2.0.2/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-REGULATED-V2.0.2.ods">REGULATED</a> and the
+<a href="https://github.com/ESPD/ESPD-EDM/blob/2.0.2/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-SELFCONTAINED-V2.0.2.ods">SELF-CONTAINED</a> flavours.</p>
 </li>
 <li>
 <p>In the <strong>SELF-CONTAINED ESPD</strong> CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.RISK_INDEMNITY_INSURANCE Subgroup "83e3dcc4-c9b3-47e5-9fb8-ffd8386679f1" changed its cardinality from 1 to 1..n.</p>
 </li>
 <li>
-<p>The REGULATED ESPD version 2.0.2 mimicks as much as possible the criteria data structures implemented in version 1.0.3. This is not necesarily the case of the SELF-CONTAINED ESPD. Thus the following REGULATED ESPD <strong>version 2.0.2</strong> have been slightly modified in the <strong>REGULATED ESPD v2.0.2</strong> to match the structures of criteria in version 1.0.3:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>CRITERION.EXCLUSION.CONTRIBUTIONS.*</p>
-</li>
-<li>
-<p>CRITERION.EXCLUSION.NATIONAL.OTHER</p>
-</li>
-<li>
-<p>CRITERION.SELECTION.SUITABILITY.MEMBERSHIP</p>
-</li>
-<li>
-<p>CRITERION.OTHER.EO_DATA.REGISTERED_IN_OFFICIAL_LIST</p>
+<p>In "Financial Ratios" for the SELF-CONTAINED ESPD, the REQUIREMENT "Ratio Type" needs to be a CODE (not a DESCRIPTION, as in previous versions). This code is needed by the Contracting Authority
+to specify the BACH&#8217;s code (See section "VI.4.2 Self-contained financial ratios" of the online documentation for details on this).</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>In the previous REGULATED <strong>version 2.0.2</strong> all criteria about Suitability were grouped in one tab of the data structure spread-sheet. The spread-sheets for <strong>ESPD v1.0.3</strong> and <strong>REGULATED ESPD v2.0.2</strong> the tab tSC-Suitability has been split into into the tabs <strong>SC-Suitability-I</strong> and <strong>SC-Suitability-II</strong> as the structure of CRITERION.SELECTION.SUITABILITY.PROFESSIONAL_REGISTER_ENROLMENT and CRITERION.SELECTION.SUITABILITY.TRADE_REGISTER_ENROLMENT are different from CRITERION.SELECTION.SUITABILITY.AUTHORISATION and CRITERION.SELECTION.SUITABILITY.MEMBERSHIP.</p>
-</li>
+<p><strong>UUIDS</strong></p>
+<div class="ulist">
+<ul>
 <li>
-<p>Turnovers have been split into 4 tabs to respect the order of appearance of the criteria as in they appear in version 1.0.3.</p>
+<p>In the previous versions the UUIDs for the block "Is this information available electronically" where not 100% consistent. For some criteria they used the same UUIDs as in version 1.0.2 and for other a completely different set of UUIDS.
+This has been corrected and now all criteria have one block "Is this information available electronically", and all of them use the same UUIDs (the ones used also in version 1.0.2).</p>
 </li>
-<li>
-<p>Beware that in version 2.0.2 the UBL-QualificationApplicationResponse has a placeholder at the root level named "cbc:EconomicOperatorGroupName". This element is used only by the SELF-CONTAINED ESPD Response document. The <strong>REGULATED ESPD Response does not use this element</strong> as it is defined in the Data Structure "OTHER-EO-GROUPS", thus mimicking version 1.0.3 to facilitate the conversion between versions 1.0.3 and 2.0.2.</p>
-</li>
-<li>
-<p>Financial Ratios in ESPD v1.0.3 and REGULATED v2.0.2 have two fields: Description and Ratio. The first one, "Description" is used to add a descriptive text about the ratio used, whilst the second one, "Ratio" MUST be used to place the ratio value itself.</p>
-</li>
-<li>
-<p>In ESPD Request and ESPD Response version 1.0.3, the bloc of fields about whether "Is this information available electronically" the UUID "7458d42a-e581-4640-9283-34ceb3ad4345" is used for the main subgroup of elements, and the UUID "41dd2e9b-1bfd-44c7-93ee-56bd74a4334b" for the sub-subgroup "URL, Code and Issuer". However there were two criteria ("CRITERION.SELECTION.SUITABILITY.PROFESSIONAL_REGISTER_ENROLMENT" and "CRITERION.SELECTION.SUITABILITY.TRADE_REGISTER_ENROLMENT") where other UUIDs were erroneously used for the same subgroups. This has been corrected and now, in versions 1.0.3 and 2.0.2 all the blocks "Is this information available electronically" use always the same UUIDs.</p>
-</li>
-<li>
-<p>The Criterion "CRITERION.OTHER.EO_DATA.REGISTERED_IN_OFFICIAL_LIST" has changed slightly in respect of the current ESPD Service: the question "Not applicable" has been removed.</p>
-</li>
-<li>
-<p>ESDP v1.0.3 Start Date and End Date structures are mimicked in the REGULATED ESPD v2.0.2. The SELF-CONTAINED ESPD instead uses the UBL-2.2 "cac:Period" element.</p>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="v1-0-3-30th-april-2018"><a class="anchor" href="#v1-0-3-30th-april-2018"></a>v1.0.3 (30th April 2018)</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Criteria</strong></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Minor documentation fixes applied to version 1.0.2. The data model was not changed.  Only the documentation was updated to reflect the changes made until the July 2017 release of the Commission ESPD. It has no impact on current ESPD services based on v1.0.2.</p>
-</div>
-<div class="paragraph">
-<p>Beware that the Codes and UUIDs of the Criteria have not been modified between major versions: versions 1.0.2-1.0.3, and 2.0.0 to 2.0.2 REGULATED and SELF-CONTAINED do use the same codes and UUIDs for each Criterion. However some minor corrections have been applied to the UUIDs of some data structures. Thus the UUIDs for the structures "Is this information available electronically" are now consistent; in the case of Convictions a new UUID is now used for the group containing the question ""; etc.</p>
-</div>
-<div class="paragraph">
-<p>A new file containing the criteria, the taxonomy codes, the Criteria UUIDs and the each criterion data structures is provided. This new spread-sheet mimics the distribution of data structures in v2.0.2 REGULATED, thus facilitating the comparison between the version 1.0.3 and version 2.0.x data structures. The update criteria taxonomy can be found here: ./dist/cl/ods/ESPD-CriteriaTaxonomy(Data-Structures)_V1.0.3.ods[Criteria Taxonomy (Data Structures)]. See also documentation about v2.0.2 chapter "I.5 Forward compatibility").</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Code Lists</strong></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>To ensure compatibility between versions 1 and 2, version 1.0.3 uses the code lists used also in version 2.0.2. See the spread-sheets in <a href="./dist/cl/ods/ESPD-CodeLists-V2.0.2.ods">ESPD-CodeLists-V2.0.2.ods</a>, and the Genericode *.gc files in <a href="./dist/val/schematron/gc">V2.0.2 Genericode files</a>, which also includes a Genericod file for the <a href="/dist/val/schematron/gc/">Criteria Taxonomy</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="v2-0-2-1st-february-2018"><a class="anchor" href="#v2-0-2-1st-february-2018"></a>v2.0.2 (1st February 2018)</h3>
+<h3 id="v2-0-1-1st-february-2018"><a class="anchor" href="#v2-0-1-1st-february-2018"></a>v2.0.1 (1st February 2018)</h3>
 <div class="paragraph">
 <p>The changes specified herein have been applied in both (1) the <a href="https://github.com/ESPD/ESPD-EDM">ESPD-EDM specification</a>, version 2.0.2 published in this Github repository; and (2) the <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0.2">ESPDInt BIS document</a>.</p>
 </div>
@@ -875,7 +814,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://github.com/ESPD/ESPD-EDM/issues/2">Change cardinality of requirements inside requirement groups</a></p>
+<p><a href="https://github.com/ESPD/ESPD-EDM/issues/2">Change cardinality of requirements inside requirement groups</a>.</p>
 </li>
 </ul>
 </div>
@@ -885,7 +824,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-24 16:06:16 CEST
+Last updated 2018-05-17 16:39:55 CEST
 </div>
 </div>
 </body>

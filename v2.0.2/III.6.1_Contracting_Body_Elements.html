@@ -537,12 +537,12 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">The contracting authority or contracting entity who is buying supplies, services or public works using a tendering procedure as described in the applicable directive (e.g. Directives 2014/24/EU, 2014/25/EU).</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>: Common (BR-REQ-20#1)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">/QualificationApplicationRequest/cac:ContractingParty</p></td>
 </tr>
 </tbody>
 </table>
@@ -625,7 +625,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">The national identifier of a contracting body as it is legally registered (e.g. VAT identification).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr070-001"><em>tbr070-001</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: More than one identifier can be specified. When possible use the VAT identification of the contracting body (see the <a href="http://ec.europa.eu/taxation_customs/vies/">VIES</a> platform for a EU cross-border national VAT number verification system).</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: More than one identifier can be specified. When possible use the VAT identification of the contracting body (see the <a href="http://ec.europa.eu/taxation_customs/vies/">VIES</a> platform for a EU cross-border national VAT number verification system).
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-REQ-20#4, BR-OTH-02)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:WebsiteURI</strong></p></td>
@@ -652,7 +653,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">The name of the contracting body as it is registered.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr070-001"><em>tbr070-001</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Mandatory. Use the official name of the contracting body. The PartyName class has an associated basic element "cbc:Name". See XML example below.</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Mandatory. Use the official name of the contracting body. The PartyName class has an associated basic element "cbc:Name". See XML example below.
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-REQ-20#2)</p></td>
 </tr>
 </tbody>
 </table>
@@ -670,6 +672,10 @@ table.CodeRay td.code>pre{padding:0}
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definition</strong>:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Contractinng body address information.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
@@ -733,7 +739,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">A code that identifies the country. The lists of valid countries are registered with the ISO 3166-1 Maintenance agency, "Codes for the representation of names of countries and their subdivisions". It is recommended to use the Country Code ISO 3166-1 2A:2006 representation.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-tbr070-006"><em>tbr070-006</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: The country of the contracting body must always be specified. Compulsory use of the code list CountryCodeIdentifier (ISO 3166-1 2A:2006).</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: The country of the contracting body must always be specified. Compulsory use of the code list CountryCodeIdentifier (ISO 3166-1 2A:2006).
+</p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-REQ-20#3, BR-OTH-01, BR-OTH-01#5, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:Country/cbc:Name</strong></p></td>
@@ -831,7 +838,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-12-19 15:33:44 CET
+Last updated 2018-05-17 16:39:55 CEST
 </div>
 </div>
 </body>
