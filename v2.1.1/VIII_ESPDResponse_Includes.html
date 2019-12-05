@@ -748,7 +748,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-013"><em>tbr92-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Try always to use the reference number issued by the contracting authority. This number in combination with a registered contracting authority ID (e.g. the VAT number) results in a <strong>universally unique identifier of the procurement procedure</strong>.
-</p><p class="tableblock"><strong>Rule scope</strong>: REGULATED (BR-REG-20), SELF-CONTAINED (BR-SC-30)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: BASIC (BR-REG-20), EXTENDED (BR-SC-30)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:IssueDate</strong></p></td>
@@ -776,7 +776,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-008"><em>tbr92-008</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: The leader of the group must take care of ensuring that the name of the group is identical in all the ESPDs of the tender.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-LEAD-10-S10)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-LEAD-10-S10)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:VersionID</strong></p></td>
@@ -803,7 +803,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of the procurement administrative procedure according to the EU Directives.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 </p><p class="tableblock"></p><p class="tableblock"><strong>Rule</strong>: Compulsory use of attributes listID, listAgencyName and listVersionID. Compulsory use of the code list <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">ProcedureType</a> (values: <code>Open</code>, <code>Restricted</code>, <code>Accelerated</code>, <code>Competitive dialogue</code>, etc.). Do not confound with the object of the procurement project (code list <code>ProjectType</code>: Works, Supplies, Services).
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-01, BR-OTH-01#1, BR-OTH-03)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-01, BR-OTH-01#1, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:QualificationApplicationTypeCode</strong></p></td>
@@ -812,8 +812,8 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of European Single Procurement Document (ESPD).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-019"><em>tbr92-019</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the codelist <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">QualificationApplicationType</a> (values 'REGULATED`, <code>SELFCONTAINED</code>). Compulsory use of attributes listID, listAgencyName and listVersionID.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-01, BR-OTH-01#2, BR-OTH-03)</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the codelist <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">QualificationApplicationType</a> (values 'BASIC`, <code>EXTENDED</code>). Compulsory use of attributes listID, listAgencyName and listVersionID.
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-01, BR-OTH-01#2, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:WeightScoringMethodologyNote</strong></p></td>
@@ -869,7 +869,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-014"><em>tbr92-014</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: If there is only one single procurement project lot specified, the ESPD refers then to a procurement procedure without lots.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-LOT-30)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-LOT-30)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:TenderingCriterion</strong></p></td>
@@ -924,7 +924,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="sect3">
 <h4 id="xml-example"><a class="anchor" href="#xml-example"></a>XML example</h4>
 <div class="paragraph">
-<p>The XML snippet below shows how the beginning of an ESPD Response XML instance looks like. For a complete instance of an ESPD Response XML document see the the example files in the <code>dist/xml</code> folder: <a href=".dist/xml/REGULATED-ESPDResponse-2.1.1.xml">REGULATED-ESPDResponse-2.1.1.xml</a> or <a href=".dist/xml/SELFCONTAINED-ESPDResponse-2.1.1.xml">SELFCONTAINED-ESPDResponse-2.1.1.xml</a>.</p>
+<p>The XML snippet below shows how the beginning of an ESPD Response XML instance looks like. For a complete instance of an ESPD Response XML document see the the example files in the <code>dist/xml</code> folder: <a href=".dist/xml/BASIC-ESPDResponse-2.1.1.xml">BASIC-ESPDResponse-2.1.1.xml</a> or <a href=".dist/xml/EXTENDED-ESPDResponse-2.1.1.xml">EXTENDED-ESPDResponse-2.1.1.xml</a>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -952,8 +952,8 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
         <span class="tag">&lt;cbc:VersionID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1.0<span class="tag">&lt;/cbc:VersionID&gt;</span>
         <span class="comment">&lt;!-- The type of the procurement procedure; e.g. V = Award of contract without prior publication of a contract notice --&gt;</span>
         <span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>OPEN<span class="tag">&lt;/cbc:ProcedureCode&gt;</span>
-        <span class="comment">&lt;!-- The type of the ESPD (REGULATED or SELFCONTAINED) --&gt;</span>
-        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>SELFCONTAINED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
+        <span class="comment">&lt;!-- The type of the ESPD (BASIC or EXTENDED) --&gt;</span>
+        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EXTENDED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
 
 <span class="comment">&lt;!-- ... rest of document removed for brevity --&gt;</span></code></pre>
 </div>
@@ -5111,7 +5111,7 @@ block related to evidences is omitted for the sake of clarity and brevity):</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-12-04 21:34:49 CET
+Last updated 2019-12-05 00:07:20 CET
 </div>
 </div>
 </body>

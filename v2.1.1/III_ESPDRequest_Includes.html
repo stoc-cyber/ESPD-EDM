@@ -759,7 +759,7 @@ to specific elements of the ESPD XSD Schemas, the severity of the error is indic
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-002"><em>tbr070-002</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: This UUID will be used to link the ESPD Response to its corresponding ESPD Request (thus its compulsoriness). Copies of a document must be identified with a different UUID. Compulsory use of schemeAgencyID attribute.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-02)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-02)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ContractFolderID</strong></p></td>
@@ -769,7 +769,7 @@ to specific elements of the ESPD XSD Schemas, the severity of the error is indic
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-007"><em>tbr070-007</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Try always to use the reference number issued by the contracting authority. This number in combination with a registered contracting authority ID (e.g. the VAT number) results in a <strong>universally unique identifier of the procurement procedure</strong>.
-</p><p class="tableblock"><strong>Rule scope</strong>: REGULATED (BR-REG-10), SELF-CONTAINED (BR-SC-10)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: BASIC (BR-REG-10), EXTENDED (BR-SC-10)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:IssueDate</strong></p></td>
@@ -815,7 +815,7 @@ to specific elements of the ESPD XSD Schemas, the severity of the error is indic
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-007"><em>tbr070-007</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: <strong>Rule</strong>: Compulsory use of attributes listID, listAgencyName and listVersionID. Compulsory use of the code list <a href="./dist/cl/ods/ESPD-CodeLists-V2.0.1.ods">ProcedureType</a> (values: <code>Open</code>, <code>Restricted</code>, <code>Accelerated</code>, <code>Competitive dialogue</code>, etc.). Do not confound with the object of the procurement project (code list <code>ProjectType</code>: Works, Supplies, Services).
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-SC-10#2, BR-OTH-03, BR-OTH-01, BR-OTH-01#1)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-SC-10#2, BR-OTH-03, BR-OTH-01, BR-OTH-01#1)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:QualificationApplicationTypeCode</strong></p></td>
@@ -825,7 +825,7 @@ to specific elements of the ESPD XSD Schemas, the severity of the error is indic
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-02"><em>tbr070-02</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the code list <code>QualificationApplicationType</code>. Compulsory use of attributes listID, listAgencyName and listVersionID.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-01, BR-OTH-01#2, BR-OTH-03)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-01, BR-OTH-01#2, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:WeightScoringMethodologyNote</strong></p></td>
@@ -862,8 +862,8 @@ to specific elements of the ESPD XSD Schemas, the severity of the error is indic
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr70-002"><em>tbr70-002</em></a>.
 </p><p class="tableblock"><strong>Rules</strong>: Use this component to identify and describe the procurement administrative procedure.
-The REGULATED version should not contain a <code>cac:ProcurementProject</code> in order to ensure the back-wards compatibility with the version 1.0.2.
-</p><p class="tableblock">Use this component in case the ESPD is SELF-CONTAINED and the procedure is divided into lots. In this case use the <code>ProcurementProjectLot</code> component to provide details specific to the lot and reserve the <code>ProcurementProject</code> component to describe the global characteristics of the procedure.</p></td>
+The BASIC version should not contain a <code>cac:ProcurementProject</code> in order to ensure the back-wards compatibility with the version 1.0.2.
+</p><p class="tableblock">Use this component in case the ESPD is EXTENDED and the procedure is divided into lots. In this case use the <code>ProcurementProjectLot</code> component to provide details specific to the lot and reserve the <code>ProcurementProject</code> component to describe the global characteristics of the procedure.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:ProcurementProjectLot</strong></p></td>
@@ -1841,7 +1841,7 @@ may be used to indicate the type of identifier used as a value of the <code>sche
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-0011"><em>tbr070-011</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>:  The country of the service provider must always be specified. Compulsory use of the code list CountryCodeIdentifier (ISO 3166-1 2A:2006).
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-REQ-20#7, BR-OTH-01, BR-OTH-01#5,  BR-OTH-03)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-REQ-20#7, BR-OTH-01, BR-OTH-01#5,  BR-OTH-03)</p></td>
 </tr>
 </tbody>
 </table>
@@ -2336,7 +2336,7 @@ may be used to indicate the type of identifier used as a value of the <code>sche
         <span class="comment">&lt;!-- The type of procedure: 1 stands for Open Procedure. See Code List 'ProcedureType' --&gt;</span>
         <span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1<span class="tag">&lt;/cbc:ProcedureCode&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
 
-        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>SELFCONTAINED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
+        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EXTENDED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
 
         <span class="comment">&lt;!-- Contracting body data left empty for the sake of brevity --&gt;</span>
         <span class="tag">&lt;cac:ContractingParty&gt;</span><span class="tag">&lt;cac:Party</span><span class="tag">/&gt;</span>        <span class="tag">&lt;/cac:ContractingParty&gt;</span>
@@ -2552,7 +2552,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
 <div class="sect3">
 <h4 id="xsd-schema-7"><a class="anchor" href="#xsd-schema-7"></a>XSD Schema</h4>
 <div class="paragraph">
-<p><strong>REGULATED</strong> and <strong>EXTENDED</strong> ESPD documents share the same UBL-2.2 XSD Schemas (there are not two different sets of XSD Schemas). Thus, for the identification of the Lots, the Extended ESPD uses the same component than for the Regulated ESPD:</p>
+<p><strong>BASIC</strong> and <strong>EXTENDED</strong> ESPD documents share the same UBL-2.2 XSD Schemas (there are not two different sets of XSD Schemas). Thus, for the identification of the Lots, the Extended ESPD uses the same component than for the Basic ESPD:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -2576,7 +2576,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
 <div class="sect3">
 <h4 id="expected-elements-7"><a class="anchor" href="#expected-elements-7"></a>Expected elements</h4>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 15. Regulated ESPD Request: Lots</caption>
+<caption class="title">Table 15. Basic ESPD Request: Lots</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -2672,7 +2672,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
         <span class="tag">&lt;cbc:ContractFolderID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">DGPE</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>PP.20170419.1024-9<span class="tag">&lt;/cbc:ContractFolderID&gt;</span>
         <span class="tag">&lt;cbc:IssueDate&gt;</span>2019-11-29<span class="tag">&lt;/cbc:IssueDate&gt;</span>
         <span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1<span class="tag">&lt;/cbc:ProcedureCode&gt;</span>
-        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>SELFCONTAINED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
+        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EXTENDED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
         <span class="comment">&lt;!-- Contracting body data left empty for the sake of brevity --&gt;</span>
         <span class="tag">&lt;cac:ContractingParty&gt;</span> <span class="tag">&lt;cac:Party</span><span class="tag">/&gt;</span><span class="tag">&lt;/cac:ContractingParty&gt;</span>
         <i class="conum" data-value="1"></i><b>(1)</b>
@@ -2747,7 +2747,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
 <div class="sect3">
 <h4 id="expected-elements-8"><a class="anchor" href="#expected-elements-8"></a>Expected elements</h4>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 16. Regulated ESPD Request: Lots</caption>
+<caption class="title">Table 16. Basic ESPD Request: Lots</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -2843,7 +2843,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
         <span class="tag">&lt;cbc:ContractFolderID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">DGPE</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>PP.20170419.1024-9<span class="tag">&lt;/cbc:ContractFolderID&gt;</span>
         <span class="tag">&lt;cbc:IssueDate&gt;</span>2019-11-29<span class="tag">&lt;/cbc:IssueDate&gt;</span>
         <span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1<span class="tag">&lt;/cbc:ProcedureCode&gt;</span>
-        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>SELFCONTAINED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
+        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EXTENDED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
         <span class="comment">&lt;!-- Contracting body data left empty for the sake of brevity --&gt;</span>
         <span class="tag">&lt;cac:ContractingParty&gt;</span> <span class="tag">&lt;cac:Party</span><span class="tag">/&gt;</span><span class="tag">&lt;/cac:ContractingParty&gt;</span>
         <i class="conum" data-value="1"></i><b>(1)</b>
@@ -2927,7 +2927,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-12-04 21:33:10 CET
+Last updated 2019-12-05 00:07:17 CET
 </div>
 </div>
 </body>

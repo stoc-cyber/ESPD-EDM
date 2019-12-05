@@ -515,7 +515,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#strong-xml-implementation-guide-v2-1-1-strong"><strong>XML Implementation Guide v2.1.1</strong></a></li>
+<li><a href="#strong-xml-implementation-guide-v2-1-1-strong"><strong>XML Implementation Guide  v2.1.1</strong></a></li>
 <li><a href="#i-introduction">I. Introduction</a>
 <ul class="sectlevel2">
 <li><a href="#i-1-objectives-and-scope">I.1 Objectives and scope</a></li>
@@ -819,7 +819,7 @@ of a greater number of potential operators in public procurement procedures and 
 <div class="sect3">
 <h4 id="mock-up"><a class="anchor" href="#mock-up"></a>Mock-up</h4>
 <div class="paragraph">
-<p>Software applications need to be aware of this new feature introduced by the V2.1.0 of the ESPD-EDM. Depending on whether the ESPD Request document that is being prepared is basic or self-contained, a software application should behave in different ways; e.g. for Extended ESPD documents, the application should allow the contracting body to define requirements for some selection criteria that are specific to the procurement procedure.</p>
+<p>Software applications need to be aware of this new feature introduced by the V2.1.0 of the ESPD-EDM. Depending on whether the ESPD Request document that is being prepared is Basic or Extended, a software application should behave in different ways; e.g. for Extended ESPD documents, the application should allow the contracting body to define requirements for some selection criteria that are specific to the procurement procedure.</p>
 </div>
 <div class="paragraph">
 <p>One suggestion for a Graphical User Interface (GUI) aimed at editing ESPD Request documents is to facilitate the contracting body the selection  of the type of ESPD Request in an initial page:</p>
@@ -1085,7 +1085,7 @@ that can be used in multiple business domains, e.g. the NUTS defined by EUROSTAT
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>For identifiers, this ESPD V2.1.1 specification requires at least (and always) the mandatory attribute <code>schemeAgencyID</code></strong>.
 When identifying parties, like the Economic Operator, the Contracting Authority, etc., the attribute <code>schemeID</code> SHOULD
 also be used (for this use the code list
-<a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-CriteriaTaxonomy-SELFCONTAINED-V2.1.1.xlsx">EOIDType</a>).</p></td>
+<a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">EOIDType</a>).</p></td>
 </tr>
 </tbody>
 </table>
@@ -1232,7 +1232,7 @@ also be used (for this use the code list
 
 <span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>OPEN<span class="tag">&lt;/cbc:ProcedureCode&gt;</span> <i class="conum" data-value="6"></i><b>(6)</b>
 
-<span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>SELFCONTAINED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span> <i class="conum" data-value="7"></i><b>(7)</b></code></pre>
+<span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EXTENDED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span> <i class="conum" data-value="7"></i><b>(7)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -1294,7 +1294,7 @@ These codes are to be used as values of the <code>schemeID</code> attribute (att
 <div class="paragraph">
 <p>The next fragment of XML shows how this is used in the particular case of the Criterion "Relied on entities"
 ("Does the economic operator rely on the capacities of other entities in order to meet the selection criteria&#8230;&#8203;?").
-See also section <a href="#xml-example-self-contained-economic-operator">XML Example (SELF-CONTAINED economic operator)</a>
+See also section <a href="#xml-example-Extended-economic-operator">XML Example (Extended economic operator)</a>
 for a more complete example on this Criterion:</p>
 </div>
 <div class="listingblock">
@@ -1584,7 +1584,7 @@ to specific elements of the ESPD XSD Schemas, the severity of the error is indic
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-002"><em>tbr070-002</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: This UUID will be used to link the ESPD Response to its corresponding ESPD Request (thus its compulsoriness). Copies of a document must be identified with a different UUID. Compulsory use of schemeAgencyID attribute.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-02)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-02)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ContractFolderID</strong></p></td>
@@ -1594,7 +1594,7 @@ to specific elements of the ESPD XSD Schemas, the severity of the error is indic
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-007"><em>tbr070-007</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Try always to use the reference number issued by the contracting authority. This number in combination with a registered contracting authority ID (e.g. the VAT number) results in a <strong>universally unique identifier of the procurement procedure</strong>.
-</p><p class="tableblock"><strong>Rule scope</strong>: REGULATED (BR-REG-10), SELF-CONTAINED (BR-SC-10)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: BASIC (BR-REG-10), EXTENDED (BR-SC-10)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:IssueDate</strong></p></td>
@@ -1640,7 +1640,7 @@ to specific elements of the ESPD XSD Schemas, the severity of the error is indic
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-007"><em>tbr070-007</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: <strong>Rule</strong>: Compulsory use of attributes listID, listAgencyName and listVersionID. Compulsory use of the code list <a href="./dist/cl/ods/ESPD-CodeLists-V2.0.1.ods">ProcedureType</a> (values: <code>Open</code>, <code>Restricted</code>, <code>Accelerated</code>, <code>Competitive dialogue</code>, etc.). Do not confound with the object of the procurement project (code list <code>ProjectType</code>: Works, Supplies, Services).
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-SC-10#2, BR-OTH-03, BR-OTH-01, BR-OTH-01#1)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-SC-10#2, BR-OTH-03, BR-OTH-01, BR-OTH-01#1)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:QualificationApplicationTypeCode</strong></p></td>
@@ -1650,7 +1650,7 @@ to specific elements of the ESPD XSD Schemas, the severity of the error is indic
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-02"><em>tbr070-02</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the code list <code>QualificationApplicationType</code>. Compulsory use of attributes listID, listAgencyName and listVersionID.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-01, BR-OTH-01#2, BR-OTH-03)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-01, BR-OTH-01#2, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:WeightScoringMethodologyNote</strong></p></td>
@@ -1687,8 +1687,8 @@ to specific elements of the ESPD XSD Schemas, the severity of the error is indic
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr70-002"><em>tbr70-002</em></a>.
 </p><p class="tableblock"><strong>Rules</strong>: Use this component to identify and describe the procurement administrative procedure.
-The REGULATED version should not contain a <code>cac:ProcurementProject</code> in order to ensure the back-wards compatibility with the version 1.0.2.
-</p><p class="tableblock">Use this component in case the ESPD is SELF-CONTAINED and the procedure is divided into lots. In this case use the <code>ProcurementProjectLot</code> component to provide details specific to the lot and reserve the <code>ProcurementProject</code> component to describe the global characteristics of the procedure.</p></td>
+The BASIC version should not contain a <code>cac:ProcurementProject</code> in order to ensure the back-wards compatibility with the version 1.0.2.
+</p><p class="tableblock">Use this component in case the ESPD is EXTENDED and the procedure is divided into lots. In this case use the <code>ProcurementProjectLot</code> component to provide details specific to the lot and reserve the <code>ProcurementProject</code> component to describe the global characteristics of the procedure.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:ProcurementProjectLot</strong></p></td>
@@ -2666,7 +2666,7 @@ may be used to indicate the type of identifier used as a value of the <code>sche
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-0011"><em>tbr070-011</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>:  The country of the service provider must always be specified. Compulsory use of the code list CountryCodeIdentifier (ISO 3166-1 2A:2006).
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-REQ-20#7, BR-OTH-01, BR-OTH-01#5,  BR-OTH-03)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-REQ-20#7, BR-OTH-01, BR-OTH-01#5,  BR-OTH-03)</p></td>
 </tr>
 </tbody>
 </table>
@@ -3161,7 +3161,7 @@ may be used to indicate the type of identifier used as a value of the <code>sche
         <span class="comment">&lt;!-- The type of procedure: 1 stands for Open Procedure. See Code List 'ProcedureType' --&gt;</span>
         <span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1<span class="tag">&lt;/cbc:ProcedureCode&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
 
-        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>SELFCONTAINED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
+        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EXTENDED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
 
         <span class="comment">&lt;!-- Contracting body data left empty for the sake of brevity --&gt;</span>
         <span class="tag">&lt;cac:ContractingParty&gt;</span><span class="tag">&lt;cac:Party</span><span class="tag">/&gt;</span>        <span class="tag">&lt;/cac:ContractingParty&gt;</span>
@@ -3377,7 +3377,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
 <div class="sect3">
 <h4 id="xsd-schema-7"><a class="anchor" href="#xsd-schema-7"></a>XSD Schema</h4>
 <div class="paragraph">
-<p><strong>REGULATED</strong> and <strong>EXTENDED</strong> ESPD documents share the same UBL-2.2 XSD Schemas (there are not two different sets of XSD Schemas). Thus, for the identification of the Lots, the Extended ESPD uses the same component than for the Regulated ESPD:</p>
+<p><strong>BASIC</strong> and <strong>EXTENDED</strong> ESPD documents share the same UBL-2.2 XSD Schemas (there are not two different sets of XSD Schemas). Thus, for the identification of the Lots, the Extended ESPD uses the same component than for the Basic ESPD:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -3401,7 +3401,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
 <div class="sect3">
 <h4 id="expected-elements-7"><a class="anchor" href="#expected-elements-7"></a>Expected elements</h4>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 19. Regulated ESPD Request: Lots</caption>
+<caption class="title">Table 19. Basic ESPD Request: Lots</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -3497,7 +3497,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
         <span class="tag">&lt;cbc:ContractFolderID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">DGPE</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>PP.20170419.1024-9<span class="tag">&lt;/cbc:ContractFolderID&gt;</span>
         <span class="tag">&lt;cbc:IssueDate&gt;</span>2019-11-29<span class="tag">&lt;/cbc:IssueDate&gt;</span>
         <span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1<span class="tag">&lt;/cbc:ProcedureCode&gt;</span>
-        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>SELFCONTAINED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
+        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EXTENDED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
         <span class="comment">&lt;!-- Contracting body data left empty for the sake of brevity --&gt;</span>
         <span class="tag">&lt;cac:ContractingParty&gt;</span> <span class="tag">&lt;cac:Party</span><span class="tag">/&gt;</span><span class="tag">&lt;/cac:ContractingParty&gt;</span>
         <i class="conum" data-value="1"></i><b>(1)</b>
@@ -3572,7 +3572,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
 <div class="sect3">
 <h4 id="expected-elements-8"><a class="anchor" href="#expected-elements-8"></a>Expected elements</h4>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 20. Regulated ESPD Request: Lots</caption>
+<caption class="title">Table 20. Basic ESPD Request: Lots</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -3668,7 +3668,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
         <span class="tag">&lt;cbc:ContractFolderID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">DGPE</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>PP.20170419.1024-9<span class="tag">&lt;/cbc:ContractFolderID&gt;</span>
         <span class="tag">&lt;cbc:IssueDate&gt;</span>2019-11-29<span class="tag">&lt;/cbc:IssueDate&gt;</span>
         <span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1<span class="tag">&lt;/cbc:ProcedureCode&gt;</span>
-        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>SELFCONTAINED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
+        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EXTENDED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
         <span class="comment">&lt;!-- Contracting body data left empty for the sake of brevity --&gt;</span>
         <span class="tag">&lt;cac:ContractingParty&gt;</span> <span class="tag">&lt;cac:Party</span><span class="tag">/&gt;</span><span class="tag">&lt;/cac:ContractingParty&gt;</span>
         <i class="conum" data-value="1"></i><b>(1)</b>
@@ -3827,7 +3827,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SELF-CONTAINED (BR-LOT-20, BR-LOT-30, BR-LOT-30-S20), Common (BR-TC-01)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EXTENDED (BR-LOT-20, BR-LOT-30, BR-LOT-30-S20), Common (BR-TC-01)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
@@ -3864,7 +3864,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A language-independent token, e.g., a number, that allows to identify a criterion uniquely as well as allows to reference the criterion in other documents.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-010"><em>tbr070-010</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Each Criterion is defined in e-Certis and must use the UUID supplied by e-Certis. See also the spreadsheets <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/ods/ESPDRequest-CriteriaTaxonomy-Basic-V2.1.1.ods"><em>Criteria Taxonomy (Basic ESPD)</em></a> and <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/ods/ESPDRequest-CriteriaTaxonomy-Extended-V2.1.1.ods"><em>Criteria Taxonomy (Extended ESPD)</em></a>.
+</p><p class="tableblock"><strong>Rule</strong>: Each Criterion is defined in e-Certis and must use the UUID supplied by e-Certis. See also the spreadsheets <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.ods"><em>Criteria Taxonomy (Basic ESPD)</em></a> and <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods"><em>Criteria Taxonomy (Extended ESPD)</em></a>.
 </p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-TC-02, BR-TC-12, BR-TC-13, BR-OTH-02)</p></td>
 </tr>
 <tr>
@@ -3874,7 +3874,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A classification code defined by the ESPD-EDM to represent the criterion in the ESPD taxonomy of criteria.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of codes coming from e-Certis, which are also used in the spreadsheets <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/ods/ESPDRequest-CriteriaTaxonomy-Basic-V2.1.1.ods"><em>Criteria Taxonomy (Basic ESPD)</em></a> and <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/ods/ESPDRequest-CriteriaTaxonomy-Extended-V2.1.1.ods"><em>Criteria Taxonomy (Extended ESPD)</em></a>, e.g. CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION, CRITERION.EXCLUSION.SOCIAL.ENVIRONMENTAL_LAW, CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.FINANCIAL_RATIO, etc.).
+</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of codes coming from e-Certis, which are also used in the spreadsheets <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.ods"><em>Criteria Taxonomy (Basic ESPD)</em></a> and <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods"><em>Criteria Taxonomy (Extended ESPD)</em></a>, e.g. CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION, CRITERION.EXCLUSION.SOCIAL.ENVIRONMENTAL_LAW, CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.FINANCIAL_RATIO, etc.).
 </p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-REQ-30, BR-REQ-30-S10,  BR-REQ-30-S20, BR-REQ-40, BR-TC-03, BR-TC-04, BR-OTH-01, BR-OTH-01#7, BR-OTH-03)</p></td>
 </tr>
 <tr>
@@ -3883,7 +3883,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A short and descriptive name for a criterion.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr70-010"><em>tbr70-010</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: The name should match the one from e-Certis, which should be the same as in the in the spreadsheets <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/ods/ESPDRequest-CriteriaTaxonomy-Basic-V2.1.1.ods"><em>Criteria Taxonomy (Basic ESPD)</em></a> and <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/ods/ESPDRequest-CriteriaTaxonomy-Extended-V2.1.1.ods"><em>Criteria Taxonomy (Extended ESPD)</em></a>, e.g. 'Convictions', 'Corruption', 'Fraud', 'Financial ratio', 'Subcontracting proportion', 'Allowance of checks', etc.).
+</p><p class="tableblock"><strong>Rule</strong>: The name should match the one from e-Certis, which should be the same as in the in the spreadsheets <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.ods"><em>Criteria Taxonomy (Basic ESPD)</em></a> and <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods"><em>Criteria Taxonomy (Extended ESPD)</em></a>, e.g. 'Convictions', 'Corruption', 'Fraud', 'Financial ratio', 'Subcontracting proportion', 'Allowance of checks', etc.).
 </p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-TC-05)</p></td>
 </tr>
 <tr>
@@ -3892,7 +3892,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An extended description of the criterion.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr70-010"><em>tbr70-010</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: The description should match the one from e-Certis, which should be the same as in the in the spreadsheets <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/ods/ESPDRequest-CriteriaTaxonomy-Basic-V2.1.1.ods"><em>Criteria Taxonomy (Basic ESPD)</em></a> and <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/ods/ESPDRequest-CriteriaTaxonomy-Extended-V2.1.1.ods"><em>Criteria Taxonomy (Extended ESPD)</em></a>, e.g. 'Has the economic operator itself or any person who is a member of its administrative, management or supervisory body or has powers of representation, decision or control therein been the subject of a conviction by final judgment for participation in a criminal organisation, by a conviction rendered at the most five years ago or in which an exclusion period set out directly in the conviction continues to be applicable? As defined in Article 2 of Council Framework Decision 2008/841/JHA of 24 October 2008 on the fight against organised crime (OJ L 300, 11.11.2008, p. 42).'.
+</p><p class="tableblock"><strong>Rule</strong>: The description should match the one from e-Certis, which should be the same as in the in the spreadsheets <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.ods"><em>Criteria Taxonomy (Basic ESPD)</em></a> and <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods"><em>Criteria Taxonomy (Extended ESPD)</em></a>, e.g. 'Has the economic operator itself or any person who is a member of its administrative, management or supervisory body or has powers of representation, decision or control therein been the subject of a conviction by final judgment for participation in a criminal organisation, by a conviction rendered at the most five years ago or in which an exclusion period set out directly in the conviction continues to be applicable? As defined in Article 2 of Council Framework Decision 2008/841/JHA of 24 October 2008 on the fight against organised crime (OJ L 300, 11.11.2008, p. 42).'.
 </p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-TC-06, BR-TC-19)
 </p><p class="tableblock"><strong>Note</strong>: The UBL specification allows always multiple lines of text for the component <code>cbc:Description</code>. This feature can be used to split long descriptions into multiple lines, specially when the description contains enumerations (see the criterion "Misinterpretation" for an example).</p></td>
 </tr>
@@ -3902,7 +3902,7 @@ represents the procedure, and its Identifier value must be '0'.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A weighting to provide for automatic scoring of the Criterion (normally a percentage, e.g. 0.1, 0.5)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr70-016"><em>tbr70-016</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: Used only in Self-contained ESPDs namely for ability and professional selection criteria in  procedures organised in two stages.
+</p><p class="tableblock"><strong>Rule</strong>: Used only in Extended ESPDs namely for ability and professional selection criteria in  procedures organised in two stages.
 </p><p class="tableblock"><strong>Rule scope</strong>: Extended (BR-2P-10, BR-2P-10-S10, BR-2P-10-S10#1, BR-2P-10-S20#1)</p></td>
 </tr>
 <tr>
@@ -4203,7 +4203,7 @@ on public procurement and repealing Directive 2004/18/EC'). Can be provided in s
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifies a group of requirements uniquely.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the UUIDs supplied by e-Certis. See also the spreadsheets <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/ods/ESPDRequest-CriteriaTaxonomy-Basic-V2.1.1.ods"><em>Criteria Taxonomy (Basic ESPD)</em></a> and <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/ods/ESPDRequest-CriteriaTaxonomy-Extended-V2.1.1.ods"><em>Criteria Taxonomy (Extended ESPD)</em></a>.
+</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the UUIDs supplied by e-Certis. See also the spreadsheets <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.ods"><em>Criteria Taxonomy (Basic ESPD)</em></a> and <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods"><em>Criteria Taxonomy (Extended ESPD)</em></a>.
 </p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-TC-12, BR-OTH-02, BR-OTH-02#01)</p></td>
 </tr>
 <tr>
@@ -4323,7 +4323,7 @@ the sub-section
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SELF-CONTAINED (BR-SC-20)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EXTENDED (BR-SC-20)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
@@ -4381,7 +4381,7 @@ the sub-section
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">Code List  'CriterionElementType'</a>.  Possible types are 'CAPTION, REQUIREMENT and QUESTION'. If the type is <code>CAPTION</code> or <code>REQUIREMENT</code> no answer is expected from the economic operator and therefore the <code>cbc:ValueDataTypeCode</code> must be set to <code>NONE</code>. Otherwise this value must be set to one of the values defined in the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">Code List  'ResponseDataType'</a>
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-TC-20, BR-OTH-01, BR-OTH-01#14, BR-OTH-03)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-TC-20, BR-OTH-01, BR-OTH-01#14, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ValueDataTypeCode</strong></p></td>
@@ -4401,7 +4401,7 @@ the sub-section
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Verify that the value of <code>cac:TypeCode</code> is set to QUESTION and that the <code>cac:ValueTypeCode</code> is different to NONE.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-01)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-01)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ValueCurrencyCode</strong></p></td>
@@ -4411,7 +4411,7 @@ the sub-section
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Verify that the value of <code>cac:TypeCode</code> is set to QUESTION and that the <code>cac:ValueTypeCode</code> is different to NONE.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-01)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-01)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ExpectedID</strong></p></td>
@@ -4421,7 +4421,7 @@ the sub-section
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Verify that the value of <code>cac:TypeCode</code> is set to QUESTION and that the <code>cac:ValueTypeCode</code> is different to NONE.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-LOT-40)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-LOT-40)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ExpectedCode</strong></p></td>
@@ -4431,7 +4431,7 @@ the sub-section
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Verify that the value of <code>cac:TypeCode</code> is set to QUESTION and that the <code>cac:ValueTypeCode</code> is different to NONE.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-01)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-01)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ExpectedValueNumeric</strong></p></td>
@@ -4522,7 +4522,7 @@ Each type of criterion is presented from three perspectives:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>ESPD-CriteriaTaxonomy-Basic-V2.1.1.xlsx, where the structures of the REGULATED ESPD criteria are defined;</p>
+<p>ESPD-CriteriaTaxonomy-Basic-V2.1.1.xlsx, where the structures of the BASIC ESPD criteria are defined;</p>
 </li>
 <li>
 <p>ESPD-CriteriaTaxonomy-Extended-V2.1.1.xlsx, where the structures of the Extended ESPD criteria are defined;</p>
@@ -4823,7 +4823,7 @@ contains codes that <strong>are not</strong> intended to be used as values of co
 <div class="ulist">
 <ul>
 <li>
-<p>The publications and document references requested in the business requirements are not generated; but the XML examples provided in the distribution do contain examples of TED and national publications (both for the ESPD Request and ESPD Response examples. See files REGULATED-ESPDRequest-2.1.1.xml, REGULATED-ESPDResponse-2.1.1.xml, SELFCONTAINED-ESPDRequest-2.1.1.xml and SELFCONTAINED-ESPDResponse-2.1.1.xml, in the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/xml">xml folder</a>.</p>
+<p>The publications and document references requested in the business requirements are not generated; but the XML examples provided in the distribution do contain examples of TED and national publications (both for the ESPD Request and ESPD Response examples. See files BASIC-ESPDRequest-2.1.1.xml, BASIC-ESPDResponse-2.1.1.xml, EXTENDED-ESPDRequest-2.1.1.xml and EXTENDED-ESPDResponse-2.1.1.xml, in the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/xml">xml folder</a>.</p>
 </li>
 <li>
 <p>The response value and cardinality are shown for informative purposes. No functionality is currently implemented based on them, but could be used in future improved versions of the prototype;</p>
@@ -5396,9 +5396,9 @@ with other requirements set out in that Annex.<span class="tag">&lt;/cbc:Descrip
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div class="title">Differences between Regulated and Self-contained exclusion criteria</div>
+<div class="title">Differences between Basic and Extended exclusion criteria</div>
 <div class="paragraph">
-<p>As far as the <em>data structures</em> of exclusion  criteria are concerned <strong>there are practically not differences</strong> between a Regulated ESPD and a Self-contained ESPD.</p>
+<p>As far as the <em>data structures</em> of exclusion  criteria are concerned <strong>there are practically not differences</strong> between a Basic ESPD and a Extended ESPD.</p>
 </div>
 <div class="paragraph">
 <p>The only two differences lie in:</p>
@@ -5410,10 +5410,10 @@ with other requirements set out in that Annex.<span class="tag">&lt;/cbc:Descrip
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Regulated ESPD Request</strong>: Has the economic operator, to its knowledge, breached its obligations in the field of environmental law? As referred to for the purposes of this procurement in national law, in the relevant notice or the procurement documents or in Article 18(2) of Directive 2014/24/EU.</p>
+<p><strong>Basic ESPD Request</strong>: Has the economic operator, to its knowledge, breached its obligations in the field of environmental law? As referred to for the purposes of this procurement in national law, in the relevant notice or the procurement documents or in Article 18(2) of Directive 2014/24/EU.</p>
 </li>
 <li>
-<p><strong>Self-contained ESPD Request</strong>: Has the economic operator, to its knowledge, breached its obligations in the field of environmental law? As referred to for the purposes of this procurement <em>in this ESPD document</em> and in the national law, in the relevant notice or the procurement documents or in Article 18(2) of Directive 2014/24/EU.</p>
+<p><strong>Extended ESPD Request</strong>: Has the economic operator, to its knowledge, breached its obligations in the field of environmental law? As referred to for the purposes of this procurement <em>in this ESPD document</em> and in the national law, in the relevant notice or the procurement documents or in Article 18(2) of Directive 2014/24/EU.</p>
 </li>
 </ul>
 </div>
@@ -5431,7 +5431,7 @@ with other requirements set out in that Annex.<span class="tag">&lt;/cbc:Descrip
 <p>As suggested in section "Criteria Data Structures" criteria may be grouped in several different categories. The figure below is intended to identify and list these categories for the Exclusion criteria (branches in text boxes), and specific subgroups within each category (leaves in text without boxes).</p>
 </div>
 <div class="paragraph">
-<p>Each branch in this 'criteria taxonomy' corresponds to one data structure that is identical for all the leaves under that branch (e.g. compare the names of the boxes with the tabs of the spreadsheets containing the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPDRequest-CriteriaTaxonomy-SELFCONTAINED-V2.1.1.ods">Regulated</a> and <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPDRequest-CriteriaTaxonomy-SELFCONTAINED-V2.1.1.ods">Self-contained</a> taxonomies).</p>
+<p>Each branch in this 'criteria taxonomy' corresponds to one data structure that is identical for all the leaves under that branch (e.g. compare the names of the boxes with the tabs of the spreadsheets containing the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.ods">Basic</a> and <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods">Extended</a> taxonomies).</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -5537,7 +5537,7 @@ will be also set to 'Yes'</strong>.</p>
 <h4 id="data-structure-extended"><a class="anchor" href="#data-structure-extended"></a>Data structure - Extended</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="./images/Selfcontained_ESPDRequest_Convictions_Data_Structure.png" alt="Convictions data structure">
+<img src="./images/Extended_ESPDRequest_Convictions_Data_Structure.png" alt="Convictions data structure">
 </div>
 <div class="title">Figure 52. Data Structure for all 'Extended Conviction' exclusion grounds criteria</div>
 </div>
@@ -5831,7 +5831,7 @@ will be also set to 'Yes'</strong>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-regulated-and-self-contained"><a class="anchor" href="#differences-between-regulated-and-self-contained"></a>Differences between Regulated and Self-contained</h4>
+<h4 id="differences-between-basic-and-extended-2"><a class="anchor" href="#differences-between-basic-and-extended-2"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -6135,9 +6135,9 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="./images/PaymentOfTaxes_CA_mock-up.png" alt="Regulated 'Payment of Taxes' (ESPD Service, CA perspective)" width="CA perspective)">
+<img src="./images/PaymentOfTaxes_CA_mock-up.png" alt="Basic 'Payment of Taxes' (ESPD Service, CA perspective)" width="CA perspective)">
 </div>
-<div class="title">Figure 57. Regulated 'Payment of Taxes' (ESPD Service, CA perspective)</div>
+<div class="title">Figure 57. Basic 'Payment of Taxes' (ESPD Service, CA perspective)</div>
 </div>
 <div class="paragraph">
 <p>This other screen-capture below represents a possible mock-up, from the contracting authority perspective, for the edition of requirements in a Extended 'Contributions' criterion (Payment of Taxes).</p>
@@ -6362,7 +6362,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
                 <span class="tag">&lt;/cac:TenderingCriterionPropertyGroup&gt;</span>
 
                 <i class="conum" data-value="9"></i><b>(9)</b>
-                <span class="comment">&lt;!-- The rest of the criterion is identical than for the Regulated version --&gt;</span>
+                <span class="comment">&lt;!-- The rest of the criterion is identical than for the Basic version --&gt;</span>
 
                 <span class="tag">&lt;cac:TenderingCriterionPropertyGroup&gt;</span>
                 <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>098fd3cc-466e-4233-af1a-affe09471bce<span class="tag">&lt;/cbc:ID&gt;</span>
@@ -6496,7 +6496,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The MS defined this national 'Payment of Taxes' criterion in e-Certis. See also previous example for the REGULATED Payment of taxes (the behavior is identical for all exclusion criteria).</td>
+<td>The MS defined this national 'Payment of Taxes' criterion in e-Certis. See also previous example for the BASIC Payment of taxes (the behavior is identical for all exclusion criteria).</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
@@ -6508,7 +6508,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
-<td>Notice that type of property used is REQUIREMENT. This entails that: (i) the ESPDRequest is of type EXTENDED (REGULATED ESPDs does not work with REQUIREMENT(s)); (ii) a <code>cbc:ValueDataType</code> will be present indicating the type of value the contracting authority uses for this REQUIREMENT (e.g. AMOUNT, INDICATOR, DESCRIPTION, etc.; see the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">Code List <code>ResponseDataType</code></a>, the values are the same for contracting authorities REQUIREMENT(s) than for economic operator response values).</td>
+<td>Notice that type of property used is REQUIREMENT. This entails that: (i) the ESPDRequest is of type EXTENDED (BASIC ESPDs does not work with REQUIREMENT(s)); (ii) a <code>cbc:ValueDataType</code> will be present indicating the type of value the contracting authority uses for this REQUIREMENT (e.g. AMOUNT, INDICATOR, DESCRIPTION, etc.; see the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">Code List <code>ResponseDataType</code></a>, the values are the same for contracting authorities REQUIREMENT(s) than for economic operator response values).</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="5"></i><b>5</b></td>
@@ -6543,7 +6543,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-regulated-and-self-contained-2"><a class="anchor" href="#differences-between-regulated-and-self-contained-2"></a>Differences between Regulated and Self-contained</h4>
+<h4 id="differences-between-basic-and-extended-3"><a class="anchor" href="#differences-between-basic-and-extended-3"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -6595,25 +6595,25 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-regulated"><a class="anchor" href="#data-structure-regulated"></a>Data structure - Regulated</h4>
+<h4 id="data-structure-basic-3"><a class="anchor" href="#data-structure-basic-3"></a>Data structure - Basic</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="./images/Regulated_Environmental_Law_Data_Structure.png" alt="Regulated Environmental Law">
+<img src="./images/Basic_Environmental_Law_Data_Structure.png" alt="Basic Environmental Law">
 </div>
 <div class="title">Figure 63. 'Environmental Law' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-self-contained"><a class="anchor" href="#data-structure-self-contained"></a>Data structure - Self-contained</h4>
+<h4 id="data-structure-extended-3"><a class="anchor" href="#data-structure-extended-3"></a>Data structure - Extended</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="./images/Selfcontained_Environmental_Law_Data_Structure.png" alt="Self-contained Environmental Law">
+<img src="./images/Extended_Environmental_Law_Data_Structure.png" alt="Extended Environmental Law">
 </div>
 <div class="title">Figure 64. 'Environmental Law' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-self-contained"><a class="anchor" href="#xml-example-self-contained"></a>XML Example - Self-contained</h4>
+<h4 id="xml-example-extended-3"><a class="anchor" href="#xml-example-extended-3"></a>XML Example - Extended</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6622,7 +6622,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Notice that the Regulated and Self-contained XML instances are identical, except for the fact that the Regulated version does not contain national sub-criteria.</p>
+<p>Notice that the Basic and Extended XML instances are identical, except for the fact that the Basic version does not contain national sub-criteria.</p>
 </div>
 </td>
 </tr>
@@ -6733,7 +6733,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-2"><a class="anchor" href="#differences-between-basic-and-extended-2"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-4"><a class="anchor" href="#differences-between-basic-and-extended-4"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -6785,7 +6785,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-3"><a class="anchor" href="#data-structure-basic-3"></a>Data structure - Basic</h4>
+<h4 id="data-structure-basic-4"><a class="anchor" href="#data-structure-basic-4"></a>Data structure - Basic</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Basic_Business_Data_Structure.png" alt="Basic_Business">
@@ -6794,7 +6794,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-3"><a class="anchor" href="#data-structure-extended-3"></a>Data structure - Extended</h4>
+<h4 id="data-structure-extended-4"><a class="anchor" href="#data-structure-extended-4"></a>Data structure - Extended</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Extended_Business_Data_Structure.png" alt="Extended_Business">
@@ -6803,7 +6803,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-3"><a class="anchor" href="#xml-example-extended-3"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-4"><a class="anchor" href="#xml-example-extended-4"></a>XML Example - Extended</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6927,7 +6927,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-3"><a class="anchor" href="#differences-between-basic-and-extended-3"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-5"><a class="anchor" href="#differences-between-basic-and-extended-5"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -6982,7 +6982,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-4"><a class="anchor" href="#data-structure-basic-4"></a>Data structure - Basic</h4>
+<h4 id="data-structure-basic-5"><a class="anchor" href="#data-structure-basic-5"></a>Data structure - Basic</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Basic_Misconduct_Data_Structure.png" alt="Basic Professional misconduct">
@@ -6991,7 +6991,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-4"><a class="anchor" href="#data-structure-extended-4"></a>Data structure - Extended</h4>
+<h4 id="data-structure-extended-5"><a class="anchor" href="#data-structure-extended-5"></a>Data structure - Extended</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Extended_Misconduct_Data_Structure.png" alt="Professional misconduct Professional misconduct">
@@ -7000,7 +7000,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-4"><a class="anchor" href="#xml-example-extended-4"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-5"><a class="anchor" href="#xml-example-extended-5"></a>XML Example - Extended</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7120,7 +7120,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-4"><a class="anchor" href="#differences-between-basic-and-extended-4"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-6"><a class="anchor" href="#differences-between-basic-and-extended-6"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -7187,7 +7187,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-5"><a class="anchor" href="#data-structure-basic-5"></a>Data structure - Basic</h4>
+<h4 id="data-structure-basic-6"><a class="anchor" href="#data-structure-basic-6"></a>Data structure - Basic</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Basic_Conflict_of_Interest_Data_Structure.png" alt="Conflict of interest">
@@ -7196,7 +7196,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-5"><a class="anchor" href="#data-structure-extended-5"></a>Data structure - Extended</h4>
+<h4 id="data-structure-extended-6"><a class="anchor" href="#data-structure-extended-6"></a>Data structure - Extended</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Extended_Conflict_of_Interest_Data_Structure.png" alt="Conflict of interest">
@@ -7205,7 +7205,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-5"><a class="anchor" href="#xml-example-extended-5"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-6"><a class="anchor" href="#xml-example-extended-6"></a>XML Example - Extended</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7303,7 +7303,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-5"><a class="anchor" href="#differences-between-basic-and-extended-5"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-7"><a class="anchor" href="#differences-between-basic-and-extended-7"></a>Differences between Basic and Extended</h4>
 <div class="paragraph">
 <p>The <strong>Extended</strong> version the XML instances can keep the national sub-criteria defined by the MS in  e-Certis;</p>
 </div>
@@ -7355,7 +7355,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-6"><a class="anchor" href="#data-structure-basic-6"></a>Data structure - Basic</h4>
+<h4 id="data-structure-basic-7"><a class="anchor" href="#data-structure-basic-7"></a>Data structure - Basic</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Basic_Early_Termination_Data_Structure.png" alt="Early termination">
@@ -7364,7 +7364,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-6"><a class="anchor" href="#data-structure-extended-6"></a>Data structure - Extended</h4>
+<h4 id="data-structure-extended-7"><a class="anchor" href="#data-structure-extended-7"></a>Data structure - Extended</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Extended_Early_Termination_Data_Structure.png" alt="Early termination">
@@ -7373,7 +7373,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-6"><a class="anchor" href="#xml-example-extended-6"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-7"><a class="anchor" href="#xml-example-extended-7"></a>XML Example - Extended</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7493,7 +7493,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-6"><a class="anchor" href="#differences-between-basic-and-extended-6"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-8"><a class="anchor" href="#differences-between-basic-and-extended-8"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -7562,7 +7562,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-7"><a class="anchor" href="#data-structure-basic-7"></a>Data structure - Basic</h4>
+<h4 id="data-structure-basic-8"><a class="anchor" href="#data-structure-basic-8"></a>Data structure - Basic</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Basic_Misinterpretation_Data_Structure.png" alt="Misinterpretation">
@@ -7571,7 +7571,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-7"><a class="anchor" href="#data-structure-extended-7"></a>Data structure - Extended</h4>
+<h4 id="data-structure-extended-8"><a class="anchor" href="#data-structure-extended-8"></a>Data structure - Extended</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Extended_Misinterpretation_Data_Structure.png" alt="Misinterpretation">
@@ -7580,7 +7580,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-7"><a class="anchor" href="#xml-example-extended-7"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-8"><a class="anchor" href="#xml-example-extended-8"></a>XML Example - Extended</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7697,7 +7697,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-7"><a class="anchor" href="#differences-between-basic-and-extended-7"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-9"><a class="anchor" href="#differences-between-basic-and-extended-9"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -7765,7 +7765,7 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-8"><a class="anchor" href="#data-structure-basic-8"></a>Data structure - Basic</h4>
+<h4 id="data-structure-basic-9"><a class="anchor" href="#data-structure-basic-9"></a>Data structure - Basic</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Basic_Purely_National_Data_Structure.png" alt="'Purely national criteria'">
@@ -7876,16 +7876,16 @@ section IV.8 GUI control elements/<a href="#ontrue-onfalse-codes-for-group-and-s
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-8"><a class="anchor" href="#data-structure-extended-8"></a>Data structure - Extended</h4>
+<h4 id="data-structure-extended-9"><a class="anchor" href="#data-structure-extended-9"></a>Data structure - Extended</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Extended_Purely_National_Data_Structure.png" alt="Purely national criteria">
 </div>
-<div class="title">Figure 89. 'Purely national criteria' data structure - Regulated</div>
+<div class="title">Figure 89. 'Purely national criteria' data structure - Basic</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-8"><a class="anchor" href="#xml-example-extended-8"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-9"><a class="anchor" href="#xml-example-extended-9"></a>XML Example - Extended</h4>
 <div class="listingblock">
 <div class="title">'Purely national criteria' (Extended)</div>
 <div class="content">
@@ -8269,7 +8269,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-8"><a class="anchor" href="#differences-between-basic-and-extended-8"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-10"><a class="anchor" href="#differences-between-basic-and-extended-10"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -8302,7 +8302,7 @@ to in the notice.</td>
 <h4 id="mock-ups-contracting-authority-perspective-8"><a class="anchor" href="#mock-ups-contracting-authority-perspective-8"></a>Mock-ups - contracting authority perspective</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="./images/Regulated_Suitability_CA_mockup.png" alt="Basic 'Suitability' criterion (CA perspective)">
+<img src="./images/Basic_Suitability_CA_mockup.png" alt="Basic 'Suitability' criterion (CA perspective)">
 </div>
 <div class="title">Figure 94. Basic 'Suitability' criterion (CA perspective)'</div>
 </div>
@@ -8314,7 +8314,7 @@ to in the notice.</td>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="./images/Regulated_Suitability_EO_mockup.png" alt="Basic 'Suitability' criterion (EO perspective)" width="800">
+<img src="./images/Basic_Suitability_EO_mockup.png" alt="Basic 'Suitability' criterion (EO perspective)" width="800">
 </div>
 <div class="title">Figure 95. Basic 'Suitability' criterion (EO perspective)'</div>
 </div>
@@ -8327,7 +8327,7 @@ to in the notice.</td>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="./images/Regulated_Suitability_Enrolments_Data_Structure.png" alt="Basic 'Suitability' criterion data structure">
+<img src="./images/Basic_Suitability_Enrolments_Data_Structure.png" alt="Basic 'Suitability' criterion data structure">
 </div>
 <div class="title">Figure 96. Basic 'Suitability' criterion data structure (for ''enrolments'')</div>
 </div>
@@ -8608,7 +8608,7 @@ to in the notice.</td>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="./images/Regulated_Suitability_ServiceContract_Data_Structure.png" alt="Basic 'Suitability' criterion data structure">
+<img src="./images/Basic_Suitability_ServiceContract_Data_Structure.png" alt="Basic 'Suitability' criterion data structure">
 </div>
 <div class="title">Figure 101. Basic 'Suitability' criterion data structure (for ''service contracts'')</div>
 </div>
@@ -8861,7 +8861,7 @@ to in the notice.</td>
 <div class="sect3">
 <h4 id="related-information-requirements-11"><a class="anchor" href="#related-information-requirements-11"></a>Related information requirements</h4>
 <div class="paragraph">
-<p>See formal requirements related to 'Turnover' criteria for the Self-contained ESPD in the <a href="http://wiki.ds.unipi.gr/pages/viewpage.action?pageId=44367916">BIS 41 - European Single Procurement Document (Version 2.0.0)</a>, and more specifically the requirement <a href="http://wiki.ds.unipi.gr/pages/viewpage.action?pageId=44367916#tbr070-008"><em>tbr070-008</em></a></p>
+<p>See formal requirements related to 'Turnover' criteria for the Extended ESPD in the <a href="http://wiki.ds.unipi.gr/pages/viewpage.action?pageId=44367916">BIS 41 - European Single Procurement Document (Version 2.0.0)</a>, and more specifically the requirement <a href="http://wiki.ds.unipi.gr/pages/viewpage.action?pageId=44367916#tbr070-008"><em>tbr070-008</em></a></p>
 </div>
 </div>
 <div class="sect3">
@@ -8904,11 +8904,11 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-regulated-and-self-contained-turnovers"><a class="anchor" href="#differences-between-regulated-and-self-contained-turnovers"></a>Differences between Regulated and Self-contained turnovers</h4>
+<h4 id="differences-between-basic-and-extended-turnovers"><a class="anchor" href="#differences-between-basic-and-extended-turnovers"></a>Differences between Basic and Extended turnovers</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The <strong>Basic</strong> ESPD expects a constant amount of groups of properties made of Amount, Start Date, End Date. The ESPD Service, for instance, expects <strong>general or specific yearly turnovers</strong> for the five past years. Thus, being the current year 2017, the ESPD Service generates a view for the economic operator with fields for 2016, 2015, 2014, 2013 and 2012. See mock-up below for the Regulated version of the general and specific yearly turnovers.</p>
+<p>The <strong>Basic</strong> ESPD expects a constant amount of groups of properties made of Amount, Start Date, End Date. The ESPD Service, for instance, expects <strong>general or specific yearly turnovers</strong> for the five past years. Thus, being the current year 2017, the ESPD Service generates a view for the economic operator with fields for 2016, 2015, 2014, 2013 and 2012. See mock-up below for the Basic version of the general and specific yearly turnovers.</p>
 </li>
 <li>
 <p>In the <strong>Extended</strong>:</p>
@@ -8963,7 +8963,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-9"><a class="anchor" href="#data-structure-basic-9"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-10"><a class="anchor" href="#data-structure-basic-10"></a>Data Structure - Basic</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Basic_General_Yearly_Turnover_Data_Structure.png" alt="Basic 'yearly turnover' criterion data structure">
@@ -9119,7 +9119,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-9"><a class="anchor" href="#data-structure-extended-9"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-10"><a class="anchor" href="#data-structure-extended-10"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>In this this figure what it is being shown is that the contracting authority required three general yearly turnovers, for which it defined minimum amounts in one REQUIREMENT(s) group. Next, three groups of QUESTION(s)  are provided, each one of them corresponding to the past three years. Remember that the spreadsheet used in this guide to represent the criteria data structure is also used to generate sample XML instances. So by including three groups of QUESTION(s) in the spread-sheet, the tool generating sample XML instances will automatically generate three sub-groups of properties each one with distinct UUIDs.</p>
 </div>
@@ -9131,7 +9131,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-9"><a class="anchor" href="#xml-example-extended-9"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-10"><a class="anchor" href="#xml-example-extended-10"></a>XML Example - Extended</h4>
 <div class="listingblock">
 <div class="title">Extended general yearly turnover</div>
 <div class="content">
@@ -9320,7 +9320,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-10"><a class="anchor" href="#data-structure-basic-10"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-11"><a class="anchor" href="#data-structure-basic-11"></a>Data Structure - Basic</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Basic_Average_Yearly_Turnover_Data_Structure.png" alt="Basic 'yearly turnover' criterion data structure">
@@ -9452,7 +9452,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-10"><a class="anchor" href="#data-structure-extended-10"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-11"><a class="anchor" href="#data-structure-extended-11"></a>Data Structure - Extended</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Extended_Average_Yearly_Turnover_Data_Structure.png" alt="Extended 'average yearly turnover' criterion data structure">
@@ -9461,7 +9461,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-10"><a class="anchor" href="#xml-example-extended-10"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-11"><a class="anchor" href="#xml-example-extended-11"></a>XML Example - Extended</h4>
 <div class="listingblock">
 <div class="title">Extended average yearly turnover</div>
 <div class="content">
@@ -9590,7 +9590,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-11"><a class="anchor" href="#data-structure-basic-11"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-12"><a class="anchor" href="#data-structure-basic-12"></a>Data Structure - Basic</h4>
 <div class="paragraph">
 <p>The figure below how the structure of the five groups of turnovers specified by the MS are organised:</p>
 </div>
@@ -9793,7 +9793,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-11"><a class="anchor" href="#data-structure-extended-11"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-12"><a class="anchor" href="#data-structure-extended-12"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>Notice that:</p>
 </div>
@@ -9827,7 +9827,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-11"><a class="anchor" href="#xml-example-extended-11"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-12"><a class="anchor" href="#xml-example-extended-12"></a>XML Example - Extended</h4>
 <div class="listingblock">
 <div class="title">Extended specific yearly turnover</div>
 <div class="content">
@@ -9979,7 +9979,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-12"><a class="anchor" href="#data-structure-basic-12"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-13"><a class="anchor" href="#data-structure-basic-13"></a>Data Structure - Basic</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Basic_Specific_Average_Turnover_Data_Structure.png" alt="Basic 'specific average turnover' criterion data structure">
@@ -10132,7 +10132,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-12"><a class="anchor" href="#data-structure-extended-12"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-13"><a class="anchor" href="#data-structure-extended-13"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>Notice that this <strong>Extended specific average turnover</strong> structure is <strong>'practically identical'</strong> to  the data structure of the <strong>Extended specific yearly turnover</strong> criterion. The only difference is that the <strong>cardinality of the amount is 1</strong> (instead of 1..n).</p>
 </div>
@@ -10144,7 +10144,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-12"><a class="anchor" href="#xml-example-extended-12"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-13"><a class="anchor" href="#xml-example-extended-13"></a>XML Example - Extended</h4>
 <div class="listingblock">
 <div class="title">Extended specific average turnover</div>
 <div class="content">
@@ -10250,7 +10250,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-9"><a class="anchor" href="#differences-between-basic-and-extended-9"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-11"><a class="anchor" href="#differences-between-basic-and-extended-11"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -10294,7 +10294,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-13"><a class="anchor" href="#data-structure-basic-13"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-14"><a class="anchor" href="#data-structure-basic-14"></a>Data Structure - Basic</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Basic_EO_Setup_Data_Structure.png" alt="'Economic operator setup' criterion data structure" width="criterion data structure">
@@ -10303,7 +10303,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-13"><a class="anchor" href="#data-structure-extended-13"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-14"><a class="anchor" href="#data-structure-extended-14"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>The data structure for the <strong>Extended</strong> model is identical to the one in the <strong>Basic</strong> model, except for the fact that the XML instance is able to keep the national sub-criteria defined by the Member State in e-Certis.</p>
 </div>
@@ -10315,7 +10315,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-13"><a class="anchor" href="#xml-example-extended-13"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-14"><a class="anchor" href="#xml-example-extended-14"></a>XML Example - Extended</h4>
 <div class="listingblock">
 <div class="title">'Economic operator setup' criterion</div>
 <div class="content">
@@ -10388,7 +10388,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-10"><a class="anchor" href="#differences-between-basic-and-extended-10"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-12"><a class="anchor" href="#differences-between-basic-and-extended-12"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -10463,7 +10463,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-14"><a class="anchor" href="#data-structure-basic-14"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-15"><a class="anchor" href="#data-structure-basic-15"></a>Data Structure - Basic</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Basic_Financial_Ratio_Data_Structure.png" alt="Basic 'financial ratio' criterion data structure">
@@ -10565,7 +10565,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-14"><a class="anchor" href="#data-structure-extended-14"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-15"><a class="anchor" href="#data-structure-extended-15"></a>Data Structure - Extended</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -10591,7 +10591,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-14"><a class="anchor" href="#xml-example-extended-14"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-15"><a class="anchor" href="#xml-example-extended-15"></a>XML Example - Extended</h4>
 <div class="listingblock">
 <div class="title">Extended Financial Ratio</div>
 <div class="content">
@@ -10798,7 +10798,7 @@ to in the notice.</td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-11"><a class="anchor" href="#differences-between-basic-and-extended-11"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-13"><a class="anchor" href="#differences-between-basic-and-extended-13"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -10857,7 +10857,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-15"><a class="anchor" href="#data-structure-basic-15"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-16"><a class="anchor" href="#data-structure-basic-16"></a>Data Structure - Basic</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Basic_Risk_Indemnity_Insurance_Data_Structure.png" alt="Basic 'risk indemnity insurance' criterion data structure">
@@ -10967,7 +10967,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-15"><a class="anchor" href="#data-structure-extended-15"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-16"><a class="anchor" href="#data-structure-extended-16"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>This structure is quite particular. Notice that:</p>
 </div>
@@ -11008,7 +11008,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-15"><a class="anchor" href="#xml-example-extended-15"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-16"><a class="anchor" href="#xml-example-extended-16"></a>XML Example - Extended</h4>
 <div class="listingblock">
 <div class="title">Extended 'risk indemnity insurance' criterion (<strong>Procedure with Lots</strong>)</div>
 <div class="content">
@@ -11172,7 +11172,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-12"><a class="anchor" href="#differences-between-basic-and-extended-12"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-14"><a class="anchor" href="#differences-between-basic-and-extended-14"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -11228,7 +11228,7 @@ to in the notice.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-16"><a class="anchor" href="#data-structure-basic-16"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-17"><a class="anchor" href="#data-structure-basic-17"></a>Data Structure - Basic</h4>
 <div class="paragraph">
 <p>The data structure for this criterion is very simple:</p>
 </div>
@@ -11333,7 +11333,7 @@ See XML example below to identify where these data are placed in the XML instanc
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-16"><a class="anchor" href="#data-structure-extended-16"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-17"><a class="anchor" href="#data-structure-extended-17"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>The structure of this criterion 'other economic or financial requirements' for the <strong>EXTENDED</strong> ESPD is also very particular (distinct from the rest of criteria data structures). Notice the following aspects:</p>
 </div>
@@ -11377,7 +11377,7 @@ See XML example below to identify where these data are placed in the XML instanc
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-16"><a class="anchor" href="#xml-example-extended-16"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-17"><a class="anchor" href="#xml-example-extended-17"></a>XML Example - Extended</h4>
 <div class="listingblock">
 <div class="title">Extended 'other economic or financial requirements' criterion (<strong>Procedure with Lots</strong>)</div>
 <div class="content">
@@ -11542,7 +11542,7 @@ See XML example below to identify where these data are placed in the XML instanc
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-13"><a class="anchor" href="#differences-between-basic-and-extended-13"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-15"><a class="anchor" href="#differences-between-basic-and-extended-15"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -11635,7 +11635,7 @@ See XML example below to identify where these data are placed in the XML instanc
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-17"><a class="anchor" href="#data-structure-basic-17"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-18"><a class="anchor" href="#data-structure-basic-18"></a>Data Structure - Basic</h4>
 <div class="paragraph">
 <p>The data structure is quite straight-forward, it is composed of multiple groups (cardinality 1..n) of description, amount, period and recipients:</p>
 </div>
@@ -11821,7 +11821,7 @@ textual value.</em></strong></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-17"><a class="anchor" href="#data-structure-extended-17"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-18"><a class="anchor" href="#data-structure-extended-18"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>The data structure for references caters for:</p>
 </div>
@@ -12485,7 +12485,7 @@ Weighting can be done either using percentage or points for one procedure. The C
 </table>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-14"><a class="anchor" href="#differences-between-basic-and-extended-14"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-16"><a class="anchor" href="#differences-between-basic-and-extended-16"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -12664,7 +12664,7 @@ Weighting can be done either using percentage or points for one procedure. The C
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-18"><a class="anchor" href="#data-structure-basic-18"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-19"><a class="anchor" href="#data-structure-basic-19"></a>Data Structure - Basic</h4>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="./images/Basic_Abilities_I_Data_Structure.png" alt="Basic 'Abilities (I)' criterion data structure">
@@ -12777,7 +12777,7 @@ Weighting can be done either using percentage or points for one procedure. The C
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-19"><a class="anchor" href="#data-structure-basic-19"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-20"><a class="anchor" href="#data-structure-basic-20"></a>Data Structure - Basic</h4>
 <div class="paragraph">
 <p>The data structure for this criterion is quite straightforward, it only contains a group of one QUESTION which has to be answered with <strong>Yes</strong> or <strong>No</strong>, thus the expected property data type <code>INDICATOR</code>.</p>
 </div>
@@ -12853,7 +12853,7 @@ Weighting can be done either using percentage or points for one procedure. The C
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-20"><a class="anchor" href="#data-structure-basic-20"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-21"><a class="anchor" href="#data-structure-basic-21"></a>Data Structure - Basic</h4>
 <div class="paragraph">
 <p>(Some columns have been hidden to enhance the readability of the image).</p>
 </div>
@@ -12988,7 +12988,7 @@ Weighting can be done either using percentage or points for one procedure. The C
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-18"><a class="anchor" href="#data-structure-extended-18"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-19"><a class="anchor" href="#data-structure-extended-19"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>(The figure below is defined in the the tab ''SC-Abilities_1 (Persons)'' of the
 <a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
@@ -13296,7 +13296,7 @@ Weighting can be done either using percentage or points for one procedure. The C
 <div class="sect2">
 <h3 id="vi-9-5-extended-abilities-ii-facilities"><a class="anchor" href="#vi-9-5-extended-abilities-ii-facilities"></a>VI.9.5 Extended Abilities (II) - Facilities</h3>
 <div class="sect3">
-<h4 id="data-structure-extended-19"><a class="anchor" href="#data-structure-extended-19"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-20"><a class="anchor" href="#data-structure-extended-20"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>(The figure below is defined in the the tab ''SC_Abilities_2 (Facilities,&#8230;&#8203;)'' of the
 <a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
@@ -13309,7 +13309,7 @@ Weighting can be done either using percentage or points for one procedure. The C
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-17"><a class="anchor" href="#xml-example-extended-17"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-18"><a class="anchor" href="#xml-example-extended-18"></a>XML Example - Extended</h4>
 <div class="listingblock">
 <div class="title">Criterion "Technical facilities and measures for ensuring quality" (Extended ESPD-Request)</div>
 <div class="content">
@@ -13761,7 +13761,7 @@ classification.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-20"><a class="anchor" href="#data-structure-extended-20"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-21"><a class="anchor" href="#data-structure-extended-21"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>The data structure below shows how this criterion is organised. Notice the following:</p>
 </div>
@@ -13796,7 +13796,7 @@ classification.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-18"><a class="anchor" href="#xml-example-extended-18"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-19"><a class="anchor" href="#xml-example-extended-19"></a>XML Example - Extended</h4>
 <div class="listingblock">
 <div class="title">Extended allowance of checks criterion</div>
 <div class="content">
@@ -13877,7 +13877,7 @@ classification.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-19"><a class="anchor" href="#xml-example-extended-19"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-20"><a class="anchor" href="#xml-example-extended-20"></a>XML Example - Extended</h4>
 <div class="listingblock">
 <div class="title">Criterion SC-Abilities (Staff) Extended ESPD-Request</div>
 <div class="content">
@@ -14055,7 +14055,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-15"><a class="anchor" href="#differences-between-basic-and-extended-15"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-17"><a class="anchor" href="#differences-between-basic-and-extended-17"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -14099,7 +14099,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-21"><a class="anchor" href="#data-structure-basic-21"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-22"><a class="anchor" href="#data-structure-basic-22"></a>Data Structure - Basic</h4>
 <div class="paragraph">
 <p>The data structure is very simple, it only defines a group with one QUESTION:</p>
 </div>
@@ -14114,7 +14114,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-21"><a class="anchor" href="#data-structure-extended-21"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-22"><a class="anchor" href="#data-structure-extended-22"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>The difference with the <strong>Basic</strong> model is that the <strong>Extended</strong> is able to define and keep in the XML instance the national sub-criteria. But, as sub-criteria are optional, if the MS did not defined any national sub-criterion then the data structure would enn up being the same than for both cases.</p>
 </div>
@@ -14170,7 +14170,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-16"><a class="anchor" href="#differences-between-basic-and-extended-16"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-18"><a class="anchor" href="#differences-between-basic-and-extended-18"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -14217,7 +14217,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-22"><a class="anchor" href="#data-structure-basic-22"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-23"><a class="anchor" href="#data-structure-basic-23"></a>Data Structure - Basic</h4>
 <div class="paragraph">
 <p>(Some columns have been hidden to enhance the readability of the image).</p>
 </div>
@@ -14229,7 +14229,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-22"><a class="anchor" href="#data-structure-extended-22"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-23"><a class="anchor" href="#data-structure-extended-23"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>The with the <strong>Basic</strong> ESPD is that the <strong>Extended</strong> is able to define and keep in the XML instance the national sub-criteria. But, as sub-criteria are optional, if the MS did not defined any national sub-criterion then the data structure would actually end up being the same for both cases.</p>
 </div>
@@ -14304,7 +14304,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-17"><a class="anchor" href="#differences-between-basic-and-extended-17"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-19"><a class="anchor" href="#differences-between-basic-and-extended-19"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -14376,7 +14376,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-basic-23"><a class="anchor" href="#data-structure-basic-23"></a>Data Structure - Basic</h4>
+<h4 id="data-structure-basic-24"><a class="anchor" href="#data-structure-basic-24"></a>Data Structure - Basic</h4>
 <div class="paragraph">
 <p>Notice the <code>ONFALSE</code> code for the sub-group containing the sentence thats starts with 'If not, please explain why&#8230;&#8203;'. The code means: if the answer to the previous question was <strong>No</strong> then this sub-group must be shown/processed.</p>
 </div>
@@ -14490,7 +14490,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-structure-extended-23"><a class="anchor" href="#data-structure-extended-23"></a>Data Structure - Extended</h4>
+<h4 id="data-structure-extended-24"><a class="anchor" href="#data-structure-extended-24"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>Notice the following:</p>
 </div>
@@ -14518,7 +14518,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 </div>
 </div>
 <div class="sect3">
-<h4 id="xml-example-extended-20"><a class="anchor" href="#xml-example-extended-20"></a>XML Example - Extended</h4>
+<h4 id="xml-example-extended-21"><a class="anchor" href="#xml-example-extended-21"></a>XML Example - Extended</h4>
 <div class="listingblock">
 <div class="title">Extended 'certificates by quality control institutes' criterion</div>
 <div class="content">
@@ -14622,7 +14622,7 @@ objective and non-discriminatory criteria and for the economic operator to decla
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-18"><a class="anchor" href="#differences-between-basic-and-extended-18"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-20"><a class="anchor" href="#differences-between-basic-and-extended-20"></a>Differences between Basic and Extended</h4>
 <div class="paragraph">
 <p>The data structure for this criterion is identical for both the Basic and the Extended models.</p>
 </div>
@@ -14933,7 +14933,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-013"><em>tbr92-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Try always to use the reference number issued by the contracting authority. This number in combination with a registered contracting authority ID (e.g. the VAT number) results in a <strong>universally unique identifier of the procurement procedure</strong>.
-</p><p class="tableblock"><strong>Rule scope</strong>: REGULATED (BR-REG-20), SELF-CONTAINED (BR-SC-30)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: BASIC (BR-REG-20), EXTENDED (BR-SC-30)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:IssueDate</strong></p></td>
@@ -14961,7 +14961,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-008"><em>tbr92-008</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: The leader of the group must take care of ensuring that the name of the group is identical in all the ESPDs of the tender.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-LEAD-10-S10)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-LEAD-10-S10)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:VersionID</strong></p></td>
@@ -14988,7 +14988,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of the procurement administrative procedure according to the EU Directives.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 </p><p class="tableblock"></p><p class="tableblock"><strong>Rule</strong>: Compulsory use of attributes listID, listAgencyName and listVersionID. Compulsory use of the code list <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">ProcedureType</a> (values: <code>Open</code>, <code>Restricted</code>, <code>Accelerated</code>, <code>Competitive dialogue</code>, etc.). Do not confound with the object of the procurement project (code list <code>ProjectType</code>: Works, Supplies, Services).
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-01, BR-OTH-01#1, BR-OTH-03)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-01, BR-OTH-01#1, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:QualificationApplicationTypeCode</strong></p></td>
@@ -14997,8 +14997,8 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of European Single Procurement Document (ESPD).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-019"><em>tbr92-019</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the codelist <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">QualificationApplicationType</a> (values 'REGULATED`, <code>SELFCONTAINED</code>). Compulsory use of attributes listID, listAgencyName and listVersionID.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-01, BR-OTH-01#2, BR-OTH-03)</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the codelist <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">QualificationApplicationType</a> (values 'BASIC`, <code>EXTENDED</code>). Compulsory use of attributes listID, listAgencyName and listVersionID.
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-01, BR-OTH-01#2, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:WeightScoringMethodologyNote</strong></p></td>
@@ -15054,7 +15054,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-014"><em>tbr92-014</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: If there is only one single procurement project lot specified, the ESPD refers then to a procurement procedure without lots.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-LOT-30)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-LOT-30)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:TenderingCriterion</strong></p></td>
@@ -15109,7 +15109,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="sect3">
 <h4 id="xml-example-12"><a class="anchor" href="#xml-example-12"></a>XML example</h4>
 <div class="paragraph">
-<p>The XML snippet below shows how the beginning of an ESPD Response XML instance looks like. For a complete instance of an ESPD Response XML document see the the example files in the <code>dist/xml</code> folder: <a href=".dist/xml/REGULATED-ESPDResponse-2.1.1.xml">REGULATED-ESPDResponse-2.1.1.xml</a> or <a href=".dist/xml/SELFCONTAINED-ESPDResponse-2.1.1.xml">SELFCONTAINED-ESPDResponse-2.1.1.xml</a>.</p>
+<p>The XML snippet below shows how the beginning of an ESPD Response XML instance looks like. For a complete instance of an ESPD Response XML document see the the example files in the <code>dist/xml</code> folder: <a href=".dist/xml/BASIC-ESPDResponse-2.1.1.xml">BASIC-ESPDResponse-2.1.1.xml</a> or <a href=".dist/xml/EXTENDED-ESPDResponse-2.1.1.xml">EXTENDED-ESPDResponse-2.1.1.xml</a>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -15137,8 +15137,8 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
         <span class="tag">&lt;cbc:VersionID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1.0<span class="tag">&lt;/cbc:VersionID&gt;</span>
         <span class="comment">&lt;!-- The type of the procurement procedure; e.g. V = Award of contract without prior publication of a contract notice --&gt;</span>
         <span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>OPEN<span class="tag">&lt;/cbc:ProcedureCode&gt;</span>
-        <span class="comment">&lt;!-- The type of the ESPD (REGULATED or SELFCONTAINED) --&gt;</span>
-        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>SELFCONTAINED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
+        <span class="comment">&lt;!-- The type of the ESPD (BASIC or EXTENDED) --&gt;</span>
+        <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EXTENDED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
 
 <span class="comment">&lt;!-- ... rest of document removed for brevity --&gt;</span></code></pre>
 </div>
@@ -15472,7 +15472,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 </div>
 </div>
 <div class="sect3">
-<h4 id="differences-between-basic-and-extended-19"><a class="anchor" href="#differences-between-basic-and-extended-19"></a>Differences between Basic and Extended</h4>
+<h4 id="differences-between-basic-and-extended-21"><a class="anchor" href="#differences-between-basic-and-extended-21"></a>Differences between Basic and Extended</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -19502,9 +19502,9 @@ the allocation of lots to a set of 'criterion properties' make sense.</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="./images/Self-contained_Suitability_LOTS_CA_mockup_NO_BULLETS.png" alt="Self-contained 'Suitability' criterion (CA perspective)">
+<img src="./images/Extended_Suitability_LOTS_CA_mockup_NO_BULLETS.png" alt="Extended 'Suitability' criterion (CA perspective)">
 </div>
-<div class="title">Figure 244. Self-contained 'Suitability' criterion with Lots (CA perspective)'</div>
+<div class="title">Figure 244. Extended 'Suitability' criterion with Lots (CA perspective)'</div>
 </div>
 </div>
 <div class="sect4">
@@ -19527,18 +19527,18 @@ the allocation of lots to a set of 'criterion properties' make sense.</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="./images/Self-contained_Suitability_LOTS_EO_mockup_NO_BULLETS.png" alt="Self-contained 'Suitability' criterion (EO perspective)" width="800">
+<img src="./images/Extended_Suitability_LOTS_EO_mockup_NO_BULLETS.png" alt="Extended 'Suitability' criterion (EO perspective)" width="800">
 </div>
-<div class="title">Figure 245. Self-contained 'Suitability' criterion (EO perspective)'</div>
+<div class="title">Figure 245. Extended 'Suitability' criterion (EO perspective)'</div>
 </div>
 </div>
 <div class="sect4">
 <h5 id="criterion-data-structure"><a class="anchor" href="#criterion-data-structure"></a>Criterion data structure</h5>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="./images/Selfcontained_Suitability_Enrolment_Data_Structure.png" alt="'Enrolment in a relevant professional register' suitability criterion" width="suitability criterion">
+<img src="./images/Extended_Suitability_Enrolment_Data_Structure.png" alt="'Enrolment in a relevant professional register' suitability criterion" width="suitability criterion">
 </div>
-<div class="title">Figure 246. 'Enrolment in a relevant professional register' suitability criterion data structure (SELF-CONTAINED)</div>
+<div class="title">Figure 246. 'Enrolment in a relevant professional register' suitability criterion data structure (EXTENDED)</div>
 </div>
 <div class="paragraph">
 <p>In this case, ''Enrolment in a relevant professional register'', the ESPD-Request
@@ -20878,7 +20878,7 @@ SCH stands for Schematron Schema and contains the set of rules to be validated w
 </div>
 </li>
 <li>
-<p>Depending on the type of application (ESPD Request or ESPD Response), and independently of the qualification application type code (either regulated or self-contained), different types of validations are executed:</p>
+<p>Depending on the type of application (ESPD Request or ESPD Response), and independently of the qualification application type code (either Basic or Extended), different types of validations are executed:</p>
 </li>
 </ol>
 </div>
@@ -20888,7 +20888,7 @@ SCH stands for Schematron Schema and contains the set of rules to be validated w
 </div>
 </div>
 <div class="sect3">
-<h4 id="espd-request-regulated-or-self-contained"><a class="anchor" href="#espd-request-regulated-or-self-contained"></a>ESPD Request (Regulated or Self-contained)</h4>
+<h4 id="espd-request-basic-or-extended"><a class="anchor" href="#espd-request-basic-or-extended"></a>ESPD Request (Basic or Extended)</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -20937,7 +20937,7 @@ SCH stands for Schematron Schema and contains the set of rules to be validated w
 <p>Business rules related to the procurer: 05 ESPD Req Procurer BR.sch</p>
 </li>
 <li>
-<p>Specific business rules for Self-contained application type: 05 ESPD Req Self-contained BR.sch</p>
+<p>Specific business rules for Extended application type: 05 ESPD Req Extended BR.sch</p>
 </li>
 </ol>
 </div>
@@ -20995,7 +20995,7 @@ SCH stands for Schematron Schema and contains the set of rules to be validated w
 <p>Business rules related to the economic operator: 05 ESPD Resp EO BR.sch</p>
 </li>
 <li>
-<p>Specific business rules for Self-contained application type: 05 ESPD Resp Self-contained BR.sch</p>
+<p>Specific business rules for Extended application type: 05 ESPD Resp Extended BR.sch</p>
 </li>
 <li>
 <p>Specific business rules for economic operators registered in a pre-qualification system: 05 ESPD Resp Qualification BR.sch</p>
@@ -21364,7 +21364,7 @@ it is in this element that the ESPD Request defines which code list to use); and
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-11-04 23:49:41 CET
+Last updated 2019-12-05 00:07:20 CET
 </div>
 </div>
 </body>

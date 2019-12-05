@@ -631,7 +631,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-013"><em>tbr92-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Try always to use the reference number issued by the contracting authority. This number in combination with a registered contracting authority ID (e.g. the VAT number) results in a <strong>universally unique identifier of the procurement procedure</strong>.
-</p><p class="tableblock"><strong>Rule scope</strong>: REGULATED (BR-REG-20), SELF-CONTAINED (BR-SC-30)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: BASIC (BR-REG-20), EXTENDED (BR-SC-30)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:IssueDate</strong></p></td>
@@ -659,7 +659,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-008"><em>tbr92-008</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: The leader of the group must take care of ensuring that the name of the group is identical in all the ESPDs of the tender.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-LEAD-10-S10)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-LEAD-10-S10)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:VersionID</strong></p></td>
@@ -686,7 +686,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of the procurement administrative procedure according to the EU Directives.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 </p><p class="tableblock"></p><p class="tableblock"><strong>Rule</strong>: Compulsory use of attributes listID, listAgencyName and listVersionID. Compulsory use of the code list <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">ProcedureType</a> (values: <code>Open</code>, <code>Restricted</code>, <code>Accelerated</code>, <code>Competitive dialogue</code>, etc.). Do not confound with the object of the procurement project (code list <code>ProjectType</code>: Works, Supplies, Services).
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-01, BR-OTH-01#1, BR-OTH-03)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-01, BR-OTH-01#1, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:QualificationApplicationTypeCode</strong></p></td>
@@ -695,8 +695,8 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of European Single Procurement Document (ESPD).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-019"><em>tbr92-019</em></a>.
-</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the codelist <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">QualificationApplicationType</a> (values 'REGULATED`, <code>SELFCONTAINED</code>). Compulsory use of attributes listID, listAgencyName and listVersionID.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-OTH-01, BR-OTH-01#2, BR-OTH-03)</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the codelist <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">QualificationApplicationType</a> (values 'BASIC`, <code>EXTENDED</code>). Compulsory use of attributes listID, listAgencyName and listVersionID.
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-01, BR-OTH-01#2, BR-OTH-03)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:WeightScoringMethodologyNote</strong></p></td>
@@ -752,7 +752,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
 <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-014"><em>tbr92-014</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: If there is only one single procurement project lot specified, the ESPD refers then to a procurement procedure without lots.
-</p><p class="tableblock"><strong>Rule scope</strong>: SELF-CONTAINED (BR-LOT-30)</p></td>
+</p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-LOT-30)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:TenderingCriterion</strong></p></td>
@@ -808,7 +808,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-11-04 23:49:41 CET
+Last updated 2019-12-05 00:07:25 CET
 </div>
 </div>
 </body>
