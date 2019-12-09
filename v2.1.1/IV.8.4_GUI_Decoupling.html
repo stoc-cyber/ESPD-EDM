@@ -580,7 +580,7 @@ starting with an <strong>@</strong> symbol):</p>
 <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup>,
 could enrich the XML instance containing the business data with processing instruction annotations, based on the annotated data structure shown above
 (the complete example can be found in the folder
-<a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/doc/evolution/Annotations%20Proposal">Annotations Proposal</a></p>
+<a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/doc/evolution/Annotations_Proposal">Annotations Proposal</a></p>
 </div>
 <div class="listingblock">
 <div class="title">Use of annotations to decouple the business data payload from the software application processing needs</div>
@@ -637,14 +637,14 @@ with other requirements set out in that Annex.<span class="tag">&lt;/cbc:Descrip
                 <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
                 <span class="tag">&gt;</span>IDENTIFIER<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
         <span class="comment">&lt;!-- No answer is expected here from the economic operator, as this is a REQUIREMENT issued by the contracting authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the contracting authority --&gt;</span>
-        <span class="tag">&lt;cbc:ExpectedID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>[List of
-                Lots]<span class="tag">&lt;/cbc:ExpectedID&gt;</span>
+        <span class="tag">&lt;cbc:ExpectedID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>[List of Lots]<span class="tag">&lt;/cbc:ExpectedID&gt;</span>
 <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
 <span class="tag">&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
          <span class="tag">&lt;xs:annotation&gt;</span><i class="conum" data-value="6"></i><b>(6)</b>
                 <span class="tag">&lt;xs:documentation&gt;</span> This is a SUBGROUP OF REQUIREMENT(s) INSIDE A GROUP OF REQUIREMENT(s).<span class="tag">&lt;/xs:documentation&gt;</span>
                 <span class="tag">&lt;xs:documentation&gt;</span>This group must be processed (e.g. shown) ALWAYS.<span class="tag">&lt;/xs:documentation&gt;</span>
-                <span class="tag">&lt;espd:groupVisibilityDependencyType&gt;</span>CRITERION_REQUIREMENT_SUBGROUP<span class="tag">&lt;/espd:groupVisibilityDependencyType&gt;</span>
+                                        <span class="tag">&lt;espd:groupVisibilityDependencyType</span>
+                                                        <span class="tag">&gt;</span>CRITERION_REQUIREMENT_SUBGROUP<span class="tag">&lt;/espd:groupVisibilityDependencyType&gt;</span>
         <span class="tag">&lt;/xs:annotation&gt;</span>
         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span>
                 <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
@@ -664,8 +664,7 @@ with other requirements set out in that Annex.<span class="tag">&lt;/cbc:Descrip
                         <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
                         <span class="tag">&gt;</span>DESCRIPTION<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
                 <span class="comment">&lt;!-- No answer is expected here from the economic operator, as this is a REQUIREMENT issued by the contracting authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the contracting authority --&gt;</span>
-                <span class="tag">&lt;cbc:ExpectedDescription&gt;</span>[Register
-                        Name]<span class="tag">&lt;/cbc:ExpectedDescription&gt;</span>
+                <span class="tag">&lt;cbc:ExpectedDescription&gt;</span>[Register Name]<span class="tag">&lt;/cbc:ExpectedDescription&gt;</span>
         <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
 
 <span class="comment">&lt;!-- ... etc. --&gt;</span></code></pre>
@@ -712,7 +711,7 @@ with other requirements set out in that Annex.<span class="tag">&lt;/cbc:Descrip
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-12-05 00:07:20 CET
+Last updated 2019-12-09 03:41:42 CET
 </div>
 </div>
 </body>

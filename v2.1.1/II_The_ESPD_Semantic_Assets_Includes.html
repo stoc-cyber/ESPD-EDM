@@ -535,7 +535,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sect2">
 <h3 id="ii-1-espd-distribution-package"><a class="anchor" href="#ii-1-espd-distribution-package"></a>II.1 ESPD Distribution package</h3>
 <div class="paragraph">
-<p>All the semantic assets needed to implement ESPD electronic documents are organised in a <a href="./dist">distribution package</a>. The content of this folder is organised as follows:</p>
+<p>All the semantic assets needed to implement ESPD electronic documents are organised in a <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist">distribution package</a>. The content of this folder is organised as follows:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -570,7 +570,7 @@ table.CodeRay td.code>pre{padding:0}
 <p><strong>xsdrt</strong>: the UBL-2.2 XSD Schemas, runtime version;</p>
 </li>
 <li>
-<p><strong>xslt</strong>: transformation stylesheets used to generate basic sample XML instances from the criteria defined in spreadsheets <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-Basic-V2.1.1.ods"><strong>Basic</strong> ESPD data structures</a> and <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-Extended-V2.1.1.ods"><strong>Extended</strong> ESPD data structures</a> (see folder <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl">dist/cl</a>).</p>
+<p><strong>xslt</strong>: transformation stylesheets used to generate basic sample XML instances from the criteria defined in spreadsheets <a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.ods"><strong>Basic</strong> ESPD data structures</a> and <a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods"><strong>Extended</strong> ESPD data structures</a> (see folder <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl">dist/cl</a>).</p>
 </li>
 </ol>
 </div>
@@ -581,13 +581,13 @@ table.CodeRay td.code>pre{padding:0}
 <p>One important difference of this new version in respect of the previous versions of the ESPD-EDM is that the XSD Schemas used for the XML implementation of the Request and Response documents have been developed by OASIS UBL (ISO/IEC 19845) in close collaboration with the European Commission (EC).</p>
 </div>
 <div class="paragraph">
-<p>The results of such collaboration have been included in the version 2.2 of UBL which is actually under revision and is to be formally adopted by the end of 2017.s</p>
+<p>The results of such collaboration have been included in the version 2.2 of UBL which is actually under revision and is to be formally adopted by the end of 2017.</p>
 </div>
 <div class="paragraph">
 <p>UBL, developed by the Organization for the Advancement of Structured Information Standards, is a royalty-free library of standard electronic Extensible Markup Language (XML) business documents. It is designed to plug directly into existing business, legal, auditing, and records management practices, and to operate within a standard business framework such as ISO 15000 (ebXML) to provide a complete, standards-based infrastructure that can extend the benefits of existing Electronic Data Interchange (EDI) systems to businesses of all sizes.</p>
 </div>
 <div class="paragraph">
-<p>UBL is also included in the European Catalogue  (<a href="https://joinup.ec.europa.eu/community/european_catalogue/description">EUcat</a>): the rules on European standardisation allow the European Commission to identify information and communication technology (ICT) technical specifications - that are not national, European or international standards - to be eligible for referencing in public procurement.</p>
+<p>UBL is also included in the ICT Standards for Procurement (<a href="https://joinup.ec.europa.eu/collection/ict-standards-procurement">ICT Standards for Procurement</a>): the rules on European standardisation allow the European Commission to identify information and communication technology (ICT) technical specifications - that are not national, European or international standards - to be eligible for referencing in public procurement.</p>
 </div>
 <div class="paragraph">
 <p>UBL is a specific used in some Member States and by the EU institutions, namely the European Commision. UBL is also referred to in the Commission implementing decision of 31 October 2014 on the identification of Universal Business Language version 2.1 for referencing in public procurement  (<a href="http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32014D0771&amp;from=EN">COM Decision 2014/771/EU</a>).</p>
@@ -608,7 +608,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>The previous ESPD-EDM versions used its own libraries where Criterion and Evidence-related aggregate and components were defined (components prefixed with <code>cac-ccv:</code>, <code>cac-cev</code>, <code>cbc-ccv</code> and <code>cbc-cev</code>).</p>
 </div>
 <div class="paragraph">
-<p>This new version uses components exclusively defined by UBL-2.2 in two main libraries: Common Aggregate Components (file <code>UBL-CommonAggregateComponents-Pre-award.xsd</code>) and Common Basic Components (<code>UBL-CommonBasicComponents-Pre-award.xsd</code>).</p>
+<p>This new version uses components exclusively defined by UBL-2.2 in two main libraries: Common Aggregate Components (file <code>UBL-CommonAggregateComponents-2.2.xsd.xsd</code>) and Common Basic Components (<code>UBL-CommonBasicComponents-2.2.xsd.xsd</code>).</p>
 </div>
 <div class="paragraph">
 <p>The usual prefix used to identify Common Aggregate Components is <code>cac:</code>. The prefix for Common  Basic Components is <code>cbc:</code>.</p>
@@ -623,12 +623,22 @@ schemas are <strong>now final</strong>, since June 2018. Thus:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The ESPD-EDM v2.1.1 XSD Schemas use the namespace <code><em>urn:oasis:names:specification:ubl:schema:xsd:*</em></code>, whilst</p>
+<p>The ESPD-EDM v2.1.* XSD Schemas use the namespace <code><em>urn:oasis:names:specification:ubl:schema:xsd:*</em></code>, whilst</p>
 </li>
 <li>
 <p>The previous ESPD-EDM versions 2.0.* used the namespace <code><em>urn:X-test:UBL:Pre-award:*</em></code>.</p>
 </li>
 </ol>
+</div>
+<div class="sect3 text-left">
+<h4 id="ubl-2-2-and-toop-requirements"><a class="anchor" href="#ubl-2-2-and-toop-requirements"></a>UBL-2.2 and TOOP Requirements</h4>
+<div class="paragraph">
+<p>During the development of v2.1.1 some requirements arose from TOOP related to the Evidence class. The aforementioned requirements, that can be found in the following GitHub <a href="https://github.com/ESPD/ESPD-EDM/issues/254">issue</a>, are fully mappable to the UBL 2.2 Schema.</p>
+</div>
+<div class="paragraph">
+<p>To check the mapping, please access to these <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/assets/TOOP_Requirements_UBL_2.2.xlsx">Excel file</a>
+or <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/assets/TOOP_Requirements_UBL_2.2.ods">ODS file</a>.</p>
+</div>
 </div>
 </div>
 <div class="sect2 text-left">
@@ -743,7 +753,7 @@ that can be used in multiple business domains, e.g. the NUTS defined by EUROSTAT
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The <a href="http://#annex-ii-code-lists-used-in-espd">Annex II</a> of this document lists all the code lists used by the ESPD and in which context or element it is used.</p>
+<p>The <a href="#annex-ii-code-lists-used-in-espd">Annex II</a> of this document lists all the code lists used by the ESPD and in which context or element it is used.</p>
 </div>
 </td>
 </tr>
@@ -788,7 +798,7 @@ also be used (for this use the code list
 <p>One convenient characteristic of these two CCT elements (Codes and Identifiers) is that they use a rich set of attributes that allow to identify their pattern, the name of the list, the URI from where to obtain the list, the Agency that maintains the list, the version of the list, and other.</p>
 </div>
 <div class="paragraph">
-<p>UBL-2.2 CCT are defined in the file <code>CCTS_CCT_SchemaModule-2.2.xsd</code> (see folders <code>xsd/common</code> or <code>xsdrt/common</code> in the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/espd-edm-v2.1.1.zip">distribution package</a>).</p>
+<p>UBL-2.2 CCT are defined in the file <code>CCTS_CCT_SchemaModule-2.2.xsd</code> (see folders <code>xsd/common</code> or <code>xsdrt/common</code> in the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/">distribution package</a>).</p>
 </div>
 <div class="paragraph">
 <p>The figure below shows the complete list of attributes for the CCT <code>CodeType</code> component.</p>
@@ -922,7 +932,7 @@ also be used (for this use the code list
 
 <span class="tag">&lt;cbc:VersionID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1.0<span class="tag">&lt;/cbc:VersionID&gt;</span> <i class="conum" data-value="5"></i><b>(5)</b>
 
-<span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>OPEN<span class="tag">&lt;/cbc:ProcedureCode&gt;</span> <i class="conum" data-value="6"></i><b>(6)</b>
+<span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>OPEN<span class="tag">&lt;/cbc:ProcedureCode&gt;</span> <i class="conum" data-value="6"></i><b>(6)</b>
 
 <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EXTENDED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span> <i class="conum" data-value="7"></i><b>(7)</b></code></pre>
 </div>
@@ -947,15 +957,15 @@ also be used (for this use the code list
 </tr>
 <tr>
 <td><i class="conum" data-value="5"></i><b>5</b></td>
-<td>Generic information,such as the content version ID, use always by default the "EU-COM-GROW" Agnecy ID. Notice that the other additional attributes may be also used, as in this example.</td>
+<td>Generic information, such as the content version ID, use always by default the "EU-COM-GROW" Agnecy ID. Notice that the other additional attributes may be also used, as in this example.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="6"></i><b>6</b></td>
-<td>Notice that for Codes, the three compulsory attributes are specified. For these codes. In this example the attributes are specifying that the code is maintained by DG GROW in a list named <code>ProcedureType</code> and that the version that has been used is version `2.1.1`which is distributed jointly with this ESPD-EDM V2.1.1 specification (in the <a href="./dist">distribution package</a>).</td>
+<td>Notice that for Codes, the three compulsory attributes are specified. For these codes. In this example the attributes are specifying that the code is maintained by the Publication Office in a list named <code>ProcedureType</code> and that the version that has been used is version <code>1.0</code> which is distributed jointly with this ESPD-EDM V2.1.1 specification (in the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist">distribution package</a>).</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="7"></i><b>7</b></td>
-<td>Beware that the codes may be numbers, text or combinations of both. These code labels are the ones that are specified in the codelist spreadsheets and XML Genericode files distributed jointly with this specification (in the folder <code>dist/cl</code> of the <a href="./dist">distribution package</a>.</td>
+<td>Beware that the codes may be numbers, text or combinations of both. These code labels are the ones that are specified in the codelist spreadsheets and XML Genericode files distributed jointly with this specification (in the folder <code>dist/cl</code> of the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist">distribution package</a>.</td>
 </tr>
 </table>
 </div>
@@ -986,7 +996,7 @@ These codes are to be used as values of the <code>schemeID</code> attribute (att
 <div class="paragraph">
 <p>The next fragment of XML shows how this is used in the particular case of the Criterion "Relied on entities"
 ("Does the economic operator rely on the capacities of other entities in order to meet the selection criteria&#8230;&#8203;?").
-See also section <a href="#xml-example-Extended-economic-operator">XML Example (Extended economic operator)</a>
+See also section <a href="#xml-example-extended-economic-operator">XML Example (Extended economic operator)</a>
 for a more complete example on this Criterion:</p>
 </div>
 <div class="listingblock">
@@ -1012,7 +1022,7 @@ for a more complete example on this Criterion:</p>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>The ECONOMIC_OPERATOR_IDENTIFIER is mapped to an element <code>cbc:ResponseID</code> in the response ((which is based on the
+<td>The ECONOMIC_OPERATOR_IDENTIFIER is mapped to an element <code>cbc:ResponseID</code> in the response (which is based on the
 UBL-2.2. element <code>cbc:Identifier</code>).</td>
 </tr>
 </table>
@@ -1023,8 +1033,8 @@ UBL-2.2. element <code>cbc:Identifier</code>).</td>
 <pre class="CodeRay highlight"><code data-lang="xml">...
 
  <span class="tag">&lt;cac:TenderingCriterionResponse&gt;</span>
-    <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO/IEC 9834-8:2008 - 4UUID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>acb58f0e-0fe4-4372-aa08-60d0c36bfcfe<span class="tag">&lt;/cbc:ID&gt;</span>
-    <span class="tag">&lt;cbc:ValidatedCriterionPropertyID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1fa05728-308f-43b0-b547-c903ffb0a8af<span class="tag">&lt;/cbc:ValidatedCriterionPropertyID&gt;</span><i class="conum" data-value="1"></i><b>(1)</b>
+    <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO/IEC 9834-8:2008 - 4UUID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>acb58f0e-0fe4-4372-aa08-60d0c36bfcfe<span class="tag">&lt;/cbc:ID&gt;</span>
+    <span class="tag">&lt;cbc:ValidatedCriterionPropertyID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1fa05728-308f-43b0-b547-c903ffb0a8af<span class="tag">&lt;/cbc:ValidatedCriterionPropertyID&gt;</span><i class="conum" data-value="1"></i><b>(1)</b>
     <span class="tag">&lt;cbc:ResponseID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">VAT</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ES-AEAT</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>B82387770<span class="tag">&lt;/cbc:ResponseID&gt;</span> <i class="conum" data-value="2"></i><b>(2)</b>
  <span class="tag">&lt;/cac:TenderingCriterionResponse&gt;</span>
 ...</code></pre>
@@ -1041,7 +1051,7 @@ the very specific QUESTION it is responding.</td>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>The element <code>cbc:ResponseID</code> is of type <code>Identifier</code>(as defined in the Core Component Type Specification library).
 The value ''VAT'' assigned to the attribute <code>schemeID</code>, taken from the code list
-<a href="https://github.com/ESPD/ESPD-EDM/blob/master/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-CodeLists-V2.0.2.xlsx">EOIDType</a>,
+<a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-CodeLists-V2.1.1.xlsx">EOIDType</a>,
 is used to indicate that the type of identifier used is the Value Added Tax identifier issued by the Spanish Tax Agency (ES-AEAT).</td>
 </tr>
 </table>
@@ -1053,7 +1063,7 @@ is used to indicate that the type of identifier used is the Value Added Tax iden
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-12-05 00:07:17 CET
+Last updated 2019-12-09 03:40:13 CET
 </div>
 </div>
 </body>

@@ -539,7 +539,7 @@ table.CodeRay td.code>pre{padding:0}
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definition</strong>:</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Caption (i.e. a 'label'), specific MS or contracting authority requirement (e.g. 'Number of references expected: 5' or a question addressed to the economic operator (e.g. 'Your average yearly turnover for the past three years?'.
-</p><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a></p></td>
+</p><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
@@ -547,7 +547,7 @@ table.CodeRay td.code>pre{padding:0}
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -579,7 +579,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifies one specific property.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Property identifiers must use UUID numbers (version 4) automatically generated. The responses of the economic operator (in the ESPD Response document) will refer to this UUID to link the response with one, and only one, criterion property. See the section about the ESPD Response for examples.
 </p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-TC-18, BR-OTH-02)</p></td>
 </tr>
@@ -589,7 +589,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The text of the caption, requirement or question.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: None.
 </p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-TC-19)</p></td>
 </tr>
@@ -599,7 +599,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of property. Used to verify that structure of the property is correct.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">Code List  'CriterionElementType'</a>.  Possible types are 'CAPTION, REQUIREMENT and QUESTION'. If the type is <code>CAPTION</code> or <code>REQUIREMENT</code> no answer is expected from the economic operator and therefore the <code>cbc:ValueDataTypeCode</code> must be set to <code>NONE</code>. Otherwise this value must be set to one of the values defined in the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">Code List  'ResponseDataType'</a>
 </p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-TC-20, BR-OTH-01, BR-OTH-01#14, BR-OTH-03)</p></td>
 </tr>
@@ -609,7 +609,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of answer expected by the contracting authority in the case of a poperty of type QUESTION.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the Code List “ResponseDataType”. Verify that the value is different to NONE for properties of type QUESTION.
 </p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-TC-21, BR-OTH-01, BR-OTH-03, BR-OTH-01#12, BR-OTH-03)</p></td>
 </tr>
@@ -619,7 +619,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The unit of measure of the numeric value as a quantity or measure in the expected response from the economic operator.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Verify that the value of <code>cac:TypeCode</code> is set to QUESTION and that the <code>cac:ValueTypeCode</code> is different to NONE.
 </p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-01)</p></td>
 </tr>
@@ -629,7 +629,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The currency of the numeric value as an amount in the expected response from the economic operator.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Verify that the value of <code>cac:TypeCode</code> is set to QUESTION and that the <code>cac:ValueTypeCode</code> is different to NONE.
 </p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-01)</p></td>
 </tr>
@@ -639,7 +639,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The expected identifier that the economic operator has to provide in the criterion response.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Verify that the value of <code>cac:TypeCode</code> is set to QUESTION and that the <code>cac:ValueTypeCode</code> is different to NONE.
 </p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-LOT-40)</p></td>
 </tr>
@@ -649,7 +649,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The expected code that the economic operator has to provide in the Criterion response.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Verify that the value of <code>cac:TypeCode</code> is set to QUESTION and that the <code>cac:ValueTypeCode</code> is different to NONE.
 </p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-OTH-01)</p></td>
 </tr>
@@ -659,7 +659,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The expected value that the economic operator has to provide in the Criterion response.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Verify that the value of <code>cac:TypeCode</code> is set to QUESTION and that the <code>cac:ValueTypeCode</code> is different to NONE.</p></td>
 </tr>
 <tr>
@@ -668,7 +668,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The maximum value the response must have.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Verify that the value of <code>cac:TypeCode</code> is set to QUESTION and that the <code>cac:ValueTypeCode</code> is different to NONE.</p></td>
 </tr>
 <tr>
@@ -677,7 +677,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The minimum value the response must have.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Verify that the value of <code>cac:TypeCode</code> is set to QUESTION and that the <code>cac:ValueTypeCode</code> is different to NONE.</p></td>
 </tr>
 <tr>
@@ -686,7 +686,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The description of the level of the expected certification.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Verify that the value of <code>cac:TypeCode</code> is set to QUESTION and that the <code>cac:ValueTypeCode</code> is different to NONE.</p></td>
 </tr>
 <tr>
@@ -695,7 +695,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The period to which this criterion property shall apply.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: The ESPD-EDM does only expect start date and end date.</p></td>
 </tr>
 <tr>
@@ -704,7 +704,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A pointer to one or more evidences that support the veracity of this criterion.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-013"><em>tbr070-013</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-013"><em>tbr070-013</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: None.</p></td>
 </tr>
 </tbody>
@@ -726,7 +726,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-12-05 00:07:25 CET
+Last updated 2019-12-09 03:41:42 CET
 </div>
 </div>
 </body>

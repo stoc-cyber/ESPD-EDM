@@ -542,7 +542,7 @@ table.CodeRay td.code>pre{padding:0}
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -574,7 +574,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The website of the service provider.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-011"><em>tbr070-011</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-011"><em>tbr070-011</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Use it for the official web site of the service provider. Reserve the <code>EndPointID</code> for online services (e.g. web, REST, ftp services, etc.)</p></td>
 </tr>
 <tr>
@@ -583,7 +583,7 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Electronic address of the service provider.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-0011"><em>tbr070-011</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-0011"><em>tbr070-011</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Use it for online services (e.g. Web Services, REST services, Delivery ID, ftp, etc. For the official web site of the Party use always the <code>cac:Party/cbc:WebsiteURI</code>). An end-point identifier MUST have a scheme identifier attribute (e.g.eSENSParty Identifier Scheme). Should be considered for all actors (contracting authority, service provider, economic operator) as an eDeliveryID.</p></td>
 </tr>
 <tr>
@@ -592,9 +592,9 @@ table.CodeRay td.code>pre{padding:0}
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The national identifier of a service provider as it is legally registered (e.g. VAT identification).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-0011"><em>tbr070-011</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-0011"><em>tbr070-011</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: An identifier for the service provider must always be provided. Compulsory use of the attribute <code>SchemeAgencyID</code>. When possible use the VAT identification of the service provider (see the VIES platform for a EU cross-border national VAT number verification system). See XML example below.
-The code list <a href="https://github.com/ESPD/ESPD-EDM/blob/master/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-CodeLists-V2.0.2.xlsx">EOIDType</a>
+The code list <a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">EOIDType</a>
 may be used to indicate the type of identifier used as a value of the <code>schemeID</code> attribute, e.g. <code>schemeID="VAT"</code>).
 </p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-REQ-20#5, BR-OTH-02")</p></td>
 </tr>
@@ -604,7 +604,7 @@ may be used to indicate the type of identifier used as a value of the <code>sche
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The name of the service provider.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-0011"><em>tbr070-011</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-0011"><em>tbr070-011</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: The name of the service provider must always be specified. Supply the official registered name of the service provider.
 </p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-REQ-20#6)</p></td>
 </tr>
@@ -614,7 +614,7 @@ may be used to indicate the type of identifier used as a value of the <code>sche
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The code that identifies the country of the service provider.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:
-<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr070-0011"><em>tbr070-011</em></a>.
+<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-0011"><em>tbr070-011</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>:  The country of the service provider must always be specified. Compulsory use of the code list CountryCodeIdentifier (ISO 3166-1 2A:2006).
 </p><p class="tableblock"><strong>Rule scope</strong>: EXTENDED (BR-REQ-20#7, BR-OTH-01, BR-OTH-01#5,  BR-OTH-03)</p></td>
 </tr>
@@ -624,7 +624,7 @@ may be used to indicate the type of identifier used as a value of the <code>sche
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-12-05 00:07:25 CET
+Last updated 2019-12-09 03:41:42 CET
 </div>
 </div>
 </body>

@@ -517,7 +517,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#viii-the-espd-response-document">VIII. The ESPD Response document</a>
 <ul class="sectlevel2">
 <li><a href="#viii-1-business-requirements-specification">VIII.1 Business requirements specification</a></li>
-<li><a href="#viii-2-espd-request-xsd-schema">VIII.2 ESPD Request XSD Schema</a></li>
+<li><a href="#viii-2-espd-response-xsd-schema">VIII.2 ESPD Response XSD Schema</a></li>
 <li><a href="#viii-3-espd-response-cardinalities">VIII.3 ESPD Response cardinalities</a></li>
 <li><a href="#viii-4-root-elements">VIII.4 Root elements</a></li>
 <li><a href="#viii-5-reference-to-publications-and-to-the-espd-request">VIII.5 Reference to publications and to the ESPD Request</a></li>
@@ -561,12 +561,12 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 <div class="sect2 text-left">
-<h3 id="viii-2-espd-request-xsd-schema"><a class="anchor" href="#viii-2-espd-request-xsd-schema"></a>VIII.2 ESPD Request XSD Schema</h3>
+<h3 id="viii-2-espd-response-xsd-schema"><a class="anchor" href="#viii-2-espd-response-xsd-schema"></a>VIII.2 ESPD Response XSD Schema</h3>
 <div class="paragraph">
 <p>For the ESPD Response, the ESPD-EDM V2.1.1 uses the UBL-2.2 document named <code>QualificationApplicationResponse.xsd</code> XSD Schema. This schema can be found under the folder <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/xsdrt/maindoc">dist/xsdrt/maindoc</a> (or the equivalent documented <code>xsd</code> folder).</p>
 </div>
 <div class="paragraph">
-<p>The figure below shows the XSD Schema defined by UBL-2.2 for this document, which replaces the Schema for the “ESPD Request” document used in the previous versions of the ESPD-EDM.
+<p>The figure below shows the XSD Schema defined by UBL-2.2 for this document, which replaces the Schema for the “ESPD Response” document used in the previous versions of the ESPD-EDM.
 The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the first level components of the schema are shown. The inner sub-elements and sub-classes are covered in  detail in the following sub-sections of this document. The ESPD Response share many elements with the ESPD Request. For those elements that have already been described in the ESPD Request please see the sections above in this document where those elements were explained.</p>
 </div>
 <div class="paragraph">
@@ -599,7 +599,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="./images/XSD-Schema-elements-Legend.png" alt="Legend: cardinalities" width="400">
 </div>
-<div class="title">Figure 2. Legend: QualificationApplicationRequest XSD Schema, possible cardinalities of the Schema elements</div>
+<div class="title">Figure 2. Legend: QualificationApplicationResponse XSD Schema, possible cardinalities of the Schema elements</div>
 </div>
 </div>
 <div class="sect2">
@@ -665,7 +665,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/xsdrt/maindoc/UBL-QualificationApplicationResponse-2.2-Pre-award.xsd">dist/xsdrt/maindoc/UBL-QualificationApplicationResponse-2.2-Pre-award.xsd</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/xsdrt/maindoc/UBL-QualificationApplicationResponse-2.2.xsd">dist/xsdrt/maindoc/UBL-QualificationApplicationResponse-2.2.xsd</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -737,7 +737,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A universally unique identifier that can be used to reference this ESPD document instance.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>:http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-019[<em>tbr92-019</em>].
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-019"><em>tbr92-019</em></a>.
 </p><p class="tableblock"><strong>Rule</strong>: Other documents, e.g. the tender, might refer to the ESPD Response using this identifier (thus its compulsoriness). Copies of a document must be identified with a different UUID. Compulsory use of schemeAgencyID attribute.</p></td>
 </tr>
 <tr>
@@ -924,11 +924,11 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="sect3">
 <h4 id="xml-example"><a class="anchor" href="#xml-example"></a>XML example</h4>
 <div class="paragraph">
-<p>The XML snippet below shows how the beginning of an ESPD Response XML instance looks like. For a complete instance of an ESPD Response XML document see the the example files in the <code>dist/xml</code> folder: <a href=".dist/xml/BASIC-ESPDResponse-2.1.1.xml">BASIC-ESPDResponse-2.1.1.xml</a> or <a href=".dist/xml/EXTENDED-ESPDResponse-2.1.1.xml">EXTENDED-ESPDResponse-2.1.1.xml</a>.</p>
+<p>The XML snippet below shows how the beginning of an ESPD Response XML instance looks like. For a complete instance of an ESPD Response XML document see the the example files in the <code>dist/xml</code> folder: link:. or <a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/xml/EXTENDED-ESPDResponse-2.1.1.xml">EXTENDED-ESPDResponse-2.1.1.xml</a>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;QualificationApplicationResponse</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:X-test:UBL:Pre-award:QualificationApplicationResponse</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:cac</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:X-test:UBL:Pre-award:CommonAggregate</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:cbc</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:X-test:UBL:Pre-award:CommonBasic</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:espd</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:com:grow:espd:2.1.1</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:fn</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2005/xpath-functions</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:office</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:oasis:names:tc:opendocument:xmlns:office:1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:style</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:oasis:names:tc:opendocument:xmlns:style:1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:table</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:oasis:names:tc:opendocument:xmlns:table:1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:text</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:oasis:names:tc:opendocument:xmlns:text:1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:util</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">java:java.util.UUID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:xs</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:X-test:UBL:Pre-award:QualificationApplicationResponse ../xsdrt/maindoc/UBL-QualificationApplicationResponse-2.2-Pre-award.xsd</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;QualificationApplicationResponse</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:oasis:names:specification:ubl:schema:xsd:QualificationApplicationResponse-2</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:cac</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:cbc</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:espd</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:com:grow:espd:2.1.1</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:fn</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2005/xpath-functions</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:office</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:oasis:names:tc:opendocument:xmlns:office:1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:style</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:oasis:names:tc:opendocument:xmlns:style:1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:table</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:oasis:names:tc:opendocument:xmlns:table:1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:text</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:oasis:names:tc:opendocument:xmlns:text:1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:util</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">java:java.util.UUID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:xs</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:oasis:names:specification:ubl:schema:xsd:QualificationApplicationResponse-2 ../xsdrt/maindoc/UBL-QualificationApplicationResponse-2.2.xsd</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
 <span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
         <span class="comment">&lt;!-- The ESPD-EDM-V2.1.1 is entirely based on OASIS UBL-2.2 --&gt;</span>
         <span class="tag">&lt;cbc:UBLVersionID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">OASIS-UBL-TC</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>2.2<span class="tag">&lt;/cbc:UBLVersionID&gt;</span>
@@ -951,7 +951,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
         <span class="comment">&lt;!-- The version of the content of this document. If the document is modified the element cbc:PreviousVersionID should be instantiated --&gt;</span>
         <span class="tag">&lt;cbc:VersionID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1.0<span class="tag">&lt;/cbc:VersionID&gt;</span>
         <span class="comment">&lt;!-- The type of the procurement procedure; e.g. V = Award of contract without prior publication of a contract notice --&gt;</span>
-        <span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>OPEN<span class="tag">&lt;/cbc:ProcedureCode&gt;</span>
+        <span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>OPEN<span class="tag">&lt;/cbc:ProcedureCode&gt;</span>
         <span class="comment">&lt;!-- The type of the ESPD (BASIC or EXTENDED) --&gt;</span>
         <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyName</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EXTENDED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span>
 
@@ -970,12 +970,12 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>The economic operator must include int its ESPD Response document the information from the ESPD Request about the official journals or gazettes where the procurement procedure is announced. For procurement projects above the threshold it is compulsory to refer to the Contract Notice published in <a href="http://ted.europa.eu/TED/misc/chooseLanguage.do">TED</a> by the contracting authority.</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>The economic operator must include int its ESPD Response document the information from the ESPD Request about the official journals or gazettes where the procurement procedure is announced. For procurement projects above the threshold it is compulsory to refer to the Contract Notice published in <a href="http://ted.europa.eu/TED/">TED</a> by the contracting authority.</strong></p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>For EU and national publications that need to be included in the ESPD Response sSee the section "III.4 EU and national publications" where this information is presented in detail and illustrated with examples.</p>
+<p>For EU and national publications that need to be included in the ESPD Response. See the section "III.5 EU and national publications" where this information is presented in detail and illustrated with examples.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -1046,7 +1046,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -1159,7 +1159,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -1519,7 +1519,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -1597,7 +1597,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -1668,7 +1668,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of the economic operator in an official list, register or (pre)qualification system.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-001"><em>tbr92-001</em></a>
 </p><p class="tableblock"><strong>Rule</strong>: The attribute <code>schemeAgencyID</code> must hold the value retrieved from eCertis that identifies unequivocally the (pre)qualification system. If, for any reason, that value is not available use the default schemeAgencyID "EU-COM-GROW" and the <code>cac:EconomicOperatorParty/cac:QualifyingParty/cac:Party/cac:PartyIdentificaton/cbc:ID</code> for the value of the identifier. Additionally you can use the data structure <code>CRITERION.OTHER.EO_DATA.REGISTERED_IN_OFFICIAL_LIST</code> to specify an alternative or additional name, identifier and description.
-The code list <a href="https://github.com/ESPD/ESPD-EDM/blob/master/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-CodeLists-V2.0.2.xlsx">EOIDType</a>
+The code list <a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">EOIDType</a>
 should be used to indicate the type of identifier used as a value of the <code>schemeID</code> attribute, e.g. <code>schemeID="VAT"</code>).
 </p><p class="tableblock"><strong>Rule scope</strong>: Extended ( BR-RESP-80-S10, BR-RESP-80-S20), Common (BR-RESP-50, BR-OTH-02)</p></td>
 </tr>
@@ -1691,7 +1691,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -1758,7 +1758,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -1853,7 +1853,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -1948,7 +1948,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -2047,7 +2047,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -2285,7 +2285,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="./images/BASIC_EO_XML_Collapsed.png" alt="EO data - collapsed view">
+<img src="./images/Basic_EO_XML_Collapsed.png" alt="EO data - collapsed view">
 </div>
 <div class="title">Figure 30. Vision of the data about the EO in a 'collapsed' Basic ESPD</div>
 </div>
@@ -2707,7 +2707,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="sect4">
 <h5 id="sheltered-workshop"><a class="anchor" href="#sheltered-workshop"></a>Sheltered workshop</h5>
 <div class="paragraph">
-<p>For this case the <strong>EXTENDED</strong> ESPD works identically as the <strong>Basic</strong> ESPD. If the economic operator answers <strong>Yes</strong> the fields about the 'percentage of disabled/disadvantaged workers and the category of handicap to which they belong to should shown, validated or processed (see mock-up for the <strong>Basic</strong> ESPD in section <a href="#vii-5-1-Basic-economic-operator-party">VIII.5.1 Basic economic operator party</a>. For this purpose the <strong>Basic</strong> and the <strong>EXTENDED</strong> data structures are identical:</p>
+<p>For this case the <strong>EXTENDED</strong> ESPD works identically as the <strong>Basic</strong> ESPD. If the economic operator answers <strong>Yes</strong> the fields about the 'percentage of disabled/disadvantaged workers and the category of handicap to which they belong to should shown, validated or processed (see mock-up for the <strong>Basic</strong> ESPD in section <a href="#viii-6-1-basic-economic-operator-party">VIII.6.1 Basic economic operator party</a>. For this purpose the <strong>Basic</strong> and the <strong>EXTENDED</strong> data structures are identical:</p>
 </div>
 <div class="paragraph">
 <p><strong>Data structure for a sheltered workshop or social business in case of reserved procurement</strong>:</p>
@@ -2759,7 +2759,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="sect4">
 <h5 id="lots-contracting-authority-perspective"><a class="anchor" href="#lots-contracting-authority-perspective"></a>Lots (contracting authority perspective)</h5>
 <div class="paragraph">
-<p>The economic operator should be able to specify to which Lots it tenders. Thus, if the procurement procedure is divided into Lots, the software application should show the list with all the Lots the contracted authority (CA) specified for the economic operator select one or more Lots. See the section <a href="#iii-10-lots-Extended-espd">III.10 Lots - Extended ESPD</a> for details on how the CA specifies Lots.  The mock-up below shows the requirements established by the contracting authorities about the Lots of the procurement procedure.</p>
+<p>The economic operator should be able to specify to which Lots it tenders. Thus, if the procurement procedure is divided into Lots, the software application should show the list with all the Lots the contracted authority (CA) specified for the economic operator select one or more Lots. See the section <a href="#iii-11-lots-extended-espd">III.11 Lots - Extended ESPD</a> for details on how the CA specifies Lots. The mock-up below shows the requirements established by the contracting authorities about the Lots of the procurement procedure.</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -2904,7 +2904,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="./images/EXTENDED_EO_XML_Collapsed.png" alt="EO data - collapsed view">
+<img src="./images/Extended_EO_XML_Collapsed.png" alt="EO data - collapsed view">
 </div>
 <div class="title">Figure 42. Vision of the data about the EO in a 'collapsed' Extended ESPD</div>
 </div>
@@ -3466,7 +3466,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -3937,7 +3937,7 @@ cac:Person/cac:Contact/cbc:Telephone</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -4066,7 +4066,7 @@ cac:Person/cac:Contact/cbc:Telephone</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -4135,7 +4135,7 @@ cac:Person/cac:Contact/cbc:Telephone</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -4200,7 +4200,7 @@ cac:Person/cac:Contact/cbc:Telephone</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -4262,7 +4262,7 @@ cac:Person/cac:Contact/cbc:Telephone</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A code used as a reply to the criterion property.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-018"><em>tbr92-018</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the attributes mentioned in the section "<a href="##ii-4-codes-and-identifiers">II.4 Codes and Identifiers</a>" for codes.
+</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the attributes mentioned in the section "<a href="#ii-4-codes-and-identifiers">II.4 Codes and Identifiers</a>" for codes.
 </p><p class="tableblock"><strong>Rule scope</strong>: Common (BR-OTH-01)</p></td>
 </tr>
 <tr>
@@ -4287,7 +4287,7 @@ cac:Person/cac:Contact/cbc:Telephone</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An identifier used as a reply to the criterion property.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-018"><em>tbr92-018</em></a>
-</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the attributes mentioned in the section "<a href="##ii-4-codes-and-identifiers">II.4 Codes and Identifiers</a>" for codes. Several identifiers may be linked to one criterion property thus building a list of identifiers. See XML examples (e.g. in Extended references ESPD Response, 'Lots tendered the EO tenders to').</p></td>
+</p><p class="tableblock"><strong>Rule</strong>: Compulsory use of the attributes mentioned in the section "<a href="#ii-4-codes-and-identifiers">II.4 Codes and Identifiers</a>" for codes. Several identifiers may be linked to one criterion property thus building a list of identifiers. See XML examples (e.g. in Extended references ESPD Response, 'Lots tendered the EO tenders to').</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ResponseIndicator</strong></p></td>
@@ -4354,37 +4354,98 @@ been instantiated in your ESPD-Response (pay attention to the bullets and commen
 <div class="title">Reduction of Candidates - (QUESTION(s) in the ESPD-Request)</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="comment">&lt;!-- ... beginning of document removed for brevity --&gt;</span>
-
 <span class="tag">&lt;cac:TenderingCriterion&gt;</span>
-    <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>51c39ba9-0444-4967-afe9-36f753b30175<span class="tag">&lt;/cbc:ID&gt;</span>
-    <span class="tag">&lt;cbc:CriterionTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CRITERION.OTHER.EO_DATA.REDUCTION_OF_CANDIDATES<span class="tag">&lt;/cbc:CriterionTypeCode&gt;</span>
-    <span class="tag">&lt;cbc:Name&gt;</span>Reduction of the number of qualified candidates<span class="tag">&lt;/cbc:Name&gt;</span>
-    <span class="tag">&lt;cbc:Description&gt;</span>The economic operator declares that It meets the objective and non discriminatory criteria or rules to be applied in order to limit the number of candidates in the following way:<span class="tag">&lt;/cbc:Description&gt;</span>
-    <span class="tag">&lt;cac:TenderingCriterionPropertyGroup&gt;</span>
-        <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>ecc69670-f428-4446-908f-689568ca0d0d<span class="tag">&lt;/cbc:ID&gt;</span>
-        <span class="tag">&lt;cbc:PropertyGroupTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">PropertyGroupType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>ON*<span class="tag">&lt;/cbc:PropertyGroupTypeCode&gt;</span>
-        <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
-            <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>c110177c-aa9a-4acd-809a-79a2353a41ef<span class="tag">&lt;/cbc:ID&gt;</span>
-            <span class="tag">&lt;cbc:Description&gt;</span>Your answer?<span class="tag">&lt;/cbc:Description&gt;</span> <i class="conum" data-value="2"></i><b>(2)</b>
-            <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionElementType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>QUESTION<span class="tag">&lt;/cbc:TypeCode&gt;</span><i class="conum" data-value="3"></i><b>(3)</b>
-            <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>INDICATOR<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span><i class="conum" data-value="4"></i><b>(4)</b>
-        <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
-        <span class="tag">&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span><i class="conum" data-value="5"></i><b>(5)</b>
-            <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>f13754df-7e15-4155-aaa6-7ca6407baa47<span class="tag">&lt;/cbc:ID&gt;</span>
-            <span class="tag">&lt;cbc:PropertyGroupTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">PropertyGroupType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>ONTRUE<span class="tag">&lt;/cbc:PropertyGroupTypeCode&gt;</span><i class="conum" data-value="6"></i><b>(6)</b>
-            <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span><i class="conum" data-value="7"></i><b>(7)</b>
-                <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>e437cac1-3a89-4f36-bcc7-3219dda49d30<span class="tag">&lt;/cbc:ID&gt;</span>
-                <span class="tag">&lt;cbc:Description&gt;</span>Please describe them<span class="tag">&lt;/cbc:Description&gt;</span><i class="conum" data-value="8"></i><b>(8)</b>
-                <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionElementType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>QUESTION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
-                <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>DESCRIPTION<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span><i class="conum" data-value="8"></i><b>(8)</b>
-            <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
-        <span class="tag">&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
-    <span class="tag">&lt;/cac:TenderingCriterionPropertyGroup&gt;</span>
-    <span class="tag">&lt;cac:TenderingCriterionPropertyGroup&gt;</span>
-        <span class="comment">&lt;!-- Block requesting evidences: removed for the sake of brevity and clarity --&gt;</span>
-    <span class="tag">&lt;/cac:TenderingCriterionPropertyGroup&gt;</span>
+        <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span>
+                <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>51c39ba9-0444-4967-afe9-36f753b30175<span class="tag">&lt;/cbc:ID&gt;</span>
+        <span class="tag">&lt;cbc:CriterionTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTypeCode</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span>
+                <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                <span class="tag">&gt;</span>CRITERION.OTHER.EO_DATA.REDUCTION_OF_CANDIDATES<span class="tag">&lt;/cbc:CriterionTypeCode&gt;</span>
+        <span class="tag">&lt;cbc:Name&gt;</span>Reduction of the number of qualified candidates<span class="tag">&lt;/cbc:Name&gt;</span>
+        <span class="tag">&lt;cbc:Description&gt;</span>The economic operator declares that It meets the objective and non
+                discriminatory criteria or rules to be applied in order to limit the number
+                of candidates in the following way:<span class="tag">&lt;/cbc:Description&gt;</span>
+        <span class="tag">&lt;cac:TenderingCriterionPropertyGroup&gt;</span>
+                <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span>
+                        <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                        <span class="tag">&gt;</span>ecc69670-f428-4446-908f-689568ca0d0d<span class="tag">&lt;/cbc:ID&gt;</span>
+                <span class="tag">&lt;cbc:PropertyGroupTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">PropertyGroupType</span><span class="delimiter">&quot;</span></span>
+                        <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                        <span class="tag">&gt;</span>ON*<span class="tag">&lt;/cbc:PropertyGroupTypeCode&gt;</span>
+                <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
+                        <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span>
+                                <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                <span class="tag">&gt;</span>087ecf5a-a0df-4a0b-a09f-7e6a8392bb35<span class="tag">&lt;/cbc:ID&gt;</span>
+                        <span class="tag">&lt;cbc:Description&gt;</span>Your answer?<span class="tag">&lt;/cbc:Description&gt;</span>
+                        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionElementType</span><span class="delimiter">&quot;</span></span>
+                                <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                <span class="tag">&gt;</span>QUESTION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+                        <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span>
+                                <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                <span class="tag">&gt;</span>INDICATOR<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
+                <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
+                <span class="tag">&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
+                        <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span>
+                                <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                <span class="tag">&gt;</span>f13754df-7e15-4155-aaa6-7ca6407baa47<span class="tag">&lt;/cbc:ID&gt;</span>
+                        <span class="tag">&lt;cbc:PropertyGroupTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">PropertyGroupType</span><span class="delimiter">&quot;</span></span>
+                                <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                <span class="tag">&gt;</span>ONTRUE<span class="tag">&lt;/cbc:PropertyGroupTypeCode&gt;</span>
+                        <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
+                                <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span>
+                                        <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                        <span class="tag">&gt;</span>27a9f64c-16e0-4dd8-b35f-c4e50b8d2242<span class="tag">&lt;/cbc:ID&gt;</span>
+                                <span class="tag">&lt;cbc:Description&gt;</span>Please describe them<span class="tag">&lt;/cbc:Description&gt;</span>
+                                <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionElementType</span><span class="delimiter">&quot;</span></span>
+                                        <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                        <span class="tag">&gt;</span>QUESTION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+                                <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span>
+                                        <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                        <span class="tag">&gt;</span>DESCRIPTION<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
+                        <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
+                <span class="tag">&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
+        <span class="tag">&lt;/cac:TenderingCriterionPropertyGroup&gt;</span>
+        <span class="tag">&lt;cac:TenderingCriterionPropertyGroup&gt;</span>
+                <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span>
+                        <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                        <span class="tag">&gt;</span>7458d42a-e581-4640-9283-34ceb3ad4345<span class="tag">&lt;/cbc:ID&gt;</span>
+                <span class="tag">&lt;cbc:PropertyGroupTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">PropertyGroupType</span><span class="delimiter">&quot;</span></span>
+                        <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                        <span class="tag">&gt;</span>ON*<span class="tag">&lt;/cbc:PropertyGroupTypeCode&gt;</span>
+                <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
+                        <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span>
+                                <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                <span class="tag">&gt;</span>97735936-388a-4a2e-8f18-be1e19e21607<span class="tag">&lt;/cbc:ID&gt;</span>
+                        <span class="tag">&lt;cbc:Description&gt;</span>Is this information available
+                                electronically?<span class="tag">&lt;/cbc:Description&gt;</span>
+                        <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionElementType</span><span class="delimiter">&quot;</span></span>
+                                <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                <span class="tag">&gt;</span>QUESTION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+                        <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span>
+                                <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                <span class="tag">&gt;</span>INDICATOR<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
+                <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
+                <span class="tag">&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
+                        <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span>
+                                <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                <span class="tag">&gt;</span>41dd2e9b-1bfd-44c7-93ee-56bd74a4334b<span class="tag">&lt;/cbc:ID&gt;</span>
+                        <span class="tag">&lt;cbc:PropertyGroupTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">PropertyGroupType</span><span class="delimiter">&quot;</span></span>
+                                <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                <span class="tag">&gt;</span>ONTRUE<span class="tag">&lt;/cbc:PropertyGroupTypeCode&gt;</span>
+                        <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
+                                <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span>
+                                        <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                        <span class="tag">&gt;</span>97bba377-3a10-45dc-8b8d-dad5c23bbfee<span class="tag">&lt;/cbc:ID&gt;</span>
+                                <span class="tag">&lt;cbc:Description&gt;</span>Evidence supplied<span class="tag">&lt;/cbc:Description&gt;</span>
+                                <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionElementType</span><span class="delimiter">&quot;</span></span>
+                                        <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                        <span class="tag">&gt;</span>QUESTION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
+                                <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span>
+                                        <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span>
+                                        <span class="tag">&gt;</span>EVIDENCE_IDENTIFIER<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
+                        <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
+                <span class="tag">&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
+        <span class="tag">&lt;/cac:TenderingCriterionPropertyGroup&gt;</span>
 <span class="tag">&lt;/cac:TenderingCriterion&gt;</span>
-
 <span class="comment">&lt;!-- ... rest of document removed for brevity --&gt;</span></code></pre>
 </div>
 </div>
@@ -4498,7 +4559,7 @@ block related to evidences is omitted for the sake of clarity and brevity):</p>
 <div class="sect3">
 <h4 id="xsd-schema-basic-and-extended-3"><a class="anchor" href="#xsd-schema-basic-and-extended-3"></a>XSD Schema (Basic and Extended)</h4>
 <div class="paragraph">
-<p>Remember that evidences are indirectly linked to responses based on the identifier of the evidence: in the response, the element <code>cac:EvidenceSupplied/cbc:ID</code> contains the identifier set in <code>/QualificationApplicationResponse/cac:Evidence/cbc:ID</code>. See XML example below; see also the example XML file "<a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist/xml/Extended-ESPDResponse-2.1.1.xml">Extended-ESPDResponse-2.1.1.xml</a>" for an example.</p>
+<p>Remember that evidences are indirectly linked to responses based on the identifier of the evidence: in the response, the element <code>cac:EvidenceSupplied/cbc:ID</code> contains the identifier set in <code>/QualificationApplicationResponse/cac:Evidence/cbc:ID</code>. See XML example below; see also the example XML file "<a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/xml/EXTENDED-ESPDResponse-2.1.1.xml">Extended-ESPDResponse-2.1.1.xml</a>" for an example.</p>
 </div>
 <div class="paragraph">
 <p>The figure below shows the XSD Diagram for the UBL-2.2 component <code>cac:Evidence</code> (elements in blue are the expected ones in ESPD-EDM V2.1.1):</p>
@@ -4578,7 +4639,7 @@ block related to evidences is omitted for the sake of clarity and brevity):</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -4685,7 +4746,7 @@ block related to evidences is omitted for the sake of clarity and brevity):</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-Pre-award.xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dist/common/xsdrt/UBL-CommonAggregateComponents-2.2.xsd</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -5111,7 +5172,7 @@ block related to evidences is omitted for the sake of clarity and brevity):</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-12-05 00:07:20 CET
+Last updated 2019-12-09 03:40:17 CET
 </div>
 </div>
 </body>

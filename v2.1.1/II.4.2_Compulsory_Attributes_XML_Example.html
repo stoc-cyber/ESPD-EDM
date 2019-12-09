@@ -537,7 +537,7 @@ table.CodeRay td.code>pre{padding:0}
 
 <span class="tag">&lt;cbc:VersionID</span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1.0<span class="tag">&lt;/cbc:VersionID&gt;</span> <i class="conum" data-value="5"></i><b>(5)</b>
 
-<span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>OPEN<span class="tag">&lt;/cbc:ProcedureCode&gt;</span> <i class="conum" data-value="6"></i><b>(6)</b>
+<span class="tag">&lt;cbc:ProcedureCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ProcedureType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>OPEN<span class="tag">&lt;/cbc:ProcedureCode&gt;</span> <i class="conum" data-value="6"></i><b>(6)</b>
 
 <span class="tag">&lt;cbc:QualificationApplicationTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">QualificationApplicationType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>EXTENDED<span class="tag">&lt;/cbc:QualificationApplicationTypeCode&gt;</span> <i class="conum" data-value="7"></i><b>(7)</b></code></pre>
 </div>
@@ -562,15 +562,15 @@ table.CodeRay td.code>pre{padding:0}
 </tr>
 <tr>
 <td><i class="conum" data-value="5"></i><b>5</b></td>
-<td>Generic information,such as the content version ID, use always by default the "EU-COM-GROW" Agnecy ID. Notice that the other additional attributes may be also used, as in this example.</td>
+<td>Generic information, such as the content version ID, use always by default the "EU-COM-GROW" Agnecy ID. Notice that the other additional attributes may be also used, as in this example.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="6"></i><b>6</b></td>
-<td>Notice that for Codes, the three compulsory attributes are specified. For these codes. In this example the attributes are specifying that the code is maintained by DG GROW in a list named <code>ProcedureType</code> and that the version that has been used is version `2.1.1`which is distributed jointly with this ESPD-EDM V2.1.1 specification (in the <a href="./dist">distribution package</a>).</td>
+<td>Notice that for Codes, the three compulsory attributes are specified. For these codes. In this example the attributes are specifying that the code is maintained by the Publication Office in a list named <code>ProcedureType</code> and that the version that has been used is version <code>1.0</code> which is distributed jointly with this ESPD-EDM V2.1.1 specification (in the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist">distribution package</a>).</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="7"></i><b>7</b></td>
-<td>Beware that the codes may be numbers, text or combinations of both. These code labels are the ones that are specified in the codelist spreadsheets and XML Genericode files distributed jointly with this specification (in the folder <code>dist/cl</code> of the <a href="./dist">distribution package</a>.</td>
+<td>Beware that the codes may be numbers, text or combinations of both. These code labels are the ones that are specified in the codelist spreadsheets and XML Genericode files distributed jointly with this specification (in the folder <code>dist/cl</code> of the <a href="https://github.com/ESPD/ESPD-EDM/tree/2.1.1/docs/src/main/asciidoc/dist">distribution package</a>.</td>
 </tr>
 </table>
 </div>
@@ -601,7 +601,7 @@ These codes are to be used as values of the <code>schemeID</code> attribute (att
 <div class="paragraph">
 <p>The next fragment of XML shows how this is used in the particular case of the Criterion "Relied on entities"
 ("Does the economic operator rely on the capacities of other entities in order to meet the selection criteria&#8230;&#8203;?").
-See also section <a href="#xml-example-Extended-economic-operator">XML Example (Extended economic operator)</a>
+See also section <a href="#xml-example-extended-economic-operator">XML Example (Extended economic operator)</a>
 for a more complete example on this Criterion:</p>
 </div>
 <div class="listingblock">
@@ -627,7 +627,7 @@ for a more complete example on this Criterion:</p>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>The ECONOMIC_OPERATOR_IDENTIFIER is mapped to an element <code>cbc:ResponseID</code> in the response ((which is based on the
+<td>The ECONOMIC_OPERATOR_IDENTIFIER is mapped to an element <code>cbc:ResponseID</code> in the response (which is based on the
 UBL-2.2. element <code>cbc:Identifier</code>).</td>
 </tr>
 </table>
@@ -638,8 +638,8 @@ UBL-2.2. element <code>cbc:Identifier</code>).</td>
 <pre class="CodeRay highlight"><code data-lang="xml">...
 
  <span class="tag">&lt;cac:TenderingCriterionResponse&gt;</span>
-    <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO/IEC 9834-8:2008 - 4UUID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>acb58f0e-0fe4-4372-aa08-60d0c36bfcfe<span class="tag">&lt;/cbc:ID&gt;</span>
-    <span class="tag">&lt;cbc:ValidatedCriterionPropertyID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.2</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1fa05728-308f-43b0-b547-c903ffb0a8af<span class="tag">&lt;/cbc:ValidatedCriterionPropertyID&gt;</span><i class="conum" data-value="1"></i><b>(1)</b>
+    <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO/IEC 9834-8:2008 - 4UUID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>acb58f0e-0fe4-4372-aa08-60d0c36bfcfe<span class="tag">&lt;/cbc:ID&gt;</span>
+    <span class="tag">&lt;cbc:ValidatedCriterionPropertyID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriteriaTaxonomy</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.1.1</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1fa05728-308f-43b0-b547-c903ffb0a8af<span class="tag">&lt;/cbc:ValidatedCriterionPropertyID&gt;</span><i class="conum" data-value="1"></i><b>(1)</b>
     <span class="tag">&lt;cbc:ResponseID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">VAT</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ES-AEAT</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>B82387770<span class="tag">&lt;/cbc:ResponseID&gt;</span> <i class="conum" data-value="2"></i><b>(2)</b>
  <span class="tag">&lt;/cac:TenderingCriterionResponse&gt;</span>
 ...</code></pre>
@@ -656,7 +656,7 @@ the very specific QUESTION it is responding.</td>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>The element <code>cbc:ResponseID</code> is of type <code>Identifier</code>(as defined in the Core Component Type Specification library).
 The value ''VAT'' assigned to the attribute <code>schemeID</code>, taken from the code list
-<a href="https://github.com/ESPD/ESPD-EDM/blob/master/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-CodeLists-V2.0.2.xlsx">EOIDType</a>,
+<a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-CodeLists-V2.1.1.xlsx">EOIDType</a>,
 is used to indicate that the type of identifier used is the Value Added Tax identifier issued by the Spanish Tax Agency (ES-AEAT).</td>
 </tr>
 </table>
@@ -665,7 +665,7 @@ is used to indicate that the type of identifier used is the Value Added Tax iden
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-12-05 00:07:25 CET
+Last updated 2019-12-09 03:40:13 CET
 </div>
 </div>
 </body>
