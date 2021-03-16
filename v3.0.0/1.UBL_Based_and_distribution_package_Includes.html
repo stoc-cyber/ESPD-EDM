@@ -531,7 +531,7 @@ table.CodeRay td.code>pre{padding:0}
 <h2 id="1-ubl-based-and-distribution-package"><a class="anchor" href="#1-ubl-based-and-distribution-package"></a>1. UBL Based and distribution package</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Semantic assets have been defined by <a href="https://joinup.ec.europa.eu/category/glossary/semantic-interoperability-asset">ISA</a> as "a collection of highly reusable metadata (e.g. xml schemata, generic data models) and reference data (e.g. code lists, taxonomies, dictionaries, vocabularies) which are used for e-Government system development".</p>
+<p>Semantic assets have been defined by <a href="https://lov.linkeddata.es/dataset/lov/vocabs/adms">ISA</a> as "a collection of highly reusable metadata (e.g. xml schemata, generic data models) and reference data (e.g. code lists, taxonomies, dictionaries, vocabularies) which are used for e-Government system development".</p>
 </div>
 <div class="sect2">
 <h3 id="1-1-espd-distribution-package"><a class="anchor" href="#1-1-espd-distribution-package"></a>1.1 ESPD Distribution package</h3>
@@ -539,7 +539,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>All the semantic assets needed to implement ESPD electronic documents are organised in a <a href="https://github.com/ESPD/ESPD-EDM/tree/3.0.0/docs/src/main/asciidoc/dist">distribution package</a>. The content of this folder is organised as follows:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/Distribution_package.png" alt="Distribution (dist) package" width="89" height="220"></span></p>
+<p><span class="image"><img src="./images/Distribution_package.png" alt="Distribution (dist) package" width="100" height="220"></span></p>
 </div>
 <div class="paragraph">
 <p><em>Figure 5. Distribution (dist) package</em></p>
@@ -730,7 +730,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>The figure below illustrate how these elements are organised in the code lists maintained in spread-sheets:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/Elements_metadata_of_ESPD_codelist.png" alt="Elements and metadata of an ESPD code list" width="591" height="202"></span></p>
+<p><span class="image"><img src="./images/Elements_metadata_of_ESPD_codelist.png" alt="Elements and metadata of an ESPD code list" width="600" height="202"></span></p>
 </div>
 <div class="paragraph">
 <p><em>Figure 6. Elements and metadata of an ESPD code list</em></p>
@@ -961,7 +961,7 @@ The <strong><em>Annex I</em></strong> of this document lists all the code list
 <p>The figure below shows the possible values of this code list. These codes are to be used as values of the schemeID attribute (attribute of the UBL-2.3 element cbc:Identifier):</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/Values_schemeID_Party_Identifiers.png" alt="Values of the schemeID for Party Identifiers" width="566" height="264"></span></p>
+<p><span class="image"><img src="./images/Values_schemeID_Party_Identifiers.png" alt="Values of the schemeID for Party Identifiers" width="600" height="264"></span></p>
 </div>
 <div class="paragraph">
 <p><em>Figure 9. Values of the schemeID for Party Identifiers</em></p>
@@ -1001,20 +1001,16 @@ The <strong><em>Annex I</em></strong> of this document lists all the code list
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p><em>TenderingCriterionResponse (the answer to the previous QUESTION)</em></p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">_TenderingCriterionResponse (the answer to the previous QUESTION)_
-
-...
-
+<pre class="CodeRay highlight"><code data-lang="xml">...
 <span class="tag">&lt;cac:TenderingCriterionResponse&gt;</span>
-
 <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ISO/IEC 9834-8:2008 - 4UUID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>acb58f0e-0fe4-4372-aa08-60d0c36bfcfe<span class="tag">&lt;/cbc:ID&gt;</span>
-
 <span class="tag">&lt;cbc:ValidatedCriterionPropertyID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>1fa05728-308f-43b0-b547-c903ffb0a8af<span class="tag">&lt;/cbc:ValidatedCriterionPropertyID&gt;</span>
-
 <span class="tag">&lt;cbc:ResponseID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">VAT</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ES-AEAT</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>B82387770<span class="tag">&lt;/cbc:ResponseID&gt;</span>
-
 <span class="tag">&lt;/cac:TenderingCriterionResponse&gt;</span>
 ...</code></pre>
 </div>
@@ -1036,7 +1032,7 @@ The <strong><em>Annex I</em></strong> of this document lists all the code list
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-03-10 08:33:29 CET
+Last updated 2021-03-11 00:28:26 CET
 </div>
 </div>
 </body>

@@ -1014,7 +1014,7 @@ table.CodeRay td.code>pre{padding:0}
 <p><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-001"><em>tbr92-001</em></a></p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: The attribute schemeAgencyID must hold the value retrieved from eCertis that identifies unequivocally the (pre)qualification system. If, for any reason, that value is not available use the default schemeAgencyID "EU-COM-GROW" and the cac:EconomicOperatorParty/cac:QualifyingParty/cac:Party/cac:PartyIdentificaton/cbc:ID for the value of the identifier. Additionally you can use the data structure “registered” to specify an alternative or additional name, identifier and description. The code list <a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">EOIDType</a> should be used to indicate the type of identifier used as a value of the schemeID attribute, e.g. schemeID="VAT").</p>
+<p><strong>Rule</strong>: The attribute schemeAgencyID must hold the value retrieved from eCertis that identifies unequivocally the (pre)qualification system. If, for any reason, that value is not available use the default schemeAgencyID "EU-COM-GROW" and the cac:EconomicOperatorParty/cac:QualifyingParty/cac:Party/cac:PartyIdentificaton/cbc:ID for the value of the identifier. Additionally you can use the data structure “registered” to specify an alternative or additional name, identifier and description. The code list <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/cl/ods/">EOIDType</a> should be used to indicate the type of identifier used as a value of the schemeID attribute, e.g. schemeID="VAT").</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule scope</strong>: (BR-RESP-80-S10, BR-RESP-80-S20), Common (BR-RESP-50, BR-OTH-02)</p>
@@ -1686,7 +1686,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </li>
 <li>
-<p><strong>Not an SME</strong>. . The definition of what is an SME is provided in the link:http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361<sup class="EU recommendation 2003/361">[<a href="https://espd.github.io/ESPD-EDM/v2.1.1/xml_guide.html#_footnote_11">11</a>]</sup>. Notice that ESPD asks for the number of employees and turnover. This can be used by the software applications to validate the consistency of the data provided by the EO with the definition. By the way, these data are all placed in the cac:QualifyingParty element. See the XSD diagrams above the and the XML example below for details on the use of the cac:QualifyingParty and sub-components.</p>
+<p><strong>Not an SME</strong>. . The definition of what is an SME is provided in the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361">EU recommendation 2003/361</a>. Notice that ESPD asks for the number of employees and turnover. This can be used by the software applications to validate the consistency of the data provided by the EO with the definition. By the way, these data are all placed in the cac:QualifyingParty element. See the XSD diagrams above the and the XML example below for details on the use of the cac:QualifyingParty and sub-components.</p>
 </li>
 </ol>
 </div>
@@ -2521,7 +2521,7 @@ _<span class="comment">&lt;!-- Exclusion and selection Criteria, Responses and E
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-03-10 22:42:47 CET
+Last updated 2021-03-16 00:06:20 CET
 </div>
 </div>
 </body>

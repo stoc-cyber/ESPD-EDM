@@ -587,7 +587,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>This XSD Schema diagram shows a global view of the UBL 2.3 cac:TenderingCriterion component:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/cacTenderingCriterion_XSD_Schema.png" alt="cac:TenderingCriterion - XSD Schema" width="229" height="387"></span></p>
+<p><span class="image"><img src="./images/cacTenderingCriterion_XSD_Schema.png" alt="cac:TenderingCriterion - XSD Schema" width="500" height="700"></span></p>
 </div>
 <div class="paragraph">
 <p><em>Figure 34. cac:TenderingCriterion - XSD Schema, global view</em></p>
@@ -927,7 +927,7 @@ _<span class="comment">&lt;!-- ... elements omitted for brevity --&gt;</span>_
 
 <span class="tag">&lt;cac:Legislation&gt;</span>
 
-<span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>4ea7a10a-643e-4022-b67e-e06573b28ff5<span class="tag">&lt;/cbc:ID&gt;</span>
+<span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>4ea7a10a-643e-4022-b67e-e06573b28ff5<span class="tag">&lt;/cbc:ID&gt;</span>
 
 <span class="tag">&lt;cbc:Title&gt;</span>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC<span class="tag">&lt;/cbc:Title&gt;</span>
 
@@ -1677,7 +1677,7 @@ _<span class="comment">&lt;!-- ... elements omitted for brevity --&gt;</span>_
 <p>The fact of presenting the data structures as a spread-sheet book had an additional reason: <strong>to use the spread-sheet as an elementary prototype tool to generate the XML instances of the criteria for the ESPD Request and ESDP Response documents</strong>.</p>
 </div>
 <div class="paragraph">
-<p>Thus the folder <a href="https://github.com/ESPD/ESPD-EDM/tree/3.0.0/docs/src/main/asciidoc/dist/xslt/ODS%20Data%20Structures%20to%20ESPD%20XML">dist/xslt/ODS Data Structures to ESPD XML</a> contains four XSL style-sheets that facilitate the generation of the complete set of criteria required in an ESDP Request or in an ESDP Response XML file.</p>
+<p>Thus the folder <a href="https://github.com/ESPD/ESPD-EDM/tree/3.0.0/docs/src/main/asciidoc/dist/xslt/">dist/xslt/ODS Data Structures to ESPD XML</a> contains four XSL style-sheets that facilitate the generation of the complete set of criteria required in an ESDP Request or in an ESDP Response XML file.</p>
 </div>
 <div class="paragraph">
 <p>For this, you can use the following method: Rename the .ods files as .ods.zip and extract the file 'content.xml'; use an XML editor to load the 'content.xml' file and the XSL-T file. Associate (or reference) the XSLT file to the XML. Launch the transformation from the XML Editor. Save the output file.</p>
@@ -1816,7 +1816,7 @@ _<span class="comment">&lt;!-- ... elements omitted for brevity --&gt;</span>_
 <div class="sect3">
 <h4 id="radio-button-and-check-box-controls"><a class="anchor" href="#radio-button-and-check-box-controls"></a>Radio-Button and Check-box controls</h4>
 <div class="paragraph">
-<p>In version 2.1.0 a new code list named <a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-CodeLists-V2.1.1.xlsx">BooleanGUIControlType</a> was added to help software application process REQUIREMENT(s) issued by the buyer when drafting Extended ESPD documents. For the time being this need is only present in one Criterion of the Extended ESPD: 'Other economic or financial requirements' (CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.OTHER_REQUIREMENT(s)). The figure below shows the data structure for that Criterion:</p>
+<p>In version 2.1.0 a new code list named <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-CodeLists-V3.0.0.xlsx">BooleanGUIControlType</a> was added to help software application process REQUIREMENT(s) issued by the buyer when drafting ESPD documents. For the time being this need is only present in one Criterion of ESPD: 'Other economic or financial requirements' (finan-requ). The figure below shows the data structure for that Criterion:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./images/Use_code_list_BooleanGUIControlType.png" alt="Use of the code list BooleanGUIControlType" width="574" height="336"></span></p>
@@ -1885,7 +1885,7 @@ _<span class="comment">&lt;!--...--&gt;</span>_
 
 <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
 
-<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>9c62f2c7-0c51-451d-8730-427f92ed618c<span class="tag">&lt;/ID&gt;</span>
+<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>9c62f2c7-0c51-451d-8730-427f92ed618c<span class="tag">&lt;/ID&gt;</span>
 
 <span class="tag">&lt;Description&gt;</span>Select the type of requirement<span class="tag">&lt;/Description&gt;</span>
 
@@ -1905,7 +1905,7 @@ _<span class="comment">&lt;!--...--&gt;</span>_
 
 <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
 
-<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>13728a54-21e3-4c84-8b11-48666c3d260f<span class="tag">&lt;/ID&gt;</span>
+<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>13728a54-21e3-4c84-8b11-48666c3d260f<span class="tag">&lt;/ID&gt;</span>
 
 <span class="tag">&lt;Description&gt;</span>Specify the total invoiced amount, taxes included.<span class="tag">&lt;/Description&gt;</span>
 
@@ -1919,7 +1919,7 @@ _<span class="comment">&lt;!--...--&gt;</span>_
 
 <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
 
-<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>48c7b3bf-8d1c-4497-a915-78d53ba68089<span class="tag">&lt;/ID&gt;</span>
+<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>48c7b3bf-8d1c-4497-a915-78d53ba68089<span class="tag">&lt;/ID&gt;</span>
 
 <span class="tag">&lt;Description&gt;</span>Minimum amount<span class="tag">&lt;/Description&gt;</span>
 
@@ -1933,7 +1933,7 @@ _<span class="comment">&lt;!--...--&gt;</span>_
 
 <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
 
-<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>8b4ae4f0-2849-49ea-a64b-7bb20c60bde4<span class="tag">&lt;/ID&gt;</span>
+<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>8b4ae4f0-2849-49ea-a64b-7bb20c60bde4<span class="tag">&lt;/ID&gt;</span>
 
 <span class="tag">&lt;Description&gt;</span>Start date; End date<span class="tag">&lt;/Description&gt;</span>
 
@@ -1959,7 +1959,7 @@ _<span class="comment">&lt;!--...--&gt;</span>_
 
 <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
 
-<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="error">“</span><span class="attribute-value">3.0.0</span><span class="error">”</span><span class="tag">&gt;</span>1d89c188-58d2-461e-a4f6-a17f689d87f4<span class="tag">&lt;/ID&gt;</span>
+<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="error">“</span><span class="attribute-value">3.0.0</span><span class="error">”</span><span class="tag">&gt;</span>1d89c188-58d2-461e-a4f6-a17f689d87f4<span class="tag">&lt;/ID&gt;</span>
 
 <span class="tag">&lt;Description&gt;</span>Amount<span class="tag">&lt;/Description&gt;</span>
 
@@ -1981,7 +1981,7 @@ _<span class="comment">&lt;!--...--&gt;</span>_
 
 <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
 
-<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>57d4160f-20b4-4b43-967b-76b038a2fa6b<span class="tag">&lt;/ID&gt;</span>
+<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>57d4160f-20b4-4b43-967b-76b038a2fa6b<span class="tag">&lt;/ID&gt;</span>
 
 <span class="tag">&lt;Description&gt;</span>Minimum rating<span class="tag">&lt;/Description&gt;</span>
 
@@ -1993,7 +1993,7 @@ _<span class="comment">&lt;!--...--&gt;</span>_
 
 <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
 
-<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>f07b5174-93ae-46dd-aa26-7f451d97f6a8<span class="tag">&lt;/ID&gt;</span>
+<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>f07b5174-93ae-46dd-aa26-7f451d97f6a8<span class="tag">&lt;/ID&gt;</span>
 
 <span class="tag">&lt;Description&gt;</span>Rating scheme<span class="tag">&lt;/Description&gt;</span>
 
@@ -2013,7 +2013,7 @@ _<span class="comment">&lt;!--...--&gt;</span>_
 
 <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
 
-<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>3bd1913b-c461-41eb-87c4-84e003785a56<span class="tag">&lt;/ID&gt;</span>
+<span class="tag">&lt;ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-OP</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>3bd1913b-c461-41eb-87c4-84e003785a56<span class="tag">&lt;/ID&gt;</span>
 
 <span class="tag">&lt;Description&gt;</span>Rating<span class="tag">&lt;/Description&gt;</span>
 
@@ -2100,7 +2100,7 @@ _<span class="comment">&lt;!--...--&gt;</span>_
 <p>The value of the amount meets the REQUIREMENT, as the amount is required to be above 10006 Euros (see XML above, notice the currencyID type value, too).</p>
 </li>
 <li>
-<p>Beware that, contrary to other numeric types of data, AMOUNT is not semantised and mapped to cbc:ResponseMinimumAmount nor cbc:ResponseMaximumAmount`, as in the current ESPD-EDM specification all monetary thresholds are always "minimum" (and similarly for QUANTITY or QUANTITY_INTEGER, e.g. see the REQUIREMENT ''Minimum number of years'' in criterion #49 (tab <em>SC-Abilities_5 (Staff)</em> in the <a href="https://github.com/ESPD/ESPD-EDM/blob/2.1.1/docs/src/main/asciidoc/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods">ESPD-CriteriaTaxonomy-EXTENDED</a> spread-sheet).</p>
+<p>Beware that, contrary to other numeric types of data, AMOUNT is not semantised and mapped to cbc:ResponseMinimumAmount nor cbc:ResponseMaximumAmount`, as in the current ESPD-EDM specification all monetary thresholds are always "minimum" (and similarly for QUANTITY or QUANTITY_INTEGER, e.g. see the REQUIREMENT ''Minimum number of years'' in criterion #49 (tab <em>SC-Abilities_5 (Staff)</em> in the <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/cl/ods/">ESPD-criteion-V3.0.0</a> spread-sheet).</p>
 </li>
 </ol>
 </div>
@@ -2153,7 +2153,7 @@ _<span class="comment">&lt;!--...--&gt;</span>_
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-03-10 08:31:38 CET
+Last updated 2021-03-11 00:28:26 CET
 </div>
 </div>
 </body>
