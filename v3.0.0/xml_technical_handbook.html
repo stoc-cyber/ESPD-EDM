@@ -572,6 +572,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#5-6-risk-indemnity-insurance">5.6 Risk indemnity insurance</a></li>
 <li><a href="#5-7-other-economic-or-financial-requirements">5.7 Other economic or financial requirements</a></li>
 <li><a href="#5-8-references-on-similar-works-deliveries-or-services">5.8 References on similar works, deliveries or services</a></li>
+<li><a href="#5-9-abilities">5.9 Abilities</a></li>
 <li><a href="#5-10-subcontracting-proportion">5.10 Subcontracting proportion</a></li>
 <li><a href="#5-11-samples-and-certificates">5.11 Samples and certificates</a></li>
 <li><a href="#5-12-quality-assurance">5.12 Quality assurance</a></li>
@@ -4657,18 +4658,20 @@ Thus, in the case of Convictions, a new requirement could be introduced in G1 (s
 <div class="paragraph">
 <p>This other mock-up illustrates what the economic operator sees.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
+<div class="admonitionblock note">
+<table>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Beware that this mock-up is not showing the national criteria. For this mock-up it is presumed that <strong>by answering 'Yes' to the general EU criterion all the national criteria QUESTION 'Your answer' will be also set to 'Yes'</strong>.</p></td>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Beware that this mock-up is not showing the national criteria. For this mock-up it is presumed that <strong>by answering 'Yes' to the general EU criterion all the national criteria QUESTION 'Your answer' will be also set to 'Yes'</strong>.</p>
+</div>
+</td>
 </tr>
-</tbody>
 </table>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./images/Payment_Taxes_EO_perspective.png" alt="Payment of Taxes" width="656" height="395"></span></p>
 </div>
@@ -4678,18 +4681,6 @@ Thus, in the case of Convictions, a new requirement could be introduced in G1 (s
 </div>
 <div class="sect3">
 <h4 id="data-structure-2"><a class="anchor" href="#data-structure-2"></a>Data structure</h4>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The figure for the general data structure below is not reflecting the fact that, for this particular example (about Finland), the national sub-criterion will be repeated four times (the sub-criterion structure has cardinality 0..n). Hence the circles 2 to 5 in this figure meaning that the sub-criterion structure will be repeated for the national criteria 2 to 5. Verify that in the XML example there are four cac:SubTenderingCriterion elements)</p></td>
-</tr>
-</tbody>
-</table>
 <div class="paragraph">
 <p><span class="image"><img src="./images/Contributions_criterion_data_structure.png" alt="Contributions" width="656" height="357"></span></p>
 </div>
@@ -4753,7 +4744,7 @@ Thus, in the case of Convictions, a new requirement could be introduced in G1 (s
                                 <span class="tag">&lt;cbc:Description&gt;</span>Threshold<span class="tag">&lt;/cbc:Description&gt;</span>
                                 <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionElementType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>REQUIREMENT<span class="tag">&lt;/cbc:TypeCode&gt;</span>
                                 <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>AMOUNT<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
-                                <span class="comment">&lt;!-- No answer is expectedhere from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the buyer --&gt;</span>
+                                <span class="comment">&lt;!-- No answer is expected here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the buyer --&gt;</span>
                                 <span class="tag">&lt;cbc:ExpectedAmount</span> <span class="attribute-name">currencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EUR</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>500000<span class="tag">&lt;/cbc:ExpectedAmount&gt;</span>
                         <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
                         <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
@@ -4761,7 +4752,7 @@ Thus, in the case of Convictions, a new requirement could be introduced in G1 (s
                                 <span class="tag">&lt;cbc:Description&gt;</span>Additional Information<span class="tag">&lt;/cbc:Description&gt;</span>
                                 <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionElementType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>REQUIREMENT<span class="tag">&lt;/cbc:TypeCode&gt;</span>
                                 <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>DESCRIPTION<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
-                                <span class="comment">&lt;!-- No answer is expected here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the buyer --&gt;</span>
+                                <span class="comment">&lt;!-- No answer is expected here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the buyer --&gt;</span>
                                 <span class="tag">&lt;cbc:ExpectedDescription&gt;</span>[Additional information provided by the CA]<span class="tag">&lt;/cbc:ExpectedDescription&gt;</span>
                         <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
                         <span class="tag">&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
@@ -4806,7 +4797,8 @@ Thus, in the case of Convictions, a new requirement could be introduced in G1 (s
                                                   <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionElementType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>QUESTION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
                                                   <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>DESCRIPTION<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
                                                   <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
-                                                  <span class="tag">&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
+                                                <span class="tag">&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
+                                                <span class="tag">&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
                                                   <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>fc57e473-d63e-4a04-b589-dcf81cab8052<span class="tag">&lt;/cbc:ID&gt;</span>
                                                   <span class="tag">&lt;cbc:PropertyGroupTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">PropertyGroupType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>ON*<span class="tag">&lt;/cbc:PropertyGroupTypeCode&gt;</span>
                                                   <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
@@ -4824,7 +4816,6 @@ Thus, in the case of Convictions, a new requirement could be introduced in G1 (s
                                                   <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionElementType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>QUESTION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
                                                   <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>DESCRIPTION<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
                                                   <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
-                                                  <span class="tag">&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
                                                   <span class="tag">&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
                                                 <span class="tag">&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
                                                 <span class="tag">&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
@@ -4935,18 +4926,20 @@ Thus, in the case of Convictions, a new requirement could be introduced in G1 (s
 </div>
 <div class="sect3">
 <h4 id="mock-ups-economic-operator-perspective-2"><a class="anchor" href="#mock-ups-economic-operator-perspective-2"></a>Mock-ups - economic operator perspective</h4>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
+<div class="admonitionblock note">
+<table>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Beware that this mock-up is not showing the national criteria. For this mock-up it is presumed that <strong>by answering 'Yes' to the general EU criterion all the national criteria QUESTION 'Your answer' will be also set to 'Yes'</strong>.</p></td>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Beware that this mock-up is not showing the national criteria. For this mock-up it is presumed that <strong>by answering 'Yes' to the general EU criterion all the national criteria QUESTION 'Your answer' will be also set to 'Yes'</strong>.</p>
+</div>
+</td>
 </tr>
-</tbody>
 </table>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./images/Environmental_Law_criterion_mockup_EO perspective.png" alt="Environmental Law" width="642" height="354"></span></p>
 </div>
@@ -8997,24 +8990,58 @@ _<span class="comment">&lt;!-- ... the rest of elements in the QualificationAppl
 </div>
 </div>
 <div class="paragraph">
-<p>The following elements can be read in the example:
-. The description of the Criterion.
-. The minimum number of references expected by the buyer (minimum one, in this example).
-. Additional REQUIREMENT expressed by the buyer that apply for the affected Lots: Specific amount greater than a certain amount.
-. Additional REQUIREMENT expressed by the buyer that apply for the affected Lots: Executed recently.
-. The Lots for which the Reference makes sense. Notice that the response of the EO is consistent, as the procedure is divided into 2 Lots.
-. The description of the work executed.
-. The Total Amount of the Reference, including the amounts that were specific to (share of) other EOs participating in the execution of the work. Notice that the attribute currencyID is set to "EUR".
-. The activity of this economic operator in this work.
-. The amount specific to the contribution of this EO in this Reference. Notice that the specific and the total amounts are identical. The EO proabably executed the work alone, as a sole contractor.
-. Duration of the execution of the work.
-. The level of confidentiality of the information regarding this Reference. Confidential references provided by the EO cannot be made accessible by the buyer to third parties.
-. The name of the recipient of the work.
-. Name of the contact point, a person in this case.
-. Contact e-mail of the recipient of the work.
-=== 5.9 Abilities</p>
+<p>The following elements can be read in the example:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The description of the Criterion.</p>
+</li>
+<li>
+<p>The minimum number of references expected by the buyer (minimum one, in this example).</p>
+</li>
+<li>
+<p>Additional REQUIREMENT expressed by the buyer that apply for the affected Lots: Specific amount greater than a certain amount.</p>
+</li>
+<li>
+<p>Additional REQUIREMENT expressed by the buyer that apply for the affected Lots: Executed recently.</p>
+</li>
+<li>
+<p>The Lots for which the Reference makes sense. Notice that the response of the EO is consistent, as the procedure is divided into 2 Lots.</p>
+</li>
+<li>
+<p>The description of the work executed.</p>
+</li>
+<li>
+<p>The Total Amount of the Reference, including the amounts that were specific to (share of) other EOs participating in the execution of the work. Notice that the attribute currencyID is set to "EUR".</p>
+</li>
+<li>
+<p>The activity of this economic operator in this work.</p>
+</li>
+<li>
+<p>The amount specific to the contribution of this EO in this Reference. Notice that the specific and the total amounts are identical. The EO proabably executed the work alone, as a sole contractor.</p>
+</li>
+<li>
+<p>Duration of the execution of the work.</p>
+</li>
+<li>
+<p>The level of confidentiality of the information regarding this Reference. Confidential references provided by the EO cannot be made accessible by the buyer to third parties.</p>
+</li>
+<li>
+<p>The name of the recipient of the work.</p>
+</li>
+<li>
+<p>Name of the contact point, a person in this case.</p>
+</li>
+<li>
+<p>Contact e-mail of the recipient of the work.</p>
+</li>
+</ol>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="5-9-abilities"><a class="anchor" href="#5-9-abilities"></a>5.9 Abilities</h3>
 <div class="sect3">
 <h4 id="related-information-requirements-15"><a class="anchor" href="#related-information-requirements-15"></a>Related information requirements</h4>
 <div class="paragraph">
@@ -9037,9 +9064,6 @@ _<span class="comment">&lt;!-- ... the rest of elements in the QualificationAppl
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p></p>
 </li>
 <li>
 <p>One data structure to define a miscellania of five criteria that can share the same data structure:</p>
@@ -9099,8 +9123,19 @@ _<span class="comment">&lt;!-- ... the rest of elements in the QualificationAppl
 </div>
 <div class="sect3">
 <h4 id="5-9-4-abilities-i-persons"><a class="anchor" href="#5-9-4-abilities-i-persons"></a>5.9.4 Abilities (I) - Persons</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
 <p>Note that in ESPD V3.0.0 there are not weights to keep the model as simple as possible.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -9127,7 +9162,7 @@ _<span class="comment">&lt;!-- ... the rest of elements in the QualificationAppl
 <div class="sect3">
 <h4 id="data-structure-20"><a class="anchor" href="#data-structure-20"></a>Data Structure</h4>
 <div class="paragraph">
-<p>(The figure below is defined in the the tab ''SC-Abilities_1 (Persons)'' of the <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-Criterion-V3.0.0.xlsx">ESPD-Criterion-V3.0.0</a> spread-sheet).</p>
+<p>(The figure below is defined in the the tab ''SC-Abilities_1 (Persons)'' of the <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-criterion-V3.0.0.xlsx">ESPD-criterion-V3.0.0</a> spread-sheet).</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./images/Abilities_Persons_criterion_data structure.png" alt="Abilities (I)(Persons)" width="566" height="372"></span></p>
@@ -9378,7 +9413,7 @@ _<span class="comment">&lt;!-- ... the rest of elements in the QualificationAppl
 <div class="sect3">
 <h4 id="data-structure-21"><a class="anchor" href="#data-structure-21"></a>Data Structure</h4>
 <div class="paragraph">
-<p>(The figure below is defined in the the tab ''SC_Abilities_2 (Facilities,…​)'' of the <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-Criterion-V3.0.0.xlsx">ESPD-Criterion-V3.0.0</a> spread-sheet).</p>
+<p>(The figure below is defined in the the tab ''SC_Abilities_2 (Facilities,…​)'' of the <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-criterion-V3.0.0.xlsx">ESPD-criterion-V3.0.0</a> spread-sheet).</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./images/Abilities_Facilities_criterion data structure.png" alt="Abilities (II) (Facilities, …​.)" width="526" height="188"></span></p>
@@ -9543,10 +9578,10 @@ _<span class="comment">&lt;!-- Rest of elements removed for brevity --&gt;</span
 <div class="sect3">
 <h4 id="data-structure-22"><a class="anchor" href="#data-structure-22"></a>Data Structure</h4>
 <div class="paragraph">
-<p>(The figure below is defined in the the tab ''SC_Abilities_3 (Education)'' of the <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-Criterion-V3.0.0.xlsx">ESPD-Criterion-V3.0.0</a> spread-sheet).</p>
+<p>(The figure below is defined in the the tab ''SC_Abilities_3 (Education)'' of the <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/cl/xlsx/">ESPD-criterion-V3.0.0</a> spread-sheet).</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/abilitites-education-datastructure.png" alt="Abilities (III) (Education)' criterion data structure" width="566" height="313"></span></p>
+<p><span class="image"><img src="./images/abilitites-education-datastructure.png.png" alt="Abilities (III) (Education)' criterion data structure" width="566" height="313"></span></p>
 </div>
 <div class="paragraph">
 <p><em>Figure 171. 'Abilities (III) (Education)' criterion data structure</em></p>
@@ -9800,7 +9835,7 @@ _<span class="comment">&lt;!-- The rest of criteria above and below this criteri
 <div class="sect3">
 <h4 id="mock-ups-buyer-perspective-12"><a class="anchor" href="#mock-ups-buyer-perspective-12"></a>Mock-ups - buyer perspective</h4>
 <div class="paragraph">
-<p>The buyer has selected the 'allowance of checks' (in <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-Criterion-V3.0.0.xlsx">ESPD-Criterion-V3.0.0</a> will be shown as “Special requierements check”, spec-req-check) option in a ESPD Request builder software application GUI. This software application will create a criterion of this in the ESPD Request XML instance with zero, one or more REQUIREMENT(s) by the EO.</p>
+<p>The buyer has selected the 'allowance of checks' (in <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-criterion-V3.0.0.xlsx">ESPD-criterion-V3.0.0</a> will be shown as “Special requierements check”, spec-req-check) option in a ESPD Request builder software application GUI. This software application will create a criterion of this in the ESPD Request XML instance with zero, one or more REQUIREMENT(s) by the EO.</p>
 </div>
 <div class="paragraph">
 <p>The buyer (CA) can specify none, one or several REQUIREMENT(s). In this case a REQUIREMENT is a descriptive text provided by the buyer where the criterion is better explained or where certain conditions relating to the criterion. In this example the buyer is specifying which type of premises it wants to check and for which reasons.</p>
@@ -10002,7 +10037,7 @@ _<span class="comment">&lt;!-- The rest of criteria above and below this criteri
 <div class="sect3">
 <h4 id="data-structure-24"><a class="anchor" href="#data-structure-24"></a>Data Structure</h4>
 <div class="paragraph">
-<p>(The figure below is defined in the the tab ''SC_Abilities_5 (Staff)'' of the <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-Criterion-V3.0.0.xlsx">ESPD-Criterion-V3.0.0</a> spread-sheet).</p>
+<p>(The figure below is defined in the the tab ''SC_Abilities_5 (Staff)'' of the <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/cl/xlsx/ESPD-criterion-V3.0.0.xlsx">ESPD-criterion-V3.0.0</a> spread-sheet).</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./images/Abilities_V_Staff_criterion_data_structure.png" alt="Abilities (V) (Staff)" width="566" height="362"></span></p>
@@ -15618,7 +15653,7 @@ all the information about its classification and documentation about its financi
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-03-11 00:28:29 CET
+Last updated 2021-03-16 00:40:13 CET
 </div>
 </div>
 </body>
