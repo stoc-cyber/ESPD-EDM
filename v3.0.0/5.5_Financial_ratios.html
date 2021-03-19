@@ -548,7 +548,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>The buyer  has selected the financial ratio as one of the selection criteria that will go into the ESPD Request document:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/Financial ratio_CA mockup.png" alt="Financial ratio" width="623" height="137"></span></p>
+<p><span class="image"><img src="./images/Financial ratio_CA mockup.jpg" alt="Financial ratio" width="623" height="137"></span></p>
 </div>
 <div class="paragraph">
 <p>In ESPD the buyer  specifies procurement procedure-specific requirements, see data structure below.</p>
@@ -560,7 +560,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>The economic operator does only have to provide the numeric value for the financial ratio (which should be greater than the minimum requirement specified by the buyer ):</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/Financial_ratio_EO_mock-up.png" alt="‘Financial ratio' EO mock-up" width="454" height="279"></span></p>
+<p><span class="image"><img src="./images/Financial_ratio_EO_mock-up.jpg" alt="‘Financial ratio' EO mock-up" width="454" height="279"></span></p>
 </div>
 <div class="paragraph">
 <p><em>Figure 135. ‘Financial ratio' EO mock-up</em></p>
@@ -586,7 +586,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>Notice how the spreadsheet has been used to specify the three different financial ratios of the above mock-up example: the XML example below was produced using a XSL-T transformation <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/xslt/">style-sheet</a> that takes the <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/cl/ods/">ODS spreadsheet</a> and produced the <a href="https://github.com/ESPD/ESPD-EDM/blob/3.0.0/docs/src/main/asciidoc/dist/xml/">XML instance</a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/Financial_ratio_criterion_data_structure.png" alt="‘Financial ratio' criterion data structure" width="526" height="293"></span></p>
+<p><span class="image"><img src="./images/Financial_ratio_criterion_data_structure.jpg" alt="‘Financial ratio' criterion data structure" width="526" height="293"></span></p>
 </div>
 <div class="paragraph">
 <p><em>Figure 136. ‘Financial ratio' criterion data structure</em></p>
@@ -599,7 +599,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="error">&lt;</span>!... header elements removed for brevity --<span class="error">&gt;</span>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="comment">&lt;!--... header elements removed for brevity... --&gt;</span>
 
 <span class="comment">&lt;!-- Criterion:Financial ratio --&gt;</span>
         <span class="tag">&lt;cac:TenderingCriterion&gt;</span>
@@ -646,7 +646,7 @@ table.CodeRay td.code>pre{padding:0}
                                         <span class="tag">&lt;cbc:Description&gt;</span>Ratio Type<span class="tag">&lt;/cbc:Description&gt;</span>
                                         <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionElementType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>REQUIREMENT<span class="tag">&lt;/cbc:TypeCode&gt;</span>
                                         <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>CODE<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
-                                <span class="comment">&lt;!-- No answer is expected here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the buyer --&gt;</span>
+                                        <span class="comment">&lt;!-- No answer is expected here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the buyer --&gt;</span>
                                         <span class="tag">&lt;cbc:ExpectedCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">PleaseSelectTheCorrectOne</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Assets to equity ratio<span class="tag">&lt;/cbc:ExpectedCode&gt;</span>
                                 <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
                                 <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
@@ -654,7 +654,7 @@ table.CodeRay td.code>pre{padding:0}
                                         <span class="tag">&lt;cbc:Description&gt;</span>Definition<span class="tag">&lt;/cbc:Description&gt;</span>
                                         <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionElementType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>REQUIREMENT<span class="tag">&lt;/cbc:TypeCode&gt;</span>
                                         <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>DESCRIPTION<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
-                                <span class="comment">&lt;!-- No answer is expected here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the buyer --&gt;</span>
+                                        <span class="comment">&lt;!-- No answer is expected here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the buyer --&gt;</span>
                                         <span class="tag">&lt;cbc:ExpectedDescription&gt;</span>Total balance sheet/Total equity<span class="tag">&lt;/cbc:ExpectedDescription&gt;</span>
                                 <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
                                 <span class="tag">&lt;cac:TenderingCriterionProperty&gt;</span>
@@ -662,7 +662,7 @@ table.CodeRay td.code>pre{padding:0}
                                         <span class="tag">&lt;cbc:Description&gt;</span>Minimum requirement<span class="tag">&lt;/cbc:Description&gt;</span>
                                         <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionElementType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>REQUIREMENT<span class="tag">&lt;/cbc:TypeCode&gt;</span>
                                         <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>QUANTITY<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
-                                <span class="comment">&lt;!-- No answer is expected here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the buyer --&gt;</span>
+                                        <span class="comment">&lt;!-- No answer is expected here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the buyer --&gt;</span>
                                         <span class="tag">&lt;cbc:ExpectedValueNumeric&gt;</span>0.5<span class="tag">&lt;/cbc:ExpectedValueNumeric&gt;</span>
                                 <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
                         <span class="tag">&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
@@ -684,7 +684,6 @@ table.CodeRay td.code>pre{padding:0}
                                                 <span class="tag">&lt;cbc:TypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CriterionElementType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>QUESTION<span class="tag">&lt;/cbc:TypeCode&gt;</span>
                                                 <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>INDICATOR<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
                                         <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
-                                <span class="tag">&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
                                 <span class="tag">&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
                                         <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>e296a1cc-83d3-48ac-b4e4-7e7d0ae0af25<span class="tag">&lt;/cbc:ID&gt;</span>
                                         <span class="tag">&lt;cbc:PropertyGroupTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">PropertyGroupType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>ONTRUE<span class="tag">&lt;/cbc:PropertyGroupTypeCode&gt;</span>
@@ -701,6 +700,7 @@ table.CodeRay td.code>pre{padding:0}
                                                 <span class="tag">&lt;cbc:ValueDataTypeCode</span> <span class="attribute-name">listID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ResponseDataType</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">listVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>ECONOMIC_OPERATOR_IDENTIFIER<span class="tag">&lt;/cbc:ValueDataTypeCode&gt;</span>
                                         <span class="tag">&lt;/cac:TenderingCriterionProperty&gt;</span>
                                 <span class="tag">&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
+                                                                <span class="tag">&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
                         <span class="tag">&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
                         <span class="tag">&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</span>
                                 <span class="tag">&lt;cbc:ID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">criterion</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeAgencyID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">EU-COM-GROW</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">schemeVersionID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">3.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>e9aa7763-c167-4352-8060-1a3d7d3e2662<span class="tag">&lt;/cbc:ID&gt;</span>
@@ -735,7 +735,7 @@ table.CodeRay td.code>pre{padding:0}
                 <span class="tag">&lt;/cac:TenderingCriterionPropertyGroup&gt;</span>
         <span class="tag">&lt;/cac:TenderingCriterion&gt;</span>
 
-<span class="error">&lt;</span>!... rest of elements removed for brevity --<span class="error">&gt;</span></code></pre>
+<span class="comment">&lt;!--... rest of elements removed for brevity... --&gt;</span></code></pre>
 </div>
 </div>
 <div class="olist arabic">
@@ -783,7 +783,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-03-16 00:40:11 CET
+Last updated 2021-03-18 04:19:39 CET
 </div>
 </div>
 </body>
