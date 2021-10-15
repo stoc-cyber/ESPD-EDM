@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: ESPD-EDM</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="../..">ESPD-EDM</a>
+        </div>
+    </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ESPD-EDM" data-version="2.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">version 3.0.0</span>
+    <span class="version">2.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../3.0.0/index.html">version 3.0.0</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../3.0.0/index.html">3.0.0</a>
+        </li>
+        <li class="version">
+          <a href="../2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../2.1.0/index.html">2.1.0</a>
+        </li>
+        <li class="version">
+          <a href="../2.0.2/index.html">2.0.2</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">2.0.1</a>
+        </li>
+        <li class="version">
+          <a href="../2.0.0/index.html">2.0.0</a>
+        </li>
+        <li class="version">
+          <a href="../1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../3.0.0/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.0.1</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../3.0.0/index.html">3.0.0</a>
+    <a class="version is-missing" href="../2.1.1/index.html">2.1.1</a>
+    <a class="version is-missing" href="../2.1.0/index.html">2.1.0</a>
+    <a class="version is-missing" href="../2.0.2/index.html">2.0.2</a>
+    <a class="version is-current" href="IV.0_Criteria_(common)_Aspects.html">2.0.1</a>
+    <a class="version" href="../2.0.0/IV.0_Criteria_(common)_Aspects.html">2.0.0</a>
+    <a class="version is-missing" href="../1.0.2/index.html">1.0.2</a>
+    <a class="version is-missing" href="../1.0.1/index.html">1.0.1</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/meaningfy-ws/ESPD-EDM/blob/v2.0.1/docs/src/main/asciidoc/modules/ROOT/pages/IV.0_Criteria_(common)_Aspects.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_iv_criteria_common_aspects"><a class="anchor" href="#_iv_criteria_common_aspects"></a>IV. Criteria, common aspects</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong>
+(<a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.0#BIS41-ESPDV2.0-HighLevelBusinessRequirements">_br41-002</a>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The contracting body shall provide the exclusion grounds and selection criteria for its tendering process as structured information – via ESPD template or structured list of criteria set out in a call for tender.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The ESPD-EDM defined a flexible structure to express data about criteria. Based on this structure UBL-2.2 defined in turn the component <code>cac:TenderingCriterion</code>, which is used in ESPD-EDM V2.0.1 to implement the XML objects for exclusion and selection criteria.</p>
+</div>
+<div class="paragraph">
+<p>The UML diagram below provides a graphic view of the <code>QualificationApplicationRequest</code> document with the complete structure for the <code>cac:TenderingCriterion</code> component (cf. section on the ESPD Response, furhter on this guide, to understand how the QualificationApplicationResponse deals with Criteria).</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/Criterion.png" alt="Criterion">
+</div>
+<div class="title">Figure 1. A Criterion - UML diagram</div>
+</div>
+<div class="sect2">
+<h3 id="_iv_1_general_behavior"><a class="anchor" href="#_iv_1_general_behavior"></a>IV.1 General behavior</h3>
+<div class="paragraph">
+<p><strong>Notice that</strong>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>One criterion <strong>may</strong> have descendent 'sub-criteria'. This is very useful to, for example, define national exclusion criteria that specialise the EU criteria defined in the Directive;</p>
+</li>
+<li>
+<p>One criterion <strong>may</strong> refer to one or several pieces of legislation (EU, national, other);</p>
+</li>
+<li>
+<p>One criterion <strong>must</strong> always contain at least one group of 'properties'. Properties may be informative captions; general requirements issued by the Member State or procedure-specific requirements specified by the contracting authority; and questions addressed to the economic operator;</p>
+</li>
+<li>
+<p>One group of properties <strong>must</strong> always specify at least one 'property';</p>
+</li>
+<li>
+<p>One group of properties <strong>may</strong> contain one or several 'sub-groups' of properties.</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="_xsd_schema"><a class="anchor" href="#_xsd_schema"></a>XSD Schema</h4>
+<div class="paragraph">
+<p>This XSD Schema diagram shows a global view of the UBL-2.2 <code>cac:TenderingCriterion</code> component:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/TenderingCriterion_XSD_global_view.png" alt="Criterion">
+</div>
+<div class="title">Figure 2. cac:TenderingCriterion - XSD Schema, global view</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+    <p style="text-align:center">This document is created by the Publications Office of the European Union and is
+        licensed under the terms of <a href="https://github.com/OP-TED/eForms-SDK/blob/main/LICENSE">EUPL-1.2
+            license</a>.
+        <br/>This page was built using the Antora default UI. The source code for this UI is licensed under the terms of
+        the MPL-2.0 license.
+    </p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

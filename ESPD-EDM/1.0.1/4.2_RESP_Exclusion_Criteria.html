@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: ESPD-EDM</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="../..">ESPD-EDM</a>
+        </div>
+    </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ESPD-EDM" data-version="1.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">version 3.0.0</span>
+    <span class="version">1.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../3.0.0/index.html">version 3.0.0</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../3.0.0/index.html">3.0.0</a>
+        </li>
+        <li class="version">
+          <a href="../2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../2.1.0/index.html">2.1.0</a>
+        </li>
+        <li class="version">
+          <a href="../2.0.2/index.html">2.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../2.0.1/index.html">2.0.1</a>
+        </li>
+        <li class="version">
+          <a href="../2.0.0/index.html">2.0.0</a>
+        </li>
+        <li class="version">
+          <a href="../1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../3.0.0/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">1.0.1</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../3.0.0/index.html">3.0.0</a>
+    <a class="version is-missing" href="../2.1.1/index.html">2.1.1</a>
+    <a class="version is-missing" href="../2.1.0/index.html">2.1.0</a>
+    <a class="version is-missing" href="../2.0.2/index.html">2.0.2</a>
+    <a class="version is-missing" href="../2.0.1/index.html">2.0.1</a>
+    <a class="version is-missing" href="../2.0.0/index.html">2.0.0</a>
+    <a class="version" href="../1.0.2/4.2_RESP_Exclusion_Criteria.html">1.0.2</a>
+    <a class="version is-current" href="4.2_RESP_Exclusion_Criteria.html">1.0.1</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/meaningfy-ws/ESPD-EDM/blob/v1.0.1/docs/src/main/asciidoc/modules/ROOT/pages/4.2_RESP_Exclusion_Criteria.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect2 text-left">
+<h3 id="_1_exclusion_criteria"><a class="anchor" href="#_1_exclusion_criteria"></a>1. <strong>EXCLUSION CRITERIA</strong></h3>
+<div class="paragraph">
+<p>For Procurement Projects where the value of the contract is above the threshold, all
+ESPDRespone XML documents MUST specify all the exclusion criteria defined in the Directive. Thus the following general rule:</p>
+</div>
+<div class="admonitionblock note text-left">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">General rule 3: For above-the-threshold contracts all the Exclusion criteria MUST be specified</div>
+<div class="paragraph text-left">
+<p>All ESPDResponse XML instances (and the ESPDRequest instances, too, for that matter) MUST always
+include all the exclusion criterion detailed in the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Annex of the Regulation 2016</a>
+and the <a href="./code_lists/CriteriaTaxonomy.xlsx">criteria data flow tables</a> defined by COM).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph text-left">
+<p>Criteria may be grouped in several different categories. The figure below is
+intended to identify and list these categories for the Exclusion criteria (branches in text boxes), and specific subgroups
+within each category (leaves in text without boxes):</p>
+</div>
+<div id="exclusion_criteria_taxonomy" class="imageblock text-center">
+<div class="content">
+<img src="_images/exclusion_criteria_taxonomy.png" alt="exclusion_criteria" width="800" height="1200">
+</div>
+<div class="title">Figure 1. Exclusion criteria taxonomy</div>
+</div>
+<div class="paragraph text-left">
+<p>Each of these categories has its own particular data structure, which can be represented as
+flow diagrams like the one in the figure above (see Figure 21. ''General data-structure design rule for criteria and requirements with a <em>yes</em> or <em>no</em> answer'').
+Thus the data structures below represent how the data is organised for each exclusion criterion used in the ESPD.</p>
+</div>
+<div class="admonitionblock note text-left">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The exclusion criteria have been drafted ''from a negative perspective''. Thus a criterion like <code>Payment of Taxes</code>
+is drafted like follows:</p>
+</div>
+<div class="paragraph">
+<p><em>Has the economic operator breached its obligations relating to the payment of taxes, both in the
+country in which it is established and in Member State of the contracting authority or contracting
+entity if other than the country of establishment?</em></p>
+</div>
+<div class="paragraph">
+<p>If the Economic Operator answers ''no'' then it has nothing to justify or motivate. On the
+contrary if it answers ''yes'' it will have to provide additional data and evidences to prove
+that the criterion is satisfied.</p>
+</div>
+<div class="paragraph">
+<p>The ESPD Service applies this approach as much as possible.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+    <p style="text-align:center">This document is created by the Publications Office of the European Union and is
+        licensed under the terms of <a href="https://github.com/OP-TED/eForms-SDK/blob/main/LICENSE">EUPL-1.2
+            license</a>.
+        <br/>This page was built using the Antora default UI. The source code for this UI is licensed under the terms of
+        the MPL-2.0 license.
+    </p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
